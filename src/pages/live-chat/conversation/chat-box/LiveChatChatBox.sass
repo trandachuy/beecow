@@ -1,0 +1,238 @@
+.live-chat-chat-box
+  background-color: #F2F3F7
+  display: flex
+  flex-direction: column
+
+  .live-chat-chat-box__blank-page
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .live-chat-chat-box__title
+      text-transform: uppercase
+      font-weight: 500
+      font-size: 20px
+      margin-bottom: .5rem
+      margin-top: 70px
+
+    .live-chat-chat-box__sub-title
+      color: #6E6E6E
+
+    .live-chat-chat-box__blank-mess-wrapper
+      display: flex
+      align-items: flex-end
+      width: 100%
+      margin-top: 40px
+
+    .live-chat-chat-box__blank-avatar
+      width: 28px
+      height: 28px
+      border-radius: 50%
+      background-color: #E6E8F0
+
+    .live-chat-chat-box__triangle-left
+      width: 8px
+      height: 8px
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #E6E8F0 50%, #E6E8F0 100%)
+
+    .live-chat-chat-box__triangle-right
+      width: 8px
+      height: 8px
+      background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #E6E8F0 50%, #E6E8F0 100%)
+
+    .live-chat-chat-box__blank-mess-left
+      background-color: #E6E8F0
+      border-radius: 4px 4px 4px 0
+
+    .live-chat-chat-box__blank-mess-right
+      background-color: #E6E8F0
+      border-radius: 4px 4px 0 4px
+
+  .live-chat-chat-box__message-container
+    padding: 1rem 2rem
+    width: 100%
+    display: flex
+    flex-direction: column-reverse
+    justify-content: flex-start
+    height: 100%
+    overflow-y: auto
+
+  .live-chat-chat-box__message-container--blank
+    padding: 1rem 2rem
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    height: 100%
+    overflow-y: auto
+    max-width: 700px
+
+  .live-chat-chat-box__loading
+    .lds-ellipsis--grey
+      height: 30px
+      div
+        top: 10px
+
+  .live-chat-chat-box__btn-load-more
+    text-align: center
+    color: #0F5BCA
+    padding: .5rem
+    cursor: pointer
+    transition-duration: .3s
+    transition-property: background-color
+
+    &:hover
+      background-color: #fafafa
+      text-decoration: underline
+
+  .live-chat-chat-box__btn
+    width: 20px
+    height: 20px
+    cursor: pointer
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    display: inline-block
+    &:hover
+      opacity: .7
+
+  .live-chat-chat-box__header
+    background-color: white
+    height: 80px
+    border-bottom: 1px solid #EAEDF3
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 2rem
+
+  .live-chat-chat-box__btn-view-customer
+    background-image: url("/assets/images/icon-view-customerdetails.svg")
+
+
+  .live-chat-chat-box__btn-send-emoji
+    background-image: url("/assets/images/icon-attach-emotions.svg")
+
+  .live-chat-chat-box__btn-send-image
+    background-image: url("/assets/images/icon-attach-images.svg")
+
+  .live-chat-chat-box__body
+    flex: 1
+    overflow-y: auto
+    position: relative
+    overflow-x: hidden
+
+  .live-chat-chat-box__emoji-wrapper
+    position: absolute
+    left: -300px
+    bottom: 0
+    padding: .7rem
+    border-radius: 0 5px 0 0
+    background-color: white
+    max-width: 300px
+    border: 1px solid #E2E5ED
+    transition-duration: 200ms
+    transition-property: left
+    transition-timing-function: ease-in-out
+    z-index: 1
+
+    &--open
+      left: 0
+
+    &--close
+      left: -300px
+
+  .live-chat-chat-box__footer
+    background-color: white
+    height: 65px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 2rem
+
+  .live-chat-chat-box__input-message
+    flex: 1
+    border: none
+    width: 100%
+    font-size: 16px
+    &:focus
+      outline: none
+
+  .live-chat-chat-box__user-picture
+    width: 45px
+    height: 45px
+    border-radius: 50%
+
+  .live-chat-chat-box__send-messages-loading-bar
+    height: 3px
+    background-color: white
+    position: relative
+    border-top: 1px solid #EAEDF3
+
+  .live-chat-chat-box__send-messages-progress
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 0
+    background-color: #556CE7
+    transition-duration: .3s
+    transition-property: width
+    transition-timing-function: ease-in-out
+
+    &--0
+      width: 0
+      transition-duration: 0s
+
+    &--25
+      width: 25%
+
+    &--50
+      width: 50%
+
+    &--75
+      width: 75%
+
+    &--100
+      width: 100%
+
+    &--100-done
+      background-color: #3e8044
+      width: 100%
+      animation-name: fadeOut
+      animation-delay: 200ms
+      animation-duration: 200ms
+      animation-fill-mode: forwards
+
+      @keyframes fadeOut
+        0%
+          opacity: 1
+        100%
+          opacity: 0
+          width: 0
+
+
+    &--100-failed
+      background-color: #ff2000
+      width: 100%
+      animation-name: fadeOut
+      animation-delay: 500ms
+      animation-duration: 300ms
+      animation-fill-mode: forwards
+
+      @keyframes fadeOut
+        0%
+          opacity: 1
+        100%
+          opacity: 0
+
+
+  .live-chat-chat-box__btn-send
+    background-image: url("/assets/images/send-message.svg")
+    background-size: 50%
+    background-position: center
+    background-repeat: no-repeat
+    filter: invert(1)
+    background-color: #ff9800d1
+    width: 2rem
+    height: 2rem
+    border-radius: 50%

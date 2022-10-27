@@ -1,0 +1,60 @@
+.language-selector
+  padding: 0px 3px
+  border-radius: 2px
+  margin-left: 1.5em
+  margin-right: 1.5em
+
+  .selected-flag
+    width: 2em
+    height: 2em
+    display: inline-block
+    border-radius: 50%
+    background-size: cover !important
+
+
+  .uik-select__valueRendered
+    background-color: unset !important
+    border: unset !important
+    width: unset !important
+    min-width: 8em
+    transition-duration: .3s
+    box-shadow: unset !important
+    color: white
+    text-transform: uppercase
+
+
+  .uik-select__optionListWrapper
+    min-width: unset
+
+  .uik-select__arrowWrapper
+
+    &:after
+      display: none !important
+
+    &:before
+      border-width: 5px !important
+      border-bottom-color: white !important
+      top: -2px !important
+
+
+  .uik-select__valueWrapper
+    span:first-child
+      display: flex
+      align-items: center
+
+      span:first-child
+        margin-right: .5em
+
+  .uik-select__label
+    span:first-child
+      display: flex
+      align-items: center
+
+  .uik-select__option
+    .selected-flag
+      margin-right: .5em
+      width: 1.2em
+      height: 1.2em
+      display: inline-block
+      border-radius: 50%
+      background-size: cover !important

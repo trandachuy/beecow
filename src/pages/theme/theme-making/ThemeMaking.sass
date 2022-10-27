@@ -1,0 +1,78 @@
+.theme-theme-making
+  .theme-making-grid
+    display: grid
+    grid: 'logo page toolbar' 'setting configure content'
+    grid-template-columns: 0.2fr 1fr 3.8fr
+    grid-template-rows: 1fr max-content
+    grid-auto-rows: 1fr
+    grid-gap: 0px
+    padding: 0px
+
+    .logo-setting-bar
+      grid-area: logo
+      background-color: #5267df
+      background-image: url(/assets/images/logo_gosell_theme.png)
+      background-repeat: no-repeat
+      background-size: 3rem 3rem
+      background-position: center
+      cursor: pointer
+
+    .page-and-setting
+      grid-area: page
+      background-color: #4659c5
+
+    .platform-head-toolbar
+      grid-area: toolbar
+      background-color: #3f51b5
+
+    .setting-bar-body
+      grid-area: setting
+      background-color: #f0eded
+      -webkit-box-shadow: 5px 0px 11px -10px rgba(0,0,0,0.75)
+      -moz-box-shadow: 5px 0px 11px -10px rgba(0,0,0,0.75)
+      box-shadow: 5px 0px 11px -10px rgba(0,0,0,0.75)
+      position: relative
+
+    .page-content-body
+      grid-area: configure
+      background-color: white
+
+    .theme-editor-body
+      grid-area: content
+      min-height: 100%
+      display: flex
+      background-color: #ffffff
+      align-items: baseline
+      align-content: stretch
+      margin: 0
+      padding: 0
+      flex-direction: column
+      >div
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+@media screen and (max-width: 670px)
+  .theme-theme-making
+    .theme-making-grid
+      grid: 'content content content' 'content content content'
+      grid-template-columns: ''
+      grid-auto-rows: ''
+
+      .logo-setting-bar
+        display: none
+      .page-and-setting
+        display: none
+      .platform-head-toolbar
+        display: none
+      .setting-bar-body
+        display: none
+      .page-content-body
+        display: none
+      .theme-editor-body
+        .editing-area
+          height: calc(100vh - 0px)
+
+
+ 

@@ -1,0 +1,91 @@
+@import "../../../sass/gsvariables"
+
+.layout-main
+  height: 100vh !important
+  .layout-top-bar
+    background-color: $color-header
+    //position: sticky
+    //position: -webkit-sticky
+    //top: 0
+    .section-app-name
+      height: 100%
+      background-color: $color-header-light
+      .title-app-name
+        height: 30px
+        font-style: normal
+        font-weight: 500
+        font-size: 19px
+        line-height: 29px
+        color: white
+
+
+  .nav-left-mobile
+    position: fixed
+    top: 0
+    z-index: 999
+    height: 100vh
+    width: 100vw
+
+.layout-body
+  background-color: $color-background
+  overflow-y: auto !important
+  position: relative
+
+
+.layout__overlay
+  position: absolute
+  top: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(128, 128, 128, 0.18)
+  z-index: 99
+  padding: 2rem
+
+.layout__navigation-panel
+  overflow-x: hidden
+  flex-shrink: 0
+  transition: width .3s ease-in-out
+
+  &--closed
+    width: 70px
+    border-right: 1px solid rgb(234, 237, 243)
+
+    //.uik-nav-link__text
+    //  //.nav-icon
+    //  //  width: 25px
+    //  //  height: 25px
+    //
+    //.uik-nav-link__nav-1-text
+    //  animation-name: fadeOut
+    //  animation-duration: .3s
+    //  animation-delay: .1s
+    //  animation-fill-mode: forwards
+    //  @keyframes fadeOut
+    //    100%
+    //      opacity: 0
+    //      display: none !important
+    //
+    //.nav-secondary-section
+    //  overflow-y: hidden
+    //  animation-name: fadeOutHeight
+    //  animation-duration: .3s
+    //  animation-delay: .1s
+    //  animation-fill-mode: forwards
+    //  @keyframes fadeOutHeight
+    //    100%
+    //      opacity: 0
+    //      height: 0
+    //
+    //.uik-nav-section-title__wrapper
+    //  animation-name: fadeOut
+    //  animation-duration: .3s
+    //  animation-delay: .1s
+    //  animation-fill-mode: forwards
+
+
+
+
+  &--opened
+    width: 270px
+

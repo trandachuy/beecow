@@ -1,0 +1,406 @@
+.affiliate-transfer-form-editor
+  font-size: 14px
+
+  .content-wrapper
+    display: flex
+
+  .transfer-form-header-wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    .transfer-form-header
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+
+      .header-progress-bar
+        display: flex
+        width: 60%
+        .progress-step-navigation
+          padding: 1em 5em
+
+    .detect-change
+      display: flex
+      align-items: center
+      color: #1E69D5
+
+      a
+        font-weight: bold
+
+  .information
+    width: 20vw !important
+    margin-left: 1em
+
+    .uik-select__optionListWrapper
+      width: 100%
+
+    .search-box
+      position: relative
+      width: 100%
+
+      &:focus-within > .search-result
+        max-height: 485px
+        padding: 1rem
+        border: 1px solid #ced4da
+        box-shadow: 0 0 4px 1px lightgrey
+
+      .search-result
+        transition: all .3s ease
+        background-color: white
+        border-radius: .25rem
+        position: absolute
+        top: 50px
+        left: 0
+        width: 100%
+        max-height: 0
+        overflow-y: auto
+
+        &:focus
+          outline: none
+
+        .search-item
+          border-bottom: 1px solid #ced4da
+          padding: .5rem .2rem
+          display: flex
+          align-items: center
+
+          &:last-child
+            border-bottom: unset
+            margin-bottom: 0
+
+    .partner
+      display: flex
+      align-items: center
+
+    .margin-left
+      margin-left: 20px
+
+    .symbol
+      position: absolute
+      width: 10px
+      height: calc(100% / 2 + 48px)
+      border-top: 1px solid #D8DCE6
+      border-left: 1px solid #D8DCE6
+      margin-left: -10px
+      top: 50%
+
+    .symbol-2
+      width: 30px
+      height: 30px
+      position: relative
+      margin-left: -10px
+      border-bottom: 1px solid #D8DCE6
+      border-left: 1px solid #D8DCE6
+      transform: translateY(-50%)
+
+      &:after
+        position: absolute
+        content: ''
+        width: 9px
+        height: 9px
+        background-color: #D8DCE6
+        border-radius: 50%
+        right: 0
+        top: 50%
+        transform: translate(50%, 120%)
+        z-index: 4
+
+  .note
+    width: 20vw !important
+    margin-left: 1em
+
+  .history
+    width: 20vw !important
+    margin-left: 1em
+
+    .transfer_history
+      cursor: pointer
+      color: #3F51B5
+
+  .product
+    width: 100% !important
+    float: left
+    height: fit-content
+
+    .search-box
+      position: relative
+      width: 100%
+
+      &:focus-within > .search-result
+        max-height: 485px
+        padding: 1rem
+        border: 1px solid #ced4da
+        box-shadow: 0 0 4px 1px lightgrey
+
+      .search-result
+        transition: all .3s ease
+        background-color: white
+        border-radius: .25rem
+        position: absolute
+        top: 50px
+        left: 0
+        width: 100%
+        max-height: 0
+        overflow-y: auto
+        .product-item
+          overflow: hidden
+          &.unit
+            .product-item-row-border
+              margin-left: 8px
+          .product-item-row-border
+            border-bottom: 1px solid #ced4da
+        .icon-show-unit
+          transform: rotate(90deg)
+
+        &:focus
+          outline: none
+        .container-item
+          background: #F9F9F9
+          &:hover
+            background-color: rgba(84, 147, 245, 0.05)
+            .search-item
+              &.unit
+                &:hover
+                background-color: rgba(84, 147, 245, 0.05)
+
+        .search-item
+          padding: .5rem
+          display: flex
+          align-items: center
+          width: 100%
+
+          &:last-child
+            border-bottom: unset
+            margin-bottom: 0
+          &.unit
+            background: #F9F9F9
+
+    h3
+      width: 100%
+      display: flex
+      justify-content: space-between
+
+    @media screen and (max-width: 430px)
+      h3
+        flex-direction: column
+
+    .row-product-name
+      max-width: 9em
+      min-width: 5em
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+      color: #3E3F42
+      font-size: 1em
+      font-weight: 500
+
+    .row-product-variable
+      font-size: .9em
+      margin-top: .5em
+
+    .crystrapinput__wrapper
+      margin-bottom: 0
+
+    .table
+      background-color: #F9F9F9
+      overflow: auto
+      td,
+      th
+        flex-basis: 12%
+        flex-grow: 0
+
+      td:first-child,
+      th:first-child
+        flex-basis: 10%
+
+      td:nth-child(2),
+      th:nth-child(2)
+        flex-basis: 25%
+
+      td:nth-child(3),
+      th:nth-child(3)
+        flex-basis: 10%
+
+      td:nth-child(4),
+      th:nth-child(4)
+        flex-basis: 10%
+
+      td:nth-child(5),
+      th:nth-child(5)
+        flex-basis: 10%
+
+      td:nth-child(6),
+      th:nth-child(6)
+        flex-basis: 11%
+
+      td:nth-child(7),
+      th:nth-child(7)
+        flex-basis: 12%
+
+      td:nth-child(8),
+      th:nth-child(8)
+        flex-basis: 12%
+
+      tbody
+        overflow: unset
+        max-height: 510px
+
+      .uik-widget-table__wrapper
+        border-top: none
+
+      tr th
+        color: #3E3F42
+        border: none
+        font-weight: bold
+        vertical-align: middle
+        height: auto !important
+
+      .col-data
+        display: flex
+        height: 100%
+        align-items: center
+        .col-link-data
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+          width: 50px
+          cursor: pointer
+          color: #3F51B5
+
+        .form-group
+          margin: 0
+
+        .invalid-feedback
+          white-space: pre
+
+        .product-image
+          width: 70px
+          height: 70px
+          display: flex
+          justify-content: center
+          align-items: center
+
+        .product-name
+          font-weight: 500
+          display: -webkit-box
+          -webkit-line-clamp: 2
+          -webkit-box-orient: vertical
+          overflow: hidden
+
+      .delete
+        background: none
+        border: none
+        box-shadow: none
+        min-width: 3em
+
+      .padding-top
+        padding-top: 1em
+
+      .price
+        min-width: 9em
+
+      .number
+        max-width: 9em
+        height: 38px
+
+      .fix-number
+        height: 40px
+        display: flex
+        align-items: center
+
+      .gs-discount-label
+        margin-top: 4px
+
+    .custom-row
+      display: table
+      width: 100%
+      table-layout: fixed
+      background-color: #F9F9F9
+      height: 44px
+
+      td
+        padding: 15px
+
+    .empty
+      color: #b5b5b5
+
+  .title
+    font-weight: 500
+    font-size: .9rem !important
+
+  .error
+    margin-top: 0.25rem
+    font-size: 80%
+    color: #dc3545
+    text-align: center
+
+  .input-error
+    border: 1px solid #dc3545
+    border-radius: 4px
+
+.transfer-history-modal
+  .modal-dialog
+    .modal-content
+      max-width: 700px
+      max-height: 800px
+      width: max-content
+
+      .modal-body
+        table
+          overflow-y: auto
+          max-height: 600px
+          position: relative
+
+          tr
+            vertical-align: middle
+            padding-top: 1rem
+            padding-bottom: 1rem
+
+            > td
+              min-width: 8rem
+
+              &:nth-child(3)
+                min-width: 10rem
+
+    .modal-header
+      border-bottom: none
+      padding-bottom: unset
+
+      .modal-title
+        text-align: left
+
+    .modal-body
+      max-height: 700px
+      overflow-y: auto
+
+@media only screen and (max-width: 1200px)
+  .affiliate-transfer-form-editor
+    .progress-step-navigation
+      .step__bar
+        .step
+    .transfer-form-header
+      flex-direction: column
+      align-items: flex-start !important
+      justify-content: center !important
+
+      .title
+        width: 100%
+
+      .progress-step-navigation
+        width: 100%
+        padding: 1em 0em !important
+
+      .gs-content-header-right-el
+        margin-left: 0 !important
+
+    .gs-page-content
+      .content-wrapper
+        flex-direction: column
+        .information
+          width: 100% !important
+          margin-left: 0
+        .history
+          width: 100% !important
+          margin-left: 0

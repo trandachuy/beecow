@@ -1,0 +1,86 @@
+@import "../../../../../sass/mixins"
+
+.supplier-page__info
+  background: white
+  border-radius: 5px
+  padding: 10px 0
+
+  .form-group label:first-child
+    color: black
+
+  .supplier-page__info_error
+    color: red
+    font-size: 13px
+
+  .phone-supplier
+    position: relative
+    .phone-country
+      position: absolute
+      top: 36px
+      left: 25px
+      font-size: 13px
+      color: #000000
+      padding: 2px
+      background-color: #FFFFFF
+    .form-group
+      .form-control
+        padding-left: 50px
+  .phone-supplier.maxPhoneCode
+    .form-control
+      padding-left: 68px
+
+.supplier-page__address
+  background: white
+  border-radius: 5px
+  padding: 10px 0
+
+  .form-group label:first-child
+    color: black
+.supplier-page__other-info
+  background: white
+  border-radius: 5px
+  padding: 10px 0
+
+  .form-group label:first-child
+    color: black
+
+.disabled-element
+    pointer-events: none
+    opacity: 0.4
+
+.supplier-page__body
+  .supplier-page__body--form
+    padding: 0!important
+    @include mobile
+      padding: 15px!important
+
+.suplier-page__supplier-status
+  background: white
+  border-radius: 5px
+  padding: 10px 0
+  margin-bottom: 15px
+  .status-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 10px
+    .title-label
+      color: gray
+      margin: 0
+    .label-status
+      background: #3F51B5
+      color: white
+      font-weight: 700
+      border-radius: 30px
+      padding: 10px 25px
+      margin: 0
+      &.deleted
+        background: #e21c1c
+        color: white
+.label-required-count
+  color: black
+  text-transform: uppercase
+  font-weight: 700
+  padding-top: 1px
+  padding-bottom: 8px
+  font-size: 0.8rem

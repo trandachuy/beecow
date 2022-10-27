@@ -1,0 +1,502 @@
+@import "../../../../sass/mixins"
+.discount
+
+  .dropdown
+    button
+      &.btn.btn-secondary
+        width: 100%
+        background-color: white
+        text-align: left
+        color: black
+        border-color: #ced4da
+        vertical-align: middle
+      &:active
+        background-color: inherit!important
+        color: #495057!important
+
+  .discount-header
+    .gs-atm__flex-row--flex-start
+      justify-content: space-between
+      .gs-button
+        div
+          min-width: 188px!important
+          justify-content: space-between!important
+
+    .second-button-group
+      margin-left: 15px
+    .dropdown
+      flex-basis: 15%
+      min-width: 9rem
+      max-width: fit-content
+
+      @include desktop
+        .discount-create__menu
+          left: auto !important
+          //right: -20px
+
+      button
+        &.gs-button
+          cursor: pointer
+          color: white
+          box-shadow: 0 0 2px #999
+          border: none
+          outline: none
+          padding: 0.4rem 0.75rem
+          font-size: 0.875rem
+          height: 38px
+        
+          background-position: center
+          transition: background 0.2s
+          transition-timing-function: ease-in
+          display: flex
+          display: -webkit-flex
+          justify-content: space-between
+          border-radius: 3px
+
+        &.gs-button__green
+          background-color: #00c851
+          border-color: #00c851
+          color: white
+          &.dropdown-toggle::after
+            align-self: center
+          &:active
+            color: white!important
+            background-color: #00c851!important
+            border-color: #00c851!important
+      &.show
+        .dropdown-menu.show
+          font-size: 0.85rem
+          //width: 100%
+          min-width: 9rem
+          .dropdown-item
+            padding-left: 1em
+            
+            span
+              display: flex
+              display: -webkit-flex
+              flex-direction: row
+              -webkit-flex-direction: row
+              i
+                width: 20px
+                height: 20px
+                display: block
+                background-repeat: no-repeat
+                background-position: center
+                margin-right: 5px
+
+                &.icon-coupon
+                  background-image: url(/assets/images/icon-coupons.svg)
+                &.icon-promotion
+                  background-image: url(/assets/images/icon-wholesale-pricing.svg)
+
+  .discount-content-body
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+    align-items: flex-start
+    .gs-widget__content
+      width: 100%
+    .top-search
+      border: unset
+      box-shadow: unset
+      flex-direction: row!important
+      -webkit-flex-direction: row!important
+      margin-top: unset
+      display: flex
+      display: -webkit-flex
+      justify-content: space-between
+      flex-direction: column
+      -webkit-flex-direction: column
+      align-items: center
+
+      .search
+        //margin-left: 1.5em
+        flex-basis: 100%
+        -webkit-flex-basis: 100%
+        @include mobile
+          margin-bottom: 1em
+      .group-combobox
+        -webkit-flex-basis: 100%
+        flex-basis: 100%
+        display: flex
+        display: -webkit-flex
+        border: unset
+        box-shadow: unset
+        justify-content: flex-end
+        flex-direction: row
+        -webkit-flex-direction: row
+        //margin-right: 1.5em
+
+        select
+          min-width: 10rem
+          background-color: white
+          color: black
+          border-color: #ced4da
+          box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+          border-radius: 0.25rem
+          option
+            padding: 10px
+            margin-top: 10px
+            line-height: 10px
+            
+        .dropdown
+          min-width: 10rem
+          margin-left: 1em
+          
+          button
+            display: flex
+            display: -webkit-flex
+            justify-content: space-between
+            align-items: center
+            &.gs-button__green:hover
+              background-color: unset
+
+          @include mobile
+            width: 100%
+
+    .empty
+      display: flex
+      display: -webkit-flex
+      flex-direction: column
+      -webkit-flex-direction: column
+      align-items: center
+      justify-content: center
+      background-color: #F9F9F9
+      width: 100%
+      margin-top: -1.1em
+      height: 30em
+
+      i
+        &.icon-empty
+          background-image: url(/assets/images/icon-emptydiscount.svg)
+          background-repeat: no-repeat
+          width: 100px
+          height: 100px
+          display: block
+          margin-bottom: 1em
+
+    .gs-table
+      border-top: 1px solid #EAEDF3
+      margin-top: 1em
+      .gs-table-header
+        .gs-table-header-item
+          min-width: 10%
+          &:first-child
+            min-width: 35%
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            padding: .8em
+            min-width: 10%
+            
+            &:first-child
+              display: inline-block
+              white-space: nowrap
+              text-overflow: ellipsis
+              overflow: hidden
+              min-width: 35%
+
+            &.type
+              white-space: unset
+              
+            &.active-date
+              span:nth-child(2)
+                display: none
+            span
+              &.status
+                display: inline-block
+                padding: 10px
+                border-radius: 3px
+                border: 1px solid #9EA0A5
+
+                &.expired
+                  background-color: #ECEDF1
+                &.in-progress
+                  background-color: #F1FFE2
+                &.schedule
+                  background-color: #F1F3FF
+
+            &.action
+              display: flex
+              display: -webkit-flex
+              align-items: center
+              line-height: 0
+              .content
+                display: flex
+                flex-basis: 119px
+                justify-content: end
+                padding-left: 0
+              .gs-component-tooltip
+                div
+                  padding: 1em 5px !important
+
+              i
+                background-repeat: no-repeat
+                width: 20px
+                height: 20px
+                display: block
+              
+                align-self: center
+
+                &.icon-edit
+                  background-image: url(/assets/images/icon-edit.png)
+                  margin-right: 20px
+
+                &.icon-delete
+                  background-image: url(/assets/images/icon-delete.png)
+                  
+                &.icon-stop
+                  width: 21px
+                  height: 21px
+                  background-image: url(/assets/images/icon-stop.svg)
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .discount
+    .discount-content-body
+      .top-search
+        flex-wrap: wrap
+        -webkit-flex-wrap: wrap
+        .search
+          margin-left: unset
+        .group-combobox
+          justify-content: flex-start
+          .dropdown
+            margin-left: unset
+            &:first-child
+              margin-right: 1.5em
+      .gs-table
+        .gs-table-header
+          display: none
+        .gs-table-body
+          .gs-table-body-items
+            flex-wrap: wrap
+            -webkit-flex-wrap: wrap
+            .gs-table-body-item
+              &.type,
+              &.status
+                display: none
+              &.icon
+                order: 1
+                flex-basis: 75%
+                padding-bottom: 0
+                &::before
+                  content: ""
+                  width: 10px
+                  height: 10px
+                  display: inline-block
+                  border-radius: 50%
+                  margin-right: 10px
+              &.expired::before
+                background-color: #9EA0A5
+              &.in_progress::before
+                background-color: #90CE51
+              &.scheduled::before
+                background-color: #556CE7
+              &.action
+                order: 2
+                flex-basis: 25%
+                margin-top: .5em
+                justify-content: center
+                
+                .gs-component-tooltip
+                  line-height: .3em
+              &.active-date
+                color: #9EA0A5
+                order: 3
+                padding-top: .5em
+                span:nth-child(2)
+                  display: inline-block
+                  padding-left: .3em
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .discount
+    .discount-content-body
+      .top-search
+        flex-wrap: wrap
+        -webkit-flex-wrap: wrap
+        .search
+          margin-left: unset
+        .group-combobox
+          justify-content: flex-start
+          .dropdown
+            margin-left: unset
+            &:first-child
+              margin-right: 1.5em
+              
+      .gs-table
+        .gs-table-header
+          display: none
+        .gs-table-body
+          .gs-table-body-items
+            flex-wrap: wrap
+            .gs-table-body-item
+              &.type,
+              &.status
+                display: none
+              &.icon
+                order: 1
+                flex-basis: 75%
+                padding-bottom: 0
+                &::before
+                  content: ""
+                  width: 10px
+                  height: 10px
+                  display: inline-block
+                  border-radius: 50%
+                  margin-right: 10px
+              &.expired::before
+                background-color: #9EA0A5
+              &.in_progress::before
+                background-color: #90CE51
+              &.scheduled::before
+                background-color: #556CE7
+              &.action
+                order: 2
+                flex-basis: 25%
+                margin-top: .5em
+                justify-content: center
+                .gs-component-tooltip
+                  line-height: .3em
+              &.active-date
+                color: #9EA0A5
+                order: 3
+                padding-top: .5em
+                span:nth-child(2)
+                  display: inline-block
+                  padding-left: .3em
+                  
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .discount
+    .discount-content-body
+      .top-search
+        flex-wrap: wrap
+        -webkit-flex-wrap: wrap
+        .search
+          margin-left: unset
+        .group-combobox
+          justify-content: flex-start
+          .dropdown
+            margin-left: unset
+            min-width: 6rem
+            &:first-child
+              margin-right: 1.5em
+            .dropdown-menu.show
+              min-width: 6rem
+              .dropdown-item
+                padding: 0.375rem 0.55rem
+      .gs-table
+        .gs-table-header
+          display: none
+        .gs-table-body
+          .gs-table-body-items
+            flex-wrap: wrap
+            .gs-table-body-item
+              &.type,
+              &.status
+                display: none
+              &.icon
+                order: 1
+                flex-basis: 75%
+                padding-bottom: 0
+                &::before
+                  content: ""
+                  width: 10px
+                  height: 10px
+                  display: inline-block
+                  border-radius: 50%
+                  margin-right: 10px
+              &.expired::before
+                background-color: #9EA0A5
+              &.in_progress::before
+                background-color: #90CE51
+              &.scheduled::before
+                background-color: #556CE7
+              &.action
+                order: 2
+                flex-basis: 25%
+                margin-top: .5em
+                justify-content: center
+                .gs-component-tooltip
+                  line-height: .3em
+              &.active-date
+                color: #9EA0A5
+                order: 3
+                padding-top: .5em
+                span:nth-child(2)
+                  display: inline-block
+                  padding-left: .3em
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .discount
+    .discount-content-body
+      .top-search
+        flex-wrap: wrap
+        -webkit-flex-wrap: wrap
+        .search
+          margin-left: unset
+        .group-combobox
+          justify-content: flex-start
+          .dropdown
+            margin-left: unset
+            min-width: 6rem
+            &:first-child
+              margin-right: 1.5em
+            .dropdown-menu.show
+              min-width: 6rem
+              .dropdown-item
+                padding: 0.375rem 0.55rem
+      .gs-table
+        .gs-table-header
+          display: none
+        .gs-table-body
+          .gs-table-body-items
+            flex-wrap: wrap
+            .gs-table-body-item
+              &.type,
+              &.status
+                display: none
+              &.icon
+                order: 1
+                flex-basis: 75%
+                padding-bottom: 0
+                &::before
+                  content: ""
+                  width: 10px
+                  height: 10px
+                  display: inline-block
+                  border-radius: 50%
+                  margin-right: 10px
+              &.expired::before
+                background-color: #9EA0A5
+              &.in_progress::before
+                background-color: #90CE51
+              &.scheduled::before
+                background-color: #556CE7
+              &.action
+                order: 2
+                flex-basis: 25%
+                margin-top: .5em
+                justify-content: center
+                .gs-component-tooltip
+                  line-height: .3em
+              &.active-date
+                color: #9EA0A5
+                order: 3
+                padding-top: .5em
+                span:nth-child(2)
+                  display: inline-block
+                  padding-left: .3em
+    
+@media only screen and (max-width: 476px)
+  .discount
+    .discount-header
+      .gs-atm__flex-row--flex-start
+        .gs-button
+          div
+            min-width: 130px!important
+        .uik-btn__content
+          font-size: .8rem!important

@@ -1,0 +1,48 @@
+.url-selector
+  display: flex
+  flex-direction: column
+  padding: 1em
+
+  &__title
+    color: #536be7
+    font-weight: bold
+    font-size: 1.2em
+
+  &__type
+    border-top-left-radius: 0.3em
+    border-bottom-left-radius: 0.3em
+    padding: 0.4em
+    border: 1px solid #D8D8D8
+    border-right: none
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 1) 50%)
+    cursor: pointer
+    white-space: nowrap
+
+    &:active
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 1) 50%)
+
+  &__input
+    display: flex
+    border: 1px solid #D8D8D8
+    border-top-right-radius: 0.3em
+    border-bottom-right-radius: 0.3em
+    width: 100%
+
+    &--error
+      border-color: red
+
+    &__prefix
+      background: white
+      padding: 0.4em
+
+    &__url
+      -webkit-appearance: none !important
+      border: none
+      background: white
+      padding: 0 0.4em
+      border-top-right-radius: 0.4em
+      border-bottom-right-radius: 0.4em
+      width: 100%
+
+      &:hover, &:focus
+        outline: none

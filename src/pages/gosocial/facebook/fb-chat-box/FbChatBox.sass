@@ -1,0 +1,446 @@
+.box_chat
+  flex-grow: 1
+  background: #F2F2F2
+  display: flex
+  flex-direction: column
+  position: relative
+  width: 30%
+  .chat_header
+    margin-right: 0.5rem
+    margin-left: 0.5rem
+    background-color: #FFFFFF
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 5px
+    .chat_left
+      display: flex
+      align-items: center
+      .chat_image
+        position: relative
+        padding-right: 10px
+        img
+          border-radius: 30px
+        .ignore
+          position: absolute
+          width: 10px
+          background: #92CD59
+          border: 2px solid #FFFFFF
+          height: 10px
+          border-radius: 30px
+          bottom: 0
+          right: 10px
+      .chat_name
+        .name
+          margin: 0
+          font-weight: 500
+          font-size: 15px
+        .status
+          margin: 0
+          font-size: 12px
+          line-height: 14px
+          font-weight: normal
+          color: #9B9B9B
+    .chat_right
+      display: flex
+      align-items: center
+      .btn-assign
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+        margin-right: 10px
+        .fa-xs
+          font-size: 1em
+      .dropdown-menu
+        width: 280px
+        left: -25%
+        border: 1px solid #D8DCE6
+        -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04)
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04)
+        .uik-widget-content__wrapper
+          padding: 0
+          min-height: 300px
+          position: relative
+          .search-assign-staff
+            padding: .3em .9em
+            .uik-input__input
+              padding: 7px 15px 7px 40px
+            .uik-input__input::placeholder
+              font-size: 13px
+              color: #CCCCCC
+              font-style: normal
+              font-weight: normal
+            .uik-input__iconWrapper
+              color: #7a7a7a
+          .box_list-staff
+            padding: 0 .9rem
+            height: 210px
+            overflow-x: hidden
+            overflow-y: auto
+            &::-webkit-scrollbar
+              width: 3px
+              margin-left: -30px
+            &::-webkit-scrollbar-thumb
+              background: #C4C4C4
+            .page-notFound
+              display: flex
+              justify-content: center
+              margin-top: 25%
+              p
+                font-size: 12px
+                margin-top: 10px
+            .staff-row
+              border-bottom: 1px solid #E6E6E6
+              padding: .35rem 0
+              &:last-child
+                border-bottom: none
+              .custom-control
+                margin: 0
+                .custom-control-label
+                  font-size: 13px
+                  vertical-align: middle
+                  &::before
+                    top: .1em
+                  &::after
+                    top: .1em
+
+          .box_button-assign
+            display: flex
+            justify-content: space-between
+            position: absolute
+            bottom: 0
+            width: 100%
+            padding-top: .5rem
+            border-top: 1px solid #E6E6E6
+            .gs-button
+              height: 28px
+      .icon-mail-fb
+        border-left: 1px solid #C4C4C4
+        padding-left: 10px
+  .chat_content
+    overflow-x: hidden
+    overflow-y: auto
+    position: relative
+    display: flex
+    padding: 10px
+    justify-content: flex-start
+    flex-direction: column-reverse
+    height: 100%
+    overflow-y: auto
+    width: 100%
+    &::-webkit-scrollbar
+      width: 3px
+      margin-left: -30px
+    &::-webkit-scrollbar-thumb
+      background: #4051B6
+    .messages
+      .message-time
+        width: 100%
+        max-width: 100%
+        margin-bottom: 1rem
+        display: flex
+        justify-content: center
+        font-size: 13px
+      .message-item
+        max-width: 65%
+        margin-bottom: 2rem
+        display: flex
+        .message-content
+          background-color: #FFFFFF
+          color: #000000
+          display: table
+          margin-left: auto
+          border-radius: 1rem
+          padding: .5rem
+        .message-avatar
+          margin-right: .5rem
+          .avatar
+            display: inline-block
+            margin-bottom: 0
+            border-radius: 50%
+
+      .message-item.outgoing-message
+        margin-left: auto
+        flex-direction: row-reverse
+        .message-content
+          background-color: #4051B6
+          color: #FFFFFF
+  .message-add-tag
+    display: flex
+    width: 100%
+    padding: 0
+    margin-top: 1rem
+  .chat_footer
+    position: sticky
+    bottom: 0
+    form
+      display: flex
+      display: -webkit-flex
+      align-items: center
+      -webkit-align-items: center
+      position: relative
+      .chat_form
+        padding: 2rem 6rem 2rem 0.75rem
+        border: none
+        border-radius: unset
+        &:focus
+          border-color: unset!important
+          box-shadow: none!important
+      .group_icon
+        display: flex
+        position: absolute
+        right: 0
+        margin-right: .5rem
+        img
+          width: 20px
+          height: 20px
+          margin-left: 10px
+
+    .expired
+      display: flex
+      padding: 15px
+      background-color: #E4E7F6
+
+      .text
+        padding-left: 15px
+        color: #6A6A6A
+
+.fb-chat-box
+  background-color: #F2F3F7
+  display: flex
+  flex-direction: column
+
+  .fb-chat-box__blank-page
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .fb-chat-box__title
+      text-transform: uppercase
+      font-weight: 500
+      font-size: 20px
+      margin-bottom: .5rem
+      margin-top: 70px
+
+    .fb-chat-box__sub-title
+      color: #6E6E6E
+
+    .fb-chat-box__blank-mess-wrapper
+      display: flex
+      align-items: flex-end
+      width: 100%
+      margin-top: 40px
+
+    .fb-chat-box__blank-avatar
+      width: 28px
+      height: 28px
+      border-radius: 50%
+      background-color: #E6E8F0
+
+    .fb-chat-box__triangle-left
+      width: 8px
+      height: 8px
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #E6E8F0 50%, #E6E8F0 100%)
+
+    .fb-chat-box__triangle-right
+      width: 8px
+      height: 8px
+      background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #E6E8F0 50%, #E6E8F0 100%)
+
+    .fb-chat-box__blank-mess-left
+      background-color: #E6E8F0
+      border-radius: 4px 4px 4px 0
+
+    .fb-chat-box__blank-mess-right
+      background-color: #E6E8F0
+      border-radius: 4px 4px 0 4px
+
+  .fb-chat-box__message-container
+    padding: 1rem 2rem
+    width: 100%
+    display: flex
+    flex-direction: column-reverse
+    justify-content: flex-start
+    height: 100%
+    overflow-y: auto
+
+  .fb-chat-box__message-container--blank
+    padding: 1rem 2rem
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    height: 100%
+    overflow-y: auto
+    max-width: 700px
+
+  .fb-chat-box__loading
+    .lds-ellipsis--grey
+      height: 30px
+      div
+        top: 10px
+
+  .fb-chat-box__btn-load-more
+    text-align: center
+    color: #0F5BCA
+    padding: .5rem
+    cursor: pointer
+    transition-duration: .3s
+    transition-property: background-color
+
+    &:hover
+      background-color: #fafafa
+      text-decoration: underline
+
+  .fb-chat-box__btn
+    width: 20px
+    height: 20px
+    cursor: pointer
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    display: inline-block
+    &:hover
+      opacity: .7
+
+  .fb-chat-box__header
+    background-color: white
+    height: 80px
+    border-bottom: 1px solid #EAEDF3
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 2rem
+
+  .fb-chat-box__btn-view-customer
+    background-image: url("/assets/images/icon-view-customerdetails.svg")
+
+
+  .fb-chat-box__btn-send-emoji
+    background-image: url("/assets/images/icon-attach-emotions.svg")
+
+  .fb-chat-box__btn-send-image
+    background-image: url("/assets/images/icon-attach-images.svg")
+
+  .fb-chat-box__body
+    flex: 1
+    overflow-y: auto
+    position: relative
+    overflow-x: hidden
+
+  .fb-chat-box__emoji-wrapper
+    position: absolute
+    left: -300px
+    bottom: 0
+    padding: .7rem
+    border-radius: 0 5px 0 0
+    background-color: white
+    max-width: 300px
+    border: 1px solid #E2E5ED
+    transition-duration: 200ms
+    transition-property: left
+    transition-timing-function: ease-in-out
+    z-index: 1
+
+    &--open
+      left: 0
+
+    &--close
+      left: -300px
+
+  .fb-chat-box__footer
+    background-color: white
+    height: 65px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 2rem
+
+  .fb-chat-box__input-message
+    flex: 1
+    border: none
+    width: 100%
+    font-size: 16px
+    &:focus
+      outline: none
+
+  .fb-chat-box__user-picture
+    width: 45px
+    height: 45px
+    border-radius: 50%
+
+  .fb-chat-box__send-messages-loading-bar
+    height: 3px
+    background-color: white
+    position: relative
+    border-top: 1px solid #EAEDF3
+
+  .fb-chat-box__send-messages-progress
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 0
+    background-color: #556CE7
+    transition-duration: .3s
+    transition-property: width
+    transition-timing-function: ease-in-out
+
+    &--0
+      width: 0
+      transition-duration: 0s
+
+    &--25
+      width: 25%
+
+    &--50
+      width: 50%
+
+    &--75
+      width: 75%
+
+    &--100
+      width: 100%
+
+    &--100-done
+      background-color: #3e8044
+      width: 100%
+      animation-name: fadeOut
+      animation-delay: 200ms
+      animation-duration: 200ms
+      animation-fill-mode: forwards
+
+      @keyframes fadeOut
+        0%
+          opacity: 1
+        100%
+          opacity: 0
+          width: 0
+
+
+    &--100-failed
+      background-color: #ff2000
+      width: 100%
+      animation-name: fadeOut
+      animation-delay: 500ms
+      animation-duration: 300ms
+      animation-fill-mode: forwards
+
+      @keyframes fadeOut
+        0%
+          opacity: 1
+        100%
+          opacity: 0
+
+
+  .fb-chat-box__btn-send
+    background-image: url("/assets/images/send-message.svg")
+    background-size: 50%
+    background-position: center
+    background-repeat: no-repeat
+    filter: invert(1)
+    background-color: #ff9800d1
+    width: 2rem
+    height: 2rem
+    border-radius: 50%

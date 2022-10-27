@@ -1,0 +1,283 @@
+@import "../../../../sass/style"
+@import "../../../../sass/mixins"
+
+
+
+.order-detail-page
+  .item-row-content
+    padding: 1em 0
+  .confirm-payment
+    color: #7CC834
+    border: 1px solid
+    padding: 4px 12px
+    border-radius: 3px
+  .payment-summary
+    border-bottom: 1px solid #EAEDF3
+  .payment-history
+    .payable-successfully
+
+    .img-check-payment
+      position: relative
+      div
+        position: absolute
+        width: 1.5px
+        height: 27px
+        background: #3F51B5
+        bottom: -24px
+        left: 6px
+
+
+    .title
+      font-weight: 600
+      font-size: .9rem
+    .payment-history-line:before
+      content: ''
+      position: absolute
+      width: 1.5px
+      height: 203px
+      background: #3F51B5
+      left: 6px
+    .payment-history-line
+      position: relative
+    .payment-history-column
+      .payment-history-note
+        display: flex
+        flex-direction: column
+        .title
+          margin-bottom: 5px
+          font-weight: bold
+          font-size: 1.1rem
+          margin-left: 19px
+        .description
+          margin-left: 19px
+          width: 65%
+          font-size: 13px
+          font-weight: 500
+          height: 60px
+          margin-bottom: 0
+          overflow: auto
+
+
+
+      .row
+        p
+          font-size: 13px
+          font-weight: 500
+        p:first-child
+          width: 145px
+          margin-left: 19px
+  .gs-widget__header.paymentSummary
+    h3
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+  .gs-widget__header
+    h3
+      font-weight: 600
+  .dropdown-print__button
+    left: 15px !important
+
+    .dropdown-print__button-group
+      display: flex !important
+      flex-direction: column
+
+      span
+        padding: 0px 10px
+        color: #939393
+        cursor: pointer
+
+        &:hover
+          opacity: 0.7
+
+      .shipping-label
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+        padding-bottom: 0.5rem
+
+      .order-receipt
+        padding-top: 0.5rem
+
+  .order-information__left-label
+    color: $color-frm-label
+    font-weight: bold
+    line-height: 2em
+    padding-right: 1em
+    white-space: nowrap
+    margin-bottom: 5px
+    @extend .col-xl-4, .col-lg-6, .col-sm-6, .col-12
+
+  .order-information__right-value
+    align-self: center
+    font-weight: 500
+    color: #3b3b3b
+    @extend .col-xl-8, .col-lg-6, .col-sm-6, .col-12
+
+  .order-information_email
+    word-break: break-all
+
+  .order-items__detail
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+    padding: 0 1em
+
+    &.order-items__detail-header
+      .order-items__paid
+        font-size: 1rem
+        border-width: 1px
+        padding: 3px 1em
+
+    .order-items__table
+      tr
+        &:last-child
+          //font-weight: bold
+          color: black
+          td
+            color: black  !important
+
+        td
+          text-align: right
+          min-width: 6em
+
+          &:first-child
+            font-size: 16px
+            line-height: 2em
+            padding-right: 1em
+            text-align: right
+          .shipping-fee-original
+            text-decoration: line-through
+            margin-right: 5px
+
+    .order-items__paid
+      padding: 5px
+      font-size: 1.5em
+      border: 2px dashed
+
+    .order-items__paid-status-unpaid
+      color: #ff5500
+      border-color: #ff5500
+
+    .order-items__paid-status-paid
+      color: green
+      border-color: green
+
+  .order__table, .order-info-sm
+    .order-info-sm--group
+      @extend .order-table-info
+
+      .order-information__left-label, td
+        @extend .order-table-info
+        min-width: 6em
+        word-break: break-word
+        color: $color-frm-label
+        font-weight: bold
+        line-height: 2em
+        padding-right: 1em
+        white-space: nowrap
+
+      .order-information__right-value
+        @extend .order-table-info
+
+  //&:first-child
+  //  color: $color-frm-label
+  //  font-weight: bold
+  //  line-height: 2em
+  //  padding-right: 1em
+  //  white-space: nowrap
+
+  .buyer-cancel
+    .gs-widget__content
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-weight: bold
+      color: red
+
+      .buyer-cancel__btn-container
+        display: flex
+        .uik-btn__base, .btn-outline-secondary
+          height: 2em
+
+        .btn-outline-secondary
+          padding: 0px
+
+  .return-order-list
+    max-height: 50vh
+    overflow-x: auto
+//Buton order
+#btn-readyToShip
+  order: 0
+#btn-print
+  order: 1
+#btn-cancelOrder
+  order: 2
+
+.order-table-info
+  @extend .d-lg-flex, .d-block
+
+@include mobile
+  .order-detail-page .row
+    display: block
+    margin-bottom: 1em
+    >div
+      padding: 0
+
+    .order-items__detail
+      .order-items__table
+        width: 100%
+
+        tr
+          td:first-child
+            text-align: left
+  .order-info-sm
+    .order-info-sm--group
+      margin-bottom: 1em
+
+  //Buton order
+  #btn-readyToShip
+    order: 0
+  #btn-print
+    order: 2
+  #btn-cancelOrder
+    order: 1
+
+@include lg
+  .order-detail-page
+    .payment-history
+      .payable-successfully
+        text-overflow: ellipsis
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+        display: -webkit-box
+        overflow: hidden
+        max-width: 300px
+
+
+@include mobile
+  .order-detail-page
+    .payment-history
+      .payment-history-column
+        .payment-history-note
+          .description
+            width: 85%
+  .payment-history-date
+    margin-left: 20px
+  .payment-history
+    .img-check-payment
+      div
+        height: 65px !important
+        bottom: -60px !important
+    .payment-history-line:before
+      height: 245px !important
+@include mobile-m
+  .order-detail-page
+    .payment-history
+      .payable-successfully
+        text-overflow: ellipsis
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+        display: -webkit-box
+        overflow: hidden
+        max-width: 300px
+

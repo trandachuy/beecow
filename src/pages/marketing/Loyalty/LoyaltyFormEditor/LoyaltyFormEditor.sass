@@ -1,0 +1,111 @@
+@import "../../../../../sass/mixins"
+.loyalty-form
+    .page-toolbar
+        .gs-atm__flex-row--flex-start
+            justify-content: space-between
+            .group-btn
+                display: flex
+                display: -webkit-flex
+    .gs-page-content
+        .group-input
+            display: flex
+            display: -webkit-flex
+            flex-direction: row
+            -webkit-flex-direction: row
+            -webkit-flex-wrap: wrap
+
+            label
+                color: #939393
+                text-transform: uppercase
+                font-weight: bold
+                font-size: 0.875em
+                flex-basis: 100%
+            span
+                color: #9EA0A5
+                font-weight: 100
+                font-size: .875em
+            .tier-name
+                flex-basis: 50%
+                -webkit-flex-basis: 50%
+                padding-right: 1em
+
+                @include mobile
+                    flex-basis: 100%
+                .form-group
+                    display: flex
+                    display: -webkit-flex
+                    flex-direction: column
+                    -webkiet-flex-direction: column
+                    &:nth-child(2)
+                        flex-direction: row
+                        flex-wrap: wrap
+                    span
+                        &.segment-add
+                            font-size: .875rem
+                            flex-basis: 100%
+                        .gs-fake-link
+                            width: fit-content
+                            color: #5570E2
+                            font-size: .875rem
+                        &.error-segment
+                            color: red
+            .image
+                flex-basis: 50%
+                -webkit-flex-basis: 50%
+                display: flex
+                display: -webkit-flex
+                flex-direction: column
+                -webkit-flex-direction: column
+                @include mobile
+                    flex-basis: 100%
+                    margin-top: 1rem
+                    margin-bottom: 1rem
+                .image-upload
+                    margin-top: 0.5rem
+                    margin-bottom: 0.5rem
+                    display: flex
+                    display: -webkit-flex
+
+                    .image-thumnail
+                        align-self: center
+                        margin-left: 1em
+                        span
+                            vertical-align: middle
+                            line-height: 50%
+                            padding-left: .5em
+                            font-size: 1em
+
+                    @include mobile
+                        flex-direction: column
+
+                        .image-thumnail
+                            margin-top: .5rem
+
+                img
+                    width: fit-content
+                    max-width: 64px
+                    height: fit-content
+                    max-height: 64px
+
+                    @include mobile
+                        margin: 0 auto
+
+
+            .description
+                display: flex
+                display: -webkit-flex
+                -webkit-flex-direction: column
+                flex-direction: column
+                flex-basis: 100%
+                -webkit-flex-basis: 100%
+    .benefit
+        .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) .uik-checkbox__label:before
+            border: 1px solid #ced4da
+        .custom-check-box
+            .uik-checkbox__label
+                color: #939393
+                text-transform: uppercase
+                font-weight: bold
+                font-size: 0.8rem
+        .max-amount-description
+            color: #939393

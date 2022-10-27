@@ -1,0 +1,1140 @@
+@import "~bootstrap/scss/bootstrap"
+@import "~bootstrap-daterangepicker/daterangepicker.css"
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@import './gsvariables'
+@import './animations'
+@import './ui/gs'
+
+@font-face
+  font-family: Roboto
+  src: url("/assets/fonts/Roboto-Regular.ttf")
+  font-weight: normal
+
+@font-face
+  font-family: Roboto
+  src: url("/assets/fonts/Roboto-Medium.ttf")
+  font-weight: 500
+
+@font-face
+  font-family: Roboto
+  src: url("/assets/fonts/Roboto-Bold.ttf")
+  font-weight: bold
+
+body
+  font-family: Roboto
+  font-size: 14px
+
+
+// REFACTOR BOOTSTRAP TO TAKE A SAME WITH UIKIT
+
+.btn
+  min-width: 6em
+  font-size: 0.875rem
+  height: 38px
+  webkit-box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+  box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+
+  &:focus
+    box-shadow: unset !important
+
+.btn-outline-secondary
+  border: 1px solid #6c757d
+  webkit-box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+  box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+
+  &:hover
+    background-image: linear-gradient(0deg, #6c757d 2%, #697179 100%) !important
+    border: 1px solid #6c757d !important
+
+.btn-warning
+  color: #fff
+  border: 1px solid #FF8E21
+  background-image: linear-gradient(0deg, #FF8D00 0%, #ff961a 100%)
+
+  &:hover
+    color: #fff
+    background-image: linear-gradient(0deg, #fc8f00 0%, #f89d00 100%) !important
+    border: 1px solid #FF8E21 !important
+
+
+.btn-success
+  color: #fff
+  background-image: linear-gradient(0deg, #34AA44 0%, #38B249 100%)
+  border: 1px solid #2D9C3C
+  webkit-box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+  box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+
+  &:hover
+    background-image: linear-gradient(0deg, #2CA13C 2%, #2FAE40 100%) !important
+    border: 1px solid #259835 !important
+
+.btn-success:not(:disabled):not(.disabled):hover,
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle
+  color: #fff
+  background-color: #90ce51
+  border-color: #90ce51
+
+.form-control.is-invalid
+  background-image: unset
+
+
+
+.uik-btn__base
+  min-width: 6em
+
+.fade:not(.show)
+  opacity: 0
+  display: flex !important
+  align-items: center
+
+.modal-mw-500px
+  .modal-content
+    min-width: 500px !important
+
+.modal-mw-400px
+  .modal-content
+    min-width: 400px !important
+
+.model-mw-300px
+  .modal-content
+    min-width: 300px !important
+
+.modal-dialog
+  @include mobile
+    width: 100vw
+  .modal-content
+    border: none
+    min-width: 300px
+    width: fit-content
+    margin: 0px auto
+    @include mobile
+      width: 100%
+
+    .modal-header
+      //background: unset !important
+      border-bottom: unset !important
+      padding-bottom: 0px !important
+
+      .modal-title
+        width: 100%
+        text-align: center
+        font-weight: bold
+
+    .modal-header.modal-success
+      color: #28a745 !important
+    //background-color: #28a745
+    //border-color: #28a745
+    .modal-header.modal-warning
+      color: #ffc107 !important
+    //background-color: #ffc107
+    //border-color: #ffc107
+    .modal-header.modal-danger
+      color: #dc3545 !important
+    //background-color: #dc3545
+    //border-color: #dc3545
+    .modal-header.modal-info
+      color: #17a2b8 !important
+    //background-color: #17a2b8
+    //border-color: #17a2b8
+
+
+    .modal-body
+      font-size: 1.15em
+      text-align: center
+      padding-bottom: 1.5em
+
+    .modal-footer
+      padding-top: 0px !important
+      display: flex
+      justify-content: center
+      border-top: unset !important
+
+      .btn-outline-secondary.btn-secondary
+        background-color: initial !important
+
+.form-group
+  label:first-child
+    @extend .gs-frm-control__title
+
+
+// tooltips
+.tippy-popper
+
+  @include mobile
+    width: 100%
+    max-width: unset
+    transform: unset !important
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.15)
+    position: fixed !important
+    animation-name: fade-in
+    animation-timing-function: ease-in-out
+    animation-duration: .3s
+
+
+  .tippy-tooltip
+
+    @include mobile
+      transform: unset !important
+      border-radius: 0 !important
+      width: 100%
+      bottom: 0
+      top: unset !important
+      position: absolute
+      height: fit-content
+      padding: 1em
+
+  .arrow-regular
+    @include mobile
+      display: none
+
+.Toastify__toast
+  min-height: unset
+  border-radius: 4px
+  padding: .5em 1em
+  align-items: center
+  color: black
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+  font-size: .8em
+  background-color: white
+
+.Toastify__toast-body
+  //text-align: center
+  font-size: 1rem
+  margin-left: 1em
+
+  @include mobile
+    padding-top: 1rem
+    padding-bottom: 1rem
+
+.Toastify__close-button
+  align-self: unset
+  margin-left: 1em
+  color: gray
+
+.Toastify__toast-container
+  transform: translateX(-50%)
+  width: unset
+  margin-left: unset
+
+  @include mobile
+    transform: unset !important
+    width: 100%
+    //bottom: unset
+    //top: 0
+
+
+.Toastify__toast--default
+  //color: black
+
+.Toastify__toast--success
+
+  &:before
+    content: '✔'
+    color: white
+    width: 1.5em
+    font-size: 1.2em
+    height: 1.5em
+    border-radius: 50%
+    border: 1px solid #52c41a
+    background-color: #52c41a
+    display: flex
+    justify-content: center
+    align-items: center
+
+.Toastify__toast--error
+
+  &:before
+    content: '✘'
+    color: white
+    width: 1.5em
+    font-size: 1.2em
+    height: 1.5em
+    border-radius: 50%
+    background-color: #f5222d
+    display: flex
+    justify-content: center
+    align-items: center
+
+.Toastify__toast--warning
+
+  &:before
+    content: '✘'
+    color: white
+    width: 1.5em
+    font-size: 1.2em
+    height: 1.5em
+    border-radius: 50%
+    background-color: #f1c40f
+    display: flex
+    justify-content: center
+    align-items: center
+  .Toastify__close-button--warning
+    display: none !important
+
+
+@page
+  size: a4 !important
+
+@media print
+  @page
+    margin: 0
+    size: a4 !important
+
+  body
+    min-width: 100% !important
+
+  .order-detail-page
+    margin-top: 30px
+  .layout-top-bar
+    display: none !important
+
+  .gs-atm__scrollbar-1
+    display: none !important
+
+  .btn-print
+    display: none !important
+
+  .layout-body
+    overflow-y: hidden !important
+
+
+// bootstraps
+.row
+  margin-right: unset
+  margin-left: unset
+
+//.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto
+//  padding-left: unset
+//  padding-right: unset
+
+// firefox
+.uik-select__arrowWrapper
+  height: unset !important
+
+
+.gs-frm-radio
+
+    .custom-control-label
+      cursor: pointer
+
+    .custom-control-input:checked ~ .custom-control-label::before
+      border-color: #38B249
+      background-color: #ffffff
+
+    .custom-radio .custom-control-input:checked ~ .custom-control-label::after
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'> <circle r='4' fill='rgb(56,178,73)' /> </svg>")
+
+    margin-bottom: unset
+
+.d-mobile-none
+  @extend .d-none
+  @extend .d-sm-none
+  
+.d-mobile-block
+  @extend .d-block
+  @extend .d-sm-block
+  
+.d-mobile-flex
+  @extend .d-flex
+  @extend .d-sm-flex
+    
+.d-mobile-inline
+  @extend .d-inline
+  @extend .d-sm-inline
+      
+.d-mobile-inline-block
+  @extend .d-inline-block
+  @extend .d-sm-inline-block
+  
+.d-mobile-inline-flex
+  @extend .d-inline-flex
+  @extend .d-sm-inline-flex
+
+
+
+.d-desktop-none
+  @extend .d-md-none
+  @extend .d-lg-none
+  @extend .d-xl-none
+
+.d-desktop-block
+  @extend .d-md-block
+  @extend .d-lg-block
+  @extend .d-xl-block
+
+.d-desktop-flex
+  @extend .d-md-flex
+  @extend .d-lg-flex
+  @extend .d-xl-flex
+  
+.d-desktop-inline
+  @extend .d-md-inline
+  @extend .d-lg-inline
+  @extend .d-xl-inline
+
+    
+.d-desktop-inline-block
+  @extend .d-md-inline-block
+  @extend .d-lg-inline-block
+  @extend .d-xl-inline-block
+
+    
+.d-desktop-inline-flex
+  @extend .d-md-inline-flex
+  @extend .d-lg-inline-flex
+  @extend .d-xl-inline-flex 
+  
+.d-desktop-table
+  width: 100%
+  @extend .d-md-table
+  @extend .d-lg-table
+  @extend .d-xl-table
+
+.d-desktop-exclude-tablet-none
+  @extend .d-lg-none
+  @extend .d-xl-none
+
+.d-desktop-exclude-tablet-block
+  @extend .d-lg-block
+  @extend .d-xl-block
+
+.d-desktop-exclude-tablet-flex
+  @extend .d-lg-flex
+  @extend .d-xl-flex
+  
+.d-desktop-exclude-tablet-inline
+  @extend .d-lg-inline
+  @extend .d-xl-inline
+
+    
+.d-desktop-exclude-tablet-inline-block
+  @extend .d-lg-inline-block
+  @extend .d-xl-inline-block
+
+    
+.d-desktop-exclude-tablet-inline-flex
+  @extend .d-lg-inline-flex
+  @extend .d-xl-inline-flex
+
+
+.d-tablet-none
+  @extend .d-md-none
+
+.d-tablet-block
+  @extend .d-md-block
+
+.d-tablet-flex
+  @extend .d-md-flex
+
+.d-tablet-inline
+  @extend .d-md-inline
+
+
+.d-tablet-inline-block
+  @extend .d-md-inline-block
+
+
+.d-tablet-inline-flex
+  @extend .d-md-inline-flex
+
+
+@include desktop
+  .gs-page-content
+    .sticky
+      display: none !important
+
+@include mobile
+  .gss-content-header
+    .sticky
+      display: none !important
+  .btn-none-pdlr
+    padding: 0.4rem 0 !important
+  .gs-page-container-max
+    will-change: auto !important
+    .widget__content-none-pdl
+      padding: 1.5rem 0
+    .widget__content-little-pdl
+      padding: 1.5rem 0.9rem
+  .gs-page-content
+    .sticky
+      position: sticky
+      position: -webkit-sticky // for safari browser
+      text-align: right
+      padding: 0.3rem 0.4rem
+      background-color: #F2F2F2
+      z-index: 1040 // show below modal
+      top: 0
+      float: none
+
+.cursor
+  &--pointer
+    cursor: pointer
+
+  &--default
+    cursor: default
+
+// fix check box is broken when label is too long
+.uik-checkbox__wrapper
+  .uik-checkbox__label
+    &:before
+      flex-shrink: 0
+
+.uik-widget-table__wrapper
+  border-top: 1px solid #EAEDF3
+
+
+.gs-search-box__wrapper
+  input
+    padding: 8px 15px 8px 40px !important
+    max-width: 235px
+    @include mobile
+      width: 100%
+      max-width: unset
+
+.text-decoration-line-through
+  text-decoration: line-through
+
+.text-decoration-underline
+  text-decoration: underline
+
+.color-gray
+  color: #939393
+
+.color-lightgray
+  color: lightgray
+
+.color-green
+  color: #28a745
+
+.color-blue
+  color: #2196f3
+
+.color-red
+  color: #dc3545
+
+.background-color-lightgray
+  background-color: lightgray
+
+
+.bg-color-gray
+  background-color: #939393
+
+.bg-light-gray
+  background: #F3F3F3
+
+.bg-bright-gray
+  background: #EFEFEF
+.bg-lotion
+  background: #FBFBFB
+
+.bg-light-white
+  background: #F9F9F9
+
+.bg-light-gray-while
+    background: #FBFAFA
+
+.font-size-12px
+  font-size: 12px !important
+
+.font-size-14px
+  font-size: 14px !important
+
+.font-size-16px
+  font-size: 16px !important
+
+.font-size-1rem
+  font-size: 1rem !important
+
+.font-size-1_5rem
+  font-size: 1.5rem !important
+
+.font-size-1_1rem
+  font-size: 1.1rem !important
+
+.font-size-1_2rem
+  font-size: 1.2rem !important
+
+.font-size-1_3rem
+  font-size: 1.3rem !important
+
+.font-size-1_4rem
+  font-size: 1.4rem !important
+
+.font-size-2rem
+  font-size: 2rem !important
+
+.font-size-3rem
+  font-size: 3rem !important
+
+.font-size-4rem
+  font-size: 4rem !important
+  
+.font-size-_5rem
+  font-size: .5rem !important
+
+.font-size-_6rem
+  font-size: .6rem !important
+
+.font-size-_7rem
+  font-size: .7rem !important
+
+.font-size-_8rem
+  font-size: .8rem !important
+
+.font-size-_9rem
+  font-size: .9rem !important
+
+.font-size-1em
+  font-size: 1em !important
+
+.font-size-1_5em
+  font-size: 1.5em !important
+
+.font-size-2em
+  font-size: 2em !important
+
+.font-size-3em
+  font-size: 3em !important
+
+.font-size-4em
+  font-size: 4em !important
+
+.font-size-_5em
+  font-size: .5em !important
+
+.font-size-_8em
+  font-size: .8em !important
+
+.font-size-_9em
+  font-size: .9em !important
+
+.font-style-italic
+  font-style: italic!important
+
+.pointer
+  cursor: pointer
+
+.custom-control-input:checked ~ .custom-control-label::before
+  background-color: rgb(56, 178, 73)
+  border-color: rgb(80, 178, 29)
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before
+  background-color: rgba(56, 178, 73, 0.2)
+
+.uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) .uik-checkbox__checkbox:checked + .uik-checkbox__label.blue:before
+  background-color: rgb(56, 178, 73)
+  border-color: rgb(80, 178, 29)
+
+.custom-control-label
+  cursor: pointer
+
+.vertical-align-baseline
+  vertical-align: baseline !important
+
+.vertical-align-middle
+  vertical-align: middle
+
+.font-weight-500
+  font-weight: 500
+
+.clear-up-down-btn::-webkit-outer-spin-button, .clear-up-down-btn::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+  -moz-appearance: textfield
+
+.stepper-none::-webkit-outer-spin-button, .stepper-none::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+  -moz-appearance: textfield
+
+.background-color-lightgray2
+  background-color: #f9f9f9
+
+.left-0
+  left: 0
+
+.right-0
+  right: 0
+
+
+.background-color-white
+  background-color: white
+
+.text-black-100
+  color: #000000 !important
+
+.uik-btn__content
+  width: 100%
+
+  .uik-select__valueWrapper
+    overflow: hidden
+    text-overflow: ellipsis !important
+    max-width: 100% !important
+
+.link-not-active
+  pointer-events: none
+  cursor: not-allowed
+  text-decoration: none
+  color: #939393
+
+.not-allowed
+  cursor: not-allowed
+
+.text-medium
+  font-size: .8rem
+
+.disable-link 
+  color: #1E69D5
+  opacity: 50%
+
+.daterangepicker
+  .calendar-time
+    margin-top: .3rem
+    .hourselect, .minuteselect
+      display: inline !important
+      @extend .form-control
+      background-color: white !important
+      cursor: pointer
+      width: 47px
+      padding: 2px 5px
+      font-size: 13px !important
+      font-weight: bold
+      position: absolute
+      top: 3px
+      height: 23px
+
+    .minuteselect
+      right: calc(50% - 55px)
+
+    .hourselect
+      left: calc(50% - 55px)
+
+.modal.fade.show
+  display: flex!important
+  align-items: center
+
+.dropdown
+  button
+    &.btn.btn-secondary
+      width: 100%
+      background-color: white !important
+      text-align: left
+      color: black
+      border: 1px solid #ced4da !important
+      vertical-align: middle
+    &:active
+      background-color: inherit!important
+      color: #495057!important
+
+  @include mobile
+    padding: 0 0 1rem 0
+
+
+  .step__bar
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 0 1.5em
+
+    .step
+      border-radius: 50%
+      background: #CDCED2
+      color: white
+      width: 2.5em
+      height: 2.5em
+      font-size: 1rem
+      display: flex
+      justify-content: center
+      align-items: center
+      transition-duration: .3s
+
+      &_1
+        &--active
+          background: $step1-color
+          cursor: pointer
+
+          &:hover
+            background: $step1-color-hover
+
+      &_2
+        &--active
+          background: $step1-color
+          cursor: pointer
+
+          &:hover
+            background: $step1-color-hover
+
+
+
+
+      &__progress
+        height: 3px
+        background: #CDCED2
+        flex-grow: 1
+        position: relative
+
+        &--active
+
+          &:before
+            content: ""
+            height: 3px
+            background-color: #54B1FB
+            position: absolute
+            top: 0px
+            left: 0px
+            width: 100%
+            animation-name: toRight
+            animation-duration: .3s
+            animation-timing-function: ease-in
+
+          @keyframes toRight
+            0%
+              width: 0%
+            100%
+              width: 100%
+
+  .step__text
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: .6em
+
+    .step__label
+      text-align: center
+      padding: .2em
+      min-width: 6em
+      border: 1px solid #CDCED2
+      border-radius: 3px
+      color: #CDCED2
+
+      &_1
+        &--active
+          border: 1px solid $step1-color
+          border-radius: 3px
+          color: $step1-color
+
+      &_2
+        &--active
+          border: 1px solid $step1-color
+          border-radius: 3px
+          color: $step1-color
+
+.image-widget__image-item
+  position: relative
+  border: 2px solid #e2e2e2
+  margin: 5px
+
+  &--no-border
+    border: unset
+
+  &--main
+    border: 2px solid #33b5e5 !important
+.image-widget__container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.image-widget__main-cover
+  color: white
+  text-align: center
+  bottom: -1px
+  position: absolute
+  width: 100%
+  background-color: #3232328f
+  font-size: 0.8em
+  font-weight: bold
+  padding: 0.5em 0em
+
+.image-widget__set-main-cover
+  position: absolute
+  width: 100%
+  top: 0px
+  left: 0px
+  height: 100%
+  background-color: rgba(161,161,161,0.35)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 20px
+
+
+.image-widget__btn-set-main
+  padding: 0px
+  height: 25px
+  color: white
+  font-weight: bold
+  transition: 0.3s
+  background-color: #3232328f !important
+  border-radius: 0px
+  z-index: 1
+  transition-duration: 0.3s
+  cursor: pointer
+
+  &:hover
+    background-color: rgba(1, 184, 72, 0.35)
+
+
+.image-widget__btn-remove
+  position: absolute
+  right: 0.2em
+  top: 0.2em
+  font-size: 1em
+  color: #a1a1a1 !important
+  cursor: pointer
+  z-index: 2
+  transition-duration: 0.3s
+
+  &:hover
+    color: #cf1200 !important
+
+
+.image-drop-zone
+  width: 100%
+  height: 200px
+  border: 2px dashed #e2e2e2
+  color: #B6B6B6
+
+  &:hover
+    background-color: rgba(243, 243, 243, 0.43)
+
+  &__icon
+    font-size: 2em
+
+  p
+    text-align: center
+    font-weight: bold
+
+
+  section
+    height: 100%
+    cursor: pointer
+
+    div
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+.palette
+  display: flex
+  flex: 1
+  flex-direction: column
+  cursor: pointer
+
+.palette__row
+  display: flex
+  flex: 1
+  flex-direction: row
+
+.palette__col
+  width: 73px
+  height: 73px
+  //border-radius: 10px
+  position: relative
+  margin: 2px
+
+.palette__col span.hidden
+  display: none
+
+.palette__col span
+  color: green
+  position: absolute
+  right: 5px
+  bottom: 2px
+  font-size: 20px
+
+.text-normal
+  text-transform: none
+
+
+.online-payment
+  .bank-transfer
+
+  .online-payment__selector
+    flex-grow: 1
+
+    .uik-form-input-group__horizontal
+      justify-content: flex-start
+      @include mobile
+        flex-wrap: nowrap
+        flex-direction: column
+
+      img
+        //width: 60px
+        height: 40px
+        margin-right: 30px
+
+        //&.zalo
+        //  width: 100px
+        //&.momo
+        //  width: auto
+
+        @include mobile
+          //width: 40px
+          height: 25px
+          margin-right: 15px
+          &.zalo
+            max-width: 65px
+
+      .uik-checkbox__wrapper
+        flex: unset !important
+
+      .uik-checkbox__label
+        display: flex
+        align-items: center
+
+
+        &:after
+          top: unset
+
+.shopee-select-sync-product-modal
+  max-width: unset !important
+
+  .product-list
+    overflow-y: scroll
+    height: 50vh
+    margin: 1em 0
+    position: relative
+
+  .modal-content
+    min-width: 50%!important
+    width: 50em!important
+    max-width: 95%!important
+
+  .modal-header
+    h5
+      font-size: 1.1rem
+      text-align: left !important
+
+    .gs-widget__header-sub-title
+      color: #939393
+
+  .loading-product
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  button, .uik-btn__base
+    min-width: 10em
+
+  .spinner-border
+    position: absolute
+    right: 10px
+    top: 11px
+    width: 1.3em
+    height: 1.3em
+    color: #dadada !important
+
+.gs-modal-fullscreen-mobile__body
+  .filter-modal-wrapper
+    padding: 0 1rem
+
+
+input[type="date"]::-webkit-calendar-picker-indicator, input[type="month"]::-webkit-calendar-picker-indicator
+  cursor: pointer
+  filter: opacity(.5)
+
+.table-header-fix
+  margin: 0
+  padding: 0
+
+  table
+    width: 100%
+    display: block
+    empty-cells: show
+
+    tr
+      width: 100%
+      display: flex
+      align-items: center
+
+      td, th
+        flex: 1 0 25%
+        display: block
+        border: none
+
+      th
+        padding: 15px 15px
+
+      td
+        height: fit-content
+
+    thead,
+    tbody,
+    tfoot
+      position: relative
+      display: block
+      width: 100%
+
+    tbody
+      overflow: auto
+
+      &::-webkit-scrollbar
+        width: 5px
+
+      &::-webkit-scrollbar-thumb
+        background: #C4C4C4
+
+      tr
+        border-bottom: 1px solid #EAEDF3
+
+        &:first-child
+          border-top: 1px solid #dee2e6
+
+.error
+  color: #dc3545
+  font-size: 11px
+  display: block
+  margin-top: 6px
+.error-input
+  border: 1px solid #dc3545
+
+.modal-v2
+  .modal-header
+    background-color: #F8F8F8
+    padding: 11px 17px !important
+
+    .modal-title
+      text-align: left !important
+      font-weight: 500
+      font-size: 18px
+      color: black
+
+  .modal-body
+    //border-bottom: 1px solid #DDE0E9 !important
+    text-align: left !important
+
+  .modal-footer-with-border
+    border-top: 1px solid #DDE0E9 !important
+
+    //justify-content: flex-end !important
+    //padding: 16px 15px !important
+    //
+    //button:first-child
+    //  margin-right: 8px !important
+  @include mobile
+    width: calc(100vw - 1rem) !important
+
+.overflow-unset
+  overflow: unset !important
+
+.cursor-na
+  cursor: no-drop
+.w-25
+  width: 25%
+.w-30 
+  width: 30%
+.w-45
+  width: 45%
+.scrollbar-gray
+  display: none !important

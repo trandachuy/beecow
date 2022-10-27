@@ -1,0 +1,194 @@
+@import "../../../../sass/mixins"
+.headerRightElWrapper
+  display: flex
+  justify-content: flex-end
+  align-items: center
+
+
+
+.basicInfoWidget
+  display: flex
+  padding-top: 0 !important
+  padding-bottom: 0 !important
+  @include mobile-lg
+    flex-wrap: wrap
+
+  .basicInfoColLeft
+    border-right: 1px solid #d6d7dd
+
+    @include mobile-lg
+      flex-wrap: wrap
+      flex: 1
+      border: none
+      padding-top: 2rem
+
+  .basicInfoColRight
+    flex-grow: 1
+    animation: fadeIn .3s
+
+    @keyframes fadeIn
+      0%
+        opacity: 0
+      100%
+        opacity: 1
+
+  .basicInfoContentWrapper
+    padding: 50px 20px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    &:last-child
+      @include mobile
+        padding-bottom: 0
+        padding-top: 0
+
+
+
+
+  .basicInfoAvatar
+    width: 12em
+    height: 12em
+    border-radius: 50%
+
+    .textAvatar
+      width: 100%
+      height: 100%
+      background-color: #ECEDF1
+      color: #9EA0A5
+      font-size: 3em
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+
+
+
+
+  .basicInfoMemberSinceFromWrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 1em
+
+    .memberFrom
+      color: #9EA0A5
+      margin-top: .3em
+
+    .tagLazada
+      color: #183546
+
+    .tagShopee
+      color: #ff4848
+
+    .tagGosell
+      color: #1665D8
+
+    .tagBeecow
+      color: #201f57
+
+  .statisticWrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    .statisticItem
+      display: flex
+      justify-content: space-between
+      margin-bottom: .7em
+
+      &:last-child
+        margin-bottom: 0
+
+      .statisticLeftCol
+        color: #9EA0A5
+        display: flex
+        align-items: center
+
+      .statisticRightCol
+        .form-group
+          margin-bottom: 0 !important
+
+      .totalOrder
+        background-color: #FACF55
+        border-radius: 2px
+        color: white
+        text-align: center
+        padding: 2px .5em 1px .5em
+
+    .confirmPayment
+      display: flex
+      justify-content: flex-end
+
+
+  .form
+    width: 100%
+
+    .gsTag
+      margin-bottom: 1rem
+      max-width: fit-content
+      min-width: 100%
+
+.orderNotificationWrapper
+
+  .orderStatusTag
+    font-weight: normal
+
+.optionItemSelect
+    padding: 0.3rem
+    border-bottom: #c2c2c2 1px solid
+    display: flex
+    &:last-child
+      border: none
+    &:hover
+      background: #c2c2c2
+    span
+      color: #9EA0A5
+    i.optionIconPlus
+      width: 15px
+      height: 15px
+      display: block
+      background-repeat: no-repeat
+      background-position: center
+      margin-right: 5px
+      margin-top: 3px
+      background-image: url('/assets/images/icon-add-circle.png')
+      background-size: cover
+.tagsListView
+  display: flex
+  -webkit-flex-wrap: wrap
+  .tagsItem
+    font-size: 1.3em
+    margin: 0.2em
+    display: flex
+    .tagsItemText
+      background: #E2EEFE
+      padding: 0.3rem 0.8rem 0.3rem 0.8rem
+      text-align: center
+      word-break: break-word
+    .tagsItemIconDelete
+      color: #216DDA
+      background: #BFD7FA
+      text-align: center
+      padding: 0.3rem 0.8rem 0.3rem 0.8rem
+.groupInputTags
+  position: relative
+  display: contents
+  .tagsPopup
+    width: 15px
+    height: 15px
+    display: block
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url('/assets/images/icon-externallink-productdetail.svg')
+    background-size: cover
+    position: absolute
+    right: 0
+    bottom: 0
+

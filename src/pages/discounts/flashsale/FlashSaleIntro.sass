@@ -1,0 +1,64 @@
+.gs-flash-sale-intro
+  &__margin-top
+    margin-top: 5rem
+  &__title
+    font-size: clamp(1.8rem, 2vh, 2.5rem)
+    margin-bottom: 1.2rem
+    font-weight: 500
+  &__description
+    font-size: clamp(1rem, 2vh, 1.5rem)
+    margin-bottom: 1.2rem
+    color: #3e3f42
+    max-width: 90%
+  &__benefit-list
+    ul
+      list-style: url("/assets/images/buylink/icon_buy_link.svg")
+      margin-left: 2rem
+      li
+        padding-bottom: 1rem
+        padding-left: .5rem
+  &__background
+    background-image: url("/assets/images/flash-sale/flashsale_introduction.png")
+    height: 140%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    margin-bottom: 1rem
+  &__display-flex-col
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: space-between
+  &__learn-more
+    width: 20rem
+    justify-content: center
+    margin: auto
+  &__btn-explore
+    font-size: 2rem
+    width: 16rem
+    height: 4rem
+    &.gs-atm--disable
+      background-color: #6d6a6a
+  &__right-col
+    display: flex
+    justify-items: baseline
+    img
+      width: 100%
+      margin: auto
+      transform: translateY(10%)
+
+@media screen and (max-width: 992px)
+  .gs-flash-sale-intro
+    &__margin-top
+      margin-top: 0
+
+@media screen and (max-width: 768px)
+  .gs-flash-sale-intro
+    &__title
+      font-size: clamp(1.5rem, 2vh, 2rem)
+    &__description
+      font-size: clamp(.8rem, 2vh, 1rem)
+    &__learn-more
+      width: 18rem
+      font-size: clamp(.7rem, 2vh, .9rem)
+

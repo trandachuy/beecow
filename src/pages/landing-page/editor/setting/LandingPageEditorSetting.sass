@@ -1,0 +1,194 @@
+.landing-page-editor-setting
+  min-width: 280px
+
+  .landing-page-editor-setting__hr--first
+    margin-top: .6rem
+
+  .landing-page-editor-setting__title
+    position: relative
+    span
+      top: 0
+      right: 0
+      position: absolute
+      font-size: 1rem
+      border: 1px solid #c2c2c2
+      width: 1.5rem
+      height: 1.5rem
+      border-radius: 50%
+      display: flex
+      color: #909090
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      &:hover
+        opacity: .8
+
+  .landing-page-editor-setting__template-part-container
+    padding: 1rem
+    background-color: #f6f6f6
+    border-radius: 0 0 .25rem .25rem
+    .landing-page-editor-setting__template-part
+      padding: .5rem
+      border: 1px solid rgb(216, 220, 230)
+      margin-top: .5rem
+      cursor: pointer
+      transition: opacity .3s ease-in-out
+      border-radius: .25rem
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      background-color: white
+      &:hover:not(.selected)
+        opacity: .6
+      &.selected
+        border-color: #96A2F1
+        border-width: 2px
+
+      &:first-child
+        margin-top: 0
+
+      span
+        font-size: .8em
+      img
+        width: 70%
+        border: 1px solid gray
+        margin-bottom: .2rem
+  .landing-page-editor-setting__template-part-container.show
+    display: block
+
+  .seo-thumbnail
+    width: 100%
+    height: 100px
+    margin-left: auto
+    display: flex
+    align-items: center
+    .title-seo-thumbnail
+      color: #939393
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 0.8rem
+    .background-picker
+      padding: 0
+      width: 60%
+      margin-left: auto
+      background: white
+      .background-picker__img
+        div
+          height: 100px!important
+      .background-picker__hint
+        display: none!important
+      .justify-content-center
+        .gs-button
+          display: none!important
+
+  .landing-page-editor-setting__template-selector
+    .form-group
+      margin-bottom: .25rem !important
+
+  .landing-page-editor__page-template-selector
+    width: 100%
+
+    .uik-select__valueRenderedWrapper
+      img
+        display: none
+      .landing-page-editor-setting__template-option-title
+        text-align: left !important
+
+      .landing-page-editor-setting__template-option
+        padding-left: 0 !important
+
+
+    .uik-select__option
+      height: fit-content
+
+    .uik-select__optionList
+
+
+      &::-webkit-scrollbar-track
+
+        //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+        border-radius: 10px
+      //background-color: #F5F5F5
+      &::-webkit-scrollbar
+        width: 5px
+        height: 5px
+        //background-color: #F5F5F5
+        &:hover
+          height: 10px
+
+      &::-webkit-scrollbar-thumb
+        //border-radius: 10px
+        //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+        background-color: #556CE7
+        height: 5px
+        cursor: pointer
+
+        &:hover
+          background-color: #556CE7
+          height: 10px
+
+  .landing-page-editor-setting__domain-custom
+    display: flex
+
+    .form-group
+      flex: 1
+
+    input
+      padding: 0 0 0 .25rem
+      border-top: unset !important
+      border-right: unset !important
+      border-left: unset !important
+      font-size: .8rem !important
+      border-radius: 0 !important
+      &:focus
+        box-shadow: unset !important
+
+  .landing-page-editor-setting__customer-tag-wrapper
+    position: relative
+
+  .landing-page-editor-setting__customer-tag
+    transition: width .3s
+
+    &:focus
+      width: 100%
+      font-family: unset
+
+    &--tagged
+      background-color: #fafafa
+      color: black
+      width: fit-content
+      border: unset
+      font-family: monospace, monospace
+
+    &--empty
+
+.landing-page-editor-setting__instruction-modal
+  .modal-content
+    width: 700px !important
+.modal.show
+  .popup-themes
+    min-width: 60vw!important
+    .modal-content
+      min-width: 60vw
+      .popup-themes__title
+        .modal-title
+          display: flex
+          justify-content: space-between
+      .modal-body
+        .theme-library-template__item-img-fluid
+          height: 160px
+          overflow: hidden
+          justify-content: center
+          display: flex
+          background-size: cover
+          background-position: center
+
+        .theme-library-template__item__actions
+          margin-top: 5px
+          margin-bottom: 15px
+          display: flex
+
+
+
+

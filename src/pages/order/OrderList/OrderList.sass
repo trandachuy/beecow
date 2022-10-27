@@ -1,0 +1,544 @@
+@import "../../../../sass/mixins"
+.order-page
+
+  .order-page__filter-pane
+    width: 600px
+    font-size: 14px
+
+    .uik-select__optionListWrapper
+      width: fit-content
+      width: -moz-fit-content
+
+    .order-page__filter-title
+      font-weight: 500
+      padding-top: .3rem
+      color: #424242
+
+    .uik-select__wrapper
+      margin-left: 0 !important
+
+      .uik-btn__base
+        height: 31px
+
+    .order-page__filter-section
+      margin-bottom: 1rem
+
+
+  .order-page__filter-option
+    background-color: #e9f2fb
+    border-radius: .25rem
+    margin-right: .3rem
+    margin-bottom: .3rem
+    padding: .3rem .5rem
+    font-size: 14px
+    transition-duration: .2s
+    cursor: pointer
+    transition-property: opacity, background-color
+    font-weight: 500
+
+    &:hover
+      opacity: .8
+
+    &.selected
+      background-color: #1665d8
+      color: white
+
+  .gs-component-tooltip
+    div:not(.shipping-address-text):not(.buyer-name-text)
+      display: flex !important
+      flex-direction: row
+
+  .export-button
+    margin-right: 10px !important
+
+  .order-list-widget
+    @include mobile
+      padding: 0
+
+  .gs-widget__content
+    padding: 1em 1em
+
+  .order-list__empty
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .order-list__empty-text
+    text-align: center
+    margin-top: -2em
+
+  .gs-status-tag--beecow
+    background-color: #fcb016
+    color: white
+
+  .gs-status-tag--lazada
+    background-color: #183546
+    color: white
+
+  .gs-status-tag--shopee
+    background-color: #ff4848
+    color: white
+
+  .gs-status-tag--gosell
+    background-color: #1665D8
+    color: white
+
+  .react-bootstrap-daterangepicker-container
+    padding-left: 15px
+    position: relative
+    cursor: pointer
+
+    svg
+      position: absolute
+      right: 5px
+      top: 10px
+
+    @include mobile
+      padding-left: unset
+
+  .uik-widget-table__wrapper
+    tbody
+      tr
+        cursor: pointer
+
+  .filter__status
+    .uik-btn__base
+      margin-bottom: 1em
+
+  .btn-filter-desk
+    border: 1px solid #D8DCE6
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    padding: 0.75em
+    height: 38px
+    border-radius: 4px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 10rem
+    cursor: pointer
+
+    .icon-filter
+      margin-right: -3px
+
+  .btn-filter
+    border: 1px solid #D8DCE6
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    padding: 0.75em
+    height: 36px
+    border-radius: 4px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 1rem
+
+    .icon-filter
+      margin-right: -7px
+
+  .n-filter-container
+    width: 100%
+    display: flex
+    display: -webkit-box
+    justify-content: flex-end
+    align-items: center
+    flex-shrink: 0
+
+    @include mobile
+      display: flex
+      flex-direction: column
+      padding: 1rem 0
+      box-shadow: 0 2px 0 0 #c2c2c2
+      background-color: white
+
+      .row
+        width: 100%
+        margin-bottom: 1em
+        flex-shrink: 0
+        .left
+          @include mobile
+            padding: 0 3px 0 0
+        .right
+          @include mobile
+            padding: 0 0 0 3px
+
+      .uik-select__wrapper
+        margin: 0 !important
+        width: 100%
+
+
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0px !important
+
+    .uik-select__wrapper
+      //margin-left: 1em !important
+      min-width: 10em
+      .uik-select__optionList
+        flex-direction: column !important
+        .uik-select__optionContent
+          .uik-select__label
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            overflow: hidden
+
+  .gs-widget
+    display: flex
+    flex-direction: column
+
+    .uik-widget-content__wrapper
+      flex: 1
+      display: flex
+      flex-direction: column
+
+    .loading
+      flex: 1
+      display: flex
+      align-items: center
+
+  .order-page__body
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+    @include mobile
+      padding-right: 1rem !important
+      padding-left: 1rem !important
+
+  .react-bootstrap-daterangepicker-container
+    input
+      font-size: 1em
+      height: 38px
+
+    @include mobile
+      input
+        font-size: 1rem
+
+  .mobile-order-list-container
+    flex-direction: column
+    padding: 1rem
+    border-top: 1px solid rgba(220, 220, 220, 0.31)
+    flex-shrink: 0
+    flex-grow: 1
+
+    .m-order-row
+      padding: 1rem 0
+      border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+      display: flex
+      justify-content: space-between
+      flex-shrink: 0
+
+      .m-order-basic-info
+        display: flex
+        align-items: center
+        flex: 1
+
+        .m-order-basic-info__name
+          height: 2.8rem
+        
+          .m-order-basic-info__id
+            overflow: hidden
+            max-width: 40vw
+            white-space: nowrap
+            word-break: break-word
+            text-overflow: ellipsis
+
+          .m-order-basic-info__user-name 
+            @extend .m-order-basic-info__id
+            color: #9EA0A5
+
+      .m-order-detail
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between
+
+        &__status
+          display: flex
+          align-items: center
+          justify-content: flex-end
+
+        &__method
+          font-weight: 500
+          color: #9EA0A5
+
+        .status-dot
+          border-radius: 50%
+          width: .5rem
+          height: .5rem
+          margin-bottom: .2em
+          margin-right: .5em
+
+          &--active
+            background-color: green
+          &--error
+            background-color: red
+          &--inactive
+            background-color: gray
+
+.order-mobile-modal__filter-wrapper
+  overflow: auto
+
+  .filter-session:last-child
+    margin-bottom: 30px
+
+.order-page
+  .order-page__body
+    .gs-table
+      margin-top: 1em
+      border-top: 1px solid #EAEDF3
+      .gs-table-header
+        .gs-table-header-item
+          height: 51px
+          flex-basis: 10%
+          white-space: normal
+          &:nth-child(1)
+            flex-basis: 5%
+
+            .checkbox-border
+              margin-left: auto
+              width: fit-content
+
+              .dropdown
+                display: none
+
+          &:nth-child(2)
+            flex-basis: 13%
+          &:nth-child(3)
+            flex-basis: 10%
+          &:nth-child(4)
+            flex-basis: 13%
+          &:nth-child(5)
+            flex-basis: 15%
+          &:nth-child(6)
+            flex-basis: 10%
+          &:nth-child(7)
+            flex-basis: 10%
+          &:nth-child(8)
+            flex-basis: 17%
+          &:nth-child(9)
+            flex-basis: 10%
+          &:nth-child(10)
+            flex-basis: 10%
+          &:nth-child(11)
+            flex-basis: 22%
+
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            flex-basis: 10%
+            text-overflow: ellipsis
+            overflow: hidden
+            padding: 15px
+            &.id
+              flex-basis: 18%
+
+              .uik-checkbox__label
+                margin-left: -1em
+                margin-right: 2em
+
+                &::before
+                  margin: 0
+
+                .uik-checkbox__checkboxIcon
+                  left: 50%
+                  top: 50%
+                  transform: translate(-50%, -50%)
+
+            &.channel
+              flex-basis: 10%
+            &.status
+              flex-basis: 13%
+            &.buyer
+              flex-basis: 15%
+            &.customer-barcode
+              flex-basis: 10%
+            &.currency
+              flex-basis: 10%
+            &.payment-method
+              flex-basis: 17%
+            &.created-date
+              flex-basis: 10%
+            &.staff
+              flex-basis: 10%
+            &.shipping-address
+              flex-basis: 22%
+              white-space: normal
+              .shipping-address-text
+                white-space: normal
+                padding: 0
+                text-overflow: ellipsis
+            .gs-component-tooltip > div
+              padding: 0
+    .view-detail-container
+      margin-top: 20px
+      .group-order
+        border-radius: 3px
+        background-color: #fff
+        margin-bottom: 15px
+        border: 1px solid #e6e6e8
+        .group-order__header
+          display: flex
+          justify-content: space-between
+          background-color: #f4f4f4
+          border-bottom: 1px solid #e6e6e8
+          padding: 16px
+          @include mobile
+            flex-direction: column
+          .group-order__header__order
+            display: flex
+            font-size: 16px
+            font-weight: 700
+            align-items: center
+            .order-id
+              margin-left: 5px
+          .group-order__header__status
+            padding: 5px 10px
+            font-weight: bold
+            @include mobile
+              width: fit-content
+              margin-top: 5px
+            &.PENDING
+              color: #FFB000
+              border: 1px dashed #FFB000
+            &.TO_SHIP
+              color: #FFB000
+              border: 1px dashed #FFB000
+            &.WAITING_FOR_PICKUP
+              color: #90ce51
+              border: 1px dashed #90ce51
+            &.IN_CANCEL
+              color: #ff4f4c
+              border: 1px dashed #ff4f4c
+            &.SHIPPED
+              color: #90ce51
+              border: 1px dashed #90ce51
+            &.DELIVERED
+              color: #798ee6
+              border: 1px dashed #798ee6
+            &.CANCELLED
+              color: #ff4f4c
+              border: 1px dashed #ff4f4c
+            &.RETURNED
+              color: #ff4f4c
+              border: 1px dashed #ff4f4c
+        .group-order__body
+          .order-item
+            display: flex
+            padding: 20px
+            border-bottom: 1px solid #f3f3f8
+            @include mobile
+              padding: 15px
+              max-width: 300px
+              flex-direction: column
+            .order-item__img
+              width: 90px
+              height: 90px
+              line-height: 90px
+              text-align: center
+              overflow: hidden
+              outline: 0
+              margin-right: 10px
+              .order-item__image-url
+                vertical-align: middle
+                max-width: 100%
+                max-height: 90px
+                text-indent: -999999px
+                border: 0
+                line-height: 90px
+                text-align: center
+            .order-item__info
+              font-size: 17px
+              color: #9b9b9b
+              .order-item__info-name
+                font-weight: 600
+                color: #141823
+                white-space: nowrap
+                width: 100%
+                text-overflow: ellipsis
+                overflow: hidden
+                display: block
+                vertical-align: middle
+              .order-item__info-price
+                .bold
+                  font-weight: bold
+        .group-order__footer
+          display: flex
+          justify-content: space-between
+          padding: 10px 20px
+          @include mobile
+            flex-direction: column
+          .group-order__footer__info
+            font-size: 17px
+            .bold
+              font-weight: bold
+          .group-order__footer__btn
+            .gs-button
+              @include mobile
+                margin: 0 !important
+      .gs-table
+        border-top: none !important
+        .gs-table-header
+          border-bottom: none !important
+    .search-input-box
+      display: flex
+      justify-content: space-between
+      .gs-search-box__wrapper
+        display: flex
+        .uik-select__wrapper
+          margin-left: 0.2em !important
+          width: 10.5rem
+      .gs-search-select__wrapper
+        display: flex
+    .search-input-box-mobile
+      .gs-search-box__wrapper
+        display: flex
+        justify-content: space-between
+        .search
+          flex-basis: 69%
+        .uik-select__wrapper
+          flex-basis: 30%
+          min-width: auto !important
+          margin-left: 0 !important
+
+
+.custom-wrapper
+  border: 1px solid #EAEDF3
+  border-bottom: none
+  background: #FAFAFA
+  border-radius: 5px 5px 0px 0px
+
+.icon-setting 
+  cursor: pointer
+
+.order-list-table-custom tr th
+  white-space: pre!important
+
+.order-list-table-custom tr th:first-child,
+.order-list-table-custom tr td:first-child
+  width: 20px !important
+  padding-left: 15px !important
+  @include mobile
+    display: none
+
+.order-list-table-custom tr th:last-child,
+.order-list-table-custom tr td:last-child
+  white-space: nowrap
+
+th.order-header-title
+  vertical-align: top !important
+
+.order-list-table-custom 
+  .shipping-address
+    min-width: 22vw
+  .order-status, .customer-name, .shipping-method
+    min-width: 8vw
+  .created-date
+    min-width: 71px
+  @include mobile
+    tr td
+      min-width: 30vw
+    .shipping-address
+      min-width: 45vw
+  

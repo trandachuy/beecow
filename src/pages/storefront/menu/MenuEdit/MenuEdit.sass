@@ -1,0 +1,578 @@
+.custom-container
+  .av-invalid,
+  .av-valid
+    display: flex
+    display: -webkit-flexbox
+    flex-direction: column
+    width: 100%
+    align-items: center
+
+  .menu-items-header
+    flex-direction: column-reverse
+
+    button
+      &.btn-cancel
+        display: none
+        margin-left: 1em
+        border-color: #b3b3b4
+        border-width: 1px !important
+        border-style: solid !important
+        color: #b3b3b4
+        background-color: #b3b3b4
+
+      &.btn-save.inactive
+        pointer-events: none
+
+  .menu-title,
+  .menu-item
+    background-color: #ffffff
+    border-radius: 5px
+    margin: 1.5em 0
+    padding: 0
+    box-shadow: -5px 5px 15px -13px rgba(0, 0, 0, 0.28)
+
+    .uik-widget__wrapper
+      border-radius: inherit
+      border: unset
+      box-shadow: unset
+      display: flex
+      display: -webkit-flexbox
+      flex-direction: row
+      justify-content: space-between
+      border-radius: unset
+      padding: 25px
+      margin-top: 0
+
+  .menu-title
+    .uik-widget__wrapper
+      flex-direction: column
+      .drap-box
+        height: 50px
+        width: 100%
+        border: 1px solid black
+      input
+        margin-top: 5px
+        background-color: #ffffff
+        
+  .menu-item
+    .uik-widget__wrapper
+      padding: 18px 25px
+      align-items: center
+
+      h5
+        margin-bottom: 0
+     
+      .add-menu-item
+        display: flex
+        display: -webkit-flexbox
+        align-items: center
+        padding: 8px
+        border: 1px solid #ced4da
+        border-radius: 5px
+        
+        label
+          margin: 2px 0 0 0
+          line-height: 20px
+          margin-left: 10px
+
+      span
+        &.uik-content-title__wrapper
+          margin: 0
+
+      &.menu-item-title,
+      &.menu-item-body
+        .widget-item
+          flex-basis: 16%
+          -webkit-flex-basis: 16%
+          text-align: center
+
+      &.menu-item-body
+        flex-direction: column
+        padding-left: 0
+        padding-right: 0
+        padding-top: 0
+        border: 1px solid #ced4da
+        &.empty
+          margin-bottom: 0px
+          padding-bottom: 0px
+
+          .item
+            margin-bottom: 0px
+
+            .item-empty
+              width: 100%
+              display: flex
+              display: -webkit-flexbox
+              justify-content: center
+              padding-top: 5em
+              padding-bottom: 5em
+              background-color: #F2F2F2
+
+              .icon-empty
+                height: 25px
+                width: 25px
+                background-image: url(/assets/images/icon-Empty.svg)
+                margin-right: .5em
+
+              span
+                align-self: center
+        .item
+          justify-content: space-between
+          padding-left: 0
+          padding: 0
+          flex-wrap: wrap
+          height: auto
+             
+          .drag-item
+            margin-left: 4em
+            width: calc(100% - 4em)
+            &:last-child
+              margin-bottom: 0
+              border-bottom: unset
+            
+          .item-detail
+            width: 100%
+            display: flex
+            display: -webkit-flexbox
+            flex-direction: row
+            justify-content: space-between
+
+            &.level-0
+              border: 1px solid #ced4da
+
+            &.level-1,
+            &.level-2,
+            &.level-3
+              border-bottom: 1px solid #ced4da
+              border-right: 1px solid #ced4da
+
+            &.level-1
+              .item-info
+                flex-basis: 100%
+                -webkit-flex-basis: 100%
+            &.level-2
+              .item-info
+                flex-basis: 100%
+                -webkit-flex-basis: 100%
+            &.level-3
+                .item-info
+                  flex-basis: 100%
+                -webkit-flex-basis: 100%
+
+            .item-info
+              display: flex
+              display: -webkit-flexbox
+              flex-basis: 100%
+              -webkit-flex-basis: 100%
+
+              .dragdrop
+                display: flex
+                display: -webkit-flexbox
+                align-items: center
+                height: 100%
+                width: 100%
+
+              span
+                text-transform: unset
+                font-size: 1em
+                font-weight: unset
+                color: #615a5a
+                white-space: nowrap
+                text-overflow: ellipsis
+                overflow: hidden
+
+              .icon-expand-wrapper
+                padding-top: 1.5em
+                padding-bottom: 1.5em
+                background-color: #F2F2F2
+                margin-right: calc(100% - 98%)
+
+                &.add-menu
+                  visibility: unset
+                  .icon-expand
+                    visibility: unset
+
+          .switch-button  
+            flex-basis: 16%
+            -webkit-flex-basis: 16%
+            justify-content: center
+            display: flex
+            display: -webkit-flexbox
+            align-items: center
+            padding-right: 25px
+
+            i
+              background-repeat: no-repeat
+              width: 22px
+              height: 22px
+              display: block
+              margin-right: 20px
+              
+              &.icon-edit
+                background-image: url(/assets/images/icon-edit.png)
+                cursor: pointer
+              &.icon-edit:hover
+                opacity: 0.8
+
+              &.icon-delete
+                background-image: url(/assets/images/icon-delete.png)
+                cursor: pointer
+              &.icon-delete:hover
+                opacity: 0.8
+              
+            .switch
+              position: relative
+              display: inline-block
+              width: 35px
+              height: 20px
+              margin-bottom: 0
+              
+              input 
+                opacity: 0
+                width: 0
+                height: 0
+
+            .slider 
+              position: absolute
+              cursor: pointer
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              background-color: #ccc
+              -webkit-transition: .2s
+              transition: .2s
+
+            .slider:before 
+              position: absolute
+              content: ""
+              height: 14px
+              width: 14px
+              left: 2px
+              top: 3px
+              background-color: white
+              -webkit-transition: .2s
+              transition: .2s
+
+            input:checked + .slider 
+              background-color: #89ca7e
+
+            input:focus + .slider 
+              box-shadow: 0 0 1px #89ca7e
+
+            input:checked + .slider:before 
+              -webkit-transform: translateX(15px)
+              -ms-transform: translateX(15px)
+              transform: translateX(15px)
+
+            .slider.round 
+              border-radius: 34px
+
+            .slider.round:before 
+              border-radius: 50%
+
+          &:first-child,
+          &.level-3
+            .icon-expand-wrapper
+              visibility: hidden
+            i.icon-expand
+              visibility: hidden
+      i
+        background-repeat: no-repeat
+        width: 24px
+        height: 20px
+        display: block
+
+        &.icon-add-circle
+          background-image: url(/assets/images/icon-add-circle.png)
+        &.icon-dragdrop
+          width: 1em
+          background-image: url(/assets/images/icon-dragdrop.png)
+          background-position: center
+          background-size: auto
+          margin-right: calc(100% - 98%)
+
+        &.icon-expand
+          background-image: url(/assets/images/icon-expand.png)
+          background-position: center
+
+        &.icon-close
+          background-image: url(/assets/images/icon-expand.png)
+          background-position: center
+          transform: rotate(-90deg)
+
+        &.icon-up
+          background-image: url(/assets/images/icon-expand.png)
+          margin-bottom: 5px
+          background-position: center
+          transform: rotate(180deg)
+          cursor: pointer
+        &.icon-up:hover
+          opacity: 0.8
+
+        &.icon-down
+          background-image: url(/assets/images/icon-expand.png)
+          background-position: center
+          cursor: pointer
+        &.icon-down:hover
+          opacity: 0.8
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .gs-page-container-max
+    &.custom-container
+      padding: 0
+
+      .menu-items-header
+        padding-left: .8em
+        padding-right: .8em
+        position: absolute
+        background-color: #F2F2F2
+        height: 6.5em
+        z-index: 1
+
+        button
+          &.btn-cancel
+            display: inline
+
+        .gs-atm__flex-row--flex-start
+          padding-bottom: 1em
+          div
+            text-align: right
+        .sub-title
+          display: none
+      .gs-page-content
+        margin-top: 6.5em
+
+        .menu-title
+          margin-top: 0
+          .uik-widget__wrapper
+            padding: 1em
+
+            .form-group
+              margin-top: 0
+              margin-bottom: 0
+
+        .menu-item
+          margin-top: 0
+          .uik-widget__wrapper
+            &:first-child
+              padding: 1em
+
+          .menu-item-title
+            padding: 1em
+            .widget-item
+              white-space: nowrap
+
+          .menu-item-body
+            &.empty
+              border: unset
+              .item 
+                padding: 0
+
+            .item
+              padding: unset
+              .drag-item
+                margin-left: 1.5rem
+                width: calc(100% - 1.5rem)
+              .item-detail
+                .switch-button
+                  padding-right: unset
+                  i
+                    margin-right: 15px
+                .item-info
+                  span
+                    width: 35ch
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .gs-page-container-max
+    &.custom-container
+      padding: 0
+
+      .menu-items-header
+        padding-left: .8em
+        padding-right: .8em
+        position: absolute
+        background-color: #F2F2F2
+        height: 6.5em
+        z-index: 1
+        
+        button
+          &.btn-cancel
+            display: inline
+        .gs-atm__flex-row--flex-start
+          padding-bottom: 1em
+          div
+            text-align: right
+        .sub-title
+          display: none
+      .gs-page-content
+        margin-top: 6.5em
+        .menu-title
+          margin-top: 0
+          .uik-widget__wrapper
+            padding: 1em
+
+            .form-group
+              margin-top: 0
+              margin-bottom: 0
+
+        .menu-item
+          .uik-widget__wrapper
+            &:first-child
+              padding: 1em
+
+          .menu-item-title
+            padding: 1em
+            .widget-item
+              white-space: nowrap
+          
+          .menu-item-body
+            &.empty
+              border: unset
+              .item 
+                padding: 0
+
+            .item
+              padding: unset
+              .drag-item
+                margin-left: 1.5rem
+                width: calc(100% - 1.5rem)
+              .item-detail
+                .switch-button
+                  padding-right: unset
+                  i
+                    margin-right: 15px
+                .item-info
+                  span
+                    width: 35ch
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .gs-page-container-max
+    &.custom-container
+      padding: 0
+
+      .menu-items-header
+        padding-left: .8em
+        padding-right: .8em
+        position: absolute
+        background-color: #F2F2F2
+        height: 6.5em
+        z-index: 1
+
+        button
+          &.btn-cancel
+            display: inline
+        .gs-atm__flex-row--flex-start
+          padding-bottom: 1em
+          div
+            text-align: right
+        .sub-title
+          display: none
+      .gs-page-content
+        margin-top: 6.5em
+        .menu-title
+          margin-top: 0
+          .uik-widget__wrapper
+            padding: 1em
+
+            .form-group
+              margin-top: 0
+              margin-bottom: 0
+
+        .menu-item
+          .uik-widget__wrapper
+            &:first-child
+              padding: 1em
+
+          .menu-item-title
+            padding: 1em
+            .widget-item
+              white-space: nowrap
+
+          .menu-item-body
+            &.empty
+              border: unset
+              .item 
+                padding: 0
+
+            .item
+              padding: unset
+              .drag-item
+                margin-left: 1.5rem
+                width: calc(100% - 1.5rem)
+              .item-detail
+                .switch-button
+                  padding-right: unset
+                  i
+                    margin-right: 10px
+                .item-info
+                  span
+                    width: 18ch
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .gs-page-container-max
+    &.custom-container
+      padding: 0
+
+      .menu-items-header
+        padding-left: .8em
+        padding-right: .8em
+        position: absolute
+        background-color: #F2F2F2
+        height: 6.5em
+        z-index: 1
+
+        button
+          &.btn-cancel
+            display: inline
+        .gs-atm__flex-row--flex-start
+          padding-bottom: 1em
+          div
+            text-align: right
+        .sub-title
+          display: none
+      .gs-page-content
+        margin-top: 6.5em
+        .menu-title
+          margin-top: 0
+          .uik-widget__wrapper
+            padding: 1em
+
+            .form-group
+              margin-top: 0
+              margin-bottom: 0
+
+        .menu-item
+          .uik-widget__wrapper
+            &:first-child
+              padding: 1em
+
+          .menu-item-title
+            padding: 1em
+            .widget-item
+              white-space: nowrap
+
+          .menu-item-body
+            &.empty
+              border: unset
+              .item 
+                padding: 0
+            
+            .item
+              padding: unset
+              .drag-item
+                margin-left: 1.5rem
+                width: calc(100% - 1.5rem)
+              .item-detail
+                .switch-button
+                  padding-right: unset
+                  i
+                    margin-right: 10px
+                .item-info
+                  span
+                    width: 18ch

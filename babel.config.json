@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": { "esmodules": false, "node": "current" },
+      "useBuiltIns": false
+    }],
+    "@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-numeric-separator",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-styled-components",
+    ["@babel/plugin-transform-modules-commonjs", {
+      "allowTopLevelThis": true
+    }]
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  }
+}

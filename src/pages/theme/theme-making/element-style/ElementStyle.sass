@@ -1,0 +1,66 @@
+
+.element-wrapper
+  position: relative
+
+
+  .elemnent-curtain
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.6)
+    color: white
+    font-size: 20px
+    padding: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    >span
+      display: inline-block
+      vertical-align: middle
+      text-align: center
+
+  .element-style
+    height: calc(100% - 179px)
+    overflow-y: auto
+    background-color: #f8f8f8
+
+    .row-detail
+      margin-left: 15px
+      margin-right: 10px
+      margin-top: 15px
+      cursor: pointer
+
+      &.active
+        background-color: #d8e5f9
+
+        .detail
+          border: 1px solid #1a68d8
+
+      .detail
+        border: 1px solid #f8f8f8
+        padding: 5px
+
+        .image
+          background-size: contain
+          height: 180px
+          width: 100%
+          background-repeat: no-repeat
+          background-position: center
+
+    .row-detail:hover
+      background-color: #eaf2fe
+        
+      .detail
+        border: 1px solid #1a68d8
+
+    .row-detail:last-child
+      margin-bottom: 15px
+        
+
+  
+      
+    
+      
+      
+

@@ -1,0 +1,22 @@
+@import "../../../sass/mixins"
+
+.intercom-download-modal
+  color: white
+
+  .modal-content
+    background: #3F51B5
+
+    @include xl
+      background: url("../../../public/assets/images/intercom/800x500.png") no-repeat center center fixed
+      -webkit-background-size: auto
+      -moz-background-size: auto
+      -o-background-size: auto
+      background-size: auto
+
+  &__indicator
+    width: 50%
+    height: 1px
+    background-color: white
+
+  &__later:hover
+    filter: brightness(85%)

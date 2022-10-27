@@ -1,0 +1,361 @@
+.gs-atm--disable
+  opacity: .6 !important
+  pointer-events: none
+  -webkit-user-select: none !important
+  -moz-user-select: none !important
+  -ms-user-select: none !important
+  user-select: none !important
+  -moz-user-focus: ignore !important
+  user-focus: ignore !important
+
+.disabled
+  @extend .gs-atm--disable
+
+.user-disabled
+  opacity: .5 !important
+  pointer-events: none
+  -webkit-user-select: none !important
+  -moz-user-select: none !important
+  -ms-user-select: none !important
+  user-select: none !important
+  -moz-user-focus: ignore !important
+  user-focus: ignore !important
+
+.user-event-disabled
+  pointer-events: none
+  -webkit-user-select: none !important
+  -moz-user-select: none !important
+  -ms-user-select: none !important
+  user-select: none !important
+  -moz-user-focus: ignore !important
+  user-focus: ignore !important
+  *
+    pointer-events: none
+    -webkit-user-select: none !important
+    -moz-user-select: none !important
+    -ms-user-select: none !important
+    user-select: none !important
+    -moz-user-focus: ignore !important
+    user-focus: ignore !important
+
+.gs-atm__border--error
+  border-color: red
+
+.gs-atm__color--gray
+  color: #939393
+
+.gs-atm__label
+  font-size: 0.8rem
+
+.gsa__label-08r
+  font-size: 0.8rem
+
+.gsa__uppercase
+  text-transform: uppercase
+
+.gsa__color--gray
+  color: #939393
+
+.gs-atm__scrollbar-1,.gs-atm__scrollbar-2
+
+  &::-webkit-scrollbar-track
+
+    //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+    border-radius: 10px
+    //background-color: #F5F5F5
+  &::-webkit-scrollbar
+    width: 5px
+    height: 5px
+    //background-color: #F5F5F5
+    &:hover
+      height: 10px
+
+  &::-webkit-scrollbar-thumb
+    //border-radius: 10px
+    //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+    height: 5px
+    cursor: pointer
+
+    &:hover
+      height: 10px
+      
+.gs-atm__scrollbar-1
+  &::-webkit-scrollbar-thumb
+    background-color: #556CE7
+    &:hover
+      background-color: #556CE7
+      
+.gs-atm__scrollbar-2
+  &::-webkit-scrollbar-thumb
+    background-color: #d0d0d0
+    &:hover
+      background-color: #d0d0d0
+
+.gs-atm__border--radius
+  border-radius: 8px
+  border: 1px solid #E8E8E8
+
+.gs-atm__border-radius--0
+  border-radius: 0
+
+.gs-atm__border-radius--top
+  border-radius: 8px 0
+
+.gs-atm__border-radius--bottom
+  border-radius: 0 8px
+
+.gs-atm__padding--1em
+  padding: 1em
+
+
+.gs-atm__flex-col--flex-start
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+.gs-atm__flex-col--flex-end
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+.gs-atm__flex-col--flex-center
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.gs-atm__flex-align-items--center
+  align-items: center
+
+.gs-atm__flex-align-items--start
+  align-items: flex-start
+
+.gs-atm__flex-align-items--end
+  align-items: flex-end
+
+.gs-atm__flex-row--flex-start
+  display: flex
+  justify-content: flex-start
+
+.gs-atm__flex-row--flex-end
+  display: flex
+  justify-content: flex-end
+
+.gs-atm__flex-row--center
+  display: flex
+  justify-content: center
+
+.gs-atm__flex-row--space-between
+  display: flex
+  justify-content: space-between
+
+
+.gsa__border-bt--gray
+  border-bottom: 1px solid #ced4da
+
+.gsa__padding-bt--05em
+  padding-bottom: .5em
+
+.gsa__relative
+  position: relative
+
+.gsa-width-100
+  width: 100%
+
+.gsa-flex-grow--1
+  flex-grow: 1 !important
+
+.gsa-flex-grow--2
+  flex-grow: 2 !important
+
+.gsa-flex-grow--3
+  flex-grow: 3 !important
+
+.gsa-flex-grow--4
+  flex-grow: 4 !important
+
+
+.gsa-flex-grow--5
+  flex-grow: 5 !important
+
+
+
+.gsa-flex--1
+  flex: 1 !important
+
+.gsa-flex--2
+  flex: 2 !important
+
+.gsa-flex--3
+  flex: 3 !important
+
+.gsa-flex--4
+  flex: 4 !important
+
+
+.gsa-flex--5
+  flex: 5 !important
+
+.gsa-text--non-underline
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+.gsa-min-width--fit-content
+  min-width: fit-content
+
+.gsa-white-space--nowrap
+  white-space: nowrap
+
+.white-space-nowrap
+  white-space: nowrap
+
+.white-space-pre
+  white-space: pre
+
+.gsa-mt--1r
+  margin-top: 1rem
+  
+.gsa-mb--1r
+  margin-bottom: 1rem  
+  
+.gsa-ml--1r
+  margin-left: 1rem  
+  
+.gsa-mr--1r
+  margin-right: 1rem
+  
+.gsa-mt--1e
+  margin-top: 1em
+  
+.gsa-mb--1e
+  margin-bottom: 1em  
+  
+.gsa-ml--1e
+  margin-left: 1em  
+  
+.gsa-mr--1e
+  margin-right: 1em
+
+.gsa-hover--gray
+  &:hover
+    background-color: rgba(84, 147, 245, 0.05)
+    transition-duration: .3s
+
+.gsa-hover--fadeOut
+  &:hover
+    opacity: .8
+    transition: opacity .3s
+
+.gsa-reset
+  margin: 0 !important
+  padding: 0 !important
+
+.gsa-border-color--gray
+  border-color: #EAEDF3 !important
+
+
+.gsa--glow-effect
+  animation-name: glow
+  animation-duration: 1.5s
+  animation-timing-function: ease-in-out
+  animation-iteration-count: infinite
+
+  @keyframes glow
+    0%
+      opacity: .8
+    25%
+      opacity: .5
+    50%
+      opacity: .8
+    100%
+      opacity: .5
+
+.overflow-x-auto
+  overflow-x: auto
+
+.overflow-y-auto
+  overflow-y: auto
+
+.text-overflow-ellipsis
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+  display: block
+
+.max-width-10rem
+  max-width: 10rem
+
+.max-width-5rem
+  max-width: 5rem
+
+.max-width-7rem
+  max-width: 5rem
+
+
+.width-10rem
+  width: 10rem
+
+.width-5rem
+  width: 5rem
+
+.width-7rem
+  width: 5rem
+
+.h-fit-content
+  height: fit-content
+
+.w-fit-content
+  width: fit-content
+
+.line-clamp-1
+  display: -webkit-box
+  -webkit-line-clamp: 1
+  -webkit-box-orient: vertical
+  overflow: hidden
+
+.line-clamp-2
+  display: -webkit-box
+  -webkit-line-clamp: 2
+  -webkit-box-orient: vertical
+  overflow: hidden
+
+.line-clamp-3
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  overflow: hidden
+
+.line-clamp-4
+  display: -webkit-box
+  -webkit-line-clamp: 4
+  -webkit-box-orient: vertical
+  overflow: hidden
+
+.line-clamp-5
+  display: -webkit-box
+  -webkit-line-clamp: 5
+  -webkit-box-orient: vertical
+  overflow: hidden
+
+.text-overflow-ellipsis-5rem
+  @extend .text-overflow-ellipsis
+  max-width: 5rem
+
+.text-overflow-ellipsis-10rem
+  @extend .text-overflow-ellipsis
+  max-width: 10rem
+
+.text-overflow-ellipsis-15rem
+  @extend .text-overflow-ellipsis
+  max-width: 10rem
+
+.text-overflow-ellipsis-20rem
+  @extend .text-overflow-ellipsis
+  max-width: 10rem
+
+
+.opacity-8
+  opacity: .8
+
+.opacity-5
+  opacity: .5

@@ -1,0 +1,34 @@
+.item-collection-selector
+  padding: 0 !important
+
+  &__button
+
+    &__label
+      display: inline-block
+      font-weight: bold
+      font-size: 1em
+      width: calc(100% - 10px)
+
+    &--error
+      border: 1px solid red !important
+
+    &.left
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 1) 50%)
+
+      &:active
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 1) 50%)
+
+    &.right
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+
+  &__dropdown
+    width: 100%
+    overflow-y: auto
+    max-height: 300px
+
+    &__item
+      text-overflow: ellipsis
+      overflow: hidden

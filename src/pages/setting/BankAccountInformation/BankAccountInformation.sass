@@ -1,0 +1,95 @@
+.banking__account_information
+  padding: 0 !important
+  .banking__title_container
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  .banking__block_info
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    .banking__block_title
+      width: 50%
+      align-items: flex-start
+      margin-top: 1em
+      margin-bottom: 1em
+      padding-left: 1em
+
+      .banking__title
+        width: 95%
+        margin-top: 1em
+
+  .banking__btn_block_info
+    display: flex
+    flex-direction: row
+    justify-content: start
+
+    .banking__btn_cancel
+      margin-left: 1em
+      border-color: #556CE7
+      color: #556CE7
+      background-color: white
+
+  .banking__btn_save
+    margin-left: 1em
+
+/** RWD Setting */
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .banking__account_information
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      padding: 1em 0
+      form
+        .row
+          display: flex
+          flex-direction: column
+          .col-6
+            max-width: 100%
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .banking__account_information
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      padding: 1em 0
+      form
+        .row
+          display: flex
+          flex-direction: column
+          .col-6
+            max-width: 100%
+
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .banking__account_information
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      padding: 1em 0
+      form
+        .row
+          display: flex
+          flex-direction: column
+          .col-6
+            max-width: 100%
+       
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .banking__account_information
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      padding: 1em 0
+      form
+        .row
+          display: flex
+          flex-direction: column
+          .col-6
+            max-width: 100%

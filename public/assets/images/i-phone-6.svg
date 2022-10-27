@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="185" viewBox="0 0 92 185">
+    <defs>
+        <path id="a" d="M90.995 39.1a.494.494 0 0 0-.202.396v12.508c0 .16.08.303.202.394v117.606c0 7.166-5.82 12.996-13 12.996H14.507c-7.18 0-13-5.818-13-12.996V12.996C1.508 5.83 7.328 0 14.508 0h63.486c7.18 0 13 5.818 13 12.996v26.103z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke="#A5A5A5" stroke-width=".5" transform="translate(0 1)">
+        <ellipse cx="32.175" cy="11.5" rx="1.508" ry="1.5"/>
+        <rect width="14.582" height="1.5" x="38.96" y="10.75" rx=".75"/>
+        <use xlink:href="#a"/>
+        <use xlink:href="#a"/>
+        <g stroke-linejoin="square">
+            <rect width="84.462" height="178" x="4.272" y="2.25" rx="11"/>
+            <rect width="84.462" height="178" x="4.272" y="2.25" rx="11"/>
+        </g>
+        <path stroke-linecap="square" d="M1.005 39.248V53M1.257 23.22v7.06M1.004 55.505v13.953"/>
+        <ellipse cx="46.251" cy="5.5" rx="1.005" ry="1"/>
+        <rect width="77.926" height="138.5" x="7.288" y="21.75" rx="1"/>
+        <ellipse cx="46.251" cy="171" rx="6.033" ry="6"/>
+        <ellipse cx="46.251" cy="171" rx="7.038" ry="7"/>
+    </g>
+</svg>

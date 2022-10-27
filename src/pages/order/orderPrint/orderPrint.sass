@@ -1,0 +1,90 @@
+.order-print-page
+  background-color: rgb(245,245,245)
+  .cell-title__content
+    font-weight: 700
+    margin-right: 5px
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+    flex: 1
+
+  .cell-title__quantity
+    color: rgb(121, 121, 121)
+    margin-right: 10px
+    font-weight: 500
+
+  .row-sum
+    margin: 10px 0
+    .code
+      font-weight: 700
+      font-size: 18px
+    .total
+      font-weight: 700
+      font-size: 23px
+      float: right
+  .order__table
+    width: 100%
+    th.border__none
+      border: none
+    th
+      background-color: #cbcccb
+      font-weight: 700
+      font-size: 15px
+      height: 20px
+      line-height: 20px
+      border-right: 1px solid #b3b3b2
+      padding: 15px 0 15px 10px
+      -webkit-print-color-adjust: exact
+    tbody
+      tr
+        border-bottom: 1px solid #b3b3b2
+        height: 62px
+        background-color: #FFFFFF
+        td.border__none
+          border-right: none
+        td
+          padding: 10px 0 10px 10px
+          border-right: 1px solid #b3b3b2
+          .td-row
+            margin: 5px 0
+            .cell-title
+              font-size: 14px
+              display: -webkit-box
+              -webkit-line-clamp: 3
+              -webkit-box-orient: vertical
+              overflow: hidden
+
+  .order-items__table
+    width: 100%
+    th.border__none
+      border: none
+    th
+      background-color: #cbcccb
+      font-weight: 700
+      font-size: 0.9em
+      height: 15px
+      line-height: 15px
+      border-right: 1px solid #b3b3b2
+      padding: 15px 0 15px 10px
+      -webkit-print-color-adjust: exact
+
+    tbody
+      tr
+        border-bottom: 1px solid #b3b3b2
+        height: 52px
+        background-color: #FFFFFF
+        font-size: 0.8em
+        td.border__none
+          border: none
+        td
+          padding: 10px 0 10px 10px
+          border-right: 1px solid #b3b3b2
+          .td-row
+            margin: 5px 0
+            .cell-title
+              font-weight: 700
+              font-size: 16px
+
+          &.td-more
+            border-right: none !important

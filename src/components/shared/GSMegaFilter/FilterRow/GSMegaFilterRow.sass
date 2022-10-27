@@ -1,0 +1,47 @@
+@import "../../../../../sass/mixins"
+
+.gs-mega-filter-row
+  margin-bottom: 1rem
+  font-size: 14px
+
+  @include mobile
+    border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+    padding-bottom: 1rem
+    margin-bottom: 1rem
+
+  .filter-title
+    font-weight: 500
+    padding-top: .3rem
+    color: #424242
+
+    @include mobile
+      font-weight: bold
+      margin-bottom: 1rem
+      padding-top: 0
+
+
+
+  .uik-select__wrapper
+    min-width: 10em
+    .uik-btn__base
+      min-height: 31px
+
+
+  .filter-option
+    background-color: #e9f2fb
+    border-radius: .25rem
+    margin-right: .3rem
+    margin-bottom: .3rem
+    padding: .3rem .5rem
+    font-size: 14px
+    transition-duration: .2s
+    cursor: pointer
+    transition-property: opacity, background-color
+    font-weight: 500
+
+    &:hover
+      opacity: .8
+
+    &.selected
+      background-color: #1665d8
+      color: white

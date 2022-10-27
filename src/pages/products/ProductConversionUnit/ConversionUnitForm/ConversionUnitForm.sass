@@ -1,0 +1,63 @@
+.vh-55
+    min-height: 55vh
+.conversion-unit-wrapper
+    .btn-header-wrapper
+        display: flex
+        align-content: center
+        justify-content: end
+.conversion-unit-list
+    // min-width: 700px
+    position: static
+    min-height: 55vh
+    max-height: 63vh
+    overflow-x: auto
+    .gs-dropdown-search-form
+        .search-box
+            .box-input-unit
+                width: 80% !important
+            .icon_add_unit
+                margin-right: 15px
+        .search-list
+            width: 80%
+    .quantity
+        input
+            height: 40px
+
+.unit-conversion-item-wrapper
+    max-height: 65vh
+    position: relative
+    overflow: auto
+    .table-conversion-list
+        .conversion-unit-detail-list,
+        tr td:first-child
+            background: #f8f9fa
+        tr th:first-child
+            background: #f2f2f2
+        tr th:first-child,
+        tr td:first-child
+            min-width: 15rem
+            left: 0px
+            position: sticky
+            z-index: 9
+        tr td
+            min-width: 150px
+        tr th:last-child
+            padding-right: 15px !important
+
+.branch-list-wrapper
+    max-height: 300px
+    overflow: auto
+@media screen and ( max-width:  767px)
+    .conversion-unit-wrapper
+        .btn-header-wrapper
+            display: flex
+            align-content: center
+            justify-content: start
+@media (max-width: 426px)
+    .unit-conversion-item-wrapper
+        .table-conversion-list
+            tr th:first-child,
+            tr td:first-child
+                min-width: 11.5rem !important
+.main-unit
+    max-height: 25px

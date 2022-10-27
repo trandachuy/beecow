@@ -1,0 +1,27 @@
+.palette
+  display: flex
+  flex: 1
+  flex-direction: column
+  cursor: pointer
+
+.palette__row
+  display: flex
+  flex: 1
+  flex-direction: row
+
+.palette__col
+  width: 73px
+  height: 73px
+  //border-radius: 10px
+  position: relative
+  margin: 2px
+
+.palette__col span.hidden
+  display: none
+
+.palette__col span
+  color: green
+  position: absolute
+  right: 5px
+  bottom: 2px
+  font-size: 20px

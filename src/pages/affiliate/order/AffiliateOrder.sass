@@ -1,0 +1,151 @@
+@import "../../../../sass/mixins"
+.affiliate-order
+
+
+  .affiliate-order__widget-header
+
+    h3
+      width: 100%
+
+  .affiliate-order__widget-header-title
+    display: flex
+
+  .affiliate-order__filter-container
+    display: flex
+
+  .affiliate-order__widget-header-order-count
+    flex-basis: 25rem
+
+  .affiliate-order__widget-header-revenue-count
+    flex-basis: 25rem
+
+  .affiliate-order__search-option
+    margin-left: .2em !important
+
+  .affiliate-order__table
+    .uik-checkbox__wrapper
+      margin-bottom: 0 !important
+
+    .uik-checkbox__label
+      &::before
+        margin-right: 0 !important
+
+    tr th:first-child
+      padding: 0 !important
+
+    tr td:first-child
+      padding: 0 !important
+
+.modal-confirm-over-total-sold
+  transform: translate(-20vh , 0) !important
+  .modal-content
+    max-width: 1000px !important
+    .modal-header
+      color: #565252 !important
+      background-color: #ebe9e9
+      padding: 0.5rem 0
+    .modal-body
+      padding: 1.5rem 0 !important
+      .body-over-total-sold
+        display: flex
+        flex-direction: column
+        .table-desc
+          padding: 0 0 1rem
+          font-weight: bold
+        .table-content
+          display: inline-block
+          min-width: 60rem
+          max-height: 25rem
+          overflow: auto
+          tr
+            td
+              height: 0.5rem
+              vertical-align: middle !important
+              padding: 0.2rem 0
+          .thead
+            background-color: #dddddd
+            height: 3rem
+            th
+              text-align: left !important
+              vertical-align: middle !important
+              font-weight: 400
+          .tbody
+            max-height: 22rem
+            overflow-y: auto
+            td
+              text-align: left !important
+            .product-thumbnail
+              width: 22rem
+              img
+                width: 4em
+                height: 4em
+                margin-left: 0.5rem
+                margin-right: 1rem
+
+
+    .modal-footer
+      /** background-color: #ebe9e9 **/
+      padding: 0 0.2rem
+      .modal-footer-over-total-sold
+        display: flex
+        flex-direction: column
+        width: 100%
+        .modal-footer-over-total-sold-desc
+          text-align: center
+          padding: 1rem 0
+          font-weight: bold
+        .modal-footer-over-total-sold-action
+          display: flex
+          justify-content: center
+
+  @include mobile
+    .affiliate-order__filter-container
+      flex-direction: column
+
+    .affiliate-order__widget-header
+      padding: .5rem
+
+    .affiliate-order__widget-header-title
+      flex-direction: column
+
+    .affiliate-order__widget-header-order-count, .affiliate-order__widget-header-revenue-count
+      flex-basis: 2rem
+
+    .affiliate-order__widget-header-count-title
+      display: inline-block
+      width: 10rem
+
+    .gs-widget__content
+      padding: .5rem
+
+    .affiliate-order__search-option
+      width: 10rem
+      margin-left: .5rem !important
+
+    .search
+      flex-grow: 1
+
+    .affiliate-order__table
+      overflow-x: auto
+
+    .btn-filter-action
+      width: 7rem
+      
+    .modal-body
+      .body-over-total-sold
+        .table-content
+          min-width: unset !important
+          max-width: 60rem
+          padding-bottom: 1rem
+          
+.modalApproveOrder
+  .modal-header
+    button
+      display: none
+    
+  
+
+@media screen and ( max-width: 800px )
+  .modal-confirm-over-total-sold
+    transform: none !important
+    margin: 0px !important

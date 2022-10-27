@@ -1,0 +1,22 @@
+
+.time-frame-wrapper
+  .section__filter-optional
+    background-color: #e9f2fb
+    border-radius: .25rem
+    margin-right: .3rem
+    margin-bottom: .3rem
+    padding: .3rem .5rem
+    font-size: 14px
+    transition-duration: .2s
+    cursor: pointer
+    transition-property: opacity, background-color
+    font-weight: 500
+    &.selected
+      background-color: #1665d8
+      color: white
+  .date-range-picker
+    &::before
+      content: "|"
+      font-size: 25px
+      padding-right: 5px
+      color: #939393

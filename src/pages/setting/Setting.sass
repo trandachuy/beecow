@@ -1,0 +1,350 @@
+.text-green
+  color: #90CE51
+.text-red
+  color: #FF4F4C
+.text-gray
+  color: gray
+.text-blue
+  color: #586FE7
+
+.setting
+  .gs-widget__header
+    background: #fff !important
+    padding: 25px 15px
+    h3
+      font-size: 1.2rem !important
+  .gs-page-title
+    font-size: 22px
+  .nav-pills
+    margin-top: 1.5em
+    .nav-link
+      will-change: transform
+      color: #495057
+      border: 1px solid #ced4da
+      border-radius: 0
+      cursor: pointer
+      padding: 20px 15px
+      background-color: #F2F2F2 !important
+      &.active
+        background-color: #fff !important
+        color: #007bff
+        border: 1px solid #ced4da !important
+        border-left: 5px solid #007bff !important
+        font-weight: bold
+      &.active:hover
+        border: 1px solid #ced4da !important
+        border-left: 5px solid #007bff !important
+      &:hover
+        border: 1px solid #ced4da !important
+  .setting_btn_save
+    padding-right: 0
+    padding-left: 0
+    min-width: 5.5em
+    text-decoration: none !important
+
+    .uik-btn__content
+      min-width: 5.5em
+      height: 38px
+      background-color: #007bff
+      color: white
+      border-radius: 0.25rem
+      text-decoration: none
+
+  .setting_title_container
+    width: 100%
+    display: flex
+    flex-direction: row
+
+  &__account_info
+    display: flex
+    flex-direction: row
+    justify-content: start
+
+    .account__first_name
+      width: 50%
+      align-items: flex-start
+
+    .account__input_first_name
+      width: 95%
+      align-items: flex-start
+      margin-top: 1em
+      margin-bottom: 1em
+      padding-left: 1em
+
+    .account__last_name
+      width: 50%
+      align-items: flex-start
+
+    .account__input_last_name
+      width: 100%
+      align-items: flex-start
+      margin-top: 1em
+      margin-bottom: 1em
+      padding-left: 1em
+
+    .account__input_email
+      width: 95%
+      align-items: flex-start
+      background-color: #E8E8E8
+      margin-top: 1em
+      margin-bottom: 1em
+      padding-left: 1em
+
+  &__reset_password
+    display: flex
+    flex-direction: row
+    justify-content: start
+
+    .password__new_password_container
+      width: 50%
+      align-items: flex-start
+
+      .password__input_new_password_container
+        width: 100%
+        margin-top: 1em
+        margin-bottom: 1em
+        position: relative
+
+        .password__input_new_password
+          width: 95%
+          padding-left: 1em
+
+        .password__ic_eye
+          color: #9EA0A5
+          position: absolute
+          right: 35px
+          top: 50%
+          -ms-transform: translateY(-50%)
+          transform: translateY(-50%)
+          cursor: pointer
+
+  .password__confirm_password_container
+
+    .password__input_confirm_password_container
+      width: 100%
+      margin-top: 1em
+      margin-bottom: 1em
+      position: relative
+
+      .password__input_confirm_password
+        width: 100%
+        padding-left: 1em
+
+      .password__ic_eye
+        color: #9EA0A5
+        position: absolute
+        right: 10px
+        top: 50%
+        -ms-transform: translateY(-50%)
+        transform: translateY(-50%)
+        cursor: pointer
+
+  &__shipping_and_payment
+    display: flex
+    flex-direction: row
+    justify-content: start
+
+    .shipping_elements_container
+      width: 50%
+      align-items: flex-start
+
+      .shipping_elements
+        width: 95%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-top: 1em
+        margin-bottom: 1em
+
+        .sp_text_element
+          padding-left: 1em
+
+        .sp_icon_element
+          margin-right: 1em
+          width: 20px
+          height: 20px
+
+    .payment_elements_container
+      width: 50%
+      align-items: flex-start
+
+      .payment_elements
+        width: 100%
+        display: flex
+        margin-top: 1em
+        margin-bottom: 1em
+        flex-direction: row
+        justify-content: space-between
+
+        .sp_text_element
+          padding-left: 1em
+
+        .sp_icon_element
+          margin-right: 1em
+          width: 20px
+          height: 20px
+
+  .banking_account_info
+    display: flex
+    flex-direction: column
+
+    .btn_add_bank_card
+      margin-top: 1em
+      margin-bottom: 1em
+      overflow: auto
+      width: 25%
+      height: 38px
+      background-color: #007bff
+      color: white
+      text-align: center
+
+
+    .bank_info_row
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      margin-bottom: 8px
+
+      .bank_info_txt_left
+        width: 220px
+        align-items: flex-start
+
+      .bank_info_txt_right
+        align-items: flex-start
+
+/** RWD Setting */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .gs-page-container-max
+    will-change: transform
+
+    &.setting
+      padding-left: 0px
+      padding-right: 0px
+
+      .col-md-3,
+      .col-md-9
+        padding-left: 0px
+        padding-right: 0px
+        max-width: 100%
+        flex-basis: 100%
+
+      .col-md-3
+        ul
+          will-change: transform
+          display: inline-block
+          overflow: auto
+          overflow-y: hidden
+          white-space: nowrap
+          max-width: 100%
+          &::-webkit-scrollbar
+            width: 3px
+            height: 3px
+            margin-left: -30px
+          &::-webkit-scrollbar-thumb
+            background: #C4C4C4
+          
+          li.nav-item
+            display: inline-block
+            .nav-link
+              &:hover,&:focus
+                will-change: transform
+
+      .gs-page-title
+        padding-left: 1em
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .gs-page-container-max
+    will-change: transform
+    &.setting
+      padding-left: 0px
+      padding-right: 0px
+      .col-md-3,
+      .col-md-9
+        padding-left: 0px
+        padding-right: 0px
+        max-width: 100%
+        flex-basis: 100%
+
+      .col-md-3
+        ul
+          will-change: transform
+          display: inline-block
+          overflow: auto
+          overflow-y: hidden
+          white-space: nowrap
+          max-width: 100%
+
+          li.nav-item
+            display: inline-block
+            .nav-link
+              &:hover,&:focus
+                will-change: transform
+
+
+      .gs-page-title
+        padding-left: .7em
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .gs-page-container-max
+    will-change: transform
+    &.setting
+      padding-left: 0px
+      padding-right: 0px
+
+      .col-md-3,
+      .col-md-9
+        padding-left: 0px
+        padding-right: 0px
+
+      .col-md-3
+        ul
+          will-change: transform
+          display: inline-block
+          overflow: auto
+          overflow-y: hidden
+          white-space: nowrap
+          max-width: 100%
+          
+          li.nav-item
+            display: inline-block
+            .nav-link
+              &:hover,&:focus
+                will-change: transform
+
+
+      .gs-page-title
+        padding-left: 1em
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .gs-page-container-max
+    will-change: transform
+    &.setting
+      padding-left: 0px
+      padding-right: 0px
+
+      .col-md-3,
+      .col-md-9
+        padding-left: 0px
+        padding-right: 0px
+
+      .col-md-3
+        ul
+          will-change: transform
+          display: inline-block
+          overflow: auto
+          overflow-y: hidden
+          white-space: nowrap
+          max-width: 100%
+          
+          li.nav-item
+            display: inline-block
+            .nav-link
+              &:hover,&:focus
+                will-change: transform
+
+      .gs-page-title
+        padding-left: 1em

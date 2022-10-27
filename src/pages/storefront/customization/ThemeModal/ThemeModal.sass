@@ -1,0 +1,41 @@
+.theme-modal
+  max-width: 800px !important
+  margin: 1.75rem auto !important
+  .modal-content
+    .modal-header
+      border-bottom: 1px solid #EAEDF3 !important
+      .modal-title
+        text-align: left
+        margin: 10px 0 15px
+      .btn-close__icon
+        background-image: url(/assets/images/icon-closepop-up.png)
+        background-repeat: no-repeat
+        width: 20px
+        height: 20px
+        display: block
+        position: absolute
+        top: 15px
+        right: 15px
+        cursor: pointer
+    .theme-content
+      width: 800px
+      display: flex
+      .img-content
+        width: 50%
+        img
+          max-width: 100%
+          max-height: 450px
+      .desc-content
+        width: 50%
+        text-align: left
+        padding-left: 15px
+        max-height: 450px
+        overflow-y: auto
+
+    .modal-footer
+      border-top: 1px solid #EAEDF3 !important
+      justify-content: flex-end
+      padding: 1rem !important
+      .btn-edit
+        &:hover
+          text-decoration: none

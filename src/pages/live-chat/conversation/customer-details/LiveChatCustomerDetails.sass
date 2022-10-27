@@ -1,0 +1,221 @@
+.live-chat-customer-details
+  background-color: white
+  border-left: 1px solid #EAEDF3
+  height: 100%
+  transition-duration: 300ms
+  transition-property: flex-basis
+  overflow-x: hidden
+
+  &--opened
+    flex-basis: 400px
+
+  &--closed
+    overflow-x: hidden
+    flex-basis: 0
+
+  .btn-close
+    cursor: pointer
+    .icon-close
+      background-image: url(/assets/images/icon-close.svg)
+      background-repeat: no-repeat
+      width: 20px
+      height: 20px
+      display: block
+  .customer-details-search
+    min-width: 400px
+    .search-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-size: 18px
+      font-weight: 500
+      border-bottom: 1px solid #EAEDF3
+      height: 80px
+      padding: 0 1rem
+    .search-params
+      padding: 1rem
+      display: flex
+      flex-direction: column
+      .search-hint
+        font-weight: bold
+        margin-bottom: 1rem
+      .search-parameter
+        font-weight: bold
+        text-transform: uppercase
+        color: #9EA0A5
+      .gs-search-box__wrapper
+        .uik-input__inputWrapper
+          .uik-input__iconWrapperRight
+            right: 0
+          .uik-input__input
+            max-width: 100%
+            padding-left: 10px !important
+            height: 38px
+      .search-add-new
+        margin-top: 15px
+        .btn-addNewCustomer__icon
+          background-image: url(/assets/images/icon-add-newcustomer.svg)
+          background-repeat: no-repeat
+          width: 20px
+          height: 20px
+          display: block
+    .search-result
+      background-color: white
+      .result-header
+        background-color: #F9F9F9
+        padding: 1rem
+        font-weight: bold
+        text-transform: uppercase
+        color: #9EA0A5
+        box-shadow: 0 -1px 0 0 #EAEDF3
+      .gs-mobile-list-container
+        flex-direction: column
+        padding: 1rem
+        flex-shrink: 0
+        flex-grow: 1
+        display: flex
+        .gs-mobile-list__row
+          padding: 1rem 0
+          border-bottom: 1px solid rgba(220,220,220,0.31)
+          display: flex
+          justify-content: space-between
+          flex-shrink: 0
+          cursor: pointer
+          &:last-of-type
+            border-bottom: none
+          .mobile-customer-profile-row__info
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+            .mobile-customer-profile-row__left
+              display: flex
+              flex-direction: row
+              .full-name
+                text-overflow: ellipsis
+                white-space: nowrap
+                overflow: hidden
+                max-width: 165px
+              .pin-cnt
+                border: 1px solid #1665D8
+                color: #1665D8
+                border-radius: 5px
+                padding: 0 5px
+                margin-left: 5px
+                font-size: 12px
+            .mobile-customer-profile-row__right
+              color: #9EA0A5
+              text-overflow: ellipsis
+              white-space: nowrap
+              overflow: hidden
+              max-width: 140px
+            &.gs-atm__flex-align-items--end
+              align-items: flex-end
+
+            .user-type
+              border: 1px solid
+              padding: 0px 10px
+              width: fit-content
+              border-radius: 3px
+              //font-style: italic
+
+              &.mem-type
+                border-color: green
+                color: green
+              &.guest-type
+                border-color: black
+                
+      .gs-widget-empty-content
+        margin: 0
+      .m-paging
+        padding-bottom: 1px
+  .customer-details-editor
+    .editor-header
+      display: flex
+      justify-content: space-between
+      height: 80px
+      border-bottom: 1px solid #EAEDF3
+      align-items: center
+      padding: 0 1rem
+
+      .left
+        display: flex
+        .icon-pin
+          background-image: url(/assets/images/icon-pin.svg)
+          background-repeat: no-repeat
+          width: 20px
+          height: 20px
+          display: block
+        .icon-unpin
+          background-image: url(/assets/images/icon-unpin.svg)
+          background-repeat: no-repeat
+          width: 20px
+          height: 20px
+          display: block
+        .btn-information
+          padding-top: 10px
+          padding-left: 5px
+          cursor: pointer
+          .icon-information
+            background-image: url(/assets/images/icon-information2.svg)
+            background-repeat: no-repeat
+            width: 20px
+            height: 20px
+            display: block
+    .customer-editor
+      padding: 0
+      .gss-content-header
+        display: none
+      .gs-page-content
+        .gs-widget
+          border: none
+          box-shadow: none
+          .basic-info-widget
+            .basic-info-col-left
+              border-right: none
+              .basic-info-content-wrapper
+                padding: 0 10px
+          .customer-order-list, .customer-related-order-list
+            .m-filter
+              box-shadow: 0 1px 0 0 #EAEDF3
+            .d-desktop-table
+              display: none !important
+            .d-desktop-flex
+              display: none !important
+            .d-mobile-flex
+              display: flex !important
+            .d-mobile-block
+              display: block !important
+            .gs-mobile-list-container
+              .gs-mobile-list__row
+                cursor: pointer
+    .editor-footer
+      position: sticky
+      bottom: 0px
+      background-color: #fff
+      width: 100%
+      padding: 14px
+      display: flex
+      justify-content: flex-end
+      border-top: 1px solid #EAEDF3
+  .add-customer-container
+    .add-customer-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-size: 18px
+      font-weight: 500
+      border-bottom: 1px solid #EAEDF3
+      height: 80px
+      padding: 0 1rem
+    .add-customer-body
+      padding: 2rem 1rem
+    .add-customer-footer
+      position: fixed
+      bottom: 0px
+      background-color: #fff
+      width: 394px
+      display: flex
+      justify-content: flex-end
+      padding: 14px
+      border-top: 1px solid #EAEDF3

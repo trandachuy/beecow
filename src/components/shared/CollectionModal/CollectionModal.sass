@@ -1,0 +1,226 @@
+@import "../../../../sass/mixins"
+@import "../../../../sass/animations"
+
+
+.select-collection-modal
+  max-width: unset !important
+  width: 100%
+  margin: 0
+  @include mobile
+    margin: 0 !important
+    align-self: flex-end
+    transform: unset
+    transition: unset
+    animation-name: zoomIn
+    animation-duration: .3s
+    animation-timing-function: ease
+
+    @keyframes zoomIn
+      0%
+        opacity: 0
+        transform: scale(.9)
+      100%
+        transform: scale(1)
+        opacity: 1
+
+    .modal-content
+      //height: calc(100vh - 55px)
+      border-radius: 0 !important
+
+      .check-all_apage
+        padding-left: 1rem !important
+
+      .paging-table
+        td
+          padding: 1rem
+
+      .paging-table__table
+        //height: 65vh !important
+
+      .product-list
+        //height: 75vh
+
+
+    .modal-header
+      display: flex
+      align-items: center
+
+      .mobile-header-btn
+        button
+          min-width: 6em !important
+
+    .modal-body
+      padding: 1rem 0 0 0
+
+    .footer-btn
+      justify-content: center
+      align-items: center
+
+
+
+  .btn-close__icon
+    background-image: url(/assets/images/icon-closepop-up.png)
+    background-repeat: no-repeat
+    width: 20px
+    height: 20px
+    display: block
+    position: absolute
+    top: 15px
+    right: 15px
+    cursor: pointer
+
+    &:hover
+      opacity: 0.7
+
+  .product-list
+    //overflow-y: scroll
+    height: 60vh
+    margin: 1em 0
+    position: relative
+
+  .modal-content
+    min-width: 50%!important
+    width: 50em!important
+    max-width: 95%!important
+  .modal-header
+    h5
+      font-size: 1.1rem
+      text-align: left !important
+
+    .gs-widget__header-sub-title
+      color: #939393
+
+  .loading-product
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  button, .uik-btn__base
+    min-width: 10em
+
+  .spinner-border
+    position: absolute
+    right: 10px
+    top: 10px
+    width: 1.3em
+    height: 1.3em
+    color: #dadada !important
+
+  .search-group
+    width: 100%
+    display: flex
+    align-items: center
+    background-color: #eeeeee
+    height: 70px
+
+    .check-all_apage
+      padding-left: 30px
+
+    .search
+      margin-left: 10px
+      width: 70%
+      position: relative
+
+      .search-input
+        padding-right: 35px
+
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio).select-collection-row__discount
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label.green::before
+      background-image: url(/assets/images/icon-checked.png)
+      background-position: center center
+      background-repeat: no-repeat
+      background-color: #1665D8
+      border: 1px solid #1665D8
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) 
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label 
+      .uik-checkbox__checkboxIcon
+        display: none
+        
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) .uik-checkbox__label:before
+      min-width: 16px
+      min-height: 16px
+
+  .modal-body
+    .product-list
+      .gs-table
+        .gs-table-body
+          height: 52vh
+          overflow-y: auto
+          justify-content: flex-start
+          .gs-table-body-items
+            div.gs-table-body-item
+              max-width: 100%
+              &:first-child
+                padding-left: 30px
+              div.uik-checkbox__label.green
+                padding: 0
+                border: unset
+                div
+                  min-width: 10%
+                  padding: 0
+                  
+                  &.product-name
+                    padding: 0
+                    text-overflow: ellipsis
+                    overflow: hidden
+                  &.product-number
+                    max-width: 8em
+
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+ .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+                

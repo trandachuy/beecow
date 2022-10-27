@@ -1,0 +1,448 @@
+.box_list
+  width: 20%
+  background: #FFFFFF
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04)
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04)
+  border-right: 1px solid #E6E6E6
+  display: flex
+  flex-direction: column
+  height: 100%
+  transition: all .5s
+  .search-box__wrapper
+    .uik-input__input
+      padding: 7px 15px 7px 40px
+    .uik-input__input::placeholder
+      font-size: 13px
+      color: #CCCCCC
+      font-style: normal
+      font-weight: normal
+    .uik-input__iconWrapper
+      color: #7a7a7a
+  .groupIcon
+    border-bottom: 1px solid #E6E6E6
+    padding: 5px 0
+    .iconMess
+      display: flex
+      align-items: center
+      position: relative
+      border-bottom: 1.5px solid #4051B6
+      bottom: -5px
+      padding-bottom: 5px
+      img
+        margin-right: 10px
+      .messenger
+        margin: 0
+        color: #4051B6
+      .total-mess
+        position: absolute
+        background-color: #DE0000
+        color: white
+        border-radius: 50%
+        text-align: center
+        padding: 5px
+        vertical-align: middle
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 15px
+        height: 15px
+        top: -7px
+        left: 7px
+        font-size: .6rem
+    .iconMail
+    .iconSetting
+      cursor: pointer
+      padding: 0 5px
+    .box_reset
+      top: -130%
+      left: 200%
+      border: 1px solid #D8DCE6
+      -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+      .uik-widget-content__wrapper
+        padding: 0
+        .box_reset
+          width: 200px
+          &::after
+            content: ""
+            position: absolute
+            bottom: 65%
+            left: 1px
+            margin-left: -15px
+            border-width: 7px
+            border-style: solid
+            border-color: transparent white transparent transparent
+          .title-filter-reset
+            padding: .3rem .5rem
+            background: #F5F5F5
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .title-filter
+              font-size: 15px
+              font-style: normal
+              font-weight: 500
+              color: #000000
+            .title-reset
+              font-style: normal
+              font-weight: 400
+              font-size: 13px
+              line-height: 15px
+              color: #208EED
+              cursor: pointer
+          .title-assigned-staff,
+          .title-assigned-tags
+            display: flex
+            align-items: center
+            padding: .7rem .5rem
+            cursor: pointer
+            .assigned-staff,
+            .assigned-tags
+              display: flex
+              justify-content: space-between
+              align-items: center
+              width: 100%
+              .fa-xs
+                cursor: pointer
+              p
+                font-size: 13px
+    .box_list-filter
+      width: 260px
+      top: -130%
+      left: 200%
+      border: 1px solid #D8DCE6
+      -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+      .uik-widget-content__wrapper
+        padding: 0
+        min-height: 340px
+        position: relative
+        background-color: #FFFFFF
+        .box_list-staff
+          &::after
+            content: ""
+            position: absolute
+            bottom: 87%
+            left: 1px
+            margin-left: -15px
+            border-width: 7px
+            border-style: solid
+            border-color: transparent white transparent transparent
+          .title-list
+            font-size: 15px
+            font-style: normal
+            font-weight: 500
+            padding: .3rem .5rem
+            background: #F5F5F5
+            img
+              margin-right: 10px
+              margin-left: 5px
+          .search-filter-staff
+            padding: .5em .9em
+            display: flex
+            align-items: center
+            .check-all
+              .form-group
+                margin: 0
+            .uik-input__input
+              padding: 7px 15px 7px 40px
+            .uik-input__input::placeholder
+              font-size: 13px
+              color: #CCCCCC
+              font-style: normal
+              font-weight: normal
+            .uik-input__iconWrapper
+              color: #7a7a7a
+          .box-staff
+            height: 200px
+            overflow-x: hidden
+            overflow-y: auto
+            &::-webkit-scrollbar
+              width: 3px
+              margin-left: -30px
+            &::-webkit-scrollbar-thumb
+              background: #C4C4C4
+            .gs-widget-empty-content
+              height: 100%
+            .page-notFound
+              display: flex
+              justify-content: center
+              margin-top: 25%
+              p
+                font-size: 12px
+                margin-top: 10px
+            .staff-row
+              border-bottom: 1px solid #E6E6E6
+              padding: .3rem .9rem
+              display: flex
+              align-items: center
+              .form-group
+                margin: 0
+                width: 10%
+              &:last-child
+                border-bottom: none
+              .uik-checkbox__wrapper
+                margin: 0
+              .staff-name
+                font-size: 13px
+                width: 90%
+
+          .box_button-filter
+            display: flex
+            justify-content: end
+            position: absolute
+            bottom: 0
+            width: 100%
+            padding: .5rem 0
+            border-top: 1px solid #E6E6E6
+            .gs-button
+              height: 28px
+    .iconFilter
+      cursor: pointer
+      .total-filter
+        position: absolute
+        background-color: #4051B6
+        color: white
+        border-radius: 50%
+        text-align: center
+        padding: 5px
+        vertical-align: middle
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 15px
+        height: 15px
+        top: -7px
+        left: 5px
+        font-size: .6rem
+  .list_chat
+    overflow-x: hidden
+    overflow-y: auto
+    height: 100%
+    &::-webkit-scrollbar
+      width: 3px
+      margin-left: -30px
+    &::-webkit-scrollbar-thumb
+      background: #4051B6
+    .list-item-chat
+      cursor: pointer
+      margin-top: 10px
+      &:hover
+        background: #F6FAFE
+      .grid_chat
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .item_info
+          display: flex
+          .item_image
+            position: relative
+            padding-right: 15px
+
+            .unread_message
+              position: absolute
+              right: 10px
+              top: -6px
+              background-color: #DE0000
+              padding: 1px 5px
+              border-radius: 10px
+              font-size: 0.6rem
+              color: white
+              height: 15px
+              width: 15px
+
+            img
+              border-radius: 30px
+              margin: -2px
+            .ignore
+              position: absolute
+              width: 10px
+              background: #92CD59
+              border: 2px solid #FFFFFF
+              height: 10px
+              border-radius: 30px
+              bottom: 0
+              right: 12px
+            .total-description
+              position: absolute
+              background-color: #DE0000
+              color: white
+              border-radius: 50%
+              text-align: center
+              padding: 5px
+              vertical-align: middle
+              display: flex
+              justify-content: center
+              align-items: center
+              width: 15px
+              height: 15px
+              top: 0
+              right: 5px
+              font-size: .6rem
+          .item_name
+            .name
+              margin-bottom: 3px
+              font-size: 15px
+              line-height: 15px
+              color: #000000
+              white-space: nowrap
+              overflow: hidden
+              text-overflow: ellipsis
+              font-weight: bold
+            .description
+              margin: 0
+              font-size: 12px
+              line-height: 15px
+              font-weight: 500
+              white-space: nowrap
+              overflow: hidden
+              text-overflow: ellipsis
+            .tag-status
+              display: flex
+              padding: .5rem 0 0 0
+        .item_date
+          span
+            font-size: 10px
+            line-height: 12px
+            font-weight: 600
+            margin-right: 5px
+
+      &.active
+        border-left: 3px solid #1E69D5
+        background: #F6FAFE
+
+      &.read
+        .item_image
+          img
+            border: 1px solid #1D65CB
+        .item_name
+          .name
+            font-weight: normal!important
+          .description
+            font-weight: normal!important
+            color: #626262
+        .item_date
+          span
+            color: #9B9B9B
+.box_list.show_order
+  flex-basis: 55px
+  .search-box__wrapper
+    .uik-input__input
+      padding: 10px 15px 3px 18px
+    .uik-input__input::placeholder
+      color: transparent
+  .groupIcon
+    border-bottom: 1px solid #E6E6E6
+    padding: 5px 0
+    .d-flex
+      justify-content: center!important
+      .iconMess
+        img
+          margin-right: 0
+        .messenger
+          display: none
+        .total-mess
+          display: none
+      .iconMail
+        display: none
+  .list_chat
+    .list-item-chat
+      .grid_chat
+        justify-content: center!important
+        .item_image
+          padding-right: 0
+          .ignore
+            right: -2px
+          .unread_message
+            right: -3px
+        .item_name
+          display: none
+        .item_date
+          display: none
+  
+  
+  
+  
+.fb-chat-list
+  //background-color: red
+  height: 100%
+  display: flex
+  flex-direction: column
+
+  &__search-bar
+    background-color: white
+    height: 80px
+    border-bottom: 1px solid #EAEDF3
+    display: flex
+    padding: 0 1rem
+    align-items: center
+    justify-content: center
+
+  &__list-container
+    flex: 1
+    background-color: white
+    overflow-y: auto
+
+  .fb-chat-list__conversation
+    padding: 20px
+    height: 95px
+    border-bottom: 1px solid #EAEDF3
+    display: flex
+    align-items: center
+
+    &:hover
+      background-color: #F6F9FD
+      cursor: pointer
+
+
+    &--active
+      background-color: #F6F9FD
+      box-shadow: inset 3px 0 0 0 #1665D8
+
+    .conversation__info-wrapper
+      height: 100%
+      padding: 2px
+
+    .conversation__time-wrapper
+      margin-left: auto
+      height: 100%
+      padding: 2px
+
+    .conversation__unread-count
+      background-color: #FF4F4C
+      border-radius: 50%
+      width: 1.3rem
+      height: 1.3rem
+      color: white
+      font-size: 12px
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .conversation__time
+      color: #9EA0A5
+
+    .conversation__avatar
+      width: 45px
+      height: 45px
+      border-radius: 50%
+
+    .conversation__user-name
+      font-weight: 500
+      font-size: 1rem
+      white-space: nowrap
+      overflow: hidden
+      width: 100px
+      text-overflow: ellipsis
+
+    .conversation__location
+      color: #6B6C6F
+      white-space: nowrap
+      overflow: hidden
+      width: 100px
+      text-overflow: ellipsis
+
+  .fb-chat-list__search-empty
+    margin: 0 !important
+    height: 100%
+

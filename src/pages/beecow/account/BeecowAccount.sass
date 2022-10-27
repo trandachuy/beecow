@@ -1,0 +1,134 @@
+/*!
+ / Copyright 2017 (C) Mediastep Software Inc.
+ /
+ / Created on : 22/4/2019
+ / Author: Dai Mai <email: dai.mai@mediastep.com>
+ /
+@import '../../../../sass/_gsvariables.sass'
+
+.sp-account
+  justify-content: center
+  .sp-account__body
+    flex: 1
+    display: flex
+    flex-direction: row
+    align-items: center
+    .sp-authen
+      flex: 1
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      max-width: 360px
+      margin-left: 5%
+      *
+        margin: 10px 0
+      span
+        font-size: 14px
+      button
+        width: fit-content
+        width: -moz-fit-content
+        height: fit-content
+    .logo-author
+      flex: 1
+      text-align: center
+      img
+        max-width: 726px
+        width: 90%
+        //height: 703px
+        object-fit: contain
+    .sp-connected
+      flex: 1
+      height: 100%
+      margin: 0
+
+      .sp-connected__content
+        display: flex
+        flex-direction: row
+        align-items: stretch
+        padding: 2%
+        .left
+          flex: 1
+          flex-basis: 15%
+        .right
+          border: 1px solid #B9BDCF
+          flex: 2
+          display: flex
+          align-items: center
+          padding: 1%
+          height: 90px
+          padding-left: 0
+          .avatar
+            flex: 1
+            align-self: center
+            display: flex
+            justify-content: center
+          .image-status__green
+            font-size: 2.5rem
+            color: #38B249
+            width: 24px
+            height: 24px
+          .image-status__grey
+            font-size: 2.5rem
+            color: #9EA0A5
+            width: 24px
+            height: 24px
+          .image-status__red
+            font-size: 2.5rem
+            color: red
+            width: 24px
+            height: 24px
+          .image-rotate
+            -webkit-animation: spin 4s linear infinite
+            -moz-animation: spin 4s linear infinite
+            animation: spin 4s linear infinite
+            @-moz-keyframes spin 
+              100%
+                -moz-transform: rotate(360deg)
+            @-webkit-keyframes spin 
+              100% 
+                -webkit-transform: rotate(360deg)
+            @keyframes spin 
+              100%
+                -webkit-transform: rotate(360deg)
+                transform:rotate(360deg)
+          .gs-atm--disable
+            background: #9EA0A5
+            border: #9EA0A5
+            color: #000000
+          .info
+            flex: 5
+            font-size: 1.1rem
+            .synch-title
+              font-weight: bolder
+              font-size: 1rem
+            .synch-status
+                font-size: 1rem
+                color: #9EA0A5
+            .status
+              color: #38B249
+              font-size: 1rem
+            .title
+              font-size: 1rem
+            span
+              font-size: 1rem
+          .btn-disconnect
+            flex: 2
+            height: 40px
+          .link
+            flex: 1
+        .title
+          font-size: 1.2rem
+          font-weight: bolder
+          margin-bottom: 0px
+
+        .discription
+          font-size: 1rem
+
+    .uik-avatar__avatar, .uik-avatar__avatarWrapper
+      width: 60px
+      height: 60px
+
+
+    .uik-avatar__avatarWrapper
+      margin-right: .5em
+      margin-left: .5em

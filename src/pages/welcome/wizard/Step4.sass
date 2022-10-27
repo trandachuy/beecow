@@ -1,0 +1,70 @@
+@import '../../../../sass/mixins'
+
+.step4-page__wrapper
+    //min-height: 100vh
+    max-width: 700px
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .step-page__container
+        width: 100%
+        max-width: 560px
+
+        .step-page__content
+            margin-top: 70px
+
+            .color-picker__group
+
+                .palette__row
+                    justify-content: center
+
+                .color-picker__suggest
+                    margin-top: 40px
+                    text-align: center
+                    font-size: 14px
+                
+            .button-group
+                margin-top: 2em
+                //max-width: 560px
+                //margin: 70px auto
+
+                .btn
+                    width: 120px
+                    border-radius: 4px
+                    font-size: 14px
+
+                .btn-back
+                    border: solid 1px #556ce7
+                    color: #556ce7
+                    background-color: #ffffff
+
+                    .btn-back__icon
+                        font-size: 25px
+
+                .btn-skip  
+                    margin-left: 20px
+                    border: solid 1px #9b9b9b
+                    color: #9b9b9b
+                    background-color: #ffffff
+
+                .btn-next
+                    float: right
+                    border: solid 1px #556ce7
+                    color: #ffffff
+                    background-color: #556ce7
+                    
+                    .btn-next__icon
+                        font-size: 25px
+                
+@include mobile
+    .step4-page__wrapper
+        .step-page__container
+            .step-page__content
+                //.form-group
+                //    display: block
+                //    width: 100% !important
+                .button-group
+                    .btn
+                        width: 49%

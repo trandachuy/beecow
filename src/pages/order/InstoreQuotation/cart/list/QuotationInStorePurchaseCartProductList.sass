@@ -1,0 +1,52 @@
+.quotation-in-store-purchase-cart-product-list
+  height: 550px
+  overflow-y: auto
+  .uik-widget-table__wrapper
+    border: none
+  .uik-checkbox__label
+    &:before
+      margin-right: 0 !important
+
+  .quotation-in-store-purchase-cart-product-list__table-header
+    th
+      position: sticky
+      top: -2px
+      background-color: white
+      z-index: 1
+
+
+  .quotation-in-store-purchase-cart-product-list__product-row
+    td
+      transition: opacity .3s
+
+    &--checked
+
+    &--unchecked
+      td
+        &:not(:first-child)
+          opacity: .5
+
+    //&:hover:not(&--checked)
+    //  opacity: 1
+    .uik-checkbox__label
+      &:before
+        margin-right: 0 !important
+
+  .quotation-in-store-purchase-cart-product-list__stock-input
+    width: fit-content
+    max-width: 5rem
+
+  .quotation-in-store-purchase-cart-product-list__td-action
+    padding: 0
+
+  .quotation-in-store-purchase-cart-product-list__product-thumbnail
+    width: 4rem
+    height: 4rem
+    flex-shrink: 0
+
+  .quotation-in-store-purchase-cart-product-list__product-name
+    overflow-y: hidden
+    word-break: break-word
+    max-height: 38px
+
+  .quotation-in-store-purchase-cart-product-list__deleted-icon

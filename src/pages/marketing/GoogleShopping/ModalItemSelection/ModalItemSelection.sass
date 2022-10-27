@@ -1,0 +1,67 @@
+.product-list-barcode-printer
+  width: 600px !important
+
+  .paging-table__pagination
+    margin-bottom: 0
+
+  .modal-title
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .uik-checkbox__wrapper
+    margin-bottom: 0 !important
+    margin-left: .25rem
+
+  .product-list-barcode-printer__search-wrapper
+    padding: 0.5rem .5rem
+    background-color: #eaeaea
+    margin: 0 -1rem
+
+    //div:first-child
+    //  background-color: blue
+    //  height: 50px
+    //  flex-grow: 1
+    //  margin: 0 .25rem
+
+  .product-list-barcode-printer__product-list
+    max-height: 50vh
+    overflow-y: auto
+    margin: 0 -1rem 1rem -1rem
+    animation-name: slide-right-2
+    animation-duration: .3s
+    animation-timing-function: ease-in-out
+
+    @keyframes slide-right-2
+      0%
+        transform: translateX(-10px)
+        opacity: 0
+      100%
+        transform: translateX(0)
+        opacity: 1
+
+  .product-list-barcode-printer__inserted-list
+    overflow-x: hidden
+    animation-name: slide-left-2
+    animation-duration: .3s
+    animation-timing-function: ease-in-out
+
+    @keyframes slide-left-2
+      0%
+        transform: translateX(10px)
+        opacity: 0
+      100%
+        transform: translateX(0)
+        opacity: 1
+
+  .product-list-barcode-printer__search-by-selector
+    width: 200px !important
+
+  .product-list-barcode-printer__page-size-selector
+    width: fit-content !important
+
+
+  .product-list-barcode-printer__print-body
+    width: 210mm
+    height: 297mm
+

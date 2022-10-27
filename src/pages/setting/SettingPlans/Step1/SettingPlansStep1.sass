@@ -1,0 +1,228 @@
+@import "../../../../../sass/mixins"
+.setting-plans-step1
+  padding: 0 1em
+
+  @include mobile
+    padding: 0
+
+  @include tablet
+    overflow: auto
+
+  @include tablet-landscape
+    overflow: auto
+
+  .sale-info
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__title
+      border: 1px solid #90CE51
+      font-weight: bold
+      padding: .3em .5em
+      color: #90CE51
+      font-size: 1rem
+
+
+
+    &__descriptions
+      margin-top: .3em
+
+      pre
+        font-family: inherit
+        text-align: center
+
+
+  .plans-table
+    width: 100%
+    padding: 1em
+    tr
+      td
+        border: 1px solid #C6C6C6
+        padding: .7em
+
+        &:first-child
+          padding: .7em .7em .7em 2em
+    tr.no-border
+      td
+        border: 0
+
+    .plans-table__plan-info
+      border: 1px solid #556CE7
+      th
+        border: 1px solid #556CE7
+        padding: 1em
+      td
+        border: 1px solid #556CE7
+
+    .plans-table__row-plan-name
+      font-size: 1.2rem
+      text-transform: uppercase
+      text-align: center
+      color: #556CE7
+
+
+      .plans-table__cell-plan-name
+        min-width: 8.5em
+
+        .current-package
+          font-size: .6em
+          position: absolute
+          top: -10px
+          left: 0
+          right: 0
+          background-color: #9EA0A5
+          width: 70%
+          text-align: center
+          margin: auto
+          border: 1px solid
+          border-radius: 2px
+          color: white
+          text-transform: capitalize
+
+        img
+          height: 1em
+          width: 1em
+          margin: 0 .3em
+
+        .plans-table__cell-trial
+          font-size: .5em
+          color: #9EA0A5
+          display: block
+
+        &--withArrow
+          position: relative
+
+          &:before, &:after
+            top: 100%
+            left: 50%
+            border: solid transparent
+            content: " "
+            height: 0
+            width: 0
+            position: absolute
+            pointer-events: none
+
+          &:after
+            border-color: rgba(136, 183, 213, 0)
+            border-top-color: white
+            border-width: 8px
+            margin-left: -8px
+
+          &:before
+            border-color: rgba(194, 225, 245, 0)
+            border-top-color: #556CE7
+            border-width: 10px
+            margin-left: -10px
+
+    .plan-pricing__selector
+      white-space: pre
+
+      span
+        color: #FF8D00
+
+      .uik-checkbox__wrapper
+        height: 1.5rem
+        display: flex
+        align-items: center
+
+        .uik-checkbox__label green
+          display: flex
+          align-items: center
+
+    .plan-info__price-btn-container
+      .uik-btn__base
+        height: 2rem
+        margin: 8px
+
+      .plan-info__price-btn
+
+        &--disable
+          background: unset
+          color: black
+          border: 1px solid transparent
+          box-shadow: unset
+          pointer-events: none
+
+
+
+    .details__row-group
+      border: 1px solid #E8E8E8
+      background: #F6F9FD
+      font-size: 1.1em
+      font-weight: bold
+
+      td
+        padding: 1.3em 2em
+
+
+    .details__row-feature
+      img
+        margin: 0 auto
+        display: block
+
+    .details__row-bottom-btn
+      text-align: center
+
+
+    .details__row-bottom-months
+      padding: 1em
+
+  .bottom-button__text
+    white-space: pre
+
+
+  .mobile-detail
+    margin-top: 1em
+
+    .uik-tab__container
+      padding: 0
+
+    .uik-tab__item
+      flex: 1
+      text-align: center
+
+      img
+        width: 1.5em
+        margin-right: .5em
+
+    .plan-tab-content
+      margin: 0 -1em
+
+    .plan-tab-pricing-selector
+      padding: 2rem 1rem
+
+    .mobile-details__row-group
+      border: 1px solid #E8E8E8
+      background: #F6F9FD
+      font-size: 1.1em
+      font-weight: bold
+      padding: 1em 1em
+
+    .mobile-details__row-feature
+      padding: .7em 1em
+      border-bottom: 1px solid #E8E8E8
+
+    .mobile-details__row-bottom-btn
+      padding: 0 1em 1em 1em
+
+    .details__row-bottom-months
+      text-align: center
+      padding: 1em
+
+  &__go-call__status
+    text-align: center
+    color: #90CE51
+    font-weight: bold
+    text-transform: uppercase
+    cursor: pointer
+
+    &:hover
+      opacity: 0.8
+
+    &--disabled
+      opacity: 0.5
+      cursor: not-allowed
+
+    &--activated
+      color: grey

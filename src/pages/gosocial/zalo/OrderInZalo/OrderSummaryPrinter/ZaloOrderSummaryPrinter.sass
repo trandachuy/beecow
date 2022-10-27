@@ -1,0 +1,104 @@
+.zalo-order-summary-template
+  background-color: #FFFFFF
+  font-size: 12px
+
+  .header
+    display: flex
+
+    .user-info
+      display: flex
+      align-items: center
+      padding: 28px 30px
+      background-color: #F0F0F0
+      width: 40%
+
+      .avatar
+        border-radius: 39px
+        overflow: hidden
+
+      .user-name
+        margin-left: 24px
+        font-weight: 500
+        font-size: 15px
+
+    .indicator
+      border-top: 55px solid #F0F0F0
+      border-left: 35px solid #F0F0F0
+      border-right: 35px solid #FFFFFF
+      border-bottom: 55px solid #FFFFFF
+
+    .order-summary
+      display: flex
+      flex-direction: column
+      padding: 19px 28px
+      justify-content: center
+      margin-left: auto
+
+      .title
+        font-weight: bold
+        font-size: 25px
+        text-transform: uppercase
+
+      .order-info
+        display: flex
+        justify-content: space-between
+        padding-left: 20px
+
+        &:first-child
+          margin-top: 16px
+
+        .label
+          font-weight: 500
+
+  .summary
+    display: flex
+    padding: 30px 30px 0 30px
+
+    .info
+      width: calc(100% / 3)
+      padding: 0 23px
+
+      .title
+        font-weight: bold
+        font-size: 13px
+        text-transform: uppercase
+        width: 100%
+        white-space: pre
+        border-bottom: 1px solid #E4E4E4
+        padding-bottom: 8px
+
+      .value
+        margin-top: 10px
+
+  .table
+    padding: 30px
+    margin-bottom: 0
+
+    table
+      width: 100%
+
+      th
+        text-transform: uppercase
+        font-weight: bold
+        background-color: #F6F6F6 !important
+        white-space: pre
+
+      .model
+        color: #9D9D9D
+        margin-top: 8px
+        display: block
+
+      .footer
+        td
+          background-color: #F6F6F6 !important
+
+        td
+          border-top: none !important
+          white-space: pre
+
+        &.sub-total
+          font-weight: 500
+
+        &.total
+          font-weight: 500
+          font-size: 20px

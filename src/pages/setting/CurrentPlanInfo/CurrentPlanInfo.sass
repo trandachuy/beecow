@@ -1,0 +1,91 @@
+.current__plan_information
+  padding: 0 !important
+  .setting__account
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 20px 0
+
+    .account__block
+      display: flex
+      flex-direction: column
+
+      .account__line2
+        margin-top: 1em
+
+      .btn-change-plan
+        font-size: .8rem
+        padding: 0 1em
+        color: white !important
+        //background-color: #007bff !important
+
+  .see-plan
+    margin-top: 1.5em
+    width: 100%
+    display: flex
+    justify-content: flex-end
+
+    .gs-button
+      min-width: 10em
+
+/** RWD Setting */
+
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .current__plan_information
+    .setting__account
+      flex-wrap: wrap
+
+      .account__block
+        display: flex
+        flex-direction: column
+        flex-basis: calc(100% - 50%)
+
+        .account__line2
+          margin-top: unset
+          margin-bottom: 1em
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .current__plan_information
+    .setting__account
+      flex-wrap: wrap
+
+      .account__block
+        display: flex
+        flex-direction: column
+        flex-basis: calc(100% - 50%)
+
+        .account__line2
+          margin-top: unset
+          margin-bottom: 1em
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .current__plan_information
+    .setting__account
+      flex-wrap: wrap
+
+      .account__block
+        display: flex
+        flex-direction: column
+        flex-basis: calc(100% - 50%)
+        
+        .account__line2
+          margin-top: unset
+          margin-bottom: 1em
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .current__plan_information
+    .setting__account
+      flex-wrap: wrap
+
+      .account__block
+        display: flex
+        flex-direction: column
+        flex-basis: calc(100% - 50%)
+
+        .account__line2
+          margin-top: unset
+          margin-bottom: 1em

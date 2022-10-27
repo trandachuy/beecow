@@ -1,0 +1,106 @@
+.close-promotion-add-branch-modal
+  padding: 0 !important
+  margin: 0 !important
+
+.promotion-add-branch-modal
+  max-width: unset !important
+  width: 100%
+  margin: 0
+  .modal-content
+    min-width: 50% !important
+    width: 50em !important
+    max-width: 95% !important
+    .modal-header
+      display: flex
+      align-items: center
+      .modal-title
+        display: flex
+        justify-content: space-between
+
+  h1
+    font-size: 1.25rem
+    font-weight: 900
+
+  .branch-selection-sumary
+    font-size: 14px
+    font-weight: normal
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio).select-branch-row__discount
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label.green::before
+      background-image: url(/assets/images/icon-checked.png)
+      background-position: center center
+      background-repeat: no-repeat
+      background-color: #1665D8
+      border: 1px solid #1665D8
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio)
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label
+      .uik-checkbox__checkboxIcon
+        display: none
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) .uik-checkbox__label:before
+    min-width: 16px
+    min-height: 16px
+
+.select-branch-modal__search-group
+  padding: .5rem .5rem
+  background-color: #eaeaea
+  margin: 0 -1rem
+
+  .check-all-branch
+    padding-left: .5rem
+
+  .search-branch
+    margin-left: 10px
+    width: 100%
+    position: relative
+
+.modal-body
+  .branch-list
+    position: relative
+    margin: 1em 0 .5rem 0
+    height: 60vh
+    overflow: auto
+    .pagination
+      margin-bottom: .5rem
+    .gs-table
+      height: 60vh
+      display: flex
+      flex-direction: column
+      .gs-table-body
+        flex-grow: 1
+        overflow-y: auto
+        justify-content: flex-start
+        .gs-table-body-items
+          &:hover
+            background-color: #1665D808
+          div.gs-table-body-item
+            max-width: 100%
+            padding: 0
+            &:first-child
+              padding-left: 30px
+            div.uik-checkbox__label.green
+              padding: 0
+              border: unset
+              div
+                min-width: 10%
+                padding: 0
+        .select-branch-item-row
+          width: 100%
+          padding: 1.25rem 0
+          cursor: pointer
+          margin: 0
+          .branch-name
+            padding: 0
+            max-width: 25vw
+            text-overflow: ellipsis
+            overflow: hidden
+
+@media only screen and (max-width: 1024px)
+  .modal-body
+    .branch-list
+      .gs-table
+        .gs-table-body
+          .select-branch-item-row
+            .branch-name
+              max-width: 70vw

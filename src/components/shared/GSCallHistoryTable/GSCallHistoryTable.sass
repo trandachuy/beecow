@@ -1,0 +1,184 @@
+@import '../../../../sass/style'
+@import "../../../../sass/mixins"
+
+.call-center-page
+  .order-page__filter-pane
+    width: 600px
+    font-size: 14px
+
+    .uik-select__optionListWrapper
+      width: fit-content
+      width: -moz-fit-content
+
+    .order-page__filter-title
+      font-weight: 500
+      padding-top: .3rem
+      color: #424242
+
+    .uik-select__wrapper
+      margin-left: 0 !important
+
+      .uik-btn__base
+        height: 31px
+
+    .order-page__filter-section
+      margin-bottom: 1rem
+
+
+  .order-page__filter-option
+    background-color: #e9f2fb
+    border-radius: .25rem
+    margin-right: .3rem
+    margin-bottom: .3rem
+    padding: .3rem .5rem
+    font-size: 14px
+    transition-duration: .2s
+    cursor: pointer
+    transition-property: opacity, background-color
+    font-weight: 500
+
+    &:hover
+      opacity: .8
+
+    &.selected
+      background-color: #1665d8
+      color: white
+
+  .btn-filter-desk
+    border: 1px solid #D8DCE6
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    padding: 0.75em
+    height: 38px
+    border-radius: 4px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 10rem
+    cursor: pointer
+
+    .icon-filter
+      margin-right: -3px
+
+
+  .top-search
+    border: unset
+    box-shadow: unset
+    flex-direction: row!important
+    -webkit-flex-direction: row!important
+    margin-top: unset
+    display: flex
+    display: -webkit-flex
+    justify-content: space-between
+    flex-direction: column
+    -webkit-flex-direction: column
+    align-items: center
+    .gs-search-box__wrapper
+      input
+        max-width: 300px !important
+    .search
+      flex-basis: 100%
+      -webkit-flex-basis: 100%
+      @include mobile
+        margin-bottom: 1em
+        width: 100%
+        max-width: unset
+    .group-combobox
+      -webkit-flex-basis: 100%
+      flex-basis: 100%
+      display: flex
+      display: -webkit-flex
+      border: unset
+      box-shadow: unset
+      justify-content: flex-end
+      flex-direction: row
+      -webkit-flex-direction: row
+      //margin-right: 1.5em
+      select
+        min-width: 10rem
+        background-color: white
+        color: black
+        border-color: #ced4da
+        box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+        border-radius: 0.25rem
+        option
+          padding: 10px
+          margin-top: 10px
+          line-height: 10px
+      .dropdown-box
+        min-width: 11rem
+        width: fit-content
+        margin-left: 1em
+        button
+          display: flex
+          display: -webkit-flex
+          justify-content: space-between
+          align-items: center
+          min-width: 11rem
+          &.gs-button__green:hover
+            background-color: unset
+  .empty
+    margin-top: 0 !important
+    display: flex
+    display: -webkit-flex
+    flex-direction: column
+    -webkit-flex-direction: column
+    justify-content: center
+    background-color: #F9F9F9
+    flex-grow: 1
+    align-items: center
+    i
+      &.icon-empty
+        background-image: url('/assets/images/empty call history.svg')
+        background-repeat: no-repeat
+        width: 130px
+        height: 100px
+        display: block
+        margin-bottom: 1em
+  .gs-table
+    margin-top: 1em
+    border-top: 1px solid #EAEDF3
+    .gs-table-header
+      text-align: center
+      .gs-table-header-item
+        max-width: 14%
+        min-width: 14%
+        &:nth-child(2)
+          max-width: 10% !important
+          min-width: 10% !important
+        &:nth-child(3)
+          max-width: 8% !important
+          min-width: 8% !important
+        &:nth-child(7)
+          max-width: 7% !important
+          min-width: 7% !important
+    .gs-table-body
+      .gs-table-body-item
+        text-align: center
+        max-width: 14%
+        min-width: 14%
+        &:nth-child(2)
+          max-width: 10% !important
+          min-width: 10% !important
+        &:nth-child(3)
+          max-width: 8% !important
+          min-width: 8% !important
+        &:nth-child(7)
+          max-width: 7% !important
+          min-width: 7% !important
+        &:nth-child(8)
+          overflow: hidden
+          text-overflow: ellipsis
+
+    .toolbar__status
+      margin-right: 1em
+      border-radius: 2px
+      &--successfuly
+        background-color: #E3F5C8
+        color: #75AF39
+      &--declined
+        background-color: #FBE8E7
+        color: #D8423C
+      &--non_successfuly
+        background-color: #ADB4FB
+        color: #4270F8

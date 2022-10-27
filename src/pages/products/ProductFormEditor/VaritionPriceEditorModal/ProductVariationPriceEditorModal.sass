@@ -1,0 +1,67 @@
+@import "../../../../../sass/mixins"
+
+.product-variation-price-editor-modal
+
+  @include mobile
+    margin: 0 !important
+    padding: .5rem
+
+  .product-variation-price-editor-modal__table-wrapper
+    max-width: calc(633px - 2rem)
+    max-height: 40vh
+    overflow: auto
+
+
+  .product-variation-price-editor-modal__apply-all-wrapper
+    .product-variation-price-editor-modal__select-price-type
+      width: 150px
+
+    .form-group
+      margin-bottom: 0
+
+    .invalid-feedback
+      position: absolute
+
+  .product-variation-price-editor-modal__table
+
+    td, th
+      padding: .5rem 1rem
+      min-width: 4rem
+      white-space: nowrap
+
+    td
+      height: 55px
+      vertical-align: baseline
+
+      .wrapper
+        text-align: left
+
+    .form-group
+      margin-bottom: 0
+      width: 160px
+
+  .cur-input--error
+    border: 1px solid #dc3545
+    border-radius: 0.25rem
+    transition-duration: 0.15s, 0.15s
+
+    &:focus-within
+      border-color: #dc3545
+      box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25)
+
+  .cur-input--not-error
+    border: 1px solid #ced4da
+    border-radius: 0.25rem
+    transition-duration: 0.15s, 0.15s
+
+    &:focus-within
+      border: 1px solid #80bdff
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+
+  &__apply-price
+    height: 40px
+    text-align: right
+
+  .cur-text--error
+    color: #dc3545
+    font-size: .7em

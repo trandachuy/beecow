@@ -1,0 +1,64 @@
+.automatic-ads-container__intro.uik-widget__wrapper
+  padding: 0px
+  border: unset !important
+  box-shadow: unset !important
+  border-radius: .5em !important
+
+  .automatic-ads
+    display: flex
+    flex-direction: row
+
+    .automatic-ads__text
+      flex: 1
+
+      .title, .subTitle, .ft, .footer
+        display: block
+
+      .title
+        font-size: 1.4rem
+        font-weight: bold
+        margin-bottom: 2rem
+
+      .subTitle, .ft, .footer
+        font-size: 1.15em
+
+      .subTitle
+        max-width: 28em
+        margin-bottom: 1.2em
+
+      .sub-footer
+        text-transform: uppercase
+
+      .ft
+        font-size: 1em
+        min-height: 1.8em
+        padding-left: 20px
+        margin-bottom: 20px
+        color: #9EA0A5
+
+        &:before
+          content: ''
+          background: url("/assets/images/upgrade_page/check.svg")
+          background-size: cover
+          width: .7em
+          height: .7em
+          display: inline-block
+          margin-right: .5em
+
+      .status-waiting
+        color: #00c851
+
+      .footer
+        font-size: 1em
+        margin: 1.3em 0
+        font-weight: bold
+
+      .btn-upgrade
+        width: 8.5em
+
+    .automatic-ads__banner
+      flex: 1
+      background: url("/assets/images/automatic_ads.svg")
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat

@@ -1,0 +1,38 @@
+.gs-pagination
+
+  width: 100%
+
+  .gs-pagination__pagination
+    display: flex
+    flex-direction: row
+    -webkit-flex-direction: row
+    justify-content: center
+
+  .gs-pagination__page-item
+    cursor: pointer
+    color: #939393
+
+    &--disable
+      pointer-events: none
+
+  .gs-pagination__page-link
+    position: relative
+    display: block
+    padding: 0.5rem 0.75rem
+    margin-left: -1px
+    line-height: 1.25
+    color: #007bff
+    background-color: #fff
+    border: 1px solid #dee2e6
+
+    &--disable
+      background-color: #e9ecef
+      border-color: #dee2e6
+      cursor: none
+      pointer-events: none
+
+  .uik-btn__base
+    width: 2em
+    height: 2em
+    padding: 0
+    font-size: 1em

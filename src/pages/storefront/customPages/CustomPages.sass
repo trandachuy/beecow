@@ -1,0 +1,77 @@
+.custom-page-container
+  .gs-widget__content
+    padding-left: 0
+    padding-right: 0
+
+    .n-filter-container
+      width: 100%
+      display: flex
+      display: -webkit-box
+      justify-content: flex-end
+      align-items: center
+      flex-shrink: 0
+      margin-top: 10px
+
+      .uik-checkbox__wrapper
+        margin-bottom: 0
+
+      .uik-select__wrapper
+        margin-left: 1em
+        margin-right: 1em
+        min-width: 12em
+
+      .search-box__wrapper
+        webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+
+        input
+          padding: 8px 15px 8px 40px !important
+
+.uik-widget-table-custom-page
+  tr 
+    td:first-child
+      max-width: 0
+      div
+        display: flex
+        display: -webkit-flex
+        flex-direction: column
+        &.title-item
+          max-width: 100%
+          .page-name
+            text-align: left
+            text-overflow: ellipsis
+            overflow: hidden
+            word-wrap: none
+            white-space: nowrap
+            &.short-content
+              color: #9EA0A5
+    th:last-child
+    td:last-child
+      display: flex
+      display: -webkit-flex
+      flex-direction: row
+      justify-content: center
+
+
+.action-item
+  display: flex
+  justify-content: flex-start
+  min-width: 5em
+  >i
+    background-repeat: no-repeat
+    width: 20px
+    height: 20px
+    cursor: pointer
+    margin: 0 10px
+    &.icon-edit
+      background-image: url(/assets/images/icon-edit.png)
+      &:hover
+        opacity: 0.7
+
+    &.icon-delete
+      background-image: url(/assets/images/icon-delete.png)
+      &:hover
+        opacity: 0.7
+
+.gs-no-data
+  min-height: 500px

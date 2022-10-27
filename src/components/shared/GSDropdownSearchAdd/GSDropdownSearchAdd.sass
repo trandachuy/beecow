@@ -1,0 +1,96 @@
+.gs-dropdown-search-add
+  position: relative
+  width: 100%
+  display: block
+
+  .value
+    padding-right: 22px
+
+  .icon
+    -webkit-box-flex: 0
+    -ms-flex-positive: 0
+    flex-grow: 0
+    -webkit-transition: 0.2s color
+    -o-transition: 0.2s color
+    transition: 0.2s color
+    position: absolute
+    width: 1px
+    height: 100%
+    margin-left: 12px
+    top: 50%
+    right: 0
+
+    &:before,
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      top: -4px
+      left: -19px
+      width: 0
+      height: 0
+      border-left: 3px solid transparent
+      border-right: 3px solid transparent
+      border-bottom: 3px solid #9EA0A5
+
+    &:before
+      top: 2px
+      -webkit-transform: rotate(180deg)
+      -ms-transform: rotate(180deg)
+      transform: rotate(180deg)
+
+  .search-result
+    transition: all .3s ease
+    background-color: white
+    border-radius: .25rem
+    position: absolute
+    top: 50px
+    left: 0
+    width: 100%
+    max-height: 0
+    overflow-y: auto
+    z-index: 5
+
+    &.expanded
+      max-height: 258px
+      padding: 10px 12px
+      border: 1px solid #ced4da
+      box-shadow: 0 0 4px 1px lightgrey
+
+    &::-webkit-scrollbar
+      width: 3px
+
+    &::-webkit-scrollbar-thumb
+      background: #C4C4C4
+
+    &:focus
+      outline: none
+
+    .search-item
+      border-bottom: 1px solid #ced4da
+      padding: .5rem .2rem
+      display: flex
+      align-items: center
+
+      &:last-child
+        border-bottom: unset
+
+    .no-result
+      color: #9EA0A5
+      font-size: 14px
+      margin-bottom: 0
+
+    .add-new
+      font-size: 14px
+      margin-bottom: 0
+      cursor: pointer
+      overflow-x: hidden
+      text-overflow: ellipsis
+
+      &:hover
+        opacity: .8
+
+      .add
+        color: #556CE7
+        margin-left: 14px
+        font-weight: 500

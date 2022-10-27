@@ -1,0 +1,77 @@
+.order-print-receipt-page
+
+  @media print
+    .order-print-break
+      page-break-before: always
+
+  .head-line
+    margin-bottom: 20px
+
+  .col-2, .col-4, .col-6, .col-8, .col-12
+    padding: 5px 0px !important
+
+  .header
+    text-align: center
+    font-weight: bold
+    &:not(:last-child)
+      border-right: 2px solid white
+  
+  .item-row
+    .body
+      &:not(:last-child)
+        padding-right: 2px
+
+      .product-name
+        display: flex
+        flex-direction: column
+
+        .name
+          font-weight: bold
+        .variation
+          margin-top: 5px
+    
+    &:not(:last-child)
+      border-bottom: 1px solid #cbcccb
+    
+  .text-upper-case
+    text-transform: uppercase
+
+  .with__background
+    background-color: #cbcccb !important
+    -webkit-print-color-adjust: exact
+
+  .title
+    font-weight: bold
+
+  .content
+
+  .seller-name
+    font-weight: bold
+    font-size: 2em
+    border-right: 2px solid white
+    height: 100%
+
+  .buyer-name
+    font-weight: bold
+    font-size: 2em
+    height: 100%
+
+  .pal-10
+    padding-left: 10px !important
+
+  .par-10
+    padding-right: 10px !important
+
+  .total-amount
+    border-top: 1px solid #9EA0A5
+    font-size: 2.5em
+  
+  .mar-b-20
+    margin-bottom: 20px
+
+  .mar-t-30
+    margin-top: 30px
+
+  .shipping-fee-original
+    text-decoration: line-through
+    margin-right: 5px

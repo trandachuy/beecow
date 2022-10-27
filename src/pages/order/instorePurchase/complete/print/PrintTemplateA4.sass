@@ -1,0 +1,64 @@
+.print-template-a4
+  .page-header
+    position: fixed
+    top: 20px
+    width: 90%
+
+    &-wrapper
+      display: flex
+      flex-direction: column
+      width: 100%
+      padding-bottom: 20px
+
+    &-content
+      display: flex
+      align-items: center
+      width: 100%
+
+    .indicator
+      width: 100%
+      height: 3px
+      background-color: rgba(0, 0, 0, 0.5)
+      margin-top: 10px
+
+      &::after
+        content: ''
+        width: 100%
+        height: 1px
+        display: inline-block
+        background-color: rgba(0, 0, 0, 0.5)
+        margin-top: 5px
+
+  .table-information
+    tr
+      td
+        width: fit-content
+        padding: 5px 10px 0 0
+        border: none
+        vertical-align: baseline
+
+        &.title
+          white-space: pre
+
+  .product-list
+    table
+      table-layout: fixed
+      page-break-inside: auto
+
+      thead
+        display: table-header-group
+
+      td, th
+        padding: .5rem .5rem
+        font-size: 16px
+        border: none
+
+      th
+        background-color: rgba(0, 0, 0, 0.05)
+        text-transform: uppercase
+        font-weight: bold
+
+      tr
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+        page-break-inside: avoid
+        page-break-after: auto

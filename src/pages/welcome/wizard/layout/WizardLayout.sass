@@ -1,0 +1,85 @@
+@import "../../../../../sass/mixins"
+
+.wizard-layout
+  background-color: #FBFBFD
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  align-items: center
+
+  &__header
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 2em
+
+  &__title
+    font-size: 1.7em
+    line-height: 2.2em
+    font-weight: 500
+
+  &__content-wrapper
+    background-color: white
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 2em
+    border-top: 1px solid #EAEDF3
+    border-bottom: 1px solid #EAEDF3
+    flex-grow: 1
+    width: 100%
+
+    @include tablet
+      width: 100%
+
+    @include mobile
+      justify-content: flex-start !important
+      flex-direction: column !important
+      padding-left: 0 !important
+      padding-right: 0 !important
+      width: 100%
+
+    .wizard-layout__content
+      max-width: 1200px
+      min-width: 992px
+      height: 100%
+      flex: 1
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      min-height: 600px
+
+      .step-page__container
+        height: 100%
+
+      .button-group
+        margin-top: auto
+
+      @include mobile
+        min-width: unset !important
+        width: 90%
+
+      @include tablet
+        min-width: unset !important
+        width: 100vw !important
+
+
+  &__footer
+    padding: 2em
+    text-align: center
+    color: #9B9B9B
+    flex-grow: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+
+@include mobile
+  .wizard-layout
+    &__title
+      font-size: 1em
+    &__content-wrapper
+      padding: 1em
+    &__footer
+      flex-grow: 1

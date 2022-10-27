@@ -1,0 +1,54 @@
+@import "../../../../sass/mixins"
+.sarch-by-shipping-address
+  @include mobile
+    flex-basis: 60%
+  @include mobile-l
+    flex-basis: 50%
+  .search
+    position: relative
+    .list-shipping-address
+      position: absolute
+      left: 0
+      top: 45px
+      background: #FFFFFF
+      border: 1px solid #DDE0E9
+      z-index: 999999
+      width: 600px
+      border-radius: 5px
+      box-shadow: 1px 2px 5px #DDE0E9
+      max-height: 50vh
+      overflow-y: auto
+      @include mobile
+        width: 90vw
+      @include mobile-l
+        width: 85vw
+      &::-webkit-scrollbar
+        width: 3px
+      &::-webkit-scrollbar-thumb
+        background: #C4C4C4
+      .loading
+        justify-content: center
+        display: flex
+      .list-row
+        display: flex
+        align-items: center
+        border-bottom: 1px solid #DDE0E9
+        padding: 10px
+        cursor: pointer
+        &:hover
+          background: #eeeeee
+        &:last-child
+          border-color: transparent
+        &.empty
+          font-style: italic
+          font-weight: 400
+          font-size: 14px
+        svg
+          width: 26px
+          min-width: 26px
+        p
+          margin: 0
+          padding-left: 10px
+          font-size: 14px
+            
+    

@@ -1,0 +1,73 @@
+.expired-plan-modal
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(0, 0, 0, 0.5)
+  z-index: 1000
+
+  &__wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-image: url("../../../../public/assets/images/switch-theme-engine-notification/Bg@2x.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    width: 100vw
+    overflow: auto
+    padding: 5em 0
+
+    &__body
+      background-color: #FFFFFF
+      width: 60vw
+      margin: auto
+      border-radius: 1em
+      -webkit-box-shadow: 0px 0px 7px -1px rgba(87,87,87,1)
+      -moz-box-shadow: 0px 0px 7px -1px rgba(87,87,87,1)
+      box-shadow: 0px 0px 7px -1px rgba(87,87,87,1)
+      padding: 2vmin 6vmin
+      text-align: center
+
+      &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+
+        &--title
+          color: #3F4DB9
+          font-weight: bold
+          font-size: 4vmin
+          margin-top: 1.5em
+
+        &--description
+          color: #000000
+          font-size: 2vmin
+          margin-top: 1.5em
+
+      &__actions
+        justify-content: center
+        display: flex
+        bottom: 1rem
+        position: relative
+
+        &--seePlan
+          background-color: #3F4DB9
+          color: #FFFFFF
+          border: none
+          padding: .5em 2em
+          font-weight: bold
+          font-size: 2vmin
+          border-radius: 3em
+          text-transform: uppercase
+          margin: 2.5em 0 1em 0
+
+      &__information
+        font-size: 1.7vmin
+
+        &--item
+          color: #3F4DB9
+          font-weight: bold

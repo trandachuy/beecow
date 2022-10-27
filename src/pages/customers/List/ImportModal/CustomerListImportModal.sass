@@ -1,0 +1,61 @@
+@import "../../../../../sass/mixins"
+.customer-list-import-modal
+
+  .customer-list-import-modal__icon-upload
+    width: 27px
+    height: 27px
+    background-image: url("/assets/images/icon-importcustomers.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    display: inline-block
+    margin-top: 1rem
+
+  .customer-list-import-modal__drop-zone
+    background-color: #FAFAFA
+    border: 1px dashed #B9BDCF
+    font-size: 12px
+    color: #9EA0A5
+    text-align: center
+    cursor: pointer
+
+    @include desktop
+      width: 400px
+      height: 100px
+
+    @include mobile
+      width: 100%
+
+  .customer-list-import-modal__file-zone
+    background-color: #FAFAFA
+    border: 1px dashed #B9BDCF
+    display: flex
+    padding: 1rem
+    align-items: center
+    text-align: left
+
+    @include desktop
+      width: 400px
+      height: 100px
+
+    @include mobile
+      width: 100%
+
+  .customer-list-import-modal__file-name
+    font-weight: 500
+    display: block
+    font-size: 14px
+
+  .customer-list-import-modal__file-size
+    color: #B9BDCF
+    display: block
+    font-size: 14px
+
+  .customer-list-import-modal__btn-delete
+    margin-left: auto
+    display: block
+
+  .customer-list-import-modal__download-template-text
+    font-size: 14px
+
+

@@ -1,0 +1,51 @@
+@import '../../../../sass/mixins'
+
+@include desktop
+    .var-row__wrapper
+        display: none
+
+@include mobile
+    .var-table__wrapper
+        display: none
+    .var-item__wrapper
+        padding: 10px 0
+
+
+.var-row__wrapper
+    .widget__header-grey
+        background-color: #EAEDF3 !important
+    .uik-widget-content__wrapper
+        padding: 25px 0
+    .gs-widget__header
+        .collapse-icon-wrapper
+            &.icon-collapse
+                background-image: url(/assets/images/icon-collapse.png)
+                transform: rotateZ(90deg)
+            &.icon-expand
+                background-image: url(/assets/images/icon-expand.png)
+                transform: rotateZ(-90deg)
+
+.variation-selector
+    .warning-deposit-restriction
+        border: 1px solid red
+        border-radius: 3px
+        display: flex
+        background-color: #FFF2F1
+        padding: 20px
+        margin-bottom: 20px
+
+        .icon
+            width: 40px
+
+            i
+                background-repeat: no-repeat
+                width: 20px
+                height: 20px
+                display: block
+                background-image: url(/assets/images/icon-error.svg)
+
+        .content
+            flex: 1
+
+            .title
+                font-weight: bold

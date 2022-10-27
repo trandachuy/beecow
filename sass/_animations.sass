@@ -1,0 +1,29 @@
+/* FADE */
+.ani_fade-enter
+  opacity: 0.01
+
+.ani_fade-enter.ani_fade-enter-active
+  opacity: 1
+  transition: opacity 300ms
+
+.ani_fade-leave
+  opacity: 1
+
+.ani_fade-leave.ani_fade-leave-active
+  opacity: 0.01
+  transition: opacity 300ms
+
+/* SLIDE */
+.ani_slide-enter
+  height: 0px
+
+.ani_slide-enter.ani_slide-enter-active
+  height: 100px
+  transition: height 300ms
+
+.ani_slide-leave
+  height: 100px
+
+.ani_slide-leave.ani_slide-leave-active
+  height: 0px
+  transition: height 300ms

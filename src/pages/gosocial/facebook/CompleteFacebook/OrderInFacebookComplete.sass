@@ -1,0 +1,202 @@
+.order-in-facebook-complete
+  .summary
+    width: 75%
+    float: right
+    .text
+      font-size: 13px
+      font-weight: 500
+    .text-total
+      font-size: 20px
+      font-weight: 500
+
+
+  .order-pos__payment-select
+    border: none
+    outline: none !important
+    background: unset
+    margin: 0 0 0 -3px
+    padding: .2rem 0
+
+  .order-pos__received-input
+    border: 0
+    border-bottom: 1px solid lightgray
+    width: 10rem
+    outline: none !important
+    background: unset !important
+
+
+  .order-pos__note-input
+    border: 0
+    border-bottom: 1px solid lightgray
+    width: 100%
+    outline: none !important
+    font-size: 1rem
+    &::placeholder
+      font-style: italic
+
+  .order-pos__input-mpos-code
+    border: none
+    outline: none !important
+    border-bottom: 1px solid lightgray
+    background: unset
+    font-size: 12px
+    width: 7rem
+    margin-top: .3rem
+
+  .order-pos__btn-create-order
+    height: 5rem
+    font-size: 2rem
+
+
+  .order-pos__subtotal-hr
+    margin-top: .5rem
+    margin-bottom: .5rem
+    border-top-width: 2px
+    border-style: dashed
+
+  // don't style this class, it's wrapper class
+  &.order-in-store-purchase-complete__quantity-modal
+
+    
+
+
+    .order-in-store-purchase-complete__product-form
+      max-height: 330px
+      overflow-y: auto
+      padding: 0 .5rem
+      background-color: white
+
+    .order-in-store-purchase-complete__product-table
+
+
+      tr
+        th
+          position: sticky
+          top: 0
+
+        td, th
+          &:first-child
+            padding-left: 0 !important
+            padding-right: 0 !important
+
+          &:last-child
+            padding-left: 0 !important
+            padding-right: 0 !important
+        .form-group
+          margin-bottom: 0 !important
+
+
+    .order-in-store-purchase-complete__input-stock
+      max-width: 4rem
+
+    .order-in-store-purchase-complete__table-product-name
+      overflow-x: hidden
+      text-overflow: ellipsis
+      white-space: pre
+      max-width: 15rem
+
+  .order-in-store-purchase-complete__total-price
+    color: red
+    font-weight: bold
+    font-size: 1.3vw
+
+  .disabled
+    opacity: .3
+    pointer-events: none
+
+  .delivery-group-info
+    .edit-icon
+      margin-left: 10px
+      cursor: pointer
+      
+      &:hover
+        opacity: 0.8
+        
+  .dropdown
+    .dropdown-menu.shipping
+      width: 230px
+      left: -84px !important
+    .dropdown-menu
+      padding-left: 10px
+      padding-right: 10px
+      width: 300px
+      left: -119px !important
+      top: -152px !important 
+      h3
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 1.1rem
+
+      .search
+        display: flex
+        margin: 10px 0
+        margin-bottom: 15px
+
+        .form-group
+          margin: 0
+
+        .search-input
+          border-radius: 4px 0px 0px 4px
+        .search-input.shipping
+          border-radius: 4px 4px 4px 4px
+
+        p.active
+          background-color: #556CE7 !important
+          color: white
+
+        p
+          cursor: pointer !important
+          background-color: #F9F9F9
+          font-size: 14px
+          padding: 0px 14px
+          border-radius: 0px 4px 4px 0px
+          border: 1px solid #EAEDF3
+          border-left: unset
+          height: 38px
+          opacity: 1
+          verticle-align: middle
+          display: flex
+          align-items: center
+          cursor: unset
+          color: black
+          white-space: pre
+
+        .icon.active
+          background-color: #556CE7 !important
+          color: white
+
+        .icon
+          cursor: pointer
+          color: black
+          display: flex
+          align-items: center
+          height: 38px
+          padding: 0px 14px
+          background-color: #F9F9F9
+          border: 1px solid #EAEDF3
+          border-left: unset
+
+          svg
+            padding: 1.5px
+
+      .gsButton
+        display: flex
+        justify-content: center
+
+    @media screen and (max-width: 1200px)
+      .dropdown-menu
+        left: 0px !important
+
+.update-missing__phone-number-modal
+  .alert__wrapper
+    text-align: left !important
+  .update-missing__phone-number-modal__body
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    div
+      width: 100%
+
+    .phone_missing
+      width: 100%

@@ -1,0 +1,114 @@
+@import "../../../../../sass/mixins"
+.call-center-plans-step2
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  &.call-center-plans-step2__overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    //background-color: rgba(0, 121, 0, 0.13)
+    z-index: 1000
+
+  @include mobile
+    align-items: unset !important
+
+  .plan-info
+    display: flex
+    width: 100%
+    padding: 1em
+
+
+    .contact-info
+
+      flex-grow: 1
+
+      .contact-info__description
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        display: flex
+        padding: 2em
+
+        h3
+          font-weight: bold
+
+        p
+          padding-top: 1em
+          text-align: left
+          font-size: 1em
+          padding-bottom: 0px
+          margin-bottom: 0px
+
+        .contact-info__payment-successful
+          font-weight: bold
+          color: #90CE51
+
+        .btn-pay-again
+          margin-top: 1em
+
+      .payment-info
+        border-top: 1px solid #EAEDF3
+        padding: 1em 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &__total
+          padding-left: 2em
+          padding-right: 1em
+
+        &__price
+          font-weight: bold
+          color: #0577FF
+          font-size: 1.5em
+          padding-right: 1em
+
+    .uik-form-input-group__vertical
+      margin: unset !important
+      height: 100%
+      justify-content: space-around
+
+  .btn-back-home
+    margin-right: 1em
+
+
+  .details-container
+    margin-top: 2rem
+    margin-bottom: 2rem
+    width: 100%
+    font-weight: bold
+
+    &.d-mobile-flex
+      flex-direction: column
+
+    table
+      width: 100%
+
+      td
+        min-height: 2em
+        white-space: nowrap
+
+    .value
+      padding: 0 2em
+
+    .title
+      text-transform: uppercase
+      color: #9EA0A5
+      display: flex
+      align-items: center
+      white-space: nowrap
+
+      &:before
+        content: ""
+        width: 5px
+        height: 5px
+        background-color: #9EA0A5
+        display: inline-block
+        margin-right: .3em
+
+

@@ -1,0 +1,83 @@
+.live-chat-chat-list
+  //background-color: red
+  height: 100%
+  display: flex
+  flex-direction: column
+
+  &__search-bar
+    background-color: white
+    height: 80px
+    border-bottom: 1px solid #EAEDF3
+    display: flex
+    padding: 0 1rem
+    align-items: center
+    justify-content: center
+
+  &__list-container
+    flex: 1
+    background-color: white
+    overflow-y: auto
+
+  .live-chat-chat-list__conversation
+    padding: 20px
+    height: 95px
+    border-bottom: 1px solid #EAEDF3
+    display: flex
+    align-items: center
+
+    &:hover
+      background-color: #F6F9FD
+      cursor: pointer
+
+
+    &--active
+      background-color: #F6F9FD
+      box-shadow: inset 3px 0 0 0 #1665D8
+
+    .conversation__info-wrapper
+      height: 100%
+      padding: 2px
+
+    .conversation__time-wrapper
+      margin-left: auto
+      height: 100%
+      padding: 2px
+
+    .conversation__unread-count
+      background-color: #FF4F4C
+      border-radius: 50%
+      width: 1.3rem
+      height: 1.3rem
+      color: white
+      font-size: 12px
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .conversation__time
+      color: #9EA0A5
+
+    .conversation__avatar
+      width: 45px
+      height: 45px
+      border-radius: 50%
+
+    .conversation__user-name
+      font-weight: 500
+      font-size: 1rem
+      white-space: nowrap
+      overflow: hidden
+      width: 100px
+      text-overflow: ellipsis
+
+    .conversation__location
+      color: #6B6C6F
+      white-space: nowrap
+      overflow: hidden
+      width: 100px
+      text-overflow: ellipsis
+
+  .live-chat-chat-list__search-empty
+    margin: 0 !important
+    height: 100%
+

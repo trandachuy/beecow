@@ -1,0 +1,190 @@
+.automatic-ads-container__screen
+  .automatic-ads__header_1
+    display: flex
+
+    .current-balance
+      display: flex
+      flex-direction: column
+      text-align: right
+      padding-right: 20px
+      border-right: 1px solid #dedede
+
+    .daily-budget
+      display: flex
+      flex-direction: column
+      text-align: right
+      margin-left: 20px
+      padding-right: 20px
+      border-right: 1px solid #dedede
+
+      .change-budget
+        color: #5570E2
+        cursor: pointer
+
+    .status-campaign
+      display: flex
+      margin-left: 20px
+      background-color: #ffffff
+      border: 2px solid #dedede
+      border-radius: 2px
+      align-items: center
+      justify-content: center
+      width: 180px
+
+      label
+        margin-bottom: unset
+
+      &.organge
+        .uik-checkbox__label
+          &:before
+            background: #FF8D00
+            border: 1px solid #FF8D00
+
+      &.red
+        .uik-checkbox__label
+          &:before
+            background: red
+            border: 1px solid red
+
+
+    .prefix-title
+      color: #9EA0A5
+
+  .automatic-ads__header_2
+    display: flex
+    width: 100%
+    background-color: #FFFAE8
+    border: 1px solid #FFC150
+    margin-left: unset
+    padding-top: 20px
+    padding-bottom: 20px
+    margin-top: 20px
+
+    &.approval-pending
+      background-color: transparent
+      border: .05em solid #556CE7
+      border-radius: 3px
+
+    .text-group
+      display: flex
+      justify-content: center
+      margin-left: 40px
+      
+      .icon-information
+        background-image: url(/assets/images/icon-information.svg)
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        width: 20px
+        height: 20px
+        min-width: 20px
+
+      .icon-alert
+        background: url("/assets/images/icon-alert.svg")
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        width: 20px
+        height: 20px
+        min-width: 20px
+
+      .text-alert
+        display: flex
+        flex-direction: column
+        margin-left: 10px
+
+        .text-alert__head
+          font-weight: bold
+
+    .btn-group__ads
+      display: flex
+      margin-left: auto
+      padding-right: 40px
+      align-items: center
+    &.request-permision
+      margin-left: unset!important
+      justify-content: space-between
+
+      .text-group
+        flex-basis: 80%
+        justify-content: unset
+
+        .dropdown
+          width: 30%
+          margin-left: 15px
+          margin-top: 10px
+
+          .dropdown-toggle
+            display: flex
+            justify-content: space-between
+            
+          .dropdown-toggle::after
+            align-self: center
+            vertical-align: middle
+            border-top: 0.35em solid
+            border-right: 0.35em solid transparent
+            border-left: 0.35em solid transparent
+          .dropdown-menu.show
+            width: 100%
+            
+      .btn-group__ads
+        margin-left: unset
+
+  .footer-without__campaign
+    margin-top: 100px
+
+.automatic-ads-guide__tooltip
+  font-size: 1rem
+  padding: 20px
+
+  .header
+    display: flex
+    align-items: center
+
+    .icon
+      background-color: #eeeeee
+      background-position: center
+      background-repeat: no-repeat
+      width: 30px
+      height: 30px
+      display: inline-block
+      border-radius: 50%
+      
+    .icon-change__budget
+      background-image: url("/assets/images/icon-changebudget.svg")
+
+    .icon-change__power
+      background-image: url("/assets/images/icon-automatic-guide-off.svg")
+
+    .header-title
+      font-weight: bold
+      padding-left: 10px
+
+  .tooltip-content
+    margin-top: 10px
+    color: #9EA0A5
+
+  .button-group__tooltip
+    margin-top: 10px
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+    .gs-button__green
+      
+  .progress-dot
+    width: 10px
+    height: 10px
+    display: inline-block
+    margin-right: 10px
+    border-radius: 50%
+    
+    &.blur
+      background-color: #D8D8D8
+      
+    &.current
+      background-color: #9EA0A5
+
+    
+
+

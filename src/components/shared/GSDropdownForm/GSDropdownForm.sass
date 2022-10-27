@@ -1,0 +1,126 @@
+
+.dropdownform-selector-disbaled
+  .uik-select__optionListWrapper
+    .uik-select__optionList
+      .uik-select__option
+        .uik-select__check
+          display: none !important
+
+.dropdownform-selector
+  display: block !important
+  
+  .selected-flag
+    width: 2em
+    height: 2em
+    display: inline-block
+    border-radius: 50%
+    background-size: cover !important
+
+
+  .uik-select__valueRendered
+    min-width: 8em
+    transition-duration: .3s
+    box-shadow: unset
+    text-transform: uppercase
+
+
+  .uik-select__optionListWrapper
+    min-width: unset
+
+
+  .uik-select__valueWrapper
+    span:first-child
+      display: flex
+      align-items: center
+
+      span:first-child
+        margin-right: .5em
+
+  .uik-select__label
+      display: flex
+      align-items: center
+      span:first-child
+        text-transform: capitalize
+
+      .dropdown_item_select
+      
+      .dropdown_item_block
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+      .dropdown_action_add
+        width: 100%
+        display: flex
+        justify-content: space-between
+        border: none
+        background-color: unset
+        color: var(--primary)
+
+        button
+          margin: 0px
+          border: solid 1px var(--success)
+          border-radius: 4px
+          background-color: unset
+          color: var(--success)
+          padding-left: 5px
+          padding-right: 5px
+          margin-left: 10px
+
+      .dropdown_action_change
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        border: none
+        background-color: unset
+        color: var(--primary)
+
+        button
+          margin: 0px
+          border: none
+          background-color: unset
+          color: unset
+          width: 100%
+          text-align: left
+
+      .dropdown_action_block
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        border: none
+        background-color: unset
+
+        button
+          height: 30px
+          min-width: 50px
+          border-radius: 4px
+          margin: 0px
+          padding-left: 5px
+          padding-right: 5px
+          margin-left: 10px
+
+          &:disabled
+            background-color: var(--gray) !important
+            border: none !important
+
+        .save
+          border: solid 1px var(--success)
+          background-color: var(--success)
+          color: white
+
+        .cancel
+          border: solid 1px gray
+          background-color: white
+          color: gray
+
+      .uik-input__inputWrapper
+          width: 10rem
+          height: 1.9rem
+          .uik-input__input
+            padding: 4px 4px !important
+            &:disabled
+              background: #e4e4e4
+
+  .input_value_error
+    border: 1px solid red !important
+

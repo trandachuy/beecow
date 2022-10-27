@@ -1,0 +1,45 @@
+.gs-ani__fade-in
+  animation-name: fadeIn
+  animation-duration: .5s
+  animation-timing-function: ease
+
+  @keyframes fadeIn
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+.gs-ani__rotate
+  animation-name: rotate
+  animation-duration: .8s
+  animation-iteration-count: infinite
+
+  @keyframes rotate
+    0%
+      transform: rotateZ(0)
+    100%
+      transform: rotateZ(360deg)
+
+.gs-ani__fade-out
+  animation-name: fadeOut
+  animation-duration: .5s
+  animation-timing-function: ease
+
+  @keyframes fadeOut
+    0%
+      opacity: 1
+    100%
+      opacity: 0
+
+.gs-ani__zoom-in
+  animation-name: zoomIn
+  animation-duration: .5s
+  animation-timing-function: ease
+
+  @keyframes zoomIn
+    0%
+      opacity: 0
+      transform: scale(.9)
+    100%
+      transform: scale(1)
+      opacity: 1

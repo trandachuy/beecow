@@ -1,0 +1,347 @@
+@import "../../../sass/mixins"
+.learning-processing__popup
+  position: relative
+  
+  &.hide
+      display: none !important
+
+  .learning-processing__icon
+    cursor: pointer
+    margin-right: 2.5em
+
+
+    img
+      width: 36pt
+      height: 36pt
+
+    &:hover
+      opacity: 0.7
+
+  .learning-processing__content
+    @include xs
+      width: 85vw
+
+    @include sm
+      width: 70vw
+
+    @include md
+      width: 60vw
+
+    @include lg
+      width: 50vw
+
+    @include xl
+      width: 40vw
+
+    @include xxl
+      width: 30vw
+
+    height: 75vh
+    position: fixed
+    /** bottom: 80pt **/
+    top: 70pt
+    right: 80pt
+    z-index: 999
+    display: flex
+    flex-direction: column
+    
+    //border: 1px solid #dedede
+    border-radius: .25rem
+    background-color: #F8F9FD
+    filter: drop-shadow(0px 0px 5px #5d5757)
+
+    &.hide
+      display: none !important
+
+    /** &:before
+      content: ""
+      width: 0
+      height: 0
+      right: -20px
+      bottom: 20px
+      position: absolute
+      border-top: 20px solid transparent
+      border-bottom: 20px solid transparent
+      border-left: 20px solid black **/
+
+    &:after
+      content: ""
+      width: 0
+      height: 0
+      top: -30px
+      right: 40%
+      position: absolute
+      border-top: 20px solid transparent
+      border-bottom: 20px solid transparent
+      border-left: 20px solid #fff
+      -ms-transform: rotate(-90deg)
+      transform: rotate(-90deg)
+
+    .package-menu-or__page
+      height: 100%
+      border-radius: .25rem
+
+      .header-bar
+        display: flex
+        align-items: center
+        height: 10%
+        padding: 10px 0px
+        color: white
+        font-size: 1.4rem
+        font-weight: bold
+        background-color: #3F51B5
+        border-top-left-radius: .25rem
+        border-top-right-radius: .25rem
+        
+        &.for-menu
+          justify-content: center
+
+        &.for-page
+          padding-left: 20px
+          padding-right: 20px
+          justify-content: space-between
+
+          .lst-package__name
+            display: flex
+            flex-direction: column
+
+            .final-package
+              font-size: 0.5rem
+
+      .content-container
+        height: 90%
+        border-bottom-left-radius: .25rem
+        border-bottom-right-radius: .25rem
+
+        .menu
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          height: 80%
+          padding: 0px 20px
+          overflow: auto
+          
+          .menu-row
+            width: 80%
+            margin: 0px 30px 20px 30px
+            padding: 10px 0px
+            text-align: center
+            font-size: 1.2rem
+            background-color: #DDE2FF
+            border-radius: 10px
+            cursor: pointer
+
+            &:hover
+              opacity: 0.7
+
+            .name
+              font-weight: bold
+              
+            &.active
+              background-color: #3F51B5
+              .name
+                color: white
+
+            &.in-active
+              background-color: #DDE2FF
+              .name
+                color: #3F51B5
+
+        .content
+          height: 80%
+          padding: 0
+          overflow: auto
+          display: flex
+          flex-direction: column
+          background-color: white
+
+          img
+            width: 100%
+          
+          .page-end__step
+            // display: flex
+            // flex-direction: column
+            // justify-content: space-around
+            // align-items: center
+            // height: 100%
+            text-align: center
+            
+            .congratulation-text
+              color: #556ce8
+              font-size: 2.5rem
+              font-weight: bold
+
+            .finish-text
+              display: flex
+              flex-direction: column
+              align-items: center
+              font-size: 2rem
+              font-weight: bold
+              color: #3F51B5
+
+              .finish
+
+              .tutorial-name
+
+            .greate-text
+              color: #556ce8
+              padding-left: 50px
+              padding-right: 50px
+              font-size: 1.5em
+              font-weight: bold
+              text-align: center
+
+            .background
+              img
+                width: 100%
+
+          .title-type
+            display: flex
+            flex-direction: row
+            align-items: center
+            margin: 15px 0px
+            cursor: pointer
+
+            &:hover
+              opacity: 0.7
+              
+            .text
+              flex: 9
+              color: #556CE7
+              font-weight: bold
+              font-size: 1.3rem
+            .arrow
+              flex: 1
+              font-size: 2rem
+              color: #556CE7
+              text-align: right
+
+              &.expand-toggle
+                svg
+                  transform: rotateZ(90deg)
+                  transition-duration: .5s
+
+              &.collapse-toggle
+                svg
+                  transform: rotateZ(0deg)
+                  transition-duration: .5s
+
+            
+          .text-type
+            margin-top: 15px
+            color: #9EA0A5
+
+          .image-type
+            margin-top: 15px
+            img
+              width: 100%
+
+          .video-type
+            margin-bottom: 15px
+
+        .line
+          //margin-top: 15px
+          padding: 0px 25px 0px 20px
+
+          div
+            border-bottom: 2px solid #dedede
+
+        .footer
+          height: 15%
+          padding: 15px 25px 15px 20px
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          align-items: center
+
+          .left
+            text-align: left
+
+          .right
+            text-align: right
+            justify-content: flex-end
+
+          .grey
+            color: #9EA0A5
+
+          .blue
+            color: #2196f3
+
+          
+          .arrow
+            cursor: pointer
+            display: flex
+            flex-direction: column
+            user-select: none
+            &:hover
+              opacity: 0.7
+              color: #2196f3
+
+            .icon
+              svg
+                font-size: 2.5rem
+
+            .text
+
+    .welcome-page
+      // display: flex
+      // flex-direction: column
+      // justify-content: space-around
+      // align-items: center
+      // height: 100%
+      text-align: center
+      height: 75vh
+      padding: 0
+      overflow: auto
+      background-color: white
+      
+      .welcome-page-content
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        height: 100%
+
+        .hello-text
+          color: #556ce8
+          font-size: 2rem
+          font-weight: bold
+          text-transform: uppercase
+
+        .welcome-text
+          display: flex
+          flex-direction: column
+          align-items: center
+          color: #3F51B5
+          font-size: 1.5rem
+          font-weight: bold
+          
+          .welcome
+
+          .gosell-tutorial
+            text-transform: uppercase
+
+        .start-button
+          background-color: #3F51B5
+          color: white
+          // align-items: center
+          border-radius: 10px
+          padding: 10px 30px
+          font-weight: bold
+          font-size: 1rem
+          text-transform: uppercase
+          cursor: pointer
+          width: fit-content
+          margin: 0px auto
+
+          &:hover
+            opacity: 0.7
+
+        .background
+          img
+            width: 100%
+
+
+
+
+

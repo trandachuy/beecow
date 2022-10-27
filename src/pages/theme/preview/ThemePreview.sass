@@ -1,0 +1,42 @@
+.theme-preview
+  .theme-preview-grid
+    display: grid
+    grid: 'logo page toolbar' 'content content content'
+    grid-template-columns: 0.2fr 1fr 3.8fr
+    grid-auto-rows: minmax(min-content, max-content)
+    grid-gap: 0px
+    padding: 0px
+
+    .logo-setting-bar
+      grid-area: logo
+      background-color: #5267df
+      background-image: url(/assets/images/logo_gosell_theme.png)
+      background-repeat: no-repeat
+      background-size: 3rem 3rem
+      background-position: center
+
+    .page-and-setting
+      grid-area: page
+      background-color: #4659c5
+
+    .platform-head-toolbar
+      grid-area: toolbar
+      background-color: #3f51b5
+
+    .theme-editor-body
+      grid-area: content
+      min-height: 100%
+      display: flex
+      background-color: #ffffff
+      align-items: baseline
+      align-content: stretch
+      margin: 0
+      padding: 0
+      flex-direction: column
+      >div
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+

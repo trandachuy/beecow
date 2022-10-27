@@ -1,0 +1,71 @@
+@import '../../../../sass/mixins'
+
+.step-bar__wrapper
+    max-width: 470px
+    width: 100%
+    margin: 0 auto
+
+    .beehive-logo
+        display: flex
+        justify-content: center
+        align-items: center
+        
+    .beehive-title
+        text-align: center
+        font-size: 32px
+        font-weight: 900
+        color: #556ce7
+
+    .step-title
+        text-align: center
+        font-size: 18px
+
+    .step-title__sub
+        text-align: center
+        font-size: 14px
+
+    .step-progress
+        width: 100%
+        height: 59px
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .line
+            width: 100%
+            height: 7px
+            position: absolute
+            border-radius: 2px
+            background-color: #d8d8d8
+            opacity: 0.6
+
+        .step
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 59px
+            height: 100%
+            border-radius: 50%
+            font-size: 14px
+            z-index: 999
+
+            .step-checked__icon
+                color: #ffffff
+                font-size: 40px
+
+        .step-uncheck
+            background-color: #d8d8d8
+
+        .step-checked
+            background-color: #90ce51
+            
+@include mobile
+    .step-bar__wrapper
+        .step-progress
+            height: 40px
+            
+            .step
+                width: 40px
+                .step-checked__icon
+                    font-size: 30px

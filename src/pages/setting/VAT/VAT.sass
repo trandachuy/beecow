@@ -1,0 +1,67 @@
+@import "../../../../sass/mixins"
+.VATmodalDelete.modal-dialog
+  .modal-content
+    .modal-header
+      .close
+        span
+          display: none
+    .modal-title
+      color: #c82333
+
+
+
+.VATmodal.modal-dialog
+  .modal-content
+    display: flex
+    justify-content: space-between
+    min-width: 400px
+    border-radius: 10px
+    .modal-header
+      padding: 10px !important
+      padding-bottom: 10px !important
+      background-color: rgb(240, 240, 240)
+      border-radius: 10px 10px 0px 0px
+    .modal-title
+      color: black
+      width: auto !important
+    .modal-body
+      padding: 0
+      .modal-footer
+        .gs-button
+          margin: 0 9px !important
+      .tax-type-group__radio
+        .form-control
+          display: flex
+          .tax-type-group__radio--item:nth-child(2)
+            padding-left: 30px
+      .form-group:first-child
+        margin: 0
+        margin-top: 20px
+      .form-group
+        margin-bottom: 20px
+        .invalid-feedback
+          display: flex
+          justify-items: left
+        label
+          float: left
+      .tax-type-group__radio
+        margin-bottom: 20px !important
+
+
+.VATtitleAlert
+  h5
+    color: #bd2130
+.VAT
+  padding: 0 !important
+  .gs-widget__content
+    padding: 1em !important
+    .check-box-wrapper__label
+      color: #939393
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 0.8rem
+      margin-left: 0!important
+
+.VATmodal__input-field__hint:placeholder-shown
+  font-size: 13px
+

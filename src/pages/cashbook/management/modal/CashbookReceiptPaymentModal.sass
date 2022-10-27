@@ -1,0 +1,68 @@
+@import "../../../../../sass/mixins"
+
+.cashbook-receipt-payment-modal
+  .header
+    &.modal-header
+      background-color: #F8F8F8
+      padding: 11px 17px !important
+
+    .modal-title
+      text-align: left !important
+      font-weight: 500
+      font-size: 18px
+      color: black
+
+  .body
+    border-bottom: 1px solid #DDE0E9 !important
+    padding: 10px
+
+    .row
+      text-align: left
+      margin-top: 21px
+
+      &:first-child
+        margin-top: 9px
+
+      &>div
+        padding: 0 10px
+
+      @include xs
+        &>div.col-sm-6:not(:first-child)
+          margin-top: 21px
+
+      .label
+        text-transform: uppercase
+        font-weight: 500
+        font-size: 15px
+        color: #9EA0A5
+
+        &.required:after
+          content: ' *'
+          color: red
+
+      .uik-select__wrapper
+        width: 100%
+
+      .form-group
+        margin-bottom: 0
+
+    .indicator
+      width: 100%
+      border-top: 1px solid #DDE0E9
+      margin-top: 31px
+
+    .comment
+      background-color: #F3F5FF
+      font-style: italic
+      font-size: 13px
+      padding: 8px 10px
+      border-radius: 3px
+      margin-left: 25px
+
+  .footer
+    &.modal-footer
+      justify-content: flex-end !important
+      padding: 16px 15px !important
+
+      button:first-child
+        margin-right: 8px !important

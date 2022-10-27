@@ -1,0 +1,153 @@
+.create-customer-modal
+  &.modal-dialog
+    max-width: max-content
+
+  .birthday-date
+    margin-bottom: 20px
+    width: 50%
+    padding-left: 20px
+
+    p
+      font-weight: bold
+      font-size: .8rem
+      color: black
+      line-height: 1.3rem
+      text-transform: uppercase
+      float: left
+      margin-bottom: 7px
+
+    .react-datepicker__input-container
+      input
+        display: block
+        width: 100%
+        height: calc(1.5em + 0.75rem + 2px)
+        padding: 0.375rem 0.75rem
+        font-size: 1rem
+        font-weight: 400
+        line-height: 1.5
+        color: #495057
+        background-color: #fff
+        background-clip: padding-box
+        border: 1px solid #ced4da
+        border-radius: 0.25rem
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
+        &:focus
+          color: #495057
+          background-color: #fff
+          border-color: #80bdff !important
+          outline: 0
+
+  .invalid
+    border-color: #dc3545
+
+  .invalid-check
+    display: flex
+    justify-items: left
+    width: 100%
+    margin-top: -1rem
+    font-size: 80%
+    color: #dc3545
+    padding-bottom: 15px
+
+  .modal-content
+    display: flex
+    justify-content: space-between
+    min-width: 550px
+    border-radius: 10px
+
+    .modal-header
+      padding: 10px !important
+      padding-bottom: 10px !important
+      background-color: rgb(240, 240, 240)
+      border-radius: 10px 10px 0px 0px
+
+    .modal-title
+      color: #000000
+      width: auto !important
+
+    .modal-body
+      padding: 20px 0 0
+
+      .content
+        height: 75vh
+        overflow: auto
+
+        .phone
+          position: relative
+
+          .phone-country
+            position: absolute
+            top: 34px
+            left: 10px
+            font-size: 13px
+            color: #000000
+            padding: 2px
+            background-color: #FFFFFF
+
+          .form-group
+            width: 100%
+
+            .form-control
+              padding-left: 50px
+
+        .phone.maxPhoneCode
+          .form-control
+            padding-left: 68px
+
+      .check-box
+        label
+          margin: 3px
+
+      .note
+        padding-right: 21px
+
+        .form-group
+          width: 100%
+
+      .tags
+        width: 100% !important
+        padding-right: 21px
+
+      .box-city
+        padding-right: 21px
+
+        .form-group:first-child
+          padding: 0
+
+        .form-group
+          padding-left: 20px
+
+      .address
+        padding-right: 21px
+
+        .form-group
+          width: 100%
+
+      .address2
+        .form-group:last-child
+          margin-left: 20px
+
+      .box-form-group
+        .form-group:last-child
+          padding-left: 20px
+          width: 50%
+
+      .modal-footer
+        justify-content: center
+        margin-right: 9rem
+
+        .gs-button
+          margin: 0 9px !important
+
+      .form-group
+        margin-bottom: 20px
+        width: 47%
+
+        .invalid-feedback
+          display: flex
+          justify-items: left
+
+        label
+          float: left
+          color: #000000

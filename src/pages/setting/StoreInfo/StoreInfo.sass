@@ -1,0 +1,71 @@
+.info-container
+  padding: 0 !important
+
+  .listing__website-wrapper
+    .uik-checkbox__wrapper.uik-checkbox__toggle
+      margin-bottom: 0 !important
+
+  .fr-element.fr-view
+    max-height: 400px
+    overflow-y: auto
+
+  .gs-page-title
+    font-size: 22px
+
+  .widget__header--text-align-right
+    background: #fff !important
+    padding: 25px 30px
+    h3
+      font-size: 1.2rem !important
+
+  .btn-save-container
+    padding-left: 0 !important
+
+/** RWD Setting */
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .info-container
+    .widget__header,
+    .widget__content
+      padding-left: 1em
+
+    .gs-widget__content
+      &.btn-save-container
+        margin-left: 1em
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .info-container
+    .widget__header,
+    .widget__content
+      padding-left: 1em
+
+    .gs-widget__content
+      &.btn-save-container
+        margin-left: 1em
+        
+// For ipad portrait
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait)
+  .info-container
+    .widget__header,
+    .widget__content
+      padding-left: 1em
+
+    .gs-widget__content
+      &.btn-save-container
+        margin-left: 1em
+
+// For ipad landscape
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape)
+  .info-container
+    .widget__header,
+    .widget__content
+      padding-left: 1em
+    
+    .gs-widget__content
+      &.btn-save-container
+        margin-left: 1em
+
+
+

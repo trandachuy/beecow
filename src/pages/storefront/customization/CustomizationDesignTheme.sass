@@ -1,0 +1,33 @@
+@import "../../../../sass/mixins"
+
+.theme-component__editor
+  display: flex
+  width: 100%
+  justify-content: flex-end
+
+  @include mobile
+    display: block !important
+
+  .right-group__button
+    display: flex
+
+  .theme-component__left-wrapper
+    display: flex
+    flex-direction: column
+    flex: 1
+    justify-content: flex-start
+    overflow: auto
+
+    .theme-cpn
+      &.active
+        border-left: 4px solid #90CE51
+
+
+  .theme-component__right-wrapper
+    width: 35%
+    //min-width: 400px
+    max-width: 500px
+    height: 100%
+
+
+

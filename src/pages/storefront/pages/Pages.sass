@@ -1,0 +1,198 @@
+.page-container
+  .gs-widget__content
+    padding-left: 0
+    padding-right: 0
+  .gs-table
+    .gs-table-header-item
+      flex-basis: 65%
+      -webkit-flex-basis: 65%
+      &:nth-child(2)
+        flex-basis: 20%
+        -webkit-flex-basis: 20%
+      &:nth-child(3)
+        flex-basis: 15%
+        -webkit-flex-basis: 15%
+
+    .gs-table-body
+      .gs-table-body-items
+        .gs-table-body-item
+          flex-basis: 65%
+          -webkit-flex-basis: 65%
+          
+          &:first-child
+            display: -webkit-flexbox
+            flex-direction: column
+            -webkit-flex-direction: column
+            display: flex
+          &:nth-child(2)
+            flex-basis: 20%
+            -webkit-flex-basis: 20%
+
+          &:nth-child(3)
+            flex-basis: 15%
+            -webkit-flex-basis: 15%
+
+          .page-name
+            width: 30em
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
+            text-align: left
+            
+            &.short-content
+              color: #9EA0A5
+          &:last-child
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+
+          i
+            background-repeat: no-repeat
+            width: 20px
+            height: 20px
+            cursor: pointer
+            display: block
+            flex-basis: 100%
+            &.icon-edit
+              background-image: url(/assets/images/icon-edit.png)
+              &:hover
+                opacity: 0.7
+
+            &.icon-delete
+              background-image: url(/assets/images/icon-delete.png)
+              &:hover
+                opacity: 0.7
+
+  .no-data__warning
+    margin-top: 50px
+    margin-bottom: 50px
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .page-container
+    .gs-atm__flex-col--flex-center
+      height: auto
+      .gs-page-title
+        margin-bottom: .5em
+    .gs-page-content--large
+      .gs-widget__content
+        padding-top: 0
+    .gs-table
+      .gs-table-header
+        .gs-table-header-item
+          padding: .5em
+          &:nth-child(2)
+            min-width: 8em
+            white-space: nowrap
+          &:nth-child(3)
+            min-width: 5em
+            white-space: nowrap
+            flex-basis: 15%
+            -webkit-flex-basis: 15%
+            
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            padding: .5em
+            .page-name
+              width: 20em
+            
+            &:nth-child(2)
+              min-width: 8em
+              white-space: nowrap
+
+            &:nth-child(3)
+              min-width: 5em
+              white-space: nowrap
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .page-container
+    .gs-atm__flex-col--flex-center
+      height: auto
+      .gs-page-title
+        margin-bottom: .5em
+    .gs-page-content--large
+      .gs-widget__content
+        padding-top: 0
+    .gs-table
+      .gs-table-header
+        .gs-table-header-item
+          padding: .5em
+          &:nth-child(2)
+            min-width: 8em
+            white-space: nowrap
+          &:nth-child(3)
+            min-width: 5em
+            white-space: nowrap
+            flex-basis: 15%
+            -webkit-flex-basis: 15%
+
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            
+            .page-name
+              width: 20em
+            &:nth-child(2)
+              min-width: 8em
+              white-space: nowrap
+
+            &:nth-child(3)
+              min-width: 8em
+              white-space: nowrap
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .page-container
+    .gs-atm__flex-col--flex-center
+      height: auto
+      .gs-page-title
+        margin-bottom: .5em
+    .gs-page-content--large
+      .gs-widget__content
+        padding-top: 0
+    .gs-table
+      .gs-table-header
+        .gs-table-header-item
+          display:  none
+
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            .page-name
+              width: 15em
+            &:nth-child(2)
+              display: none
+            &:nth-child(3)
+              min-width: 6em
+              white-space: nowrap
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .page-container
+    .gs-atm__flex-col--flex-center
+      height: auto
+      .gs-page-title
+        margin-bottom: .5em
+    .gs-page-content--large
+      .gs-widget__content
+        padding-top: 0
+
+    .gs-table
+      .gs-table-header
+        .gs-table-header-item
+          display: none
+
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            .page-name
+              width: 15em
+            &:nth-child(2)
+              display: none
+            &:nth-child(3)
+              min-width: 6em
+              white-space: nowrap
+

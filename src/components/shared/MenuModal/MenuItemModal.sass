@@ -1,0 +1,326 @@
+.modal.fade.show
+  display: flex !important
+  will-change: transform !important
+  
+  .menu-item-modal
+    max-width: 8000px
+    align-self: center
+
+    .modal-content
+      border: none
+      width: 600px
+      .loading-screen
+        z-index: 999999999999
+      .modal-header
+        padding: 0.75rem 2rem !important
+        border-bottom: 1px solid #ced4da !important
+
+        .modal-title
+          text-align: left
+          font-weight: 500
+          font-size: 1.2em
+
+      .modal-header.modal-warning
+        color: #212529
+        background-color: #ffc107
+        border-color: #ffc107
+      .modal-header.modal-danger
+        color: #fff
+        background-color: #dc3545
+        border-color: #dc3545
+      .modal-header.modal-info
+        color: #fff
+        background-color: #17a2b8
+        border-color: #17a2b8
+
+      .modal-body
+        font-size: 1.15em
+        width: 100%
+        text-align: left
+        padding-left: 2em
+        padding-right: 2em
+        display: flex
+        flex-direction: column
+        will-change: transform
+
+        .uik-widget__wrapper
+          width: 100%
+          border: unset
+          box-shadow: unset
+          margin-top: 0
+          margin-bottom: 0
+
+          .form-group
+            margin-bottom: unset
+          &.url-link
+            display: flex
+            flex-direction: column
+            margin-top: .5rem
+
+            span
+              flex-basis: 100%
+            .url-link-item
+              display: flex
+              flex-direction: row
+
+              .form-group
+                width: 100%
+                max-width: 70%
+                min-width: 65%
+
+              .links
+                flex-basis: 40%
+                .dropdown-toggle
+                  display: flex
+                  justify-content: space-between
+                  align-items: center
+                  
+                  &.dropdown-toggle::after
+                    align-self: center
+              .collections
+                width: 100%
+                max-width: 60%
+                min-width: 65%
+                
+                .var-values__pool
+                  overflow: hidden
+                  line-height: 2em
+
+                .loading-screen
+                  width: inherit
+                  position: absolute
+                  height: 2.5em
+                  background-color: #f8f9fa
+                  top: calc(100% - 50%)
+
+                  position: absolute
+                  width: inherit
+                  height: 100%
+                  .loading
+                    .lds-dual-ring-white
+                      display: flex
+                      align-items: center
+
+                    .lds-dual-ring-white:after
+                      width: 30px
+                      height: 30px
+                &.error
+                  .var-values__pool
+                    border-color: #ff0000
+
+                .dropdown-menu 
+                  &.show
+                    width: 100%
+                    overflow-y: auto
+                    max-height: 15em
+                    height: inherit
+                    .dropdown-item
+                      overflow: hidden
+              
+                    
+          &.menu-items
+            margin-top: 10px
+            .dropdown-menu.show
+              width: 100%
+              overflow-y: auto
+              max-height: 15em
+              height: inherit
+
+              .dropdown-item:hover, 
+              .dropdown-item:focus
+                color: unset!important
+                text-decoration: unset!important
+                background-color: unset!important
+                outline: unset
+                
+              .dropdown-item
+                padding: 0px 0px 0px 1em
+                .item-name
+                  padding: .3em
+                .item-name:hover,
+                .item-name:focus
+                  color: #ffffff
+                  text-decoration: none
+                  background-color: #3F51B5
+          &.error
+            text-align: right
+            padding-top: 5px
+            font-size: 14px
+            height: 20px
+
+            span
+              &.invisible
+                visibility: hidden
+                
+              &.error-message
+                color: #ff0000
+
+      .modal-footer
+        padding: 0.75rem 2rem !important
+        border-top: 1px solid #ced4da!important
+        justify-content: flex-end
+        button
+          &.btn
+            padding-right: 2.5em
+            padding-left: 2.5em
+          &.btn-outline-secondary.btn-secondary
+            background-color: initial !important
+
+
+.btn
+  font-size: 1em
+
+/** RWD Menu Modal*/
+
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .modal.fade.show
+    .menu-item-modal
+      max-width: 100%
+      width: 100%
+      margin: 0
+      align-self: center
+
+      .modal-content
+        width: 100%
+        border-radius: unset
+
+        .modal-header
+          padding: .8em !important
+
+        .modal-body
+          padding: .8em
+
+          .uik-widget__wrapper
+            .form-group,
+            .url-link-item,
+            .dropdown
+              margin-top: .2rem
+              margin-bottom: .2rem
+
+            &.menu-items,
+            &.url-link
+              margin-top: .5rem
+
+            &.url-link
+              .url-link-item
+                .links
+                  .dropdown-toggle
+                    min-width: 7em
+                    padding-left: .5em
+                    padding-right: .5em
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .modal.fade.show
+    .menu-item-modal
+      max-width: 100%
+      width: 100%
+      margin: 0
+      align-self: center
+
+      .modal-content
+        width: 100%
+        border-radius: unset
+
+        .modal-header
+          padding: .8em !important
+        
+        .modal-body
+          padding: .8em
+
+          .uik-widget__wrapper
+            .form-group,
+            .url-link-item,
+            .dropdown
+              margin-top: .2rem
+              margin-bottom: .2rem
+
+            &.menu-items,
+            &.url-link
+              margin-top: .5rem
+
+            &.url-link
+              .url-link-item
+                .links
+                  .dropdown-toggle
+                    min-width: 7em
+                    padding-left: .5em
+                    padding-right: .5em
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .modal.fade.show
+    .menu-item-modal
+      max-width: 100%
+      width: 100%
+      margin: 0
+      align-self: flex-end
+
+      .modal-content
+        width: 100%
+        border-radius: unset
+
+        .modal-header
+          padding: .8em !important
+        
+        .modal-body
+          padding: .8em
+
+          .uik-widget__wrapper
+            .form-group,
+            .url-link-item,
+            .dropdown
+              margin-top: .2rem
+              margin-bottom: .2rem
+
+            &.menu-items,
+            &.url-link
+              margin-top: .5rem
+          
+            &.url-link
+              .url-link-item
+                .links
+                  .dropdown-toggle
+                    min-width: 7em
+                    padding-left: .5em
+                    padding-right: .5em
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .modal.fade.show
+    .menu-item-modal
+      max-width: 100%
+      width: 100%
+      margin: 0
+      align-self: flex-end
+
+      .modal-content
+        width: 100%
+        border-radius: unset
+
+        .modal-header
+          padding: .8em !important
+
+        .modal-body
+          padding: .8em
+
+          .uik-widget__wrapper
+            .form-group,
+            .url-link-item,
+            .dropdown
+              margin-top: .2rem
+              margin-bottom: .2rem
+
+            &.menu-items,
+            &.url-link
+              margin-top: .5rem
+            
+            &.url-link
+              .url-link-item
+                .links
+                  .dropdown-toggle
+                    min-width: 7em
+                    padding-left: .5em
+                    padding-right: .5em
+              

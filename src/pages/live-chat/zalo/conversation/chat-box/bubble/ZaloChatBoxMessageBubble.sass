@@ -1,0 +1,79 @@
+.live-chat-chat-box-message-bubble
+  display: flex
+  align-items: flex-end
+  margin-bottom: .3rem
+
+  &--right
+    justify-content: flex-end
+
+  &--left
+    justify-content: flex-start
+
+  .live-chat-chat-box-message-bubble__link
+    margin-left: 1rem
+    margin-right: 1rem
+    img
+      max-width: 100%
+      line-height: 0
+    p
+      margin-top: .5em
+      font-size: .8em
+      max-width: 250px
+
+  .live-chat-chat-box-message-bubble__avatar
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    flex-shrink: 0
+
+  .live-chat-chat-box-message-bubble__triangle-left
+    width: 8px
+    height: 8px
+    flex-shrink: 0
+    margin-left: .5rem
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #556CE7 50%, #556CE7 100%)
+
+  .live-chat-chat-box-message-bubble__triangle-right
+    width: 8px
+    height: 8px
+    flex-shrink: 0
+    margin-right: .5rem
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #FFFFFF 50%, #FFFFFF 100%)
+
+  .live-chat-chat-box-message-bubble__blank-mess-left
+    background-color: #556CE7
+    border-radius: 4px 4px 4px 0
+    color: white
+    padding: .5rem 1rem
+    margin-right: 4rem
+    word-break: break-word
+    min-width: 3rem
+    max-width: 27rem
+
+  .live-chat-chat-box-message-bubble__blank-mess-right
+    background-color: white
+    border-radius: 4px 4px 0 4px
+    border: 1px solid #E2E5ED
+    padding: .5rem 1rem
+    margin-left: 4rem
+    word-break: break-word
+    min-width: 3rem
+    max-width: 27rem
+
+  .message-image
+    border-radius: 6px
+    border: 1px solid #E2E5ED
+    max-height: 150px
+    max-width: 600px
+
+  &__time
+    color: #9EA0A5
+    padding: 3px 44px
+    font-size: 12px
+
+    &--left
+      text-align: left
+
+    &--right
+      text-align: right
+

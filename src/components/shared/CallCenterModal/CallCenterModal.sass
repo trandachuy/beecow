@@ -1,0 +1,62 @@
+.call-center
+  &__header
+    .modal-title
+      text-align: right !important
+
+  &__body
+    margin: 0 2em
+
+    li
+      list-style-type: none
+
+    &__outgoing
+      color: #9EA0A5
+      font-size: 1.1em
+
+    &__to__number
+      position: relative
+
+      &__input
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        direction: rtl
+        width: 11em
+        height: 1.2em
+        margin: 0 auto
+
+      &__backspace
+        position: absolute
+        right: -2em
+        top: 0
+
+    button
+      padding: 0.5em 1.5em
+      background: rgb(248, 248, 248)
+      border: solid 1px rgb(243, 242, 242)
+      border-radius: 5px
+      font-weight: bold
+      font-size: 20px
+      line-height: 0.7
+      width: 100%
+      height: 100%
+      outline: none !important
+
+      .call-center__body__sub-text
+        font-size: 11px
+        font-weight: normal
+        color: rgb(141, 141, 143)
+
+  &__footer
+    position: relative
+    background-color: #556CE7
+    height: 3.5em
+
+    &__dial
+      position: absolute
+      top: 0
+      transform: translate(0, -50%)
+
+      &--disabled
+        opacity: 0.5 !important
+        pointer-events: none !important

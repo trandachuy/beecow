@@ -1,0 +1,387 @@
+@import "../../../sass/mixins"
+
+.home
+
+  @include mobile
+    padding-right: 15px !important
+    padding-left: 15px !important
+
+  .gs-page-header
+    height: 44px
+
+  .title
+    font-size: 1.3rem
+    font-weight: 500
+
+  .card-col
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    overflow-y: auto
+    max-height: 30vh
+    padding-right: 0
+    &::-webkit-scrollbar-track, &::-webkit-scrollbar, &::-webkit-scrollbar-thumb
+      width: 0
+    &:hover
+      padding-right: .5rem
+      &::-webkit-scrollbar-track, &::-webkit-scrollbar, &::-webkit-scrollbar-thumb
+        width: 5px
+    .shortcut-card
+      &--green-label
+        border-left: 5px solid #34AA44
+      &--red-label
+        border-left: 5px solid #E73C1E
+      &--blue-label
+        border-left: 5px solid #6d3ce9
+
+  .card-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    overflow: auto
+
+  .home__card
+    min-height: 8em
+    //min-width: 18rem
+    display: flex
+    align-items: center
+    flex-basis: 24%
+    min-width: 15em
+
+    //margin: 0 .5em
+
+    .card__content
+      padding: 1em
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      height: 100%
+      margin-top: 3px
+      span
+        max-width: 50%
+        //font-size: .9em
+        font-weight: bold
+        text-transform: uppercase    
+
+      .building-status
+        color: #9EA0A5
+        display: block
+        text-transform: none
+        font-size: .9em
+      &.card-mobile
+        flex-direction: column
+        .card-top
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: 100%
+          height: 100%
+          margin-top: 3px
+        .card-bottom
+          display: flex
+          justify-content: flex-end
+          align-items: flex-end
+          width: 100%
+          padding-right: 6px
+
+      .capitalize-none
+        text-transform: none !important
+
+    &--active
+      border-top: 3px solid #34AA44
+
+    &--inactive
+      border-top: 3px solid #F6AB2F
+
+    &:not(:first-child)
+      margin-left: 5px
+
+    .store-logo
+      border-radius: 4px
+      width: 30px
+      height: 30px
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2)
+      &--none
+        padding: 6px
+        background-color: #556CE7
+
+
+    .mobile-app-logo
+      width: 30px
+      height: 30px
+      margin-left: 1em
+
+    .sale-channel-logo
+      width: 36px
+      height: 36px
+      margin-left: .5em
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2)
+      border-radius: 50%
+
+    .loading-logo
+      animation-name: rotate
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+
+      @keyframes rotate
+        0%
+          transform: rotateZ(0deg)
+        100%
+          transform: rotateZ(360deg)
+
+    &.gs-widget
+      &:last-child
+        margin-bottom: 0px
+
+  .what-to-do-next
+
+    .title
+      font-size: 1.4rem
+      margin-top: 2.2rem
+
+    .subTitle
+      font-size: 1rem
+      color: #9EA0A5
+
+  .statistic
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    .statistic-order__reservation
+
+      .uik-widget-content__wrapper
+        cursor: pointer
+      @include mobile
+        flex-basis: 100%
+
+      @include desktop
+        flex-basis: 24%
+
+      .gs-widget__content
+        padding: 2em
+
+      .statistic-title
+        height: 2.5em
+        color: #9EA0A5
+
+      .statistic-detail
+        margin-top: 10px
+        display: flex
+        font-size: 1.5em
+        font-weight: bold
+        
+        i
+          width: 1.5em
+          height: 1.5em
+          display: block
+          background-repeat: no-repeat
+          background-position: center
+          margin-right: 5px
+          background-color: #DDE2FF
+          border-radius: 50%
+
+          &.confirm-order
+            background-image: url(/assets/images/icon-ToConfirm-Oders.svg)
+
+          &.delivered-order
+            background-image: url(/assets/images/icon-Delivered-Orders.svg)
+
+          &.confirm-resercation
+            background-image: url(/assets/images/icon-ToConfirm-Reservations.svg)
+
+          &.delivered-reservation
+            background-image: url(/assets/images/icon-Completed-Reservations.svg)
+
+      .number
+        margin-left: 10px
+
+        &:hover
+          text-decoration: underline
+
+        .mobile-loading
+          margin-left: 0px
+
+  .shortcut-card
+    .gs-widget__header
+      background-color: white !important
+      border-radius: inherit !important
+      padding: .8rem 2rem !important
+      border-bottom: unset !important
+      cursor: pointer
+      //transition-duration: .5s !important
+
+      &:hover
+        background-color: #fafafa !important
+        h3
+          font-weight: 500 !important
+
+      h3
+        font-size: 1.1rem !important
+        font-weight: normal !important
+        display: flex
+        align-items: center
+        //transition-duration: .5s
+
+    .shortcut-card-icon
+      width: 44px
+      height: 44px
+      margin-right: 1.2rem
+
+    .gs-widget__content
+      padding: 0 2rem .8rem 2rem
+
+    .step-hint
+      font-size: 1rem
+      display: block
+      margin-bottom: 7px
+
+    .card-btn-group
+      margin-top: 1rem
+      margin-bottom: 8px
+
+
+      .btn
+        margin-right: 1rem
+
+      a
+        color: #556CE7
+
+      @include mobile
+        display: flex !important
+        flex-direction: column !important
+        justify-content: center !important
+        align-items: center !important
+
+        .gs-button
+          width: 100% !important
+          margin-bottom: .5em !important
+
+  .shortcut-card-recommend
+    display: flex
+    justify-content: flex-start
+    margin: .2rem
+    position: relative
+
+    .highlight
+      font-size: .9rem
+      font-weight: bolder
+      display: block
+
+    .sub
+      font-size: .8rem
+      color: #9EA0A5
+
+    .link
+      font-size: .8rem
+      color: #9EA0A5
+      display: block
+
+    &--icon
+      width: 10%
+      display: flex
+      img
+        margin: auto
+    &--close
+      position: absolute
+      right: .3rem
+      color: #9EA0A5
+      a
+        cursor: pointer
+    &--content
+      padding: 1rem 0 !important
+      margin-top: auto
+      width: 80%
+    &--time
+      padding: 1rem 0
+      font-size: .8rem
+      width: 4rem
+      text-align: right
+    &:last-child
+      margin: .2rem
+
+  .card__right-content
+    display: flex
+
+  .mobile-loading
+    position: relative
+    width: 36px
+    height: 36px
+    margin-left: 1em
+
+    .gsa-width-100
+      width: 36px
+      height: 36px
+
+    .btn-upgrade
+      position: absolute
+      width: 24px
+      right: -12px
+      top: -12px
+
+    .ol-loading
+      max-width: unset !important
+      position: absolute
+      border: 2px dotted #9EA0A5
+      border-top: 2px solid #9EA0A5
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      animation-name: rotate
+      animation-timing-function: linear
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      top: 0px
+      left: 0px
+
+      @keyframes rotate
+        0%
+          transform: rotateZ(0deg)
+        100%
+          transform: rotateZ(360deg)
+
+      &--sm
+        width: 22px !important
+        height: 22px !important
+        top: 7px !important
+        left: 7px !important
+
+    .ol-logo
+      position: absolute
+      width: 22px
+      height: 22px
+      top: 7px
+      left: 7px
+
+  .ico-download-ota
+    position: relative
+    width: 20px
+    height: 20px
+    margin-left: 1.5em
+    margin-top: 0.5em
+
+  .ico-building-gp
+    .ol-logo
+      left: 9px !important
+      width: 24px !important
+      height: 24px !important
+      top: 5px !important
+
+  .ico-building-as
+    .ol-logo
+      left: 3px !important
+      top: 3px !important
+      width: 30px !important
+      height: 30px !important
+
+.home-mobile__tooltip--status
+  padding: 10px
+  span
+    display: list-item
+    list-style-position: inside
+
+.a-hover:hover
+  text-decoration: none

@@ -1,0 +1,147 @@
+.cashbook-receipt-payment-modal
+  .header
+    &.modal-header
+      background-color: #F8F8F8
+      padding: 11px 17px !important
+
+    .modal-title
+      text-align: left !important
+      font-weight: 500
+      font-size: 18px
+      color: black
+
+  .body
+    border-bottom: 1px solid #DDE0E9 !important
+
+    .row
+      text-align: left
+      margin-top: 21px
+
+      &:first-child
+        margin-top: 9px
+
+      .label
+        text-transform: uppercase
+        font-weight: 500
+        font-size: 15px
+        color: #9EA0A5
+
+        &.required:after
+          content: ' *'
+          color: red
+
+      .uik-select__wrapper
+        width: 100%
+
+      .form-group
+        margin-bottom: 0
+
+    .indicator
+      width: 100%
+      border-top: 1px solid #DDE0E9
+      margin-top: 31px
+
+    .search-box
+      position: relative
+      width: 100%
+      display: block
+
+      .value
+        padding-right: 22px
+
+      .icon
+        -webkit-box-flex: 0
+        -ms-flex-positive: 0
+        flex-grow: 0
+        -webkit-transition: 0.2s color
+        -o-transition: 0.2s color
+        transition: 0.2s color
+        position: absolute
+        width: 1px
+        height: 100%
+        margin-left: 12px
+        top: 50%
+        right: 0
+
+        &:before,
+        &:after
+          display: block
+          position: absolute
+          content: ''
+          top: -4px
+          left: -19px
+          width: 0
+          height: 0
+          border-left: 3px solid transparent
+          border-right: 3px solid transparent
+          border-bottom: 3px solid #9EA0A5
+
+        &:before
+          top: 2px
+          -webkit-transform: rotate(180deg)
+          -ms-transform: rotate(180deg)
+          transform: rotate(180deg)
+
+      .search-result
+        transition: all .3s ease
+        background-color: white
+        border-radius: .25rem
+        position: absolute
+        top: 50px
+        left: 0
+        width: 100%
+        max-height: 0
+        overflow-y: auto
+
+        &.expanded
+          max-height: 485px
+          padding: 10px 12px
+          border: 1px solid #ced4da
+          box-shadow: 0 0 4px 1px lightgrey
+
+        &:focus
+          outline: none
+
+        .search-item
+          border-bottom: 1px solid #ced4da
+          padding: .5rem .2rem
+          display: flex
+          align-items: center
+
+          &:last-child
+            border-bottom: unset
+            margin-bottom: 10px
+
+        .no-result
+          color: #9EA0A5
+          font-size: 14px
+          margin-bottom: 0
+
+        .add-new
+          font-size: 14px
+          margin-bottom: 0
+          cursor: pointer
+
+          &:hover
+            opacity: .8
+
+          .add
+            color: #556CE7
+            margin-left: 14px
+            font-weight: 500
+
+    .comment
+      background-color: #F3F5FF
+      font-style: italic
+      font-size: 13px
+      padding: 8px 10px
+      border-radius: 3px
+      margin-left: 25px
+
+  .footer
+    &.modal-footer
+      justify-content: flex-end !important
+      padding: 16px 15px !important
+
+      button:first-child
+        margin-right: 8px !important

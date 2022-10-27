@@ -1,0 +1,136 @@
+@import "../../../../../sass/mixins"
+
+.gs-mega-filter-row-select-scroll
+  position: relative
+  width: 100%
+  display: block
+
+  @include mobile
+    &:focus
+      color: #495057
+      background-color: #fff
+      border-color: #80bdff
+      outline: 0
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+      border-radius: 4px
+
+  .option
+    cursor: pointer
+    border: 1px solid #D8DCE6
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    color: #3E3F42
+    border-radius: 4px
+    padding: 8px 18px 0
+    height: 38px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+    @include mobile
+      display: block
+      width: 100%
+      height: calc(1.5em + 0.75rem + 2px)
+      padding: 0.375rem 0.75rem
+      font-size: 1rem
+      font-weight: 400
+      line-height: 1.5
+      color: #495057
+      background-color: #fff
+      background-clip: padding-box
+      border: 1px solid #ced4da
+      border-radius: 0.25rem
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
+      &:after
+        position: absolute
+        content: "\f107"
+        font-family: FontAwesome
+        right: 6px
+        font-weight: bold
+
+  @include desktop
+    .icon
+      -webkit-box-flex: 0
+      -ms-flex-positive: 0
+      flex-grow: 0
+      -webkit-transition: 0.2s color
+      -o-transition: 0.2s color
+      transition: 0.2s color
+      position: absolute
+      width: 1px
+      height: 100%
+      margin-left: 12px
+      top: 50%
+      right: 0
+
+      &:before,
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        top: -4px
+        left: -19px
+        width: 0
+        height: 0
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-bottom: 3px solid #9EA0A5
+
+      &:before
+        top: 2px
+        -webkit-transform: rotate(180deg)
+        -ms-transform: rotate(180deg)
+        transform: rotate(180deg)
+
+  .option-list
+    background-color: white
+    border-radius: .25rem
+    position: absolute
+    top: 37px
+    left: 0
+    width: 100%
+    max-height: 0
+    overflow-y: auto
+    z-index: 5
+
+    @include mobile
+      border-radius: unset
+
+    &.expanded
+      max-height: 228px
+      border: 1px solid #ced4da
+
+      @include mobile
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+        border: 1px solid rgba(0, 0, 0, 0.5)
+
+    .option-item
+      cursor: pointer
+      min-height: 38px
+      border-bottom: 1px solid #EAEDF3
+      padding: 0 18px
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      @include mobile
+        &.selected
+          background-color: #ade1f5
+          color: white
+          font-size: 16px
+
+      &:last-child
+        border: none
+
+      @include desktop
+        .selected
+          color: #38B249
+          margin-left: 12px
+          width: 5px
+          height: 5px
+          background: #38B249
+          border-radius: 50%
+
+    .loading
+      padding: 14px 10px

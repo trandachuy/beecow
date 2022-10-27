@@ -1,0 +1,168 @@
+.order-in-store-shipping-method-modal
+
+  .order-in-store-shipping-fee
+    width: 100% !important
+
+  .order-in-store-shipping-method
+    min-height: 100px
+    border-top: none !important
+    border-left: none !important
+    border-right: none !important
+    text-align: left
+    margin: 0px !important
+    box-shadow: none
+
+    .gs-widget__content
+      padding: 0px
+
+    .alert__wrapper
+      padding: 0px !important
+      text-align: left !important
+
+    .form-group
+      margin-bottom: 5px !important
+
+    .crystrapinput__wrapper
+      //margin-bottom: 0px !important
+
+
+
+    .order-in-store-shipping-method__title
+      border-right: 1px solid #EAEDF3
+
+    .order-in-store-shipping-method__radio-group
+      flex-direction: row
+      justify-content: space-between
+      display: flex
+
+      .shipping-method-group
+        flex-basis: 45%
+        cursor: pointer
+        border-radius: 3px
+        font-size: 1.5em
+        &.active
+          border: 1px solid #7cc834
+          color: #7cc834
+
+      .form-shipping
+        width: 100%
+
+        .shipping-address
+          width: 100%
+          margin-top: 10px
+
+        .info-group
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          .country
+            flex-basis: 48%
+          .name
+            flex-basis: 48%
+          .address2
+            flex-basis: 48%
+          .phone
+            flex-basis: 48%
+            position: relative
+            .phone-country
+              position: absolute
+              top: 38px
+              left: 10px
+              font-size: 13px
+              color: #000000
+              padding: 2px
+              background-color: #FFFFFF
+            .form-group
+              .form-control
+                padding-left: 50px
+          .phone.maxPhoneCode
+            .form-control
+              padding-left: 68px
+
+        .shipping-select-address
+          width: 100%
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          margin-top: 15px
+
+          .form-group-customize
+            flex-basis: 31%
+
+        .shipping-dimension
+          width: 100%
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          margin-top: 15px
+
+          .unit-wrapper
+            // position: relative
+            flex-basis: 23%
+
+          //   .form-group
+          //     input
+          //       padding-right: 2em
+
+          //   .unit
+          //     position: absolute
+          //     right: 5px
+          //     top: 8px
+
+        .shipping-fee
+          margin-top: 20px
+          .shipping
+            width: 100%
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            .left
+              flex: 1
+            .right
+              flex: 3
+              display: flex
+              flex-direction: column
+              //justify-content: space-between
+
+              .option-el
+                flex-basis: 23%
+
+                &.customize
+                  display: flex
+                  align-items: flex-end
+                  flex-basis: auto
+              .gs-button
+
+    .order-in-store-shipping-method__radio-label
+      font-size: 14px
+      background-color: #F2F2F2
+      padding: 1rem .7rem
+      border-radius: 3px
+      width: 100%
+      text-transform: capitalize
+      font-weight: 500
+      border: 1px solid #d7d7d7
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        margin-right: .5rem
+        width: 24px
+        height: 25px
+        opacity: .3
+
+  &.modal-dialog
+    .modal-content
+      min-width: 40vw
+      .modal-header
+        padding-bottom: 1em !important
+        background-color: #f7f5f5
+
+  .modal-body
+    padding-bottom: 1em !important
+    padding-top: 0px !important
+
+  .modal-footer
+    justify-content: flex-end !important
+

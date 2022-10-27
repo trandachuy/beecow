@@ -1,0 +1,23 @@
+@import "../../../../sass/mixins"
+.domain
+
+  .sub-domain-title
+    display: flex
+    justify-content: space-between
+
+    .sub-domain__sample
+      text-transform: none
+
+  .mobile-sub-domain__sample
+    color: #939393
+    font-weight: bold
+    font-size: 0.8rem
+    text-align: right
+
+  .error-msg
+    margin-top: -20px
+    *
+      text-align: right
+
+    @include mobile
+      margin-top: 0

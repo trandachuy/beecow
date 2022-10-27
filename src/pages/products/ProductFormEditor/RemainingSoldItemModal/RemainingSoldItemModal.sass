@@ -1,0 +1,80 @@
+.remaining-sold-item-modal
+
+  &__header
+    color: #000000 !important
+    background-color: #F7F5F5 !important
+
+    h5
+      text-align: left !important
+
+  &__body
+    text-align: left !important
+    margin: 0 auto 1em auto
+    width: 100%
+    min-width: 600px
+
+    &__dropdown
+      margin-bottom: 1em
+
+      & > button
+        width: 300px !important
+
+        div
+          justify-content: space-between !important
+          width: 100%
+
+          svg
+            filter: brightness(0)
+
+      &--item
+        max-height: 280px
+        overflow-y: auto
+        height: 100%
+        width: 300px !important
+        display: block
+
+    &__model__table
+      overflow-x: auto
+      max-width: 700px
+      height: max-content
+
+    &__branch__table
+      overflow-x: auto
+      max-width: 760px
+      height: max-content
+
+    &__common__table
+      overflow-x: auto
+      max-height: 451px
+
+    &__table
+      border: 1px solid #EAEDF3
+
+      th, td
+        border: 1px solid #EAEDF3
+        min-width: 250px
+        padding: 10px 20px
+        text-align: center
+        white-space: nowrap
+
+      &--name
+        font-weight: 500
+        text-align: left !important
+
+    &__variable-table
+      display: flex
+      max-height: 70vh
+      overflow-y: auto
+
+      th, td
+        min-width: 150px
+
+      .table-small
+
+        th, td
+          min-width: 100px
+
+    &__error
+      color: #DC3545
+      text-align: center
+      margin-top: 10px

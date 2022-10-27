@@ -1,0 +1,124 @@
+.order-in-store-purchase
+
+  .order-in-store-purchase__pane
+    display: flex
+    flex-direction: column
+    
+    &--left
+      //background-color: #0B4AA5
+
+    &--right
+      //background-color: #00ab00
+      .order-in-store-purchase-complete
+        margin-top: 0 !important
+
+.order-in-store-purchase__text--primary
+  color: white
+  font-weight: bold
+
+
+.order-in-store-purchase__mobile-modal
+  border: 2em
+  border-radius: 5px
+  background: linear-gradient(340deg, white, white 60%,  rgb(63, 81, 181) 60%,  rgb(63, 81, 181))
+
+.order-in-store-purchase__container-fluid
+  display: grid
+  grid-template-areas: 'title title title title title title' 'image image image action action action'
+  grid-gap: 5px
+  padding: 5px
+
+.item1
+  grid-area: title
+
+.item2
+  grid-area: image
+
+.item3
+  grid-area: action
+  align-self: center
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+.order-in-store-purchase-customer
+  .customer-search
+    padding: 0
+    .search-header
+      padding: 15px
+      background: #F2F2F2 !important
+      .btn-add
+        background: white
+    .search-result
+      padding: 0 15px 15px 15px
+      height: 300px
+      overflow: scroll
+      .gs-widget-empty-content
+        height: 100%
+.customer-details-editor
+  .editor-header
+    height: 30px
+    .btn-close__icon
+      background-image: url(/assets/images/icon-closepop-up.png)
+      background-repeat: no-repeat
+      width: 20px
+      height: 20px
+      display: block
+      position: absolute
+      right: 15px
+      cursor: pointer
+
+      &:hover
+        opacity: 0.7
+
+  .editor-body
+    .customer-editor
+      padding: 0
+      .gs-atm__flex-col--flex-center
+        display: none
+      .gs-page-content--extra
+        height: 350px
+        overflow: scroll
+        overflow-x: hidden
+        &::-webkit-scrollbar
+          width: 3px
+          margin-left: -30px
+        &::-webkit-scrollbar-thumb
+          background: #C4C4C4
+        .gs-widget:last-child
+          border: none
+          box-shadow: none
+        .uik-widget__wrapper
+          .uik-widget-content__wrapper
+            display: unset
+            .gender-birthday
+              display: unset
+              .form-group
+                width: 100%
+              .birthday-date
+                width: 100%
+            .country
+              width: 100% !important
+            .customer-location
+              display: unset
+              .form-group
+                width: 100%
+        .basic-info-col-left
+          border: none
+          .basic-info-content-wrapper
+            padding: 0
+
+
+        ._2_RzLNHt0siXiXeqODAMtN
+          padding: 0
+
+.add-customer-container.quotation
+  padding: 15px
+  .add-customer-header
+    color: black
+    font-weight: 600
+    font-size: 16px
+    padding-bottom: 10px
+  .add-customer-footer
+    display: flex
+    .gs-button
+      margin-right: 15px!important

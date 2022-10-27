@@ -1,0 +1,167 @@
+.zalo-order-summary-modal
+  .modal-close
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+    padding: 14px 11px
+    cursor: pointer
+    opacity: .7
+
+    &:hover
+      opacity: 1
+
+  .modal-content
+    overflow: hidden
+
+  .info
+    display: flex
+    min-width: 1128px
+    min-height: 588px
+    text-align: left !important
+    padding: 0 !important
+    color: black
+
+    .product-info
+      width: 68%
+
+      .user
+        display: flex
+        align-items: center
+        width: fit-content
+        padding: 17px 24px
+
+        .avatar
+          border-radius: 100%
+
+        .username
+          margin-left: 31px
+          font-size: 25px
+          font-weight: 500
+
+      .order-number
+        background-color: #F6F6F6
+        font-size: 25px
+        font-weight: 500
+        padding: 17px 24px
+
+      .table
+        margin: 0
+
+        td:not(:first-child),
+        th:not(:first-child)
+          flex-basis: 50%
+          flex-grow: 1
+
+        table
+          width: 100%
+          display: block
+          empty-cells: show
+
+          tr
+            width: 100%
+            display: flex
+
+          td, th
+            flex-basis: 100%
+            flex-grow: 2
+            display: block
+
+          thead
+            position: relative
+            display: block
+            width: 100%
+
+            td
+              font-size: 13px
+              font-weight: bold
+
+          tbody
+            display: block
+            height: 524px
+            overflow: auto
+            position: relative
+            width: 100%
+
+            &::-webkit-scrollbar
+              width: 5px
+
+            &::-webkit-scrollbar-thumb
+              background: #C4C4C4
+
+            td
+              font-size: 12px
+
+              .product
+                display: flex
+
+                .name
+                  display: flex
+                  flex-direction: column
+                  margin-left: 13px
+
+                .model
+                  color: #9D9D9D
+                  margin-top: 8px
+
+    .order-summary
+      width: 32%
+      display: flex
+      flex-direction: column
+
+      .shipping-info
+        background-color: #F5F7FF
+        padding: 7px 18px
+        font-size: 13px
+        display: flex
+        flex-direction: column
+
+        &:last-child
+          flex: 1 1 auto
+
+        &:not(:first-child)
+          margin-top: 8px
+
+        .title
+          font-size: 20px
+          font-weight: 500
+          margin-top: 42px
+
+        .indicator
+          border-top: 1px solid #E4E4E4
+          margin-top: 12px
+
+        .buyer-name
+          font-weight: 500
+          margin-top: 18px
+
+        .buyer-phone
+          font-weight: 500
+          margin-top: 13px
+
+        .buyer-address
+          margin-top: 13px
+
+        .payment-method
+          margin-top: 18px
+          margin-bottom: 35px
+
+        .note
+          padding: 14px 0
+
+        .total-row
+          display: flex
+          justify-content: space-between
+
+          &:first-child
+            margin-top: 41px
+
+          &:not(:first-child)
+            margin-top: 18px
+
+          &:last-child
+            margin-bottom: 46px
+
+          &.total
+            font-size: 20px
+            font-weight: 500

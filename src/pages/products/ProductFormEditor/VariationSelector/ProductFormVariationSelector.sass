@@ -1,0 +1,83 @@
+$breakpoint-tablet: 768px
+
+.product-form-variation-selector
+
+  .form-control.is-invalid
+    padding-right: 12px
+
+  .product-form-variation-selector__btn-delete
+    min-width: unset
+    //margin-top: 28px !important
+
+
+  .product-form-variation-selector__gs-tag
+
+
+  .product-form-variation-selector__table
+    th, td
+      padding: 15px 5px
+
+    .input-th
+      width: 10rem
+
+    .input-th-stock
+      width: 9rem
+
+    tbody, thead
+      tr
+        td:first-child, th:first-child, td:last-child, th:last-child
+          padding: 0 .5rem !important
+
+      .uik-checkbox__wrapper
+        margin-bottom: 0 !important
+
+      .form-group
+        margin-bottom: 0 !important
+        //width: 9rem
+        & > div
+          //width: 9rem
+
+    background-color: #f9f9f9
+
+    &--error
+      border: 1px solid #dc3545 !important
+      border-radius: .25rem
+
+    .input-min-width
+      width: 10rem
+
+  .variation-item-row
+  .variation-item-label-second
+
+@media only screen and (max-width: $breakpoint-tablet) and (orientation: portrait)
+  .product-form-variation-selector
+    .variation-item-row
+      .first-item
+        padding-top: 5px !important
+        .field__wrapper
+          flex: 1
+      .second-item
+        padding: 0
+      .third-item
+        padding-top: 5px !important
+        padding-bottom: 5px !important
+    .variation-item-label-second
+      padding-left: 0
+
+@media only screen and (max-width: $breakpoint-tablet) and (orientation: landscape)
+  .product-form-variation-selector
+    .variation-item-row
+      .first-item
+        padding-top: 5px !important
+        .field__wrapper
+          flex: 1
+      .second-item
+        padding: 0
+      .third-item
+        padding-top: 5px !important
+        padding-bottom: 5px !important
+    .variation-item-label-second
+      padding-left: 0
+
+.custom-err > div
+  border-color: #dc3545 !important

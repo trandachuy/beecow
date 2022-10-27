@@ -1,0 +1,446 @@
+.return-order-form-editor
+  .return-order-form-header
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    .title
+      width: 25%
+      .gs-page-title
+        height: auto
+
+    .progress-step-navigation
+      padding: 0 2em
+      width: 600px
+
+      .step__label
+        margin: 0 .5em
+        min-width: 9em
+
+      @media only screen and (max-width: 397px)
+        .step__label
+          min-width: 8em
+
+  .order-information-wrapper,
+  .customer-information-wrapper,
+  .note-wrapper,
+  .return-order-history-wrapper
+    float: right
+    width: 30%
+    display: flex
+    padding-left: 1em
+    .box-order-info-group
+      padding: 15px
+      .order-info-group
+        display: flex
+        margin-bottom: 15px
+        &.note
+          .form-group
+            width: 100%
+        &:last-child
+          margin-bottom: 0
+        .order-information__left-label
+          font-size: .75rem
+          width: 120px
+          min-width: 120px
+        .order-information__right-value
+          font-size: .75rem
+
+          .uik-select__wrapper .uik-select__valueRendered .uik-select__valueRenderedWrapper > *
+            width: 1px
+
+    .order-information,
+    .customer-information,
+    .note,
+    .return-order-history
+      margin-bottom: 0 !important
+
+      .uik-select__optionListWrapper
+        width: 100%
+
+      .title
+        white-space: pre
+
+      .form-group
+        margin-bottom: 0px !important
+
+  .return-order-history
+    padding: 1rem
+
+  .product-list-wrapper
+    float: left
+    width: 70%
+    min-height: 700px
+    .payment-method
+      .gs-widget__content
+        .content-payment-history
+          padding: 0 15px
+          .box-row-2
+            display: flex
+            justify-content: space-between
+            .return-order-currency
+              width: 100%
+              .form-group
+                width: 100%
+            .form-group
+              width: 48%
+              margin-bottom: 0
+            .payment-history-date
+              width: 48%
+              div
+                width: 100%
+              p
+                color: #939393
+                text-transform: uppercase
+                font-weight: bold
+                font-size: 0.8rem
+                margin-bottom: 9px
+        .payment-history-info
+          padding: 0 15px
+          .payable-successfully
+
+          .img-check-payment
+            position: relative
+            div
+              position: absolute
+              width: 1.5px
+              height: 27px
+              background: #3F51B5
+              bottom: -24px
+              left: 6px
+
+
+          .title
+            font-weight: 600
+            font-size: .9rem
+          .payment-history-line:before
+            content: ''
+            position: absolute
+            width: 1.5px
+            height: 203px
+            background: #3F51B5
+            left: 6px
+          .payment-history-line
+            position: relative
+          .payment-history-column
+            .payment-history-note
+              display: flex
+              flex-direction: column
+              .title
+                margin-bottom: 5px
+                font-weight: bold
+                font-size: 1.1rem
+                margin-left: 19px
+              .description
+                margin-left: 19px
+                width: 65%
+                font-size: 13px
+                font-weight: 500
+                height: 60px
+                margin-bottom: 0
+                overflow: auto
+
+
+
+            .row
+              p
+                font-size: 13px
+                font-weight: 500
+              p:first-child
+                width: 145px
+                margin-left: 19px
+
+        .payment-history
+          display: flex
+          width: 100%
+          justify-content: space-between
+          align-items: center
+          padding: 15px 15px
+        .uik-select__optionListWrapper
+          top: unset
+          bottom: 50px
+        .dropdown-box
+          width: 200px !important
+        div
+          span
+            font-size: 0.92rem
+            font-weight: 500
+            padding-left: 6px
+
+    .received-goods,
+    .return-order-history
+      .gs-widget__content
+        display: flex
+        align-items: center
+        padding: 15px 15px
+        span
+          font-size: 0.92rem
+          font-weight: 500
+          padding-right: 10px
+
+    .product-list
+      width: 100% !important
+      margin-bottom: 0
+      min-height: 460px
+
+      .table
+        overflow-x: auto
+        overflow-y: auto
+        max-height: 500px
+        min-height: 257px
+        thead
+          tr
+            background: #F9F9F9
+            padding-bottom: 10px
+            th
+              padding-bottom: 11px !important
+        .uik-widget-table__wrapper
+          border-top: none
+          thead
+            tr
+              th:first-child
+                padding-left: 15px
+                
+        .gs-table-body-item
+          padding: 5px 15px
+        .gs-table-body-item:last-child
+          padding-right: 15px
+
+        tr th
+          color: #3E3F42
+          white-space: pre
+          border: none
+          font-weight: bold
+
+        .col-data
+          display: flex
+          align-items: center
+          padding-top: 1em
+          &.quantity
+            .form-group
+              width: 110px
+
+        .form-group
+          margin: 0
+
+        .product-image
+          width: 70px
+          height: 70px
+          display: flex
+          justify-content: center
+          align-items: center
+
+        .product-name
+          font-weight: 500
+          display: -webkit-box
+          -webkit-line-clamp: 2
+          -webkit-box-orient: vertical
+          overflow: hidden
+          min-width: 12em
+
+      .custom-row
+        display: table
+        width: 100%
+        table-layout: fixed
+        background-color: #F9F9F9
+        height: 44px
+        position: relative
+        padding: 0 1em
+
+        .dropdown
+          .dropdown-menu
+            padding-left: 10px
+            padding-right: 10px
+            width: 300px
+            left: -119px !important
+
+            h3
+              text-transform: uppercase
+              font-weight: bold
+              font-size: 1.1rem
+
+            .search
+              display: flex
+              margin: 10px 0
+              margin-bottom: 15px
+
+              .form-group
+                margin: 0
+
+              .search-input
+                border-radius: 4px 0px 0px 4px
+
+              p.active
+                background-color: #556CE7 !important
+                color: white
+
+              p
+                cursor: pointer !important
+                background-color: #F9F9F9
+                font-size: 14px
+                padding: 0px 14px
+                border-radius: 0px 4px 4px 0px
+                border: 1px solid #EAEDF3
+                border-left: unset
+                height: 38px
+                opacity: 1
+                verticle-align: middle
+                display: flex
+                align-items: center
+                cursor: unset
+                color: black
+                white-space: pre
+
+              .icon.active
+                background-color: #556CE7 !important
+                color: white
+
+              .icon
+                cursor: pointer
+                color: black
+                display: flex
+                align-items: center
+                height: 38px
+                padding: 0px 14px
+                background-color: #F9F9F9
+                border: 1px solid #EAEDF3
+                border-left: unset
+
+                svg
+                  padding: 1.5px
+
+            .gsButton
+              display: flex
+              justify-content: center
+
+          @media screen and (max-width: 1200px)
+            .dropdown-menu
+              left: 0px !important
+
+  @media only screen and (max-width: 1200px)
+    .return-order-form-header
+      flex-direction: column
+      align-items: flex-start
+      justify-content: center
+
+      .title
+        width: 100%
+
+      .progress-step-navigation
+        width: 100%
+        padding: 2em 0
+
+      .gs-content-header-right-el
+        margin-left: 0 !important
+
+    .order-information,
+    .customer-information,
+    .note,
+    .return-order-history
+      margin-left: 0 !important
+
+    .order-information
+      margin-top: 0
+
+    .product-list-wrapper,
+    .order-information-wrapper,
+    .customer-information-wrapper,
+    .note-wrapper,
+    .return-order-history-wrapper
+      float: none !important
+      width: 100% !important
+      padding-left: 0 !important
+
+    .product-list .custom-row td:first-child
+      display: none
+  .product-list-wrapper
+    min-height: auto
+  .title
+    font-weight: 500
+    font-size: .9rem !important
+
+  .status
+    padding: .5em 1em
+    background-color: #3F51B5
+    border-radius: 20px
+    color: #FFFFFF
+    white-space: pre
+    &.cancelled
+      background-color: #DB1B1B
+
+  .uik-widget-content__wrapper
+    padding: 0em 0em
+
+    .purchase-discount
+      p
+        cursor: pointer
+
+    .purchase-discount
+      p:hover
+        opacity: 0.7
+
+    .purchase-cost
+      cursor: pointer
+
+    .purchase-cost:hover
+      opacity: 0.7
+
+  .uik-widget-title__wrapper
+
+    h3
+      width: 100%
+      display: flex
+      justify-content: space-between
+
+    @media screen and (max-width: 576px)
+      h3
+        flex-direction: column
+
+  .restock.checked
+    margin-left: 14px
+
+.modal-dialog.complete-return-order-modal
+  .modal-content
+    .modal-body
+      p
+        margin: 0
+    .modal-header
+      background: #F8F8F8 !important
+      padding: 6px 0 !important
+      .modal-title
+        font-size: 18px
+        color: black
+
+
+.modaIMEI-order-detail
+  .modal-content
+    max-width: 100%
+    overflow: hidden
+    .modal-header
+      padding: 0
+      background-color: #F8F8F8
+      padding: 10px
+      .modal-title
+        color: black
+        text-align: left
+        padding-bottom: 10px
+      button
+        span
+          font-size: 2rem
+    .modal-body
+      .itemIMEI
+        font-size: 1rem
+        background-color: #1E69D5
+        padding: 8px
+        color: white
+        border-radius: 5px
+        margin-bottom: 10px
+        text-align: left
+        text-overflow: ellipsis
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+        overflow: hidden
+
+
+
+

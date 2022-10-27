@@ -1,0 +1,191 @@
+/*!
+ / Copyright 2017 (C) Mediastep Software Inc.
+ /
+ / Created on : 22/4/2019
+ / Author: Dai Mai <email: dai.mai@mediastep.com>
+ /
+@import '../../../../sass/_gsvariables.sass'
+
+.sp-account
+  justify-content: unset !important
+  .sp-account__body
+    display: flex!important
+    align-items: unset!important
+    .row
+      flex: 1
+      width: 100%
+
+      .shopee-intro__title
+        font-size: clamp(1.8rem, 2vh, 2.5rem)
+        margin-bottom: 1.2rem
+        font-weight: 500
+
+      .shopee-intro__description
+        font-size: clamp(1rem, 2vh, 1.5rem)
+        margin-bottom: 1.2rem
+        color: #3E3F42
+        max-width: 90%
+
+      .shopee-intro__list
+        ul
+          list-style: none
+          margin-left: 2rem
+          li::before
+            content: url("/assets/images/buylink/icon_buy_link.svg")
+            display: inline-block
+            margin-right: 1rem
+            vertical-align: text-top
+
+      .shopee-intro__explore
+        font-size: clamp(1rem, 2vh, 1.8rem)
+        &.gs-atm--disable
+          background-color: #6d6a6a
+
+      .shopee-intro__left-col
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        top: 10%
+        height: fit-content
+
+      .shopee-intro__background
+        width: 100%
+
+
+    .sp-connected
+      flex: 1
+      height: 100%
+      margin: 0
+
+      .sp-connected__content
+        display: flex
+        flex-direction: row
+        align-items: stretch
+        padding: 2%
+        .left
+          flex: 1
+          flex-basis: 10%!important
+        .right
+          border: 1px solid #B9BDCF
+          flex: 2
+          display: flex
+          align-items: center
+          padding: 1%
+          height: 90px
+          padding-left: 0
+          .avatar
+            flex: 1
+            align-self: center
+            display: flex
+            justify-content: center
+          .image-status__green
+            font-size: 2.5rem
+            color: #38B249
+            width: 24px
+            height: 24px
+          .image-status__grey
+            font-size: 2.5rem
+            color: #9EA0A5
+            width: 24px
+            height: 24px
+          .image-status__red
+            font-size: 2.5rem
+            color: red
+            width: 24px
+            height: 24px
+          .image-rotate
+            -webkit-animation: spin 4s linear infinite
+            -moz-animation: spin 4s linear infinite
+            animation: spin 4s linear infinite
+            @-moz-keyframes spin 
+              100%
+                -moz-transform: rotate(360deg)
+            @-webkit-keyframes spin 
+              100% 
+                -webkit-transform: rotate(360deg)
+            @keyframes spin 
+              100%
+                -webkit-transform: rotate(360deg)
+                transform:rotate(360deg)
+          .gs-atm--disable
+            background: #9EA0A5
+            border: #9EA0A5
+            color: #000000
+          .info
+            flex: 5
+            font-size: 1.1rem
+            .synch-title
+              font-weight: bolder
+              font-size: 1rem
+            .synch-status
+                font-size: 1rem
+                color: #9EA0A5
+            .status
+              font-size: 1rem
+              &_CONNECTED
+                color: #38B249
+              &_DISCONNECTED
+                color: #e62525
+              &_EXPIRED_CONNECTED
+                color: red
+            .title
+              font-size: 1rem
+            span
+              font-size: 1rem
+          .gs-button
+            min-width: 16em
+          .btn-disconnect
+            flex: 2
+            height: 40px
+          .link
+            flex: 1
+        .expired-date
+          .title-date
+            .name-date
+              color: #00ab00
+        .title
+          font-size: 1.2rem
+          font-weight: bolder
+          margin-bottom: 0px
+
+        .discription
+          font-size: 1rem
+
+    .uik-avatar__avatar, .uik-avatar__avatarWrapper
+      width: 60px
+      height: 60px
+
+
+    .uik-avatar__avatarWrapper
+      margin-right: .5em
+      margin-left: .5em
+
+.modal
+  .modal-dialog.shopeeModal
+    .modal-content
+      .modal-header
+        .close
+          display: none
+      .modal-body
+        .shopee__body
+          text-align: left
+          width: 450px
+          height: 210px
+          background: #f9f9f9
+          overflow-y: scroll
+          &::-webkit-scrollbar-track
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+            background-color: #F5F5F5
+          &::-webkit-scrollbar
+            width: 5px
+            background-color: #F5F5F5
+          &::-webkit-scrollbar-thumb
+            background-color: #000000
+            border: 2px solid #555555
+          .form-group
+            margin-bottom: 0
+            .form-control
+              background-color: #f9f9f9
+              .custom-control
+                margin: 15px!important

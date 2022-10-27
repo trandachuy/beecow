@@ -1,0 +1,158 @@
+.setting-plans-plan-card
+
+  .plan-card
+    border-radius: 8px 8px 0px 0px
+    background-color: #FFFDF8
+    border: 1px solid #E8E8E8
+    transition-duration: .5s
+
+    &:hover
+      box-shadow: 0px 5px 17px -1px #C6C0C0
+      -webkit-box-shadow: 0px 5px 17px -1px #C6C0C0
+      transform: scale(1.03)
+      -webkit-transform: scale(1.03)
+      border-radius: 8px
+
+    .plan-card__image
+      margin: 2em 0em
+      max-height: 8em
+      max-width: 8em
+
+    .plan-card__title-block
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 1em 0em 2em 0em
+      border-bottom: 1px solid #E8E8E8
+      position: relative
+
+      .trial-tag
+        position: absolute
+        bottom: 1em
+
+    .plan-card__price
+      border-bottom: 1px solid #E8E8E8
+      padding: .5em 0em 1em 0em
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      font-size: .8rem
+
+      &:last-child
+        border-bottom: unset
+
+    .plan-card__price-value
+      margin: .4em 0em
+
+    .plan-card__price-per-month
+      .plan-card__price-value
+        font-size: 1.2rem
+      b
+        color: #FF4F4C
+
+    .plan-card__price-per-annually
+      .plan-card__price-value
+        font-size: 1.2rem
+      b
+        color: #FF8D00
+
+    .plan-card__price-per-biannually
+      .plan-card__price-value
+        font-size: 1.2rem
+      b
+        color: #90CE51
+
+    .btn-choose-this-plan
+      width: 90%
+      margin-top: 2em
+
+    .plan-card__price-per-year
+      color: #0577FF !important
+      font-size: .8em !important
+
+    &--3 //pro
+        .plan-card__title
+          color: #FF4F4C
+          font-weight: bold
+          text-transform: uppercase
+          border-bottom: 2px solid #FF4F4C
+          text-align: center
+          min-width: 6em
+          padding-bottom: .2em
+
+
+    &--2 //advance
+        .plan-card__title
+          color: #47C9AF
+          font-weight: bold
+          text-transform: uppercase
+          border-bottom: 2px solid #47C9AF
+          text-align: center
+          min-width: 6em
+          padding-bottom: .2em
+
+
+    &--1 //basic
+        .plan-card__title
+          color: black
+          font-weight: bold
+          text-transform: uppercase
+          border-bottom: 2px solid black
+          text-align: center
+          min-width: 6em
+          padding-bottom: .2em
+
+
+
+  .show-detail
+    padding: .8em 1em
+    border: 1px solid #E8E8E8
+    border-top: unset
+    border-radius: 0px 0px 8px 8px
+
+    .show-detail__btn-show-detail
+      background-color: #E8F5FF
+      padding: .5em
+      text-align: center
+      cursor: pointer
+
+      &:hover
+        background-color: #d5edff
+
+    .show-detail__detail-table
+      animation-name: fadeIn
+      animation-duration: 1s
+      animation-timing-function: ease
+
+      .show-detail__details-container
+        display: flex
+        flex-direction: column
+
+        .show-detail__detail-item-block
+          display: flex
+          flex-direction: column
+
+          .show-detail__group-name
+            background-color: #E8F5FF
+            padding: .5em
+            text-align: left
+            font-weight: bold
+
+          .show-detail__group-item
+            padding: .7em
+            min-height: 3em
+            display: flex
+            align-items: center
+
+            .show-detail__group-item-blank
+              background-color: #D8D8D8
+              height: .3em
+              width: 2em
+
+
+      @keyframes fadeIn
+        0%
+          opacity: 0
+        100%
+          opacity: 1

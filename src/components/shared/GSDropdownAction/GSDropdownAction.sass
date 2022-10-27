@@ -1,0 +1,43 @@
+.gs-dropdown-action
+  z-index: 999
+
+  &:focus,
+  &:active
+    outline: none
+    border: none
+
+  .actions
+    min-width: 100%
+    position: absolute
+    border-radius: 4px
+    list-style: none
+    margin-top: 4px
+    bottom: 0
+    left: 0
+    transform: translate(0, 100%)
+    background: white
+    text-transform: none
+    max-height: 0
+    transition: max-height .3s ease, border-color .3s ease, box-shadow .3s ease
+    overflow-y: hidden
+
+    &.expand
+      max-height: 100vh
+      border: 1px solid #D8DCE6
+      -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+
+    div
+      padding: 1em 1.5em
+      border-bottom: 1px solid #D8DCE6
+      cursor: pointer
+      white-space: pre
+
+      &:hover
+        background: #F6F7F9
+
+  .icon
+    transition: all .3s ease
+
+    &.expand
+      transform: rotate(180deg)

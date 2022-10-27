@@ -1,0 +1,149 @@
+@import "../../../../../sass/mixins"
+
+.modal-dialog.managed-inventory-modal
+  max-width: 80%
+  position: relative
+  .errorExist
+    position: absolute
+    color: #EC092F
+    font-size: 12px
+    padding: 5px 15px
+    background-color: #FFEEF1
+    border-radius: 5px
+    border: 1px solid #EC092F
+    left: 50%
+    transform: translateX(-50%)
+    width: fit-content
+    top: 35px
+    z-index: 2
+    
+  p
+    margin: 0
+  .modal-content
+    width: 100%
+    .modal-header
+      padding: 0
+      background-color: #F8F8F8
+      padding-top: 10px
+      .modal-title
+        p
+          margin: 0
+          color: black
+          font-size: 18px
+          font-weight: 500
+          text-align: initial
+          margin-left: 15px
+          padding-bottom: 10px
+      button
+        span
+          font-size: 29px
+          padding: 10px
+    .modal-body
+      text-align: left
+      .branch
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        h3
+          color: #9EA0A5
+          font-size: 15px
+          font-weight: normal
+          margin: 0
+          margin-right: 50px
+        .gs-dropdown-multiple-select
+          width: 100% !important
+          .gs-dropdown-multiple-select__drop-header
+            width: 300px
+          .uik-menuDrop__list
+            max-height: 250px
+            .gs-dropdown-multiple-select__opt-label
+              white-space: pre-wrap
+              overflow: hidden
+              text-overflow: ellipsis
+              -webkit-line-clamp: 2
+              -webkit-box-orient: vertical
+              display: -webkit-box
+      .table
+        overflow: auto
+        border: 1px solid #DDE0E9
+        margin: 0
+        &::-webkit-scrollbar-track
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+        &::-webkit-scrollbar
+          width: 5px
+          height: 8px
+        &::-webkit-scrollbar-thumb
+          background-color: #C4C4C4
+        table
+          width: 100%
+          .modelName
+            font-size: .8rem
+            font-weight: 500
+            display: block
+          thead
+            background-color: #F6F6F6
+            th
+              font-size: 15px
+              border-color: transparent
+              font-weight: 500
+              min-width: 250px
+              max-width: 250px
+              text-transform: uppercase
+              vertical-align: middle
+            .label
+              min-width: 150px
+              max-width: 150px
+          tbody
+            .no-branch
+              color: #EC092F
+              padding: 50px 0
+              font-size: 13px
+              text-align: center  
+            form
+              border: 1px solid #DDE0E9
+            .input-code
+              padding: 8px
+              background-color: #EFEFEF
+              border: 1px solid #DDE0E9
+              border-radius: 2px 2px 0px 0px
+              .form-group
+                margin: 0
+                input
+                  font-size: 12px
+            .code
+              padding: 10px 5px
+              max-height: 205px
+              max-width: 500px
+              overflow: auto
+              &::-webkit-scrollbar-track
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+              &::-webkit-scrollbar
+                width: 5px
+                height: 5px
+              &::-webkit-scrollbar-thumb
+                background-color: #C4C4C4
+              .content
+                display: flex
+                float: left
+                justify-content: space-between
+                background-color: #1E69D5
+                border-radius: 3px
+                color: #FFFFFF
+                align-items: center
+                padding: 8px 5px
+                margin-left: 5px
+                margin-bottom: 5px
+                p
+                  font-size: 12px
+                i
+                  font-size: 10px
+                  margin-left: 15px
+                  cursor: pointer
+                  &:hover
+                    opacity: 0.7
+                    
+                  
+        
+        
+
+           

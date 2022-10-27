@@ -1,0 +1,38 @@
+@import "../../../../../../sass/mixins"
+.notification-email-campaign-editor
+
+
+  .add-segment__btn-add
+    color: gray
+    @include mobile
+      display: flex
+      flex-direction: column
+
+
+  .link-to__wrapper
+    .dropdown-menu
+      margin-bottom: 1rem
+
+    .link-to__item
+      button
+        border-radius: 4px 0 0 4px
+
+    .choose-link__value
+      button
+        border-radius: 0 4px 4px 0
+        span
+          text-overflow: ellipsis
+          max-width: 50vw
+          overflow: hidden
+          white-space: nowrap
+          display: block
+      .form-control
+        border-radius: 0 4px 4px 0
+      .title-hover
+        display: flex
+        flex-direction: column
+        justify-content: center
+      .title-click
+        display: flex
+        flex-direction: column
+        justify-content: center

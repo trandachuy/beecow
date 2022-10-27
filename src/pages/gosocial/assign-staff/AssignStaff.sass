@@ -1,0 +1,62 @@
+.assign-staff-container
+  display: flex
+  align-items: center
+  .btn-assign
+    display: flex
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+    margin-right: 10px
+    .fa-xs
+      font-size: 1em
+  .dropdown-menu
+    width: 280px
+    left: -60%
+    border: 1px solid #D8DCE6
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04)
+    .uik-widget-content__wrapper
+      padding: 0
+      min-height: 300px
+      position: relative
+      .search-assign-staff
+        padding: .3em .9em
+        .uik-input__input
+          padding: 7px 15px 7px 40px
+        .uik-input__input::placeholder
+          font-size: 13px
+          color: #CCCCCC
+          font-style: normal
+          font-weight: normal
+        .uik-input__iconWrapper
+          color: #7a7a7a
+      .box_list-staff
+        padding: 0 .9rem
+        height: 210px
+        overflow-x: hidden
+        overflow-y: auto
+        &::-webkit-scrollbar
+          width: 3px
+          margin-left: -30px
+        &::-webkit-scrollbar-thumb
+          background: #C4C4C4
+        .gs-widget-empty-content
+          height: 100%
+        .staff-row
+          border-bottom: 1px solid #E6E6E6
+          padding: .35rem 0
+          &:last-child
+            border-bottom: none
+          .custom-control
+            margin: 0
+
+      .box_button-assign
+        display: flex
+        justify-content: space-between
+        position: absolute
+        bottom: 0
+        width: 100%
+        padding-top: .5rem
+        border-top: 1px solid #E6E6E6
+        .gs-button
+          height: 28px

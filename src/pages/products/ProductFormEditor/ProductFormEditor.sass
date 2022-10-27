@@ -1,0 +1,626 @@
+$color-main-photo: #01b8488f
+$color-var-item: #d1e2ff
+$color-var-item-btn-remove-hover: #cf1200
+@import "../../../../sass/gsvariables"
+@import '../../../../sass/mixins'
+
+$breakpoint-tablet: 768px
+
+
+.isModalSave.modal-dialog
+  .modal-content
+    .modal-body
+      font-weight: 600
+      .sync-notice
+        border-bottom: #0D1013 1px solid
+        font-size: 13px
+      .description-notice
+        font-size: 13px
+        font-weight: unset
+        font-style: italic
+        font-weight: 500
+    .notice
+      .modal-title
+        color: #dc3545!important
+    .modal-header
+      .modal-title
+        font-size: 23px
+        color: #7cc834
+      button
+        display: none
+
+.image-widget__image-item
+  position: relative
+  border: 2px solid #e2e2e2
+  margin: 5px
+
+  &--no-border
+    border: unset
+
+  &--main
+    border: 2px solid #3232328f
+
+.image-widget__btn-remove
+  position: absolute
+  right: 0.2em
+  top: 0.2em
+  font-size: 1em
+  color: #a1a1a1 !important
+  cursor: pointer
+  z-index: 2
+  transition-duration: 0.3s
+
+  &:hover
+    color: #cf1200 !important
+
+.image-widget__container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.image-widget__main-cover
+  color: white
+  text-align: center
+  bottom: -1px
+  position: absolute
+  width: 100%
+  background-color: #3232328f
+  font-size: 0.8em
+  font-weight: bold
+  padding: 0.5em 0em
+
+.image-widget__set-main-cover
+  position: absolute
+  width: 100%
+  top: 0px
+  left: 0px
+  height: 100%
+  background-color: rgba(161,161,161,0.35)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 20px
+
+
+.image-widget__btn-set-main
+  padding: 0px
+  height: 25px
+  color: white
+  font-weight: bold
+  transition: 0.3s
+  background-color: #3232328f !important
+  border-radius: 0px
+  z-index: 1
+  transition-duration: 0.3s
+  cursor: pointer
+
+  &:hover
+    background-color: rgba(1, 184, 72, 0.35)
+
+.image-drop-zone
+  width: 100%
+  height: 200px
+  border: 2px dashed #e2e2e2
+  color: #B6B6B6
+
+  &:hover
+    background-color: rgba(243, 243, 243, 0.43)
+
+  &__icon
+    font-size: 2em
+
+  p
+    text-align: center
+    font-weight: bold
+
+
+  section
+    height: 100%
+    cursor: pointer
+
+    div
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+.check-box-wrapper
+  position: relative
+  margin: 0px 20px
+  border-radius: 50% !important
+
+  &.connected
+    label
+        &.icon-sync-error
+          background-image: url('/assets/images/sync-error.svg')
+          border-color: red !important
+          background-color: red !important
+          background-repeat: no-repeat
+          background-position: center
+
+          &:after
+            content: unset!important
+            
+  &.disconnected
+    label.icon-chain
+      background-color: #9EA0A5
+      &:hover
+        background-color: #566DE7
+      &:before
+        background-image: url(/assets/images/icon-chain-top.png)
+        background-repeat: no-repeat
+        width: 10px
+        height: 10px
+        border: unset
+        transform: unset
+        border-top: unset
+        border-right: unset
+        opacity: 1
+        top: 6px
+        left: 9px
+        content: ""
+        display: block
+        position: absolute
+
+      &:after
+        background-image: url(/assets/images/icon-chain-bottom.png)
+        background-repeat: no-repeat
+        width: 10px
+        height: 10px
+        border: unset
+        transform: unset
+        border-top: unset
+        border-right: unset
+        opacity: unset
+        top: 9px
+        left: 6px
+    
+  label.unsynced
+    background-color: #cccccc !important
+    border-color: #cccccc !important
+
+  &.shopee, &.lazada, &.beecow, &.store-front
+    background-repeat: no-repeat
+    background-position-x: center
+    background-position-y: center
+    margin: 0
+    background-clip: content-box
+    width: 50px
+    height: 50px
+    border-radius: 15px
+    align-self: center
+
+  &.beecow
+    background-size: contain
+
+  &.shopee
+    &.connected
+      background-image: url('/assets/images/sale_channels/shopee-connected.png')
+     
+    &.disconnected
+      background-image: url('/assets/images/sale_channels/shopee-disconnected.png')
+
+  &.lazada
+    &.connected
+      background-image: url('/assets/images/sale_channels/lazada-connected.png')
+   
+    &.disconnected
+      background-image: url('/assets/images/sale_channels/lazada-disconnected.png')
+
+  &.store-front
+    background-image: url('/assets/images/sale_channels/store-front-connected.png')
+    border-radius: 50%
+    &.connected
+      background-color: #556CE7
+    &.disconnected
+      background-color: #cccccc
+
+  &.beecow
+    &.connected
+      background-image: url('/assets/images/sale_channels/beecow-connected.png')
+    &.disconnected
+      background-image: url('/assets/images/sale_channels/beecow-newPost.png')
+
+.check-box-wrapper label
+  background-color: #fff
+  border: 1px solid #ccc
+  border-radius: 50%
+  cursor: pointer
+  height: 24px
+  position: absolute
+  width: 24px
+  bottom: -10px
+  margin-bottom: 0
+  right: -10px
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 1)
+
+.check-box-wrapper label:after
+  border: 2px solid #fff
+  border-top: none
+  border-right: none
+  content: ""
+  height: 6px
+  left: 5px
+  opacity: 1 !important
+  position: absolute
+  top: 6px
+  transform: rotate(-45deg)
+  width: 12px
+
+
+.check-box-wrapper input[type="checkbox"]
+  visibility: hidden
+  bottom: 0
+  position: absolute
+  right: 0
+
+.check-box-wrapper input[type="checkbox"]:checked + label
+  background-color: #66bb6a
+  border-color: #66bb6a
+
+
+.check-box-wrapper input[type="checkbox"]:checked + label:after
+  opacity: 1
+
+.check-box-wrapper__label
+  margin-left: 24px
+
+.sale-channels-info
+
+.form-collection-general
+
+.form-variation-section
+
+.sale-channels-list-wrapper
+  display: flex
+  flex-direction: row
+  justify-content: flex-start 
+
+  .channels-wrapper
+    border-radius: 50%
+    border: 1px solid #eaedf3
+    border-top: #eaedf3
+    height: 60px
+    width: 60px
+    display: flex
+    justify-content: center
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+    margin-right: 35px
+
+    &:hover
+      cursor: pointer
+
+.var-values__wrapper
+  border: 1px solid #ced4da
+  border-radius: 0.25rem
+  padding: 0.375rem 0.75rem
+
+  input
+    width: 100%
+    border: none
+    height: 25px
+
+    &:focus
+      outline: none
+      border: none
+
+.var-values__pool
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.var-values__varItem
+  background-color: $color-var-item
+  border-radius: 3px
+  padding: 6px
+  margin-right: 5px
+  margin-top: 5px
+
+.var-values__btn-remove
+  color: white !important
+  margin-left: 5px
+  transition-duration: 0.3s
+  cursor: pointer
+  font-size: 1em
+
+  &:hover
+    color: $color-var-item-btn-remove-hover !important
+
+.var-item__wrapper
+  padding: 10px
+  border: 1px solid #ced4da
+  border-radius: 0.25rem
+  position: relative
+  margin-bottom: 10px
+
+.var-item__btn-remove
+  position: absolute
+  top: -0.7em
+  right: -0.5em
+  cursor: pointer
+  color: #959595 !important
+  font-size: 1.5em
+  z-index: 1
+
+  &:hover
+    color: $color-var-item-btn-remove-hover !important
+
+.var-empty__wrapper
+  color: #9b9b9b
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.var-empty__icon
+  font-size: 3em
+
+.var-table
+  margin-top: 20px
+  text-align: center
+  width: 100%
+  border-radius: 0.25em
+  border: 1px solid #ced4da
+  border-collapse: separate !important
+  border-spacing: 0
+
+  &--error
+    border-color: $color-var-item-btn-remove-hover
+
+  td
+    padding: 6px
+    border-right: 1px solid #ced4da
+    border-top: 1px solid #ced4da
+
+    &:last-child
+      border-right: none
+
+    .wrapper
+      margin-bottom: 0px
+
+    .form-group
+      margin-bottom: 0px
+
+    .crystrapinput__wrapper
+      margin-bottom: 0px
+
+  th
+    padding: 6px
+    border-right: 1px solid #ced4da
+
+    &:last-child
+      border-right: none
+
+.page-toolbar
+  .gs-page-title
+    display: inline-block
+  .btn
+    min-width: 6em
+    font-size: 1em
+    margin-left: 1em
+
+  .btn-save
+    margin-left: auto
+
+  .spinner-border
+    margin-right: 0.5em
+
+  .toolbar__product-status
+    margin-right: 1em
+    border-radius: 2px
+
+    &--active
+      background-color: #fcb016
+      color: white
+
+    &--inactive
+      background-color: $color-frm-label
+      color: white
+
+
+
+
+.form__wrapper
+  padding-bottom: 2em
+
+.input-group
+
+  .input-group-text
+    background-color: white
+    border-left: none
+    color: $color-frm-label
+
+.product-form__alert
+  font-size: 1em
+  margin-top: 0.8em
+  margin-bottom: 0.8em
+
+.image-widget__error-wrapper
+  width: 100%
+  text-align: left
+  margin-top: 5px
+
+.category__alert
+  text-align: center
+  font-size: .8em
+
+.shipping-widget__note
+  color: black
+  font-style: italic
+  padding: 0 15px
+
+
+.product-form-page
+  .Notice-product-quantity
+    font-size: 13px
+    padding: 10px
+    background: #FEF6E8
+    margin-bottom: 15px
+    span
+      font-weight: 700
+  .fr-element.fr-view
+    max-height: 400px
+    overflow-y: auto
+
+  .product-name
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    max-width: 20em
+
+  .warning-dimension
+    border: 1px solid red
+    border-radius: 3px
+    display: flex
+    background-color: #FFF2F1
+    padding: 20px
+    margin-bottom: 20px
+
+    .icon
+      width: 40px
+      
+      i
+        background-repeat: no-repeat
+        width: 20px
+        height: 20px
+        display: block
+        background-image: url(/assets/images/icon-error.svg)
+
+    .content
+      flex: 1
+
+      .title
+        font-weight: bold
+
+
+.priority-field
+  width: 100%
+
+.priority-field__wrapper
+  width: 100% !important
+
+.product-form-page
+
+  .product-form-page__widget-wrapper
+    display: flex
+    justify-content: center
+
+
+  .product-form-page__widget-col
+    .gs-dropdown-search-form
+      .search-box
+        .box-input-unit
+          width: 45% !important
+      .search-list
+        width: 45% !important
+    @media (max-width: 992px)
+      .gs-dropdown-search-form
+        .search-box
+          .box-input-unit
+            width: 80% !important
+        .search-list
+          width: 80% !important
+
+    &--n1
+      flex: 1
+      width: 820px
+
+    &--n2
+      flex-basis: 350px
+      padding-left: 1rem
+
+  .product-form-page__barcode
+    border: 1px solid #ced4da
+    border-radius: .25rem
+    height: 38px
+    display: flex
+    align-items: center
+    padding: 0 .9rem
+
+    code
+      color: black
+      font-size: 1rem
+
+    .gs-witget-warehousing
+      display: flex
+      display: -webkit-flex
+      -webkit-flex-wrap: wrap
+
+.branch-list-stock__wrapper
+  background-color: #F4F4F4
+  padding: 1em 0
+  max-height: 300px
+  overflow-y: auto
+  margin-bottom: 1rem
+
+  &__row
+    align-items: center
+    margin-bottom: 1em
+
+.branch-edit-stock
+  opacity: 1
+  cursor: grab
+
+.uik-select__wrapper
+  .uik-select__bottomLeft
+    left: 0
+    right: 0
+
+@media only screen and (max-width: $breakpoint-tablet)
+  .product-form-page
+    .sale-channels-info
+      margin-top: 0 !important
+    .product-form-variation-selector__table--normal
+      max-width: calc(100vw - 3rem)
+      margin-top: .5rem
+
+    .variation-item-row
+      border-top: 1px solid #c1c1c1
+      margin-top: 1rem
+      padding-top: .5rem
+
+@media only screen and (max-width: $breakpoint-tablet) and (orientation: landscape) 
+  .product-form-page
+    .product-form-page__widget-wrapper
+      display: -webkit-flex
+      -webkit-flex-wrap: wrap
+    .product-form-page__widget-col--n2
+      flex-basis: auto
+      padding-left: 0
+    .product-form-page__widget-col--n1
+      flex-basis: auto
+      padding-left: 0
+      max-width: 100%
+      .gs-widget__content
+        //p
+        //  white-space: nowrap
+        //  overflow: hidden
+        //  text-overflow: ellipsis
+    [class*="col-"]
+      padding: 0 !important
+
+@media only screen and (max-width: $breakpoint-tablet) and (orientation: portrait) 
+  .product-form-page
+    margin: 4px
+    .product-form-page__widget-wrapper
+      display: -webkit-flex
+      -webkit-flex-wrap: wrap
+    .product-form-page__widget-col--n2
+      flex-basis: auto
+      padding-left: 0
+    .product-form-page__widget-col--n1
+      flex-basis: auto
+      padding-left: 0
+      max-width: 100%
+      .gs-widget__content
+        //p
+        //  white-space: nowrap
+        //  overflow: hidden
+        //  text-overflow: ellipsis
+    [class*="col-"]
+      padding: 0 !important
+
+.title-custom
+  font-weight: 500 !important
+  color: #212529 !important
+

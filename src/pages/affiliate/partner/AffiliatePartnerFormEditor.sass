@@ -1,0 +1,295 @@
+@import "../../../../sass/mixins"
+
+
+.affiliate-partner-form-editor
+  .affiliate-partner-form-editor__body-desktop
+    p
+      margin: 0
+    .revenue-information
+      padding: 0
+      padding-right: 25px
+      &:nth-child(5)
+        padding-top: 25px
+      &:nth-child(6)
+        padding-top: 25px
+      .content
+        background-color: #F8F8F8
+        padding: 13px
+        border-radius: 3px
+        border: 1px solid #ECECEC
+        height: 100%
+        .total
+          font-weight: 500
+          font-size: 22px
+          margin-top: 12px
+          text-overflow: ellipsis
+          overflow: hidden
+        .img-descriptions
+          display: flex
+          align-items: center
+          p
+            color: #868686
+            font-size: 18px
+            font-weight: 500
+            margin-left: 11px
+            text-transform: capitalize
+            text-overflow: ellipsis
+            overflow: hidden
+          div
+            min-width: 42px
+            width: 42px
+            height: 42px
+            background-repeat: no-repeat
+            background-size: 100% 100%
+          .img1
+            background-image: url(/assets/images/affiliate/orders.svg)
+          .img2
+            background-image: url(/assets/images/affiliate/approved_commission.svg)
+          .img3
+            background-image: url(/assets/images/affiliate/Total-Commission.svg)
+          .img4
+            background-image: url(/assets/images/affiliate/Approved-Commission.svg)
+          .img5
+            background-image: url(/assets/images/affiliate/paid_commission.svg)
+          .img6
+            background-image: url(/assets/images/affiliate/rejected_commission.svg)
+
+    .commission-rate
+      .modal-footer-commission
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 7px 10px
+        p
+          font-size: 10px
+          color: #DA1919
+          margin: 0
+          margin-right: 20px
+      .validation-commission
+        font-size: 13px
+        color: #DA1919
+        position: absolute
+        left: 0
+        bottom: -22px
+      .validation-delete-commission
+        font-size: 13px
+        color: #DA1919
+        position: absolute
+        left: 0
+        bottom: -60px
+      .commission-title
+        color: black
+        font-size: 15px
+        text-transform: capitalize
+        font-weight: 500
+        margin-top: 1px
+        margin-bottom: 0.5rem
+      .commission-options.validation
+        border: 1px solid #dc3545
+      .commission-options
+        cursor: pointer
+        position: relative
+        height: calc(1.5em + 0.75rem + 2px)
+        padding: 0.375rem 0.75rem
+        font-size: 1rem
+        font-weight: 400
+        line-height: 1.5
+        color: #495057
+        background-color: #fff
+        background-clip: padding-box
+        border: 1px solid #ced4da
+        border-radius: 0.25rem
+        box-shadow: none
+        z-index: 99
+        margin-bottom: 1.8rem
+        .options-checked
+          width: 100%
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+        .options-rate
+          background: #EAEAEA
+          width: 100%
+          position: absolute
+          left: 0
+          top: 100%
+          border-radius: 0.25rem
+          border: 1px solid #ced4da
+          z-index: 1
+          .loading
+            height: 100%
+            position: absolute
+            left: 50%
+            top: 0%
+            transform: translateX(-50%)
+            width: 100%
+            background: black
+            opacity: 0.3
+          .label-list
+            max-height: 30vh
+            overflow: auto
+          .label
+            cursor: default
+            background: white
+            width: 100%
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            font-size: 13px
+            font-weight: 400
+            display: flex
+            align-items: center
+            margin: 0
+            border-bottom: 1px solid #EAEDF3
+            padding: 7px 10px
+            input, label
+              cursor: pointer
+          button
+            height: 33px
+            float: right
+            margin: 10px 17px 10px 0
+      .commission-options:before
+        display: block
+        position: absolute
+        content: ''
+        top: 52%
+        right: 2%
+        width: 0
+        height: 0
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-bottom: 3px solid #9EA0A5
+        transform: rotate(180deg)
+      .commission-options:after
+        display: block
+        position: absolute
+        content: ''
+        top: 37%
+        right: 2%
+        width: 0
+        height: 0
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-bottom: 3px solid #9EA0A5
+    .uik-select__wrapper
+      margin-bottom: 1rem
+    .commission-information
+      .col-sm-6
+        line-height: 22px
+    .payment-information
+      .col-sm-6
+        line-height: 21px
+    .counter__wrapper
+      padding: 3px
+      font-size: 13px
+      font-weight: 400
+      color: #B4B4B4
+      top: 39px
+    .checkbox
+      font-size: 15px
+      font-weight: 400
+    .uik-widget-title__wrapper
+      padding: 16px
+      h3
+        font-size: 17px !important
+        font-weight: 700
+    .note
+      font-size: 15px
+      .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) .uik-checkbox__checkbox:checked + .uik-checkbox__label:before
+        background: #556CE7
+      p
+        font-size: 13px
+    .uik-select__valueRendered
+      height: calc(1.5em + 0.75rem + 2px)
+      padding: 0.375rem 0.75rem
+      font-size: 1rem
+      font-weight: 400
+      line-height: 1.5
+      color: #495057
+      background-color: #fff
+      background-clip: padding-box
+      border: 1px solid #ced4da
+      border-radius: 0.25rem
+      box-shadow: none
+    .password
+      position: relative
+      svg
+        position: absolute
+        top: 0
+        right: 0
+        cursor: pointer
+        top: 43px
+        right: 25px
+    input:focus
+      box-shadow: none
+      border-color: #80bdff
+    .gs-widget__content
+      .form-group
+        label
+          color: black
+          font-size: 15px
+          text-transform: capitalize
+          font-weight: 500
+      .uik-select__wrapper
+        span
+          color: black
+          text-transform: capitalize
+          font-size: 15px
+          font-weight: 500
+      .input-field__hint::placeholder
+        font-size: 15px
+        font-weight: 400
+        color: #ACACAC
+    @include xs
+      .gs-widget__content .col-sm-6
+        padding: 0
+      .gs-widget__content .col-sm-4
+        padding: 0
+      .revenue-information
+        &:nth-child(3)
+        padding-top: 25px
+        &:nth-child(4)
+        padding-top: 25px
+        .img-descriptions
+          p
+            font-size: 13px !important
+          div
+            min-width: 30px !important
+            width: 30px !important
+            height: 30px !important
+        .total
+          font-size: 15px !important
+  .phone-supplier
+    position: relative
+    .phone-country
+      position: absolute
+      top: 38px
+      left: 25px
+      font-size: 13px
+      color: #000000
+      padding: 2px
+      background-color: #FFFFFF
+    .form-group
+      .form-control
+        padding-left: 50px
+  .phone-supplier.maxPhoneCode
+    .form-control
+      padding-left: 68px
+
+.phone-duplicate-modal
+  .modal-footer
+    .gs-button
+      margin: 0 !important
+    .gs-button:first-child
+      display: none!important
+      
+.modal-dialog.partner-cancel-modal
+  .modal-content
+    .modal-body
+      p
+        margin: 0
+    .modal-header
+      background: #F8F8F8 !important
+      padding: 6px 0 !important
+      .modal-title
+        font-size: 18px

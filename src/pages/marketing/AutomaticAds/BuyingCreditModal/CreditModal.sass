@@ -1,0 +1,141 @@
+.buying-credit-modal
+
+  .credit-header
+    .header-title
+      text-align: left
+
+    .header-sub__title
+      font-weight: normal
+      text-align: left
+      font-size: 14px
+      color: #9EA0A5
+
+    .btn-close__icon
+      background-image: url(/assets/images/icon-closepop-up.png)
+      background-repeat: no-repeat
+      width: 20px
+      height: 20px
+      display: block
+      position: absolute
+      top: 15px
+      right: 15px
+      cursor: pointer
+
+      &:hover
+        opacity: 0.7
+
+  .current-balance
+    background-color: #F5F5F6
+    line-height: 2.5em
+    color: #9EA0A5
+
+  .choose-package
+    margin-top: 30px
+
+    .package_price
+      display: flex
+      align-items: center
+
+      span
+        margin-right: 20px
+        border-radius: 4px
+        line-height: 5em
+        width: 10em
+        cursor: pointer
+
+        &:hover
+          opacity: 0.7
+
+        &.choose
+          border: 1px solid #90CE51
+          color: #90CE51
+          box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08)
+
+        &.un-choose
+          border: 1px solid #E2E5ED
+          color: #9EA0A5
+
+  .choose-payment__method
+    margin-top: 30px
+
+  .choose-title
+    margin-bottom: 15px
+    text-align: left
+    font-weight: bold
+
+  .bank-transfer
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    text-align: left
+
+    &__info
+      p
+        &:last-child
+          margin-bottom: unset
+
+    &__requirement
+      background-color: #F1F3FF
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04)
+      border: 1px solid #556CE7
+      border-radius: 4px
+      display: flex
+      padding: 1em
+      width: 100%
+      margin-bottom: 1em
+
+      img
+        width: 1.4em
+        height: 1.4em
+
+      .bank-transfer__req-content-wrapper
+        margin-left: 1em
+        display: flex
+        flex-direction: column
+
+    &__req-title
+      font-size: 1em
+      font-weight: 500
+      line-height: 1.5em
+      text-transform: capitalize
+
+    &__req-content
+      font-size: 1em
+      color: #868686
+      line-height: 1.5em
+
+  .online-payment
+    @extend .bank-transfer
+
+    .online-payment__selector
+      flex-grow: 1
+
+      .uik-form-input-group__horizontal
+        justify-content: flex-start
+
+        img
+          width: 60px
+          height: 40px
+          margin-right: 30px
+
+        .uik-checkbox__wrapper
+          flex: unset !important
+
+        .uik-checkbox__label
+          display: flex
+          align-items: center
+
+
+          &:after
+            top: unset
+
+  .credit-btn__group
+    margin-top: 30px
+    border-top: 1px solid #EAEDF3
+    padding-top: 15px
+
+
+
+
+

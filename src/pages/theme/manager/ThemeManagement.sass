@@ -1,0 +1,56 @@
+.theme-management
+
+  &__title h5
+    font-size: 20px
+
+  &-section
+
+    &__title
+      font-size: 16px
+      padding-top: 18px
+
+    @media (max-width: 767px)
+      &__title
+        padding-left: 15px
+        padding-right: 15px
+
+    &__container
+      border: 1px solid #dedede
+
+    &__header
+      border-bottom: 1px solid #dedede
+      background-color: #F8F8F8
+      display: flex
+      align-items: center
+      padding: 0.5em 1.5em
+      font-size: 16px
+
+      &__actions
+        font-size: 20px
+        padding: 10px
+        cursor: pointer
+        color: #3f51b5
+
+        &:hover
+          opacity: 0.8
+
+    &__body
+      background-color: #FFFFFF
+      padding: 0.5em 1.5em
+      font-size: .875rem
+      display: flex
+
+      & > div
+        padding: 0.5em 1.5em
+        font-weight: bold
+
+        &:not(:first-child)
+          border-top: 1px solid #dedede
+
+      &__img
+        display: flex
+        width: 100%
+        height: 400px
+
+.theme-management .reserve-bottom
+    height: 20vh

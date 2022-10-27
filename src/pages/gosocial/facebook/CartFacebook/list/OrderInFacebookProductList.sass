@@ -1,0 +1,264 @@
+.order-in-facebook-cart-product-list
+  position: relative
+  .icon
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-30%)
+    text-align: center
+    img
+      width: 100px
+    p
+      font-size: 13px
+      color: #4D4D4D
+      margin-top: 5px
+  
+  .uik-widget-table__wrapper
+    thead
+      background-color: #f1f1f1
+      th
+        color: #3b3b3b
+        padding: 8px 5px !important
+
+  .err-out-of-stock
+    width: 100%
+    margin-top: 0.25rem
+    font-size: 85%
+    color: #dc3545
+    display: flex
+    align-items: center
+
+  i.first-button
+    background-image: url(/assets/images/icon-edit.png)
+    background-repeat: no-repeat
+    width: 20px
+    height: 20px
+    display: block
+    cursor: pointer
+    margin-left: 3px
+  i.first-button:hover
+    opacity: 0.7
+
+
+  .uik-checkbox__label
+    &:before
+      margin-right: 0 !important
+
+  .order-in-store-purchase-cart-product-list__table-header
+    background: #80808040
+    th
+      position: sticky
+      top: -2px
+      z-index: 1
+      color: black
+      font-size: 14px
+
+
+  .order-in-store-purchase-cart-product-list__product-row
+    td
+      transition: opacity .3s
+      animation-name: fadeIn
+      animation-duration: .3s
+      padding: 15px 5px !important
+
+    &--checked
+
+    &--unchecked
+      td
+        &:not(:first-child)
+          opacity: .5
+
+    //&:hover:not(&--checked)
+    //  opacity: 1
+    .uik-checkbox__label
+      &:before
+        margin-right: 0 !important
+
+  .order-in-store-purchase-cart-product-list__stock-input
+    width: fit-content
+    max-width: 4rem
+    font-size: 12px
+    height: 30px
+    
+
+  .order-in-store-purchase-cart-product-list__td-action
+    padding: 0
+
+  .order-in-store-purchase-cart-product-list__product-thumbnail
+    width: 2rem
+    height: 2rem
+    flex-shrink: 0
+
+  .order-in-store-purchase-cart-product-list__product-name
+    word-break: break-word
+    font-size: 12px
+    white-space: pre
+    h6
+      font-size: 12px
+
+  .order-in-store-purchase-cart-product-list__deleted-icon
+.modal-dialog.managed-inventory-modal
+  max-width: 80%
+  position: relative
+.modal-content
+    width: 100%
+
+    .modal-header
+      padding: 0
+      background-color: #F8F8F8
+      padding-top: 10px
+
+      .modal-title
+        p
+          margin: 0
+          color: black
+          font-size: 18px
+          font-weight: 500
+          text-align: initial
+          margin-left: 15px
+          padding-bottom: 10px
+    .modal-body
+      text-align: left
+
+      .branch
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+
+        h3
+          color: #9EA0A5
+          font-size: 15px
+          font-weight: normal
+          margin: 0 50px 0 0
+          white-space: pre
+
+        .gs-dropdown-multiple-select
+          width: 100% !important
+
+          .gs-dropdown-multiple-select__drop-header
+            width: 100% !important
+            max-width: 300px
+
+          .uik-menuDrop__list
+            max-height: 250px
+
+            .gs-dropdown-multiple-select__opt-label
+              white-space: pre-wrap
+              overflow: hidden
+              text-overflow: ellipsis
+              -webkit-line-clamp: 2
+              -webkit-box-orient: vertical
+              display: -webkit-box
+
+      .table
+        border: 1px solid #DDE0E9
+        margin: 0
+
+        &.left
+          flex-basis: 30%
+          flex-grow: 1
+
+        &.right
+          border-left: 0
+
+        &::-webkit-scrollbar-track
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+
+        &::-webkit-scrollbar
+          width: 5px
+          height: 8px
+
+        &::-webkit-scrollbar-thumb
+          background-color: #C4C4C4
+
+        table
+          width: 100%
+
+          thead
+            background-color: #F6F6F6
+
+            th
+              font-size: 15px
+              border-color: transparent
+              font-weight: 500
+              text-transform: uppercase
+              white-space: pre
+
+          tbody
+            .no-branch
+              color: #EC092F
+              padding: 50px 0
+              font-size: 13px
+              text-align: center
+
+            form:not(.in-purchase)
+              border: 1px solid #DDE0E9
+
+            .input-code
+              padding: 8px
+              background-color: #EFEFEF
+              border: 1px solid #DDE0E9
+              border-radius: 2px 2px 0px 0px
+
+              .form-group
+                margin: 0
+
+                input
+                  font-size: 12px
+
+            .code
+              max-height: 260px
+              display: flex
+
+              &:not(.in-purchase)
+                padding: 0 10px
+
+              &::-webkit-scrollbar-track
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+
+              &::-webkit-scrollbar
+                width: 5px
+                height: 5px
+
+              &::-webkit-scrollbar-thumb
+                background-color: #C4C4C4
+
+              .content
+                display: flex
+                background-color: #1E69D5
+                border-radius: 3px
+                color: #FFFFFF
+                margin-right: 5px
+                align-items: center
+                padding: 8px 5px
+                width: fit-content
+                height: 100%
+
+                &:last-child
+                  margin-bottom: 13px
+
+                p
+                  font-size: 12px
+
+                i
+                  font-size: 10px
+                  margin-left: 15px
+                  cursor: pointer
+
+                  &:hover
+                    opacity: 0.7
+      
+.error-toast
+  position: absolute
+  color: #EC092F
+  font-size: 12px
+  padding: 5px 15px
+  background-color: #FFEEF1
+  border-radius: 3px
+  border: 1px solid #EC092F
+  left: 50%
+  transform: translateX(-50%)
+  width: fit-content
+  top: 35px
+  z-index: 2
+  display: none

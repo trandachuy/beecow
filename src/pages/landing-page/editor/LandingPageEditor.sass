@@ -1,0 +1,78 @@
+.landing-page-editor
+
+
+  .landing-page-editor__body
+    display: flex
+    flex-direction: row
+    height: 100%
+
+  .landing-page-editor__pane
+
+    &--close
+      max-width: 0
+      padding: .5rem 0 .5rem 0
+
+    &--open
+      max-width: 300px
+      padding: .5rem
+
+    &--left
+      background-color: white
+      flex-shrink: 0
+      border-right: 1px solid
+
+      overflow-y: auto
+      transition: max-width .3s
+
+
+
+    &--middle
+      flex: 1
+      padding: .5rem .25rem .5rem .5rem
+      min-width: 800px
+
+      .landing-page-editor__preview-wrapper
+        background-color: white
+        border: 1px solid
+        border-radius: .25rem
+        height: 100%
+
+
+    &--right
+      width: 250px
+      flex-shrink: 0
+      padding: 0 0 0 .25rem
+
+      .landing-page-editor__components-wrapper
+        background-color: white
+
+  .landing-page-editor__domain-selector
+    .form-group
+      margin-bottom: .2rem !important
+
+  .landing-page-editor__domain-value-sub
+    display: flex
+    position: relative
+    //height: 3.5rem
+    select, input
+      font-size: .8rem !important
+      border-radius: 0 !important
+      &:focus
+        box-shadow: unset !important
+
+    select
+      border: unset !important
+      padding: 0 .25rem 0 0
+
+    input
+      padding: 0 0 0 .25rem
+      border-top: unset !important
+      border-right: unset !important
+      border-left: unset !important
+
+    .invalid-feedback
+      position: absolute
+      right: 0
+      bottom: 1px
+      text-align: center
+

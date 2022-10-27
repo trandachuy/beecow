@@ -1,0 +1,51 @@
+@import "../../../../../sass/mixins"
+
+.purchase-order-history
+  .widget__header
+    .purchase-order-history-header
+      cursor: pointer
+      color: #3F51B5
+.purchase-order-history-modal
+  .modal-dialog
+    .modal-content
+      max-width: 700px
+      max-height: 800px
+      width: max-content
+      @include xs
+        max-width: 100%
+        width: 100%
+      .modal-body
+        table
+          overflow-y: auto
+          max-height: 600px
+          position: relative
+          tr
+            vertical-align: middle
+            padding-top: 1rem
+            padding-bottom: 1rem
+            >th
+              &:first-child
+                padding-left: 0
+              &:last-child
+                padding-right: 0
+            >td
+              &:first-child
+                padding-left: 0
+                width: 15%
+              &:nth-child(2)
+                width: 15%
+              &:nth-child(2)
+                width: 20%
+              &:last-child
+                padding-right: 0
+                width: 50%
+
+    .modal-header
+      border-bottom: none
+      padding-bottom: unset
+      .modal-title
+        text-align: left
+
+    .modal-body
+      max-height: 700px
+      overflow-y: auto

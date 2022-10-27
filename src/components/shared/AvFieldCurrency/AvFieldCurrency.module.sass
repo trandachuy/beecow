@@ -1,0 +1,68 @@
+.stepper
+  z-index: 1
+  width: 40px !important
+  min-width: 40px !important
+  height: 36px !important
+  margin-top: 1px !important
+
+  &.stepperUp
+    border-left: none
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+  &.stepperDown
+    border-right: none
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+.avfieldCurrencyWrapper
+  position: relative
+  width: fit-content
+
+  .currencyInput
+    font-size: 1rem
+    color: #495057
+    height: calc(1.5em + 0.75rem)
+    padding: 0.375rem 0.75rem
+    position: absolute
+    top: 1px
+    left: 1px
+    width: 100%
+    text-align: right
+    border: none
+    background: transparent
+    z-index: 1
+
+    &:focus
+      outline: none
+
+  .avInput
+    color: transparent
+
+    &:focus
+      color: transparent
+
+  .paddingRight
+    padding-right: 2em
+  .paddingLeft
+    padding-left: 2em
+  .borderRadius0
+    border-radius: 0
+
+  .fieldWrapper
+    position: relative
+    .unit
+      position: absolute
+      right: 9px
+      top: 7px
+      color: #939393
+      font-weight: 500
+      font-size: 1rem
+    .unitLeft
+      position: absolute
+      left: 9px
+      top: 7px
+      color: #939393
+      font-weight: 500
+      font-size: 1rem
+      

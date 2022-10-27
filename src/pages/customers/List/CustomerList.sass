@@ -1,0 +1,306 @@
+@import "../../../../sass/mixins"
+.customer-list
+  .text-progress-assign
+    font-weight: 700
+    font-size: 14px
+    line-height: 14px
+    color: #1E69D5
+  .buttons-row
+    row-gap: 0.5rem
+  .btn-filter-action
+    border: 1px solid #D8DCE6
+    padding: 0.75em
+    height: 38px
+    border-radius: 4px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 8rem
+    cursor: pointer
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio).select-collection-row
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label.green::before
+      background-image: url(/assets/images/icon-checked.png)
+      background-position: center center
+      background-repeat: no-repeat
+      background-color: #1665D8
+      border: 1px solid #1665D8
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) .uik-checkbox__label:before
+    min-width: 16px
+    min-height: 16px
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio)
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label
+      .uik-checkbox__checkboxIcon
+        display: none
+  
+  .setting-column-icon
+    &:hover
+      opacity: 0.75
+      cursor: pointer
+
+
+  .action
+    max-width: 5rem
+
+  .full-name
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    max-width: 10rem
+
+  .address
+    text-overflow: ellipsis
+    overflow: hidden
+    max-width: 16rem
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+
+  .user-type
+    border: 1px solid
+    padding: 0px 10px
+    width: fit-content
+    border-radius: 3px
+    //font-style: italic
+
+    &.mem-type
+      border-color: green
+      color: green
+    &.guest-type
+      border-color: black
+
+  @include mobile
+    .uik-widget-content__wrapper
+      padding: 0
+  .customer-list__filter-container--mobile
+    flex-direction: column
+    .uik-select__wrapper
+      min-width: 11rem
+      max-width: 11rem
+    .gs-search-box__wrapper
+      width: 100%
+      margin-right: 15px !important
+    .row 
+      margin-bottom: 10px !important
+    .mega-filter-container
+      padding-left: 15px
+  .customer-list__filter-container
+    width: 100%
+    display: flex
+    display: -webkit-box
+    justify-content: flex-end
+    align-items: center
+    flex-shrink: 0
+    margin-bottom: 1em
+    .gs-search-box__wrapper
+      display: flex
+      .uik-select__wrapper
+        margin-left: 10px
+        min-width: 11rem
+    .gs-mega-filter-row-select-scroll
+      max-width: 16em
+
+    .branch-item-list
+      margin-right: 14px
+
+    &--mobile
+
+      @include mobile
+        display: flex
+        justify-content: space-between
+        padding: 1rem 0
+        box-shadow: 0 2px 0 0 #c2c2c2
+        background-color: white
+        z-index: 1
+        //position: sticky
+        //top: 0
+
+        .row
+          width: auto
+          margin-bottom: 1em
+          flex-shrink: 0
+          display: flex
+          flex-direction: column
+          &:first-child
+            width: 60%
+          .mega-filter-container
+            padding-right: 15px
+
+        .uik-select__wrapper
+          margin: 0 !important
+          width: 100%
+          min-width: unset !important
+
+        .col-6
+          padding: .25em 1em
+
+        .btn-filter
+          border: 1px solid #D8DCE6
+          -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          padding: 18px
+          height: 36px
+          border-radius: 4px
+          display: flex
+          justify-content: space-between
+          align-items: center
+
+          .icon-filter
+            margin-right: -7px
+
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0
+
+    .uik-select__wrapper
+      min-width: 16em
+      max-width: 16em
+
+  .customer-list__body
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    align-items: center
+    flex-shrink: 0
+
+    .customer-list__list-container
+      display: flex !important
+      flex-direction: column
+      .customer-table-custom
+        overflow-x: auto
+
+        .customer-table-header
+          th 
+            min-width: 150px
+
+    .uik-widget__wrapper
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      .uik-widget-content__wrapper
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+
+  .loading-list
+    display: flex
+    flex-grow: 1
+    justify-content: center
+    align-items: center
+    padding: 2rem
+
+  .btn-segments
+    min-width: 12rem
+
+  .segments-dropdown-wrapper
+    .uik-select__wrapper
+      margin-left: 0
+
+  .segments-dropdown
+    padding: 1em
+    min-width: 12rem
+    //display: flex
+    //flex-direction: column
+    .segments-search
+      .uik-input__input
+        padding-top: 7px !important
+        padding-bottom: 7px !important
+
+    hr
+      margin-left: -1em
+      margin-right: -1em
+
+    .segments-item-list
+      max-height: 200px
+      overflow-y: auto
+      margin: -14px
+
+      .found-result
+        text-align: center
+        color: gray
+
+
+      .segments-item-row
+        padding: .5rem
+        border-bottom: 1px solid #EAEDF3 !important
+        max-width: 10rem
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        cursor: pointer
+        font-size: 14px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:last-child
+          border-bottom: unset
+          box-shadow: unset
+
+        .select__check
+          width: 5px
+          height: 5px
+          background-color: #38B249
+          border-radius: 50%
+
+      .loading-row
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
+        top: 0
+        position: absolute
+        background-color: rgba(0, 0, 0, 0.02)
+
+    .gs-widget-empty-content
+      margin-top: -14px
+      //padding: 1em
+      .gs-widget-empty-content__icon
+        display: none
+
+  .mobile-customer-profile-row__info
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    .mobile-customer-profile-row__full-name
+      width: 50vw
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+
+    .mobile-customer-profile-row__phone
+      color: #9EA0A5
+
+
+
+.mobile-segment-modal
+  .gs-modal-fullscreen-mobile__body
+    height: 100%
+    .mobile-search-box
+      padding: 1em
+      background-color: #FAFAFA
+      box-shadow: 0 1px 0 0 #EAEDF3
+      z-index: 1
+
+    .mobile-segment-list
+      padding: 0 15px 15px 15px
+      height: 75%
+      overflow: auto
+
+    .mobile-branch-list
+      padding: 0 15px 15px 15px
+      height: 75%
+      overflow: auto
+
+    .gs-widget-empty-content
+      height: 100%
+
+  .uik-form-input-group__vertical
+    margin-top: 1rem
+    margin-bottom: 1rem
+
+    .uik-checkbox__wrapper
+      padding: .3rem
+      color: black
+

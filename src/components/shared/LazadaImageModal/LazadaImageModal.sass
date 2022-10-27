@@ -1,0 +1,66 @@
+.modal.fade.show
+  display: flex!important
+  align-items: center
+
+  .image-modal
+    max-width: 8000px
+    
+    .modal-content
+      border: none
+      width: 100%
+
+      .modal-header
+        padding: 0.75rem 1rem
+    
+      .modal-header
+        .modal-title
+          text-align: left
+          font-weight: 400
+          font-size: 1.25em
+
+      .modal-header.modal-warning
+        color: #212529
+        background-color: #ffc107
+        border-color: #ffc107
+      .modal-header.modal-danger
+        color: #fff
+        background-color: #dc3545
+        border-color: #dc3545
+      .modal-header.modal-info
+        color: #fff
+        background-color: #17a2b8
+        border-color: #17a2b8
+
+      .modal-body
+        font-size: 1.15em
+        padding-left: 0
+        padding-right: 0
+        width: 100%
+        .uik-widget__wrapper
+          border-radius: unset
+          width: 100%
+          .uik-widget-content__wrapper
+            .image-widget__container
+              .image-view.image-widget__image-item
+                .image-widget__set-main-cover
+                  display: none!important
+                &:hover
+                  .image-widget__set-main-cover
+                    display: flex!important
+                &.image-widget__image-item--main:hover
+                  .image-widget__set-main-cover
+                    display: none!important
+                  
+      .modal-footer
+        padding: 0.75rem 1rem
+        justify-content: flex-end
+        button
+          &.btn
+            padding-right: 2.5em
+            padding-left: 2.5em
+          &.btn-outline-secondary.btn-secondary
+            background-color: initial !important
+
+
+.btn
+  font-size: 1em

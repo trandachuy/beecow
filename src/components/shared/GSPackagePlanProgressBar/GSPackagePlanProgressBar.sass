@@ -1,0 +1,111 @@
+@import "../../../../sass/mixins"
+$step-color: #556CE7
+$step-color-hover: #5a75ff
+$step-color-active: #5a75ff
+
+.package-plan-progress-step-navigation
+  display: flex
+  flex-direction: column
+  width: 100%
+  padding: 1em 15em
+
+  .step__bar
+    padding: 0 1.5em
+
+    .step
+      border-radius: 50%
+      color: white
+      width: 2.5em
+      height: 2.5em
+      font-size: 1rem
+      display: flex
+      justify-content: center
+      align-items: center
+      transition-duration: .3s
+      margin: auto
+
+      &--hover
+        cursor: pointer
+
+        &:hover
+          filter: invert(0.8) sepia(2) hue-rotate(200deg)
+
+      &--active
+        background-color: #556CE7
+        border-radius: 100%
+        z-index: 9
+
+      &--inactive
+        background: #CDCED2
+        border-radius: 100%
+
+      &__progress
+        height: 3px
+        background: #CDCED2
+        flex-grow: 1
+        position: absolute
+        width: calc(100% - 40px)
+        right: calc(50% + 20px)
+        top: 50%
+        transform: translateY(-50%)
+
+        &--active
+          &:before
+            content: ""
+            height: 3px
+            background-color: #54B1FB
+            position: absolute
+            top: 0px
+            left: 0px
+            width: 0%
+            animation-name: toRight
+            animation-duration: .3s
+            animation-timing-function: ease-in
+            animation-fill-mode: forwards
+
+          &.delay-1:before
+            animation-delay: .3s
+
+          &.delay-2:before
+            animation-delay: .6s
+
+          &.delay-3:before
+            animation-delay: .9s
+
+          @keyframes toRight
+            0%
+              width: 0%
+            100%
+              width: 100%
+
+  .step__label
+
+    &__col
+      text-align: center
+      min-width: 13em
+      padding-top: .6em
+
+      &__text
+        padding: .2em
+        opacity: .5
+        color: #cdced2
+        border: 1px solid #cdced2
+        border-radius: 3px
+        font-size: 15px
+        min-width: 6em
+        display: inline-block
+
+        &.active
+          opacity: 1
+          border-color: #556ce7
+          color: #556ce7
+
+  .step__time-line
+    text-align: center
+    align-items: center
+    font-size: 13px
+    font-weight: 500
+
+@media screen and (max-width: 670px)
+  .package-plan-progress-step-navigation
+    padding: 1em

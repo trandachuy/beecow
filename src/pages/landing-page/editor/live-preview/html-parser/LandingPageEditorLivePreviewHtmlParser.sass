@@ -1,0 +1,60 @@
+.landing-page-editor-live-preview-html-parser
+  width: 100%
+  height: 100%
+  overflow-x: auto
+  overflow-y: hidden
+
+  &--mobile
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  .ldp-live-preview__iframe
+
+
+    &--web
+      min-width: 768px // breakpoint
+      width: 100%
+      height: 100%
+      border: none
+
+    &--mobile
+      min-width: 400px
+      width: 400px
+      height: 100%
+      border-left: 1px solid #c1c1c1
+      border-right: 1px solid #c1c1c1
+      border-top: none
+      border-bottom: none
+
+
+  #ldp-live-preview__iframe
+
+
+
+    &::-webkit-scrollbar-track
+
+      //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+      border-radius: 10px
+    //background-color: #F5F5F5
+    &::-webkit-scrollbar
+      width: 5px
+      height: 5px
+      //background-color: #F5F5F5
+      &:hover
+        height: 10px
+
+    &::-webkit-scrollbar-thumb
+      //border-radius: 10px
+      //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+      background-color: #556CE7
+      height: 5px
+      cursor: pointer
+
+      &:hover
+        background-color: #556CE7
+        height: 10px
+
+  .gs-editable
+    background-color: red

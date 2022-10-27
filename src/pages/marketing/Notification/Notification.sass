@@ -1,0 +1,265 @@
+/*!
+ / Copyright 2017 (C) Mediastep Software Inc.
+ /
+ / Created on : 3/10/2019
+ / Author: Dai Mai <email: dai.mai@mediastep.com>
+ /
+
+@import '../../../../sass/style'
+@import "../../../../sass/mixins"
+@import "../../../components/shared/GSButton/GSButton.sass"
+
+.notification
+
+  .gs-status-tag
+    width: 100%
+    max-width: 8rem
+
+  .notification-header
+    .gs-atm__flex-row--flex-start
+      justify-content: space-between
+    .dropdown
+      flex-basis: 15%
+      min-width: 9rem
+      max-width: fit-content
+      .gs-button
+        cursor: pointer
+        color: white
+        box-shadow: 0 0 2px #999
+        border: none
+        outline: none
+        font-size: 0.875rem
+        height: 38px
+        background-position: center
+        transition: background 0.2s
+        transition-timing-function: ease-in
+        display: flex
+        display: -webkit-flex
+        justify-content: space-between
+        border-radius: 3px
+        padding: 0.4rem 1em
+      .gs-button__green
+        background-color: #00c851
+        border-color: #00c851
+        color: white
+        &.dropdown-toggle::after
+          align-self: center
+        &:active
+          color: white!important
+          background-color: #00c851!important
+          border-color: #00c851!important
+      &.show
+        .dropdown-menu.show
+          font-size: 0.85rem
+          width: fit-content
+          min-width: 9rem
+          .dropdown-item
+            padding-left: 1em
+            display: flex
+            display: -webkit-flex
+            flex-direction: row
+            -webkit-flex-direction: row
+            span
+              display: flex
+              display: -webkit-flex
+              flex-direction: row
+              -webkit-flex-direction: row
+              i
+                width: 20px
+                height: 20px
+                display: block
+                background-repeat: no-repeat
+                background-position: center
+                margin-right: 5px
+  .icon-email
+    background-image: url(/assets/images/icon-email-notification.svg)
+  .icon-push
+    background-image: url(/assets/images/icon-push-notification.svg)
+  .notification-content-body
+    flex-shrink: 0
+    flex-grow: unset!important
+    -webkit-flex-grow: unset!important
+    .gs-widget__content
+      width: 100%
+    .top-search
+      border: unset
+      box-shadow: unset
+      flex-direction: row!important
+      -webkit-flex-direction: row!important
+      margin-top: unset
+      display: flex
+      display: -webkit-flex
+      justify-content: space-between
+      flex-direction: column
+      -webkit-flex-direction: column
+      align-items: center
+      .search
+        //margin-left: 1.5em
+        max-width: 235px
+        flex-basis: 100%
+        -webkit-flex-basis: 100%
+        @include mobile
+          margin-bottom: 1em
+          width: 100%
+          max-width: unset
+      .group-combobox
+        -webkit-flex-basis: 100%
+        flex-basis: 100%
+        display: flex
+        display: -webkit-flex
+        border: unset
+        box-shadow: unset
+        justify-content: flex-end
+        flex-direction: row
+        -webkit-flex-direction: row
+        //margin-right: 1.5em
+        select
+          min-width: 10rem
+          background-color: white
+          color: black
+          border-color: #ced4da
+          box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06)
+          border-radius: 0.25rem
+          option
+            padding: 10px
+            margin-top: 10px
+            line-height: 10px
+        .dropdown-box
+          min-width: 11rem
+          width: fit-content
+          margin-left: 1em
+          button
+            display: flex
+            display: -webkit-flex
+            justify-content: space-between
+            align-items: center
+            min-width: 11rem
+            width: fit-content
+            &.gs-button__green:hover
+              background-color: unset
+    .empty
+      display: flex
+      display: -webkit-flex
+      flex-direction: column
+      -webkit-flex-direction: column
+      align-items: center
+      justify-content: center
+      background-color: #F9F9F9
+      width: 100%
+      //margin-top: -1.1em
+      height: 30em
+      i
+        &.icon-empty
+          background-image: url('/assets/images/icon-emptycampaign.svg')
+          background-repeat: no-repeat
+          width: 100px
+          height: 100px
+          display: block
+          margin-bottom: 1em
+    .gs-table
+      margin-top: 1em
+      border-top: 1px solid #EAEDF3
+      .gs-table-header
+        .gs-table-header-item
+          //padding: .8em
+          min-width: 10%
+          &:first-child
+            min-width: 35%
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            padding: 15px
+            min-width: 10%
+            &:first-child
+              display: inline-block
+              white-space: nowrap
+              text-overflow: ellipsis
+              overflow: hidden
+              min-width: 35%
+  .dropdown-create-campaign
+    .dropdown-toggle
+      @extend .gs-button__green
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px)
+  .notification
+    .notification-content-body
+      .top-search
+        flex-wrap: wrap
+        -webkit-flex-wrap: wrap
+        .search
+          margin-left: unset
+        .group-combobox
+          justify-content: flex-start
+          .dropdown-box
+            margin-left: unset
+            &:first-child
+              margin-right: 1.5em
+      .gs-table
+        .gs-table-header
+          display: none
+        .gs-table-body
+          .gs-table-body-items
+            flex-wrap: wrap
+            -webkit-flex-wrap: wrap
+            padding: 0.8rem 0
+            .gs-table-body-item
+              padding: 0
+              &.type
+                order: 3
+                color: gray
+                span:nth-child(2)
+                  display: inline-block
+                  padding-left: .3em
+              &.status
+                order: 2
+                flex-basis: 20%
+                margin-top: .5em
+                justify-content: center
+              &.icon
+                order: 1
+                flex-basis: 80%
+                padding: 0
+                font-weight: bold
+
+// For mobile portrait
+@media only screen and (max-width: 480px)
+  //.gs-status-tag
+  //  min-width: 0 !important
+  .notification
+    .notification-content-body
+      .top-search
+        .group-combobox
+          justify-content: space-between
+          margin-right: unset
+          .dropdown-box
+            width: fit-content
+            min-width: 10rem
+            &:first-child
+              margin-right: unset
+            button
+              width: fit-content
+              min-width: 10rem
+      .gs-table
+        .gs-table-body
+          .gs-table-body-items
+            .gs-table-body-item
+              &.status
+                flex-basis: 30%
+                span
+                  margin-right: auto
+                  white-space: normal
+              &.icon
+                flex-basis: 70%
+
+// Very small mobile screen
+@media only screen and (max-width: 320px)
+  .notification
+    .notification-content-body
+      .top-search
+        .group-combobox
+          flex-direction: column
+          margin: 5px 0
+          .dropdown-box
+            margin: 2.5px 0

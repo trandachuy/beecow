@@ -1,0 +1,297 @@
+@import "../../../../../sass/mixins"
+
+.service-list-page
+
+  .m-paging
+    //position: sticky
+    //bottom: 0
+
+  .mobile-service-list-container
+    flex-direction: column
+    padding: 1rem
+    border-top: 1px solid rgba(220, 220, 220, 0.31)
+    flex-shrink: 0
+    flex-grow: 1
+    //overflow-y: auto
+
+
+
+    .m-service-row
+      padding: 1rem 0
+      border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+      display: flex
+      justify-content: space-between
+      flex-shrink: 0
+
+      .m-service-basic-info
+        display: flex
+        align-items: center
+        flex: 1
+
+        .m-service-basic-info__name
+          margin-left: 1rem
+          word-break: break-word
+          height: 2.8rem
+          overflow: hidden
+          max-width: 40vw
+
+      .m-service-detail
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between
+
+        &__status
+          display: flex
+          align-items: center
+          justify-content: flex-end
+
+        .status-dot
+          border-radius: 50%
+          width: .5rem
+          height: .5rem
+          margin-bottom: .2em
+          margin-right: .5em
+
+          &--active
+            background-color: green
+          &--error
+            background-color: red
+          &--inactive
+            background-color: gray
+
+
+  .service-list-widget
+    @include mobile
+      padding: 0
+    .gsa-flex-grow--1
+      width: 100%
+      height: 10em
+      background-color: #F9F9F9
+      
+  .gs-page-header
+    .btn-save
+      margin-left: auto
+
+
+  .service-list__counter
+    margin-left: auto
+
+  .product-list-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  .product-table__btn-edit
+    cursor: pointer
+    color: #9EA0A5 !important
+    transition-duration: .3s
+
+    &:hover
+      color: black !important
+
+  .product-table__last-col
+    text-align: center
+
+  .product-table__thumbnail
+    width: 4em
+    height: 4em
+
+  .product-table__tooltips-thumbnail
+    opacity: 1 !important
+
+  .row
+    align-items: center
+
+  .brands__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    
+  .uik-checkbox__label
+    margin-left: .9em
+
+  .n-filter-container
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    flex-shrink: 0
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0
+
+    .uik-select__wrapper
+      margin-left: 1em
+      min-width: 10em
+
+    .status-filter
+      margin-right: 20px
+
+  .product-list__body
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+
+  .gs-widget
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    .uik-widget-content__wrapper
+      flex: 1
+      display: flex
+      flex-direction: column
+
+    .loading
+      flex: 1
+      display: flex
+      align-items: center
+
+  .product-list__empty
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .search-box__wrapper
+    webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+
+    input
+      padding: 8px 15px 8px 40px !important
+  
+.service-list-page
+  .segments-dropdown-wrapper
+    .uik-select__wrapper
+      margin-left: 0
+
+  .segments-dropdown
+    padding: 1em
+    min-width: 12rem
+    //display: flex
+    //flex-direction: column
+    .segments-search
+      .uik-input__input
+        padding-top: 7px !important
+        padding-bottom: 7px !important
+
+    hr
+      margin-left: -1em
+      margin-right: -1em
+
+    .segments-item-list
+      max-height: 200px
+      overflow-y: auto
+      margin: -14px
+
+      .found-result
+        text-align: center
+        color: gray
+
+
+      .segments-item-row
+        padding: .5rem
+        border-bottom: 1px solid #EAEDF3 !important
+        max-width: 10rem
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        cursor: pointer
+        font-size: 14px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:last-child
+          border-bottom: unset
+          box-shadow: unset
+
+        .select__check
+          width: 5px
+          height: 5px
+          background-color: #38B249
+          border-radius: 50%
+
+      .loading-row
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
+        top: 0
+        position: absolute
+        background-color: rgba(0, 0, 0, 0.02)
+
+    .gs-widget-empty-content
+      margin-top: -14px
+      //padding: 1em
+      .gs-widget-empty-content__icon
+        display: none
+  .service-list__body
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    flex-shrink: 0
+    .gs-table
+      margin-top: 1em
+      border-top: 1px solid #EAEDF3
+      .gs-table-header
+        .gs-table-header-item
+          //padding: .8em
+          &:first-child
+            min-width: 15%
+            max-width: 15%
+          &:nth-child(2)
+            min-width: 50%
+          &:nth-child(3)
+            min-width: 15%
+            max-width: 15%
+          &:nth-child(4)
+            min-width: 15%
+            max-width: 15%
+      .gs-table-body
+        .gs-table-body-items
+          .gs-table-body-item
+            padding: .8em
+            &.product-thumbnail
+              min-width: 15%
+              max-width: 15%
+              img
+                width: 4em
+                height: 4em
+            &.product-table__name
+              min-width: 50%
+              text-overflow: ellipsis
+              white-space: nowrap
+              overflow: hidden
+            &.status
+              min-width: 15%
+              max-width: 15%
+              div
+                padding: 0
+            &.btn-group__action
+              min-width: 15%
+              max-width: 15%
+              //flex-basis: 20%
+              display: flex
+              justify-content: flex-start
+
+              i
+                background-repeat: no-repeat
+                width: 20px
+                height: 20px
+                display: block
+
+                &.first-button
+                  background-image: url(/assets/images/icon-edit.png)
+
+                &.lastest-button
+                  margin-left: 1em
+                  background-image: url(/assets/images/icon-delete.png)
+
+                &:hover
+                  opacity: 0.7
+
+
+

@@ -1,0 +1,121 @@
+@import "../../../../sass/mixins"
+$step-color: #556CE7
+$step-color-hover: #5a75ff
+$step-color-active: #5a75ff
+
+.progress-step-navigation
+  display: flex
+  flex-direction: column
+  width: 100%
+  padding: 1em 15em
+
+  .step__bar
+    padding: 0 1.5em
+
+    .step
+      border-radius: 50%
+      color: white
+      width: 30px
+      height: 30px 
+      font-size: 1rem
+      display: flex
+      justify-content: center
+      align-items: center
+      transition-duration: .3s
+      margin: auto
+
+      &--hover
+        cursor: pointer
+        &:hover
+          filter: invert(0.8) sepia(2) hue-rotate(200deg)
+
+      &--active
+        &:before
+          content: ""
+          background: url(/assets/images/check.svg) no-repeat center top
+          width: 30px
+          height: 30px 
+          display: grid
+          z-index: 9
+
+      &--cancel--active
+        &:before
+          content: ""
+          background: url(/assets/images/check_cancel.svg) no-repeat center top
+          width: 30px
+          height: 30px
+          display: grid
+          
+      &--inactive
+        &:before
+          content: ""
+          background: url(/assets/images/uncheck.svg) no-repeat center top
+          width: 30px
+          height: 30px 
+          display: grid
+
+      &__progress
+        height: 1px
+        background: #CDCED2
+        flex-grow: 1
+        position: absolute
+        width: calc(100% - 30px)
+        right: calc(50% + 15px)
+        top: 50%
+        transform: translateY(-50%)
+
+        &--active
+          &:before
+            content: ""
+            height: 1px
+            background-color: #4051B6
+            position: absolute
+            top: 0px
+            left: 0px
+            width: 0%
+            animation-name: toRight
+            animation-duration: .3s
+            animation-timing-function: ease-in
+            animation-fill-mode: forwards
+
+          &.delay-2:before
+            animation-delay: .3s
+          &.delay-3:before
+            animation-delay: .6s
+          &.delay-4:before
+            animation-delay: .9s
+
+          @keyframes toRight
+            0%
+              width: 0%
+            100%
+              width: 100%
+
+  .step__text
+    margin-top: .6em
+    font-weight: 500
+    font-size: 15px
+    color: #000000
+
+    .step__label
+      text-align: center
+      padding: .2em
+      min-width: 10em
+      opacity: .5
+
+      &--active
+        opacity: 1
+
+      &--cancel--active
+        color: red
+        border-color: red
+
+  .step__time-line
+    text-align: center
+    align-items: center
+    font-size: 13px
+    font-weight: 500
+
+@media screen and (max-width: 670px)
+  .progress-step-navigation
+    padding: 1px

@@ -1,0 +1,219 @@
+@import "sass/mixins"
+
+.gs-social-filter-staff-container-wrapper
+  &.gs-page-container-max
+    padding: 0px
+    height: fit-content
+    width: fit-content
+    margin: 0
+  .uik-widget__wrapper
+    border: none
+    box-shadow: none
+    .uik-widget-content__wrapper
+      padding: 0
+  .gs-widget:last-child
+    margin-top: 2rem!important
+  .social-filter-staff-container
+    display: flex
+    position: relative
+    width: 23px
+    justify-content: flex-end
+    .filter-staff-lead
+      display: flex
+      align-items: center
+      cursor: pointer
+      >i
+        margin: 0.2rem 0.2rem
+        &.more
+          position: relative
+          &[data-badge="0"]
+            &::before 
+              height: 18px
+              width: 16px
+              content: url(/assets/images/filter-three-dot.svg)
+            &::after
+              display: none
+          &::before
+            height: 18px
+            width: 16px
+            content: url(/assets/images/icon_filter_fb.png)
+          &::after
+            content: attr(data-badge)
+            position: absolute
+            background: rgb(64, 81, 182)
+            border-radius: 50%
+            display: block
+            padding: 0.1em
+            color: #fff
+            height: 18px
+            width: 18px
+            right: -10px
+            top: -10px
+            text-align: -webkit-center
+            font-size: 12px
+            font-weight: 800
+            font-style: normal
+
+    .reset-filter-staff-content
+      display: flex
+      justify-content: flex-start
+      margin-top: 1rem
+      flex-wrap: wrap
+      min-width: 17rem
+      max-height: 300px
+      top: -1.5rem
+      left: 2rem
+      position: absolute
+      border-radius: 0.3em
+      gap: 0.3rem
+      z-index: 10
+      opacity: 1
+      box-shadow: 5px 10px 8px #e4cfcf
+    .box_reset
+      top: -100%
+      left: 155%
+      border: 1px solid #D8DCE6
+      -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+      .uik-widget-content__wrapper
+        padding: 0
+        .box_reset-staff
+          width: 200px
+          &::after
+            content: ""
+            position: absolute
+            bottom: 62%
+            left: 1px
+            margin-left: -15px
+            border-width: 7px
+            border-style: solid
+            border-color: transparent white transparent transparent
+          .title-filter-reset
+            padding: .3rem .5rem
+            background: #F5F5F5
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .title-filter
+              font-size: 15px
+              font-style: normal
+              font-weight: 500
+              color: #000000
+            .title-reset
+              font-style: normal
+              font-weight: 400
+              font-size: 13px
+              line-height: 15px
+              color: #208EED
+              cursor: pointer
+          .title-assigned-staff,
+          .title-assigned-tags
+            display: flex
+            align-items: center
+            padding: .7rem .5rem
+            cursor: pointer
+            .assigned-staff,
+            .assigned-tags
+              display: flex
+              justify-content: space-between
+              align-items: center
+              width: 100%
+              .fa-xs
+                cursor: pointer
+              p
+                font-size: 13px
+    .filter-staff-content,
+    .filter-tags-content
+      display: flex
+      justify-content: flex-start
+      flex-wrap: wrap
+      min-width: 17rem
+      max-height: 300px
+      visibility: hidden
+      top: -2.3rem
+      left: 2.5rem
+      position: absolute
+      opacity: 0
+      z-index: 1
+      border-radius: 5px
+      &.active
+        gap: 0.3rem
+        z-index: 10
+        opacity: 1
+        visibility: visible
+        -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09)
+      .filter-staff-content-section
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        &::after
+          content: ""
+          position: absolute
+          bottom: 81%
+          left: 1px
+          margin-left: -15px
+          border-width: 7px
+          border-style: solid
+          border-color: transparent white transparent transparent
+        .header-content
+          height: 2.5rem
+          background: rgba(245, 245, 245, 1)
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          padding: 0.5rem
+          font-weight: 600
+          pointer-events: none
+          &::before
+            content: url(/assets/images/icon-back-arrow.svg)
+            padding-right: 1rem
+            cursor: pointer
+            pointer-events: auto
+        
+        .footer-content
+          display: flex
+          justify-content: flex-end
+          height: 2.5rem
+          align-items: center
+          background: #FFFFFF
+          border-top: 1px solid #e6e6e6
+        
+        .body-content
+          display: flex
+          flex-flow: column wrap
+          background: #FFFFFF
+          overflow-y: auto
+          .row
+            display: flex
+            flex-direction: row
+            flex-wrap: nowrap
+            align-items: center
+            justify-content: flex-start
+            border-bottom: 1px solid #E6E6E6
+            padding: 0.3rem 0.5rem
+            >*
+              justify-content: center
+              margin: 0 0.5rem
+            .staff-name
+            .search-box
+              webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+              box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+              .uik-input__input
+                padding: 7px 15px 7px 40px
+                .uik-input__input::placeholder
+                  font-size: 13px
+                  color: #CCCCCC
+                  font-style: normal
+                  font-weight: normal
+                .uik-input__iconWrapper
+                  color: #7a7a7a
+          .box-list-assigned
+            height: 200px
+            overflow-x: hidden
+            overflow-y: auto
+            &::-webkit-scrollbar
+              width: 3px
+              margin-left: -30px
+            &::-webkit-scrollbar-thumb
+              background: #C4C4C4

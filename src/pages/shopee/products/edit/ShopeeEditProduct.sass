@@ -1,0 +1,165 @@
+
+.shoppe-product-container
+  .uik-select__optionListWrapper
+    width: fit-content
+
+  .react-bootstrap-daterangepicker-container
+    position: relative
+  nav[aria-label="breadcrumb"]
+    flex: 1
+  ol.breadcrumb 
+    background-color: inherit
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 0
+  
+  .btn-save
+    margin-left: 20px
+
+  .gs-page-header
+    button
+      padding-left: 50px
+      padding-right: 50px
+      margin-left: 20px
+
+      &.btn-cancel
+        background: unset
+        border: solid 1px #556ce7
+        color: #556ce7
+
+  .uik-widget-title__wrapper
+    padding-bottom: 5px
+    padding-top: 10px
+
+    label
+      font-size: 16px
+      font-weight: 600
+      margin-bottom: 0
+      text-transform: uppercase
+
+    p.uik-headline-desc__wrapper
+      font-size: 14px
+      margin-bottom: 0
+
+  .uik-widget-content__wrapper
+    label
+      font-weight: 600
+
+    section.selected-product
+      display: flex
+      margin-top: 10px
+      margin-bottom: 10px
+      align-items: center
+
+      .btn-more-info
+        margin-left: auto
+        font-size: 2rem
+        color: #9EA0A5
+        cursor: pointer
+        margin-right: .5em
+        transition: .3s
+
+        &:hover
+          color: #8a8c91
+
+        &--collapsed
+
+        &--expand
+          transform: rotate(90deg)
+
+
+      img
+        height: 100px
+        width: 100px
+        margin-right: 20px
+      span
+        p
+          color: #9ea0a5
+          font-size: 14px
+
+    span.uik-content-title__wrapper
+      font-weight: 600
+
+    .gs-widget
+      margin-top: .5em
+      border: unset
+      box-shadow: unset
+
+    .product-description
+      min-height: 150px
+
+  .dropdown .show
+    svg.svg-inline--fa
+      margin-left: 30px
+
+    button
+      &.dropdown-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-right: 10px
+
+  div.dropdown
+    button
+      &.btn.btn-secondary
+        width: 100%
+        background-color: white
+        color: black
+        border: 1px solid #ced4da
+        text-align: left
+        margin-bottom: 1rem
+
+        &:after
+          position: absolute
+          content: ''
+          top: 18px
+          right: 8px
+          width: 0
+          height: 0
+          border-left: 5px solid transparent
+          border-right: 5px solid transparent
+          border-bottom: 5px solid #9EA0A5
+          transform: rotate(180deg)
+
+    div[tabindex]
+      position: relative!important
+      transform: unset!important
+
+  .logistics-container
+    display: grid !important
+    grid-template-columns: auto auto !important
+
+    .uik-checkbox__wrapper
+      margin-top: 1em
+      width: fit-content
+
+      //&:first-child
+      //  margin-top: unset
+
+    .shopee-lgt-tag
+      background-color: #f54d30
+      color: white
+      margin: 0px 1em
+      padding: .4em .7em
+      font-size: .8em
+      border-radius: 3px
+
+  .dropdown-wrapper
+    position: absolute
+    top: 35px
+
+  .category-not__selected
+    color: #939393
+
+  .red-alert__border
+    button
+      border-color: red !important
+
+
+  .collapse-attr-btn
+    color: #556ce7
+    font-size: .7em
+
+    svg
+      font-size: 30px
+      cursor: pointer

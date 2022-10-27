@@ -1,0 +1,129 @@
+@import "../../../../../sass/mixins"
+
+.modal-dialog.managed-inventory-POS-modal
+  min-width: 60%
+  position: relative
+  .modal-content
+    width: 100%
+    .modal-header
+      background-color: #F8F8F8
+      padding-top: 10px
+      width: 100%
+      justify-content: center
+      .POS-translate__titleHeader
+        p
+          margin: 0
+          color: black
+          font-size: 1.3rem
+          font-weight: 500
+          text-align: initial
+          margin-left: 15px
+          padding-bottom: 10px
+      button
+        span
+          font-size: 29px
+          padding: 10px
+    .modal-body
+      text-align: left
+      table
+        width: 100%
+        overflow: auto
+        border: 1px solid #E5E5E5
+        margin: 0
+        thead
+          background-color: #F6F6F6
+          th
+            font-size: .9rem
+            border-color: transparent
+            font-weight: 500
+            text-transform: uppercase
+            vertical-align: middle
+            &:first-child
+              width: 30%
+        tbody
+          .name
+            font-size: .8rem
+            margin-bottom: .3rem
+          .modelName
+            font-size: .8rem
+            font-weight: 500
+          form
+            border: 1px solid #DDE0E9
+          .input-code
+            padding: 8px 8px 15px
+            background-color: #EFEFEF
+            border: 1px solid #DDE0E9
+            border-radius: 2px 2px 0px 0px
+            .code__placeholder
+              font-size: .7rem
+              color: #C9C9C9
+            .code__indicators
+              display: none
+            .code-selected
+              .code__multi-value
+                background-color: #1E69D5
+                color: #FFFFFF
+                .code__multi-value__label
+                  color: #FFFFFF
+            .form-group
+              margin: 0
+              input
+                font-size: .7rem
+                padding: 1rem 0.75rem
+            .title-input-code
+              display: flex
+              justify-content: space-between
+              align-items: center
+              margin-bottom: .7rem
+              .selected-inventory-POS
+                font-size: .8rem
+                line-height: 14px
+              .selected-max-POS
+                font-size: .8rem
+                line-height: 14px
+                font-style: italic
+                color: #939393
+          .code
+            padding: 5px 10px
+            height: 195px
+            overflow: auto
+            border: 1px solid #DDE0E9
+            position: relative
+            &::-webkit-scrollbar-track
+              -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+            &::-webkit-scrollbar
+              width: 5px
+              height: 5px
+            &::-webkit-scrollbar-thumb
+              background-color: #C4C4C4
+            .iemi-not-found
+              position: absolute
+              top: 45%
+              left: 40%
+              font-size: .7rem
+            .content.selected
+              display: none
+            .content.remove-imei
+              display: none
+            .content
+              display: inline-flex
+              background-color: #EAEDF3
+              border-radius: 3px
+              color: #000000
+              margin: 5px 10px 5px 0
+              align-items: center
+              padding: 5px
+              width: fit-content
+              height: fit-content
+              cursor: pointer
+              &:hover
+                opacity: 0.8
+              p
+                font-size: .7rem
+                margin: 0
+              i
+                font-size: 10px
+                margin-left: 15px
+                cursor: pointer
+                &:hover
+                  opacity: 0.7

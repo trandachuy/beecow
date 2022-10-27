@@ -1,0 +1,36 @@
+@import "../../../../sass/mixins"
+
+.gs-branches-selector
+  height: 12rem
+  overflow-y: scroll
+  background-color: #f2f2f2
+  padding: 1rem
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin-bottom: 1rem
+  @include desktop
+    width: 400px
+  @include mobile-l
+    width: 315px
+  @include mobile-m
+    width: 300px
+  @include mobile-s
+    width: 270px
+  &__text-limited
+    text-align: left
+    display: block
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 340px
+    @include mobile-l
+      width: 260px
+    @include mobile-m
+      width: 245px
+    @include mobile-s
+      width: 220px
+  .font-style
+    font-weight: 500
+  .margin
+    margin: .5rem 0

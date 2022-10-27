@@ -1,0 +1,26 @@
+.customer-editor-activity-item
+
+  .customer-editor-activity-item__outgoing-to
+    color: #5570E2
+
+  .customer-editor-activity-item__comment-icon
+    filter: invert(74%) sepia(0%) saturate(1%) hue-rotate(202deg) brightness(80%) contrast(84%)
+    cursor: pointer
+
+    &--active
+      filter: invert(45%) sepia(68%) saturate(623%) hue-rotate(193deg) brightness(87%) contrast(104%)
+
+    &--max
+      cursor: not-allowed
+      opacity: .8
+
+    &:hover:not(.customer-editor-activity-item__comment-icon--max)
+      filter: invert(45%) sepia(68%) saturate(623%) hue-rotate(193deg) brightness(87%) contrast(104%)
+
+  .customer-editor-activity-item__image-wrapper
+    border: 1px solid lightgray
+    border-radius: .25rem
+    padding: .5rem
+    display: flex
+    justify-content: center
+    align-items: center

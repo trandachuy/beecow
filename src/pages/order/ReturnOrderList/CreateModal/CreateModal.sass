@@ -1,0 +1,145 @@
+@import "../../../../../sass/mixins"
+
+
+
+.modal-dialog.create-return-order-modal
+  min-width: 80vw
+  .modal-header
+    background: #F8F8F8
+    padding: 10px 15px 0
+    .modal-title
+      text-align: left
+      font-weight: 500
+      font-size: 18px
+      color: black
+      padding-bottom: 10px
+  .modal-content
+    width: 100%
+  .modal-body
+    padding: 0
+    overflow: auto
+    .create-modal-list-page
+      padding: 0
+
+.create-order-list-page
+  .gs-widget-empty-content__icon
+    width: 100px !important
+  .uik-select__wrapper
+    min-width: 13rem
+    .uik-select__valueRenderedWrapper
+      .uik-select__valueWrapper
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        width: 100%
+    .uik-btn__content
+      .uik-select__label
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        width: 11em
+  .gs-modal-fullscreen-mobile
+    overflow: scroll
+    padding-bottom: 55px
+  .gs-component-tooltip
+    position: relative
+    cursor: default
+    div
+      padding: 0 !important
+  .action
+    width: 100%
+    margin-top: 0.25rem
+    font-size: 85%
+    color: #dc3545
+    display: flex
+    align-items: center
+    i
+      background-repeat: no-repeat
+      width: 20px
+      height: 20px
+      display: block
+      align-self: center
+      &.icon-edit
+        background-image: url(/assets/images/icon-edit.png)
+        margin-right: 20px
+        cursor: pointer
+        &:hover
+          opacity: 0.7
+      &.icon-delete
+        background-image: url(/assets/images/icon-delete.png)
+        cursor: pointer
+        &:hover
+          opacity: 0.7
+  .paging-table__pagination
+    margin-bottom: 0
+
+
+
+.create-order-list__body-desktop
+  margin: 0
+  .gs-widget
+    margin: 0
+    .n-filter-container
+      border-color: transparent
+      margin: 0
+  .partner-filter
+    .dropdown-menu-right
+      border: 1px solid #F0F0F0
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+      border-radius: 3px
+  .uik-select__wrapper
+    margin-left: 10px
+  .n-filter-container
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: baseline
+    margin-bottom: 1em
+    border-bottom: 0.5px solid #EAEDF3
+    .gs-search-box__wrapper
+      margin-bottom: 10px
+      width: 400px
+      .uik-input__input
+        max-width: 300px
+  .gs-table
+    flex-direction: column
+    .gs-table-header
+      background: #F6F6F6
+      .gs-table-header-item
+        span
+          color: black
+    .gs-table-body
+      max-height: 50vh
+      overflow-y: auto
+      .gs-table-body-items
+        display: flex
+        flex-direction: column
+        .shortest-row
+          display: flex
+          width: 100%
+          padding: 0px
+          .gs-table-body-item
+            text-align: center
+            padding: 15px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            position: relative
+            .active
+              background: #EDFAE1
+              border-radius: 3px
+              padding: 5px 10px
+            .draft
+              background: #EAEDF3
+              border-radius: 3px
+              padding: 5px 10px
+            &:nth-child(3)
+              .gs-component-tooltip
+                position: relative
+                cursor: default
+            a
+              position: absolute
+              left: 0
+              top: 0
+              width: 100%
+              height: 100%

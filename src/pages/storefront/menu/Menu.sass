@@ -1,0 +1,254 @@
+.menu-component
+  .gs-page-title
+    .gs-atm__flex-row--flex-start
+      display: flex
+      display: -webkit-flex
+      justify-content: space-between
+      
+  .gs-table 
+    .gs-table-header
+      .gs-table-header-item
+        &:first-child
+          flex-basis: 40%
+          -webkit-flex-basis: 40%
+          min-width: 12rem
+        &:last-child
+          flex-basis: 30% 
+          -webkit-flex-basis: 30%
+
+    .gs-table-body
+      .gs-table-body-items
+        &:last-child
+          border-bottom: .1em solid transparent
+
+        .gs-table-body-item
+          &:first-child
+            flex-basis: 40%
+            -webkit-flex-basis: 40%
+            min-width: 12rem
+            span.ellipsis
+              width: 10em
+
+          span.ellipsis
+            display: block
+            white-space: nowrap
+            width: 25em
+            text-overflow: ellipsis
+            overflow: hidden
+
+          &.icon
+            flex-basis: 30%
+            -webkit-flex-basis: 30%
+            display: flex
+            display: -webkit-flex
+            min-width: 15%
+
+            i
+              background-repeat: no-repeat
+              width: 22px
+              height: 22px
+              display: block
+              margin-right: 1.5em
+
+              &.icon-edit
+                background-image: url(/assets/images/icon-edit.png)
+              &.icon-delete
+                background-image: url(/assets/images/icon-delete.png)
+   
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .menu-component
+    padding-left: 0
+    padding-right: 0
+    min-width: 100%
+
+    .gs-widget__content
+      padding-left: 0
+      padding-right: 0
+
+    .gs-page-title
+      height: auto
+
+      .gs-atm__flex-row--flex-start
+        display: flex
+        display: -webkit-flex
+        flex-direction: column
+        -webkit-flex-direction: column
+        align-items: flex-start
+        justify-content: unset
+        button
+          margin-top: .5em!important
+
+    .gs-table
+      padding-left: 0
+      padding-right: 0
+
+      .gs-table-header
+        display: none
+      .gs-table-body
+        .gs-table-body-items
+          flex-wrap: wrap
+          -webkit-flex-wrap: wrap
+          .gs-table-body-item
+            padding: .8em
+            flex-basis: 70%
+            -webkit-flex-basis: 70%
+            &:first-child
+              padding-bottom: 0
+            span
+              &.ellipsis
+                width: 25em
+            &.icon
+              flex-basis: 22% 
+              -webkit-flex-basis: 22%
+              min-width: 22%
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .menu-component
+    padding-left: 0
+    padding-right: 0
+    min-width: 100%
+
+    .gs-widget__content
+      padding-left: 0
+      padding-right: 0
+
+    .gs-page-title
+      height: auto
+
+      .gs-atm__flex-row--flex-start
+        display: flex
+        display: -webkit-flex
+        flex-direction: column
+        -webkit-flex-direction: column
+        align-items: flex-start
+        justify-content: unset
+        button
+          margin-top: .5em!important
+    .gs-page-content
+      margin-top: 0!important
+    .gs-table
+      padding-left: 0
+      padding-right: 0
+
+      .gs-table-header
+        display: none
+      .gs-table-body
+        .gs-table-body-items
+          flex-wrap: wrap
+          -webkit-flex-wrap: wrap
+          .gs-table-body-item
+            padding: .8em
+            flex-basis: 70%
+            -webkit-flex-basis: 70%
+            &:first-child
+              padding-bottom: 0
+
+            span
+              &.ellipsis
+                width: 25em
+          &.icon
+            flex-basis: 22%
+            -webkit-flex-basis: 22%
+            min-width: 22%
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .menu-component
+    padding-left: 0
+    padding-right: 0
+    .gs-widget__content
+      padding-left: 0
+      padding-right: 0
+
+    .gs-page-title
+      height: auto
+
+      .gs-atm__flex-row--flex-start
+        display: flex
+        display: -webkit-flex
+        -webkit-flex-direction: column
+        flex-direction: column
+        align-items: flex-start
+        justify-content: unset
+        button
+          margin-top: .5em!important
+    .gs-page-content
+      margin-top: 0!important
+    .gs-table
+      padding-left: 0
+      padding-right: 0
+
+      .gs-table-header
+        display: none
+
+      .gs-table-body
+        .gs-table-body-items
+          flex-wrap: wrap
+          -webkit-flex-wrap: wrap
+          .gs-table-body-item
+            padding: .8em
+            flex-basis: 70%
+            -webkit-flex-basis: 70%
+            &:first-child
+              padding-bottom: 0
+
+            span
+              &.ellipsis
+                width: 12rem
+            &.icon
+              flex-basis: 30%
+              -webkit-flex-basis: 30%
+              min-width: 15%
+              padding-right: 0
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .menu-component
+    padding-left: 0
+    padding-right: 0
+    min-width: 100%
+
+    .gs-widget__content
+      padding-left: 0
+      padding-right: 0
+
+    .gs-page-title
+      height: auto
+
+      .gs-atm__flex-row--flex-start
+        display: flex
+        display: -webkit-flex
+        flex-direction: column
+        -webkit-flex-direction: column
+        align-items: flex-start
+        justify-content: unset
+        button
+          margin-top: .5em!important
+    .gs-page-content
+      margin-top: 0!important
+    .gs-table
+      padding-left: 0
+      padding-right: 0
+
+      .gs-table-header
+        display: none
+      .gs-table-body
+        .gs-table-body-items
+          flex-wrap: wrap
+          -webkit-flex-wrap: wrap
+          .gs-table-body-item
+            padding: .8em
+            flex-basis: 70%
+            -webkit-flex-basis: 70%
+            &:first-child
+              padding-bottom: 0
+            span
+              &.ellipsis
+                width: 12rem
+            &.icon
+              flex-basis: 30%
+              -webkit-flex-basis: 30%
+              min-width: 15%
+              padding-right: 0

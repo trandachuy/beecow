@@ -1,0 +1,85 @@
+@import '../../../../../sass/mixins'
+
+.collection-conditions-zone
+  margin-left: -30px
+  margin-right: -30px
+  margin-top: 30px
+
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-top: 1px solid #dedede
+    border-bottom: 1px solid #dedede
+    padding: 15px 30px
+
+    h3
+      margin: 0
+      font-size: 1rem
+
+  &__condition-type
+    font-size: 1rem
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding: 20px 30px
+
+
+  &__radio-wrapper
+    margin-left: .5em
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    .form-group
+      margin-bottom: 0
+
+      .custom-control-input:checked ~ .custom-control-label::before
+        border-color: #38B249
+        background-color: #ffffff
+
+      .custom-radio .custom-control-input:checked ~ .custom-control-label::after
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'> <circle r='4' fill='rgb(56,178,73)' /> </svg>")
+
+  &__condition-list
+
+
+    .btn-remove__row
+      cursor: pointer
+      background-image: url(/assets/images/icon-deleteproduct.png)
+      background-repeat: no-repeat
+      width: 25px
+      height: 25px
+      display: block
+
+      &:hover
+        opacity: 0.7
+
+
+@include mobile
+  .automated-config__condition-type
+    flex-direction: column
+    align-items: flex-start !important
+    .custom-control-inline
+      display: flex
+      margin: 0.9rem 0
+  .automated-config__condition-list
+    .row
+      margin-right: -0.9rem
+      margin-left: -0.9rem
+      .col-5
+        padding-right: 0 !important
+        margin-bottom: 0.2rem
+        .uik-select__wrapper
+          button
+            padding-right: 0.3rem
+            padding-left: 0.3rem
+            .uik-select__arrowWrapper
+              padding-right: 0.3rem
+        &.long-text
+          .uik-select__wrapper
+            button
+              .uik-select__arrowWrapper
+                margin-left: 0.2rem
+      .col-10
+        padding-right: 0 !important

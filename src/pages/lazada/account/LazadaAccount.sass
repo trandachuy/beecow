@@ -1,0 +1,257 @@
+section
+    div.header
+        width: 100%
+        display: flex
+        // padding-top: 25px
+        // padding-bottom: 25px
+
+        span.breadcrumb
+            display: flex
+            flex: 1
+            height: 38px
+            line-height: 38px
+            font-weight: bold
+            font-size: 16px
+            background-color: transparent
+            padding: 0
+            margin: 0
+
+        button.btn-enable
+            width: 128px
+            height: 38px
+
+    div.content
+        width: 100%
+        text-align: center
+        background-color: #ffffff
+        height: 100%
+        margin-bottom: 40px
+
+    &.lz-container
+        flex: 1
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        div
+            &.lz-authen
+                flex: 1
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                max-width: 360px
+                margin-left: 5%
+                *
+                    margin: 10px 0
+                span
+                    font-size: 14px
+                button
+                    width: fit-content
+                    width: -moz-fit-content
+                    height: fit-content
+
+            &.logo-author
+                //display: flex
+                //flex-direction: row
+                //justify-content: center
+                //flex: 1
+                //align-content: center
+                //align-items: center
+                flex: 1
+                text-align: center
+
+                img
+                    max-width: 726px
+                    width: 90%
+                    //height: 703px
+                    object-fit: contain
+
+            
+    &.disabled
+        display: none
+
+    &.stores
+        display: flex
+        width: 100%
+        flex-direction: column
+        margin-left: 50px
+        margin-right: 50px
+
+        div.country
+            h5
+                margin-top: 125px
+                font-weight: bold
+
+            div.seller-info
+                display: flex
+                flex-direction: row
+                justify-content: center
+                margin-top: 35px
+                
+                &.active
+                    div.circle-check
+                        position: relative
+                        width: 20px
+                        height: 20px
+                        border-radius: 50%
+                        background-color: green
+                        display: flex
+                        justify-content: center
+                        top: 40px
+                        left: 15px
+
+                        &::before
+                            width: 10px
+                            border-left: 2px solid white
+                            border-bottom: 2px solid white
+                            display: block
+                            height: 5px
+                            margin-top: 6px
+                            transform: rotate(-45deg)
+                            content: ''
+    &.seller
+        display: flex
+        width: 100%
+        flex-direction: column
+        padding: 15px
+
+        .btn-save
+            flex: 2
+
+        .logo-wrapper
+            flex: 1
+
+        div.seller-activated
+            display: flex
+            width: 100%
+            text-align: center
+            background-color: #ffffff
+            height: 100%
+            margin-bottom: 0px !important
+            flex-direction: column
+            border: 1px solid #dedede
+            border-radius: 4px
+            box-shadow: 0px -5px 15px -13px rgba(0, 0, 0, 0.28)
+
+            div.seller-account
+                display: flex
+                flex-direction: row
+                // margin: 30px 30px 50px 30px
+                align-items: stretch
+                padding: 2%
+
+                span.term
+                    flex: 1
+                    text-align: left
+                    flex-basis: 15%
+                    // margin-right: 60px
+                    min-width: 160px
+
+                    p:nth-child(1)
+                        font-weight: bold
+                        font-size: 1.2rem
+                        margin-bottom: 0px
+
+                .image-status__grey
+                    font-size: 2.5rem
+                    color: #9EA0A5
+                    width: 24px
+                    height: 24px
+
+                .image-status__green
+                    font-size: 2.5rem
+                    color: #38B249
+                    width: 24px
+                    height: 24px
+
+                .image-rotate
+                    -webkit-animation: spin 4s linear infinite
+                    -moz-animation: spin 4s linear infinite
+                    animation: spin 4s linear infinite
+                    @-moz-keyframes spin 
+                        100%
+                            -moz-transform: rotate(360deg)
+                    @-webkit-keyframes spin 
+                        100% 
+                            -webkit-transform: rotate(360deg)
+                    @keyframes spin 
+                        100%
+                            -webkit-transform: rotate(360deg)
+                            transform:rotate(360deg)
+
+            div.seller-term
+                display: flex
+                flex-direction: row
+                margin: 0 30px 0 30px
+
+                span.term
+                    text-align: left
+                    flex-basis: 15%
+                    margin-right: 60px
+                    min-width: 160px
+
+                    p:nth-child(1)
+                        font-weight: bold
+                        margin-bottom: 5px
+
+                    p:nth-child(2)
+                        margin-bottom: 0
+                div.detail
+                    padding-top: 0
+                    padding-bottom: 0
+                    
+            div.detail
+                display: flex
+                flex: 2
+                padding: 15px 15px 15px 0px
+                border: 1px solid #b9bdcf
+                align-items: center
+                height: 90px
+
+
+                span.shop-name
+                    flex: 1
+                    p:nth-child(1)
+                        font-size: 17px
+                        font-size: 1rem
+
+
+                    p:nth-child(2)
+                        font-size: 1rem
+                a
+                    color: #556ce7
+                    text-decoration: unset
+
+img.logo-url
+    width: 60px
+    height: 60px
+    border-radius: 50%
+
+    &:before
+        width: 14px
+        height: 14px
+        border-radius: 7px
+        background-image: linear-gradient(to bottom, #39b54a, #34ad44)
+
+span.shop-name
+    text-align: left
+    // margin-left: 17px
+    // flex-basis: 17%
+    //flex: 5 !important
+    
+    p
+        margin-bottom: 0px
+        &:nth-child(1)
+            padding-top: 5px
+            font-weight: bold
+            font-size: 1rem
+
+.disable-event
+    pointer-events: none
+    background: #cccbd2!important
+    color: #e5e5e5!important
+    border: unset!important
+
+.lz-body
+    flex: 1
+    display: flex

@@ -1,0 +1,62 @@
+.element-list
+  .label-pdl
+    padding-left: 10px
+    font-size: 1.2rem
+    font-weight: bold
+
+  .all-setting
+    height: 100vh
+
+    .title-element
+      background-color: #536be7
+      height: 60px
+      color: #ffffff
+      align-items: center
+      display: flex
+      text-transform: capitalize
+
+    .setting-element
+      background-color: #f8f8f8
+      cursor: pointer
+
+      &--active
+        color: #1a68d8
+
+        .element-header
+          background-color: #d8e5f9 !important
+
+      .element-header
+        background-color: #f2f2f2
+        line-height: 40px
+        border: 1px solid #e0dfdf
+        vertical-align: middle
+        font-size: 1.0rem
+
+    .setting-element:hover
+      color: #1a68d8
+
+      .element-header
+        background-color: #eaf2fe
+
+  &__scroll
+    height: calc(100% - 119px)
+    overflow-y: auto
+  
+/* width */
+::-webkit-scrollbar
+  width: 10px
+
+/* Track */
+::-webkit-scrollbar-track
+  background: #ffffff
+  
+/* Handle */
+::-webkit-scrollbar-thumb
+  background: #cccbcb
+  border-radius: 5px
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+  background: #9c9c9c
+  border-radius: 5px
+    

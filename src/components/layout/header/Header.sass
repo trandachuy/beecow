@@ -1,0 +1,288 @@
+@import "../../../../sass/mixins"
+
+.layout-top-bar
+  background-color: #3F51B5
+  //position: sticky
+  //position: -webkit-sticky
+  //top: 0
+
+  .layout-top-bar__hamburger
+    background-image: url("/assets/images/icon-expand-menu.svg")
+    width: 24px
+    height: 16px
+    flex-shrink: 0
+    cursor: pointer
+
+    &:hover
+      opacity: .8
+
+  .layout-top-bar__title-wrapper
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+
+  .section-app-name
+
+    height: 100%
+    background-color: #556CE7
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 0 20px !important
+    transition: width .3s ease-in-out
+
+
+    &--closed
+      width: 70px
+      .title-app-name
+        display: none
+
+    &--opened
+      width: 270px
+
+
+
+    .title-app-name
+      height: 30px
+      font-style: normal
+      font-weight: 500
+      font-size: 19px
+      line-height: 29px
+      color: white
+      margin-left: 2rem
+
+
+
+      &--mobile
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+
+        .logo-wrapper
+          display: flex
+          justify-content: flex-start
+          align-items: center
+
+          .nav-icon
+            font-size: 1.5rem
+            color: white
+
+        .store-info-wrapper
+          display: flex
+          justify-content: flex-endz
+          align-items: center
+          position: relative
+          .modal-notification
+            overflow: hidden
+            background: #FFFFFF
+            position: absolute
+            top: 50px
+            right: -6rem
+            width: 370px
+            height: 0
+            transition: 0.5s all ease
+            border-radius: 3px
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15)
+            @include mobile
+              right: 2rem
+            @include mobile-l
+              right: 0rem
+              width: 300px
+            &.show
+              height: 70vh
+            .loading
+              height: 98%
+              display: flex
+              align-items: center
+            .card-col
+              display: flex
+              flex-direction: column
+              justify-content: flex-start
+              align-items: center
+              overflow-y: auto
+              max-height: 100%
+              padding-right: 0
+              &::-webkit-scrollbar-track, &::-webkit-scrollbar, &::-webkit-scrollbar-thumb
+                width: 4px
+              //height: 0
+              .shortcut-card-recommend
+                display: flex
+                justify-content: flex-start
+                margin: 0
+                border: unset
+                border-bottom: 1px solid #F2F2F2
+                transition: 0.1s all
+                &:hover
+                  background: #F3F7FF
+                .highlight
+                  font-size: .9rem
+                  font-weight: bolder
+                  display: block
+      
+                .sub
+                  font-size: .8rem
+                  color: #9EA0A5
+                  margin-top: 5px
+      
+                .link
+                  font-size: .8rem
+                  color: #9EA0A5
+                  display: block
+                  margin-top: 5px
+                .time
+                  width: auto
+                  font-size: 13px
+                  margin-top: 5px
+                &--icon
+                  width: 14%
+                  display: flex
+                  padding-top: 1em
+                  align-items: start
+                  margin-left: 10px
+                  img
+                    width: 100%
+
+          .more-icon
+            margin-left: .5em
+            font-size: 1.5rem
+            color: white
+
+
+
+
+    @include mobile
+      width: 100% !important
+      padding: 0 1em !important
+
+    @include tablet
+      width: 100% !important
+      padding: 0 1em !important
+
+  .expand-menu
+    margin-top: 1.1em
+    padding: 0 .5em
+
+    .dropdown-item
+      margin: .5em 0
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      padding: 4px .5em
+
+      .flag-wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+
+      .language-title
+        color: #9EA0A5
+        text-transform: uppercase
+        font-weight: 500
+        font-size: .9rem
+
+    .lang-item
+      justify-content: space-between
+
+      .dot-green
+        width: .4em
+        height: .4em
+        display: block
+        background-color: #00ab00
+        border-radius: 50%
+
+    .btn-logout
+      a
+        color: black
+
+    .selected-flag
+      width: 2em
+      height: 2em
+      display: inline-block
+      border-radius: 50%
+      background-size: cover !important
+      margin-right: 1em
+
+
+
+  .header-right
+    flex-grow: 1
+    display: flex
+    justify-content: flex-end
+    position: relative
+    .modal-notification
+      overflow: hidden
+      background: #FFFFFF
+      position: absolute
+      top: 57px
+      right: 10rem
+      width: 370px
+      height: 0
+      transition: 0.5s all ease
+      border-radius: 3px
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15)
+      &.show
+        height: 70vh
+      .loading
+        height: 98%
+        display: flex
+        align-items: center
+      .card-col
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        overflow-y: auto
+        max-height: 100%
+        padding-right: 0
+        &::-webkit-scrollbar-track, &::-webkit-scrollbar, &::-webkit-scrollbar-thumb
+          width: 4px
+          //height: 0
+        .shortcut-card-recommend
+          display: flex
+          justify-content: flex-start
+          margin: 0
+          border: unset
+          border-bottom: 1px solid #F2F2F2
+          transition: 0.1s all
+          &:hover
+            background: #F3F7FF
+          .highlight
+            font-size: .9rem
+            font-weight: bolder
+            display: block
+      
+          .sub
+            font-size: .8rem
+            color: #9EA0A5
+            margin-top: 5px
+      
+          .link
+            font-size: .8rem
+            color: #9EA0A5
+            display: block
+            margin-top: 5px
+          .time
+            width: auto
+            font-size: 13px
+            margin-top: 5px
+          &--icon
+            width: 14%
+            display: flex
+            padding-top: 1em
+            align-items: start
+            margin-left: 10px
+            img
+              width: 100%
+        
+          
+        
+
+    .header-right__ele-left
+      margin-right: auto
+
+    .header-right__ele-right
+      display: flex
+      justify-content: flex-end
+      align-items: center

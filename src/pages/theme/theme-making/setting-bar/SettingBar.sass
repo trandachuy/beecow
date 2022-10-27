@@ -1,0 +1,55 @@
+.setting-bar
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  div
+    width: 70px
+    height: 70px
+    cursor: pointer
+    
+  hr
+    border-bottom: 1px solid #dedada
+    width: 100%
+    margin: 0px
+
+
+  .setting-bar-general
+    background-color: #f0eded
+    background-image: url(/assets/images/icon_general_settings_theme.png)
+    background-repeat: no-repeat
+    background-size: 2rem 2rem
+    background-position: center
+
+  .setting-bar-general:hover:not(.disabled), .setting-bar-general.active:not(.disabled)
+    background-image: url(/assets/images/icon_general_settings_theme_hover.png)
+
+  .setting-bar-editor
+    background-color: #f0eded
+    background-image: url(/assets/images/icon_editor_theme.png)
+    background-repeat: no-repeat
+    background-size: 2rem 2rem
+    background-position: center
+
+  .setting-bar-editor:hover:not(.disabled), .setting-bar-editor.active:not(.disabled)
+    background-image: url(/assets/images/icon_editor_theme_hover.png)
+
+  .setting-bar-help
+    background-color: #f0eded
+    background-image: url(/assets/images/icon_help_theme.png)
+    background-repeat: no-repeat
+    background-size: 2rem 2rem
+    background-position: center
+
+  .setting-bar-help:hover, .setting-bar-help.active
+    background-image: url(/assets/images/icon_help_theme_hover.png)
+
+  .disabled
+    opacity: 0.3
+    cursor: default
+      
+    
+      
+      
+

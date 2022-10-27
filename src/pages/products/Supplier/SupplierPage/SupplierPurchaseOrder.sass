@@ -1,0 +1,520 @@
+@import "../../../../../sass/mixins"
+.supplier-purchase-order-list-page
+
+  pre
+    white-space: inherit
+  //white-space: -moz-pre-wrap
+  //white-space: -o-pre-wrap
+  //word-wrap: break-word
+  //word-break: break-all
+
+  .paging-table tbody tr
+    cursor: unset
+
+  .purchase-order-list-widget
+    @include mobile
+      padding: 0
+
+  .gs-page-header
+    .btn-save
+      margin-left: auto
+
+  .action-button
+    cursor: pointer
+    font-size: 20px
+
+    &:hover
+      opacity: 0.7
+
+  .btn-group__action
+    flex-basis: 20%
+    display: flex
+
+    a
+      background-repeat: no-repeat
+      width: 20px
+      height: 20px
+      display: block
+
+      &.first-button
+        background-image: url(/assets/images/icon-externallink-productdetail.svg)
+
+  .collection-list__counter
+    margin-left: auto
+
+  .collection-list-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  .collection-table__btn-edit
+    color: #9EA0A5 !important
+    transition-duration: .3s
+
+    &:hover
+      color: black !important
+
+  .collection-table__last-col
+    text-align: center
+
+  .review-table__thumbnail
+    width: 4em
+    height: 4em
+
+  .collection-table__name
+    max-width: 20em
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    text-align: left
+
+  .collection-table__tooltips-thumbnail
+    opacity: 1 !important
+
+  .review-table__td-thumbnail
+    display: flex
+    //justify-content: center
+    align-items: center
+
+
+
+  .brands__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    .brands
+      width: 2em
+      border-radius: 3px
+      margin-left: 5px
+
+      &:first-child
+        margin-left: 0px
+
+      img
+        width: 2em
+
+      &--shopee
+        background-color: #ff5500
+
+
+      &--lazada
+        background-color: #254a5e
+
+  .uik-checkbox__label
+    margin-left: .9em
+
+  //&:before
+  //  margin-right: 0px !important
+
+  .n-filter-container
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 1em
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0px !important
+
+    .uik-select__wrapper
+      margin-left: 1em !important
+      min-width: 10em
+
+    .gs-search-box__wrapper
+      width: 400px
+
+      .uik-input__input
+        max-width: 400px
+
+  .n-filter-container--mobile
+    margin-top: 10px
+    margin-bottom: 10px
+    flex-direction: column
+
+    .row
+      &:last-child
+        margin-top: 10px
+    .uik-select__wrapper
+      width: 100%
+
+    .paging-table-wrapper
+      .paging-table
+        th
+          text-align: left !important
+
+        td
+          text-align: left !important
+
+  .gs-widget
+    display: flex
+    flex-direction: column
+
+    .uik-widget-content__wrapper
+      flex: 1
+      display: flex
+      flex-direction: column
+
+    .loading
+      flex: 1
+      display: flex
+      align-items: center
+
+  .collection-list__empty
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  // for mobile
+  .mobile-review-list-list-container
+    flex-direction: column
+    border-top: 1px solid rgba(220, 220, 220, 0.31)
+    flex-shrink: 0
+    flex-grow: 1
+    //padding: 1rem
+
+
+
+    .m-review-row
+      padding: 0px
+      border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .m-review-row__short
+        display: flex
+        flex-direction: row
+        justify-content: center
+        width: 100%
+
+        .m-expand-col
+          max-width: 20px
+          min-width: 20px
+          background-color: #F5F5F6
+          align-self: stretch
+          display: flex
+          justify-content: center
+
+          i
+            background-repeat: no-repeat
+            align-self: center
+            display: block
+            padding: 5px
+            &.expanding
+              background-image: url(/assets/images/icon-expand.png)
+              transform: rotateZ(0deg)
+              transition-duration: .5s
+            &.collapsing
+              background-image: url(/assets/images/icon-expand.png)
+              transform: rotateZ(-90deg)
+              transition-duration: .5s
+
+        .m-product__image
+          width: 4em
+          height: 4em
+          margin-left: 5px
+          margin-top: 10px
+          margin-bottom: 10px
+
+        .m-review__info
+          margin-left: .5rem
+          flex: 3
+          display: flex
+          flex-direction: column
+          justify-content: center
+          .m-review-rating
+            a
+              color: #FFCD00
+            b
+              margin-right: 2px
+          .m-review-title
+            word-break: break-word
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            max-width: 50vw
+
+
+          .m-review-created__date
+            color: #9EA0A5
+
+        .m-collection__action
+          flex: 1
+          display: flex
+          justify-content: center
+          align-items: center
+
+
+      .m-review-row__detail
+        width: 100%
+        display: flex
+        flex-direction: row
+
+
+        .m-expand-col
+          max-width: 20px
+          min-width: 20px
+          background-color: #F5F5F6
+          align-self: stretch
+          display: flex
+          justify-content: center
+        .m-review-detail__body
+          margin-left: 5px
+          padding-top: 5px
+          max-height: 400px
+          overflow: hidden
+          max-width: 100vw
+          border-top: 1px solid rgba(220, 220, 220, 0.31)
+
+          .title
+            font-weight: bold
+          .customer-name
+            color: #9EA0A5
+
+.supplier-purchase-order-list-page
+  .purchase-order-list__body-desktop
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+    min-width: max-content
+    .gs-table
+      //margin-top: 2em
+      border-top: 1px solid #EAEDF3
+      //width: max-content
+      //max-width: max-content
+      min-width: max-content
+      flex-direction: column
+    .gs-table-header
+      .gs-table-header-item
+        font-size: 0.80rem
+        min-width: 14.2%
+        max-width: 14.2%
+        font-weight: bold
+        color: #333
+
+
+        &:nth-child(5)
+          min-width: 14.2%
+          max-width: 14.2%
+
+        &:nth-child(6)
+          max-width: 14.2%
+          min-width: 14.2%
+        &:nth-child(7)
+          max-width: 14.2%
+          min-width: 14.2%
+
+    .gs-table-body
+      min-width: max-content
+      section
+        div
+          max-height: 150px
+          word-break: break-word
+          white-space: unset
+      .gs-table-body-items
+        display: flex
+        flex-direction: column
+
+        &:hover
+          cursor: pointer
+
+        .shortest-row
+          display: flex
+          width: 100%
+          padding: 0px
+
+        @keyframes customFadeIn
+          from
+            opacity: 0.7
+          to
+            opacity: 1
+        .detail-row
+          display: flex
+          flex-direction: row
+          width: 100%
+          padding: 0px
+          animation: customFadeIn 1s
+          animation-delay: 0s
+          animation-fill-mode: forwards
+        .gs-table-body-item
+          min-width: 14.2%
+          max-width: 14.2%
+
+          &.status
+            min-width: 12%
+            max-width: 14.2%
+            padding-left: 0px
+            padding-right: 20px
+          &.inventory
+            padding-left: 15px
+
+
+  .purchase-order-list__body-mobile
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+    min-width: max-content
+    padding-left: 110px
+    padding-right: 12px
+    .gs-table
+      //margin-top: 2em
+      border-top: 1px solid #EAEDF3
+      //width: max-content
+      //max-width: max-content
+      min-width: max-content
+      flex-direction: column
+    .gs-table-header
+      .gs-table-header-item
+        font-size: 0.80rem
+        min-width: 15%
+        font-weight: bold
+        color: #333
+
+
+        &:nth-child(5)
+          min-width: 25%
+          max-width: 25%
+          margin-left: -14px
+
+        &:nth-child(6)
+          max-width: 10%
+          min-width: 10%
+        &:nth-child(7)
+          max-width: 10%
+          min-width: 10%
+
+        &:nth-child(8)
+          max-width: 10%
+          min-width: 10%
+
+    .gs-table-body
+      min-width: max-content
+      section
+        div
+          max-height: 150px
+          word-break: break-word
+
+      .gs-table-body-items
+        display: flex
+        flex-direction: column
+
+        &:hover
+          cursor: pointer
+
+        .shortest-row
+          display: flex
+          width: 100%
+          padding: 0px
+
+        @keyframes customFadeIn
+          from
+            opacity: 0.7
+          to
+            opacity: 1
+        .detail-row
+          display: flex
+          flex-direction: row
+          width: 100%
+          padding: 0px
+          animation: customFadeIn 1s
+          animation-delay: 0s
+          animation-fill-mode: forwards
+        .gs-table-body-item
+          min-width: 10%
+
+          &.expand-col
+            max-width: 20px
+            min-width: 20px
+            background-color: #F5F5F6
+            align-self: stretch
+            display: flex
+
+            i
+              background-repeat: no-repeat
+              align-self: center
+              display: block
+              padding: 5px
+
+          &.review-table__td-thumbnail
+            max-width: 8em
+            min-width: 4em
+          &.product-name
+            min-width: 20%
+            max-width: 20%
+
+            text-overflow: ellipsis
+            overflow: hidden
+            padding-left: 0px
+            text-align: center
+          &.product-rating
+            min-width: 9%
+            max-width: 9%
+            text-overflow: ellipsis
+            overflow: hidden
+            padding-left: 0px
+            text-align: center
+            a
+              color: #FFCD00
+            b
+              margin-right: 2px
+          &.product-review
+            min-width: 12%
+            max-width: 12%
+            display: flex
+            flex-direction: column
+            .title
+              text-overflow: ellipsis
+              overflow: hidden
+            .description
+              max-width: 50em
+              text-overflow: ellipsis
+              overflow: hidden
+              white-space: nowrap
+              color: #9EA0A5
+          &.customer-name
+            min-width: 10%
+            max-width: 10%
+            text-align: center
+            text-overflow: ellipsis
+            overflow: hidden
+
+          &.created-date
+            max-width: 10%
+            text-align: center
+          &.actions
+            max-width: 10%
+            min-width: 10%
+            justify-content: center
+          &.full-review
+            display: flex
+            flex-direction: column
+            padding-left: 0px
+            border-top: .05em solid #EAEDF3
+
+            .title
+              font-weight: bold
+            .description
+              color: #3E3F42
+              max-width: 50%
+
+
+  .status-box
+    border: 1px solid
+    border-radius: 2px
+    padding: 5px 10px
+    color: #3E3F42
+    white-space: nowrap !important
+    &.order
+        border: #556CE7
+        background-color: #F1F3FF
+    &.in-progress
+      border: #90CE51
+      background-color: #FEFCE2
+    &.completed
+      border: #9EA0A5
+      background-color: #F1F3FF
+    &.cancelled
+      border: #F84C30
+      background-color: #FFE1DE

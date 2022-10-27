@@ -1,0 +1,116 @@
+@import "../../../../../sass/mixins"
+.product-multiple-stock_updater_modal
+  z-index: 1
+
+  .product-multiple-stock_updater_modal__branch-select
+    width: 190px
+
+  @include mobile
+    margin: 0 !important
+    padding: .5rem
+
+  .quantity-input-field
+    @include mobile
+      width: unset !important
+
+
+  .product-multiple-branch-stock_editor_modal__mlp-select
+
+    @include mobile
+      width: 100%
+
+    .gs-dropdown-multiple-select__drop-header, .uik-menuDrop__list
+      min-width: 190px
+
+      @include mobile
+        width: 100%
+
+  .product-multiple-branch-stock_editor_modal__input-invalid
+
+    .form-group
+
+      input
+        border-color: red
+
+  .product-multiple-branch-stock_editor_modal__input-table
+    .tr
+      height: 36px
+
+    .td, .th
+      padding: .5rem 1rem
+      width: 100%
+      min-width: 4rem
+      white-space: nowrap
+      height: 36px
+      border: 1px solid rgb(234, 237, 243) !important
+      overflow: hidden
+      text-overflow: ellipsis
+
+    .th
+      font-weight: bold
+
+    .form-group
+      margin-bottom: 0 !important
+      width: 4rem
+      margin-left: .5em
+
+    .form-group > div
+      height: 19px
+
+      input
+        height: 19px
+        font-size: 1em
+        padding: 2px 7px
+
+  .product-multiple-branch-stock_editor_modal__header-table
+    //border: 1px solid rgb(118, 118, 118)
+
+    .tr
+      height: 36px
+      .th:first-child, .td:first-child
+        flex-basis: 25rem
+        flex-shrink: 0
+      .th:last-child, .td:last-child
+        flex-basis: 10rem
+        flex-shrink: 0
+
+    .td, .th
+      padding: .5rem 1rem
+      min-width: 4rem
+      white-space: nowrap
+      height: 36px
+      border: 1px solid rgb(234, 237, 243) !important
+      overflow: hidden
+      text-overflow: ellipsis
+
+    .th
+      font-weight: bold
+
+    .form-group
+      margin-bottom: 0 !important
+      width: 4rem
+      margin-left: .5em
+
+    .form-group > div
+      height: 19px
+
+      input
+        height: 19px
+        font-size: 1em
+        padding: 2px 7px
+
+
+  .product-multiple-branch-stock_editor_modal__branch-table-wrapper
+    max-height: calc(100vh - 400px)
+    max-width: calc(633px)
+    overflow-y: auto
+
+    @include mobile
+      max-width: calc(100vw - 3rem)
+      overflow-x: auto
+
+      &>div
+        overflow-x: unset !important
+
+
+

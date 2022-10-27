@@ -1,0 +1,170 @@
+@import '../../../../sass/mixins'
+
+.step2-page__wrapper
+    width: 100%
+    max-width: 600px
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .step-page__container
+        width: 100%
+
+        .step-page__content
+            .shop-phone
+                position: relative
+                .shop-phone__code
+                    position: absolute
+                    top: 38px
+                    left: 10px
+                .padding-left
+                    &__16
+                        padding-left: 27px
+                    &__24
+                        padding-left: 37px
+                    &__32
+                        padding-left: 45px
+                    &__39
+                        padding-left: 52px
+                    &__47
+                        padding-left: 60px
+                    &__55
+                        padding-left: 68px
+                        
+                    
+
+            .shop-url
+                .icon-input__wrap
+                    position: relative
+
+                    .shop-url__icon
+                        position: absolute
+                        top: 7px
+                        right: 10px
+                        font-size: 23px
+
+                    .shop-url__protocol
+                        position: absolute
+                        top: 7px
+                        left: 5px
+
+                    .shop-url__domain
+                        position: absolute
+                        top: 7px
+                        right: 40px
+
+                    .shop-url__input
+                        padding-left: 50px
+                        padding-right: 100px
+                        font-size: 14px
+                        top: -10px
+
+                .alert__wrapper
+                    text-align: left
+                    padding: 0 !important
+                    margin-bottom: 1rem
+
+
+            .input-field
+                width: 100%
+
+                .input-field__hint::placeholder
+                    color: #C5C5C5
+                    font-size: 14px
+
+            .shop-address__detail
+                margin-top: 20px
+                display: flex
+                justify-content: space-between
+
+                .shop-province
+                    width: 30%
+
+                .shop-district
+                    width: 30%
+                
+                .shop-ward
+                    width: 30%
+
+                .uik-select__arrowWrapper::before
+                    top: -5px
+                    left: -5px
+                    border-left: 8px solid transparent
+                    border-right: 8px solid transparent
+                    border-bottom: 13px solid #9EA0A5
+
+                .uik-select__arrowWrapper::after
+                    display: none
+            
+            .shop-store__detail
+                margin: 0
+                display: flex
+                justify-content: space-between
+
+                .shop-country
+                    width: 30%
+                    margin: 0
+
+                .shop-currency
+                    width: 30%
+                    margin: 0
+
+                .shop-language
+                    width: 30%
+                    margin: 0
+
+                .uik-select__arrowWrapper::before
+                    top: -5px
+                    left: -5px
+                    border-left: 8px solid transparent
+                    border-right: 8px solid transparent
+                    border-bottom: 13px solid #9EA0A5
+
+                .uik-select__arrowWrapper::after
+                    display: none
+
+            .button-group
+                max-width: 600px
+                margin-top: 2em
+
+                //margin: 70px auto
+
+                .btn
+                    width: 120px
+                    border-radius: 4px
+                    font-size: 14px
+
+                .btn-back
+                    border: solid 1px #556ce7
+                    color: #556ce7
+                    background-color: #ffffff
+
+                    .btn-back__icon
+                        font-size: 25px
+
+                .btn-skip  
+                    margin-left: 20px
+                    border: solid 1px #9b9b9b
+                    color: #9b9b9b
+                    background-color: #ffffff
+
+                .btn-next
+                    float: right
+                    border: solid 1px #556ce7
+                    color: #ffffff
+                    background-color: #556ce7
+                    
+                    .btn-next__icon
+                        font-size: 25px
+
+@include mobile
+    .step2-page__wrapper
+        .step-page__container
+            .step-page__content
+                .form-group
+                    display: block
+                    width: 100% !important
+                .button-group
+                    .btn
+                        width: 49%

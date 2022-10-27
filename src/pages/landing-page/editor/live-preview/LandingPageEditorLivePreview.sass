@@ -1,0 +1,104 @@
+.landing-page-editor-live-preview
+  border-radius: .25rem
+  border: 1px solid
+  height: 100%
+  background-color: white
+
+  .landing-page-editor-live-preview__address-bar
+    padding: 0 1rem .5rem 1rem
+    display: flex
+    align-items: center
+
+    .landing-page-editor-live-preview__address
+      background-color: #F5F2F2
+      border-radius: .25rem 0 0 .25rem
+      padding: .5rem 1rem
+      color: #979797
+      flex: 1
+      height: 38px
+      .landing-page-editor-live-preview__landing-page-status
+        color: black
+        font-weight: bold
+        text-transform: uppercase
+        padding-right: .5rem
+
+      .landing-page-editor-live-preview__url
+        padding-left: .5rem
+        color: #979797
+        display: flex
+        align-items: center
+        outline: none
+        border: unset
+        background-color: unset
+        font-family: monospace
+
+
+    .landing-page-editor-live-preview__btn-mode
+      min-width: unset !important
+      width: 38px
+      box-shadow: none
+      transition: box-shadow .3s
+
+      &.selected
+        //border: 1px solid #b5b5b5
+        box-shadow: 0 0 2px #999
+
+
+    .landing-page-editor-live-preview__content
+      height: 100%
+
+    .landing-page-editor-live-preview__btn-pl
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 0 1rem
+      cursor: pointer
+      align-self: stretch
+      border-radius: 0 .25rem .25rem 0
+
+      &:hover
+        opacity: .8
+
+    .landing-page-editor-live-preview__btn--draft
+      background-color: #fb3
+      color: white
+
+
+    .landing-page-editor-live-preview__btn--publish
+      background-color: #2196f3
+      color: white
+
+    .landing-page-editor-live-preview__status
+      min-width: unset
+      margin-right: .5rem
+
+
+
+.landing-page-editor-live-preview__modal-url-preview
+  background-color: #F5F2F2
+  border-radius: 5px
+  padding: .5rem 1rem
+  color: #979797
+  display: flex
+  align-items: center
+
+  .landing-page-editor-live-preview__modal-btn-copy
+    &:hover
+      opacity: .8
+
+
+.landing-page-editor-live-preview__btn-setting
+  transition: opacity .3s
+  box-shadow: none !important
+  border: unset !important
+
+  &--show
+    opacity: 1
+    pointer-events: unset
+
+  &--hide
+    opacity: 0
+    pointer-events: none
+
+.landing-page-editor-live-preview__error-message
+  font-size: .9rem

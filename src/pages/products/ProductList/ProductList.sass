@@ -1,0 +1,401 @@
+@import "../../../../sass/mixins"
+
+.filter__row
+  margin-bottom: 1em
+  button
+    margin: 0 .9em
+    border-radius: 999px
+    min-width: 7em
+.filter__allBtn
+  min-width: 4em
+
+.channelBtn
+  margin-bottom: .6em
+  min-width: 7em
+
+.product-list-page
+
+  .m-paging
+    //position: sticky
+    //bottom: 0
+
+  .mobile-product-list-container
+    flex-direction: column
+    padding: 1rem
+    border-top: 1px solid rgba(220, 220, 220, 0.31)
+    flex-shrink: 0
+    flex-grow: 1
+    //overflow-y: auto
+
+
+
+    .m-product-row
+      padding: 1rem 0
+      border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+      display: flex
+      justify-content: space-between
+      flex-shrink: 0
+
+      .m-product-basic-info
+        display: flex
+        align-items: center
+        flex: 1
+
+        .m-product-basic-info__name
+          margin-left: 1rem
+          word-break: break-word
+          height: 2.8rem
+          overflow: hidden
+          max-width: 40vw
+
+      .m-product-detail
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between
+
+        &__status
+          display: flex
+          align-items: center
+          justify-content: flex-end
+
+        &__price
+          font-weight: 500
+          color: gray
+
+        .status-dot
+          border-radius: 50%
+          width: .5rem
+          height: .5rem
+          margin-bottom: .2em
+          margin-right: .5em
+
+          &--active
+            background-color: green
+          &--error
+            background-color: red
+          &--inactive
+            background-color: gray
+
+
+  .product-list-widget
+    @include mobile
+      padding: 0
+
+    .resetting-status
+      display: flex
+      align-items: center
+      margin-left: 30px
+      margin-right: auto
+
+      .synchronize-status-text
+        margin-left: 5px
+      
+      .image-status__grey
+        font-size: 2.5rem
+        color: #9EA0A5
+        width: 24px
+        height: 24px
+
+      .image-rotate
+        -webkit-animation: spin 4s linear infinite
+        -moz-animation: spin 4s linear infinite
+        animation: spin 4s linear infinite
+        @-moz-keyframes spin 
+          100%
+            -moz-transform: rotate(360deg)
+        @-webkit-keyframes spin 
+          100% 
+            -webkit-transform: rotate(360deg)
+        @keyframes spin 
+          100%
+            -webkit-transform: rotate(360deg)
+            transform:rotate(360deg)
+
+  .gs-page-header
+    .btn-save
+      margin-left: auto
+
+
+  .product-list__counter
+    margin-left: auto
+
+  .product-list-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  .product-table__btn-edit
+    cursor: pointer
+    color: #9EA0A5 !important
+    transition-duration: .3s
+
+    &:hover
+      color: black !important
+
+  .product-table__last-col
+    text-align: center
+
+  .product-table__thumbnail
+    width: 4em
+    height: 4em
+
+  .product-table__tooltips-thumbnail
+    opacity: 1 !important
+
+  .row
+    align-items: center
+
+  .brands__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    
+  .uik-checkbox__label
+    margin-left: .9em
+
+    //&:before
+    //  margin-right: 0px !important
+
+  .n-filter-container
+    width: 100%
+    display: flex
+    display: -webkit-box
+    justify-content: flex-end
+    align-items: center
+    flex-shrink: 0
+    //margin-bottom: 1em
+
+    .btn-filter
+      border: 1px solid #D8DCE6
+      -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+      padding: 18px
+      height: 36px
+      border-radius: 4px
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .icon-filter
+        margin-right: -7px
+
+    &--mobile
+
+      @include mobile
+        display: flex
+        flex-direction: column
+        padding: 1rem 0
+        box-shadow: 0 2px 0 0 #c2c2c2
+        background-color: white
+        //position: sticky
+        //top: 0
+
+
+
+        .row
+          width: 100%
+          margin-bottom: 1em
+          flex-shrink: 0
+
+        .uik-select__wrapper
+          margin: 0 !important
+          width: 100%
+
+        .col-6
+          &:first-child
+            padding-right: .25em
+          &:last-child
+            padding-left: .25em
+
+        .btn-filter
+          border: 1px solid #D8DCE6
+          -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          padding: 18px
+          height: 36px
+          border-radius: 4px
+          display: flex
+          justify-content: space-between
+          align-items: center
+
+          .icon-filter
+            margin-right: -7px
+
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0
+
+    .uik-select__wrapper
+      margin-left: 1em
+      min-width: 10em
+
+  .product-list__body
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+
+  .gs-widget
+    display: flex
+    flex-direction: column
+
+    .uik-widget-content__wrapper
+      flex: 1
+      display: flex
+      flex-direction: column
+
+    .loading
+      flex: 1
+      display: flex
+      align-items: center
+
+  .product-list__empty
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .search-box__wrapper
+    webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+
+    input
+      padding: 8px 15px 8px 40px !important
+
+.filter-modal-wrapper
+  padding: 1rem
+
+  .filter-session
+    border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+    padding-bottom: 1rem
+    margin-bottom: 1rem
+
+    &:last-child
+      border-bottom: none
+
+
+    .filter-modal__title
+      margin-bottom: 1rem
+      display: block
+
+.product-list-page
+  .product-list__body
+    .table
+      margin-top: 1em
+      border-top: 1px solid #EAEDF3
+      thead
+        th
+          padding: 8px 15px
+          &:nth-child(4)
+            text-align: center
+          &:nth-child(5)
+            text-align: center
+          &:nth-child(6)
+            text-align: center
+          &:nth-child(7)
+            text-align: center
+          &:nth-child(8)
+            text-align: center
+      .gs-table-body-items
+        .gs-table-body-item
+          vertical-align: middle
+          padding: .8em
+          &:first-child
+            max-width: 10em
+            min-width: 8.5em
+          &.product-thumbnail
+            img
+              width: 4em
+              height: 4em
+          &.product-table__name
+            max-width: 20em
+            min-width: 15em
+            text-overflow: ellipsis
+            white-space: pre
+            overflow: hidden
+          &.product-table__tooltips-thumbnail
+            opacity: 1 !important
+          &.channels
+            display: flex
+            border-bottom: none
+            justify-content: center
+            .channels-wraper
+              padding: 0
+              max-width: 3.5em
+              max-height: 3.5em
+              border-radius: 4em
+              border: 1px solid #eaedf3
+              border-top: #eaedf3
+              display: flex
+              display: -webkit-flex
+              justify-content: center
+              align-items: center
+              margin-left: -20px
+              background-color: #ffffff
+              &:first-child
+                margin-left: 0
+              img
+                width: 3.3em
+                height: 3.3em
+                border: 3px solid white
+                &.brands
+                  border-radius: 3px
+                  margin-left: 5px
+                  &:first-child
+                    margin-left: 0px
+                  &--shopee
+                    background-color: #ff5500
+                    border-radius: 50%
+                  &--lazada
+                    background-color: #254a5e
+                    border-radius: 50%
+
+          &.price
+            display: flex
+            display: -webkit-flex
+            flex-direction: column
+            min-width: 13em
+            .org-price
+              color: #9EA0A5
+              .text-line-through
+                text-decoration: line-through
+          &.status
+            div
+              padding: 0
+
+.modalClearStock
+  p
+    font-weight: 600
+  .action
+    .check-box-wrapper__label
+      margin-left: 10px
+      
+.modalPlatformProduct
+  .title
+    font-size: 13px
+    padding: 0 3rem
+    margin-bottom: 0.7rem
+  .form-check
+    input
+      height: 16px
+      width: 16px
+      filter: hue-rotate(240deg)
+    label 
+      font-size: 13px
+      margin-left: 5px
+  .content
+    text-align: left
+    padding-left: 40%
+  .modal-header
+    padding: 0
+    background-color: #F8F8F8
+    button
+      padding: 22px 0 !important
+      margin-right: 8px
+      span
+        font-size: 30px
+    .modal-title
+      color: black
+      font-size: 18px
+      padding: 8px 0

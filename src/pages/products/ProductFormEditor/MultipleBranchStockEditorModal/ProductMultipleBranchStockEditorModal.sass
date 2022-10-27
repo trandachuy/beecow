@@ -1,0 +1,47 @@
+@import "../../../../../sass/mixins"
+.product-multiple-branch-stock_editor_modal
+  z-index: 1
+
+  @include mobile
+    margin: 0 !important
+    padding: .5rem
+
+  .quantity-input-field
+    @include mobile
+      width: unset !important
+
+
+  .product-multiple-branch-stock_editor_modal__mlp-select
+
+    @include mobile
+      width: 100%
+
+    .gs-dropdown-multiple-select__drop-header, .uik-menuDrop__list
+      min-width: 190px
+
+      @include mobile
+        width: 100%
+
+
+  .product-multiple-branch-stock_editor_modal__branch-table
+    border: 1px solid rgb(118, 118, 118)
+
+    td, th
+      padding: .5rem 1rem
+      min-width: 4rem
+      white-space: nowrap
+
+  .product-multiple-branch-stock_editor_modal__branch-table-wrapper
+    max-height: calc(100vh - 400px)
+    max-width: calc(633px - 2rem)
+    overflow-y: auto
+
+    @include mobile
+      max-width: calc(100vw - 3rem)
+      overflow-x: auto
+
+      &>div
+        overflow-x: unset !important
+
+
+

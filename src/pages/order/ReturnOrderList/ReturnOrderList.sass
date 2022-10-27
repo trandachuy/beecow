@@ -1,0 +1,286 @@
+@import "../../../../sass/mixins"
+.return-order-list
+  .grey-font
+    color: #9EA0A5
+  .full-name
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    //max-width: 10rem
+    padding: 0px !important
+
+  @include mobile
+    .uik-widget-content__wrapper
+      padding: 0
+
+  .return-order-list__filter-container
+    width: 100%
+    display: flex
+    display: -webkit-box
+    justify-content: flex-end
+    align-items: center
+    flex-shrink: 0
+    .uik-input__inputWrapper
+      .uik-input__input
+        padding: 9px 15px 9px 40px
+
+    .gs-search-box__wrapper
+      flex: 4
+      .uik-input__input
+        min-width: 35em
+      .uik-select__wrapper
+        min-width: 8em
+        .uik-select__optionListWrapper
+          min-width: 145px
+
+    &--mobile
+
+      @include mobile
+        display: flex
+        flex-direction: column
+        padding: 1rem 0
+        border-bottom: 0.5px solid #DDE0E9
+        background-color: white
+        z-index: 1
+
+        .react-bootstrap-daterangepicker-container
+          position: relative
+
+          svg
+            position: absolute
+            right: 5px
+            top: 10px
+
+        .row
+          width: 100%
+          flex-shrink: 0
+
+        .uik-select__wrapper
+          margin: 0 !important
+          width: 100%
+          min-width: unset !important
+
+        .btn-filter
+          border: 1px solid #D8DCE6
+          -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          padding: 18px
+          height: 36px
+          border-radius: 4px
+          display: flex
+          justify-content: space-between
+          align-items: center
+
+          .icon-filter
+            margin-right: -7px
+
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0
+
+    .uik-select__wrapper
+      flex: 1
+      margin-left: 1em
+      min-width: 10em
+
+  .return-order-list__body
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    align-items: center
+    flex-shrink: 0
+    .gs-widget
+      width: 100%
+      overflow: auto
+      .gs-widget__content
+        width: 100%
+
+    .uik-widget__wrapper
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      .uik-widget-content__wrapper
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+
+    .customer-list__list-container
+      .gs-table
+        margin-top: 1em
+        border-top: 1px solid #EAEDF3
+        flex-direction: column
+        .gs-table-header
+          .gs-table-header-item
+            white-space: normal
+            padding: 0px
+            display: flex
+            justify-content: center
+            align-items: center
+            overflow: hidden
+            &:first-child
+              max-width: 6rem
+              min-width: 6rem
+            &:nth-child(2)
+              max-width: 6rem
+              min-width: 6rem
+            &:nth-child(3)
+              max-width: 7rem
+              min-width: 7rem
+            &:nth-child(4)
+              max-width: 10rem
+              min-width: 10rem
+              justify-content: flex-start
+              padding-left: 15px
+            &:nth-child(5)
+              max-width: 7rem
+              min-width: 7rem
+            &:nth-child(6)
+              max-width: 8rem
+              min-width: 8rem
+            &:nth-child(7)
+              max-width: 13rem
+              min-width: 13rem
+              justify-content: flex-start
+              padding-left: 15px
+            &:nth-child(8)
+              max-width: 10rem
+              min-width: 10rem
+            &:last-child
+              max-width: 7rem
+              min-width: 7rem
+              justify-content: flex-start
+
+        .gs-table-body
+          .gs-table-body-items
+            .gs-table-body-item
+              padding: 0.9em
+              &.return_id
+                max-width: 6rem
+                min-width: 6rem
+                color: #1E69D5
+              &.bcOrderId
+                max-width: 7rem
+                min-width: 7rem
+                .full-name
+                  color: #1E69D5
+              &.status
+                max-width: 7rem
+                min-width: 7rem
+              &.customer-name
+                max-width: 10rem
+                min-width: 10rem
+              &.restock
+                max-width: 7rem
+                min-width: 7rem
+              &.refund_status
+                min-width: 8rem
+                max-width: 8rem
+              &.branch
+                max-width: 16rem
+                min-width: 16rem
+              &.create-date
+                max-width: 7rem
+                min-width: 7rem
+              &.staff
+                min-width: 7rem
+                max-width: 7rem
+              &:first-child
+                padding-left: 18px
+              &:nth-child(2)
+                padding-left: 24px
+              &:nth-child(3)
+                padding-left: 22px
+              &:nth-child(4)
+                padding-left: 4px
+              &:nth-child(5)
+                padding-left: 22px
+              &:nth-child(8)
+                padding-left: 0px
+              &:nth-child(9)
+                padding-left: 0px
+
+  .loading-list
+    display: flex
+    flex-grow: 1
+    justify-content: center
+    align-items: center
+    padding: 2rem
+
+@media (max-width: 767px)
+  .gs-mobile-list-container
+    .gs-table
+      max-width: 767px
+      overflow: auto
+      flex-direction: column
+      &::-webkit-scrollbar
+        height: 3px
+        margin-right: -3px
+      &::-webkit-scrollbar-thumb
+        background: #C4C4C4
+      &::-webkit-scrollbar-thumb:hover
+        background: #C4C4C4
+      .gs-table-header
+        width: 767px
+        .gs-table-header-item
+          &:first-child
+            max-width: 6rem
+            min-width: 6rem
+          &:nth-child(2)
+            max-width: 6rem
+            min-width: 6rem
+          &:nth-child(3)
+            max-width: 8rem
+            min-width: 8rem
+          &:nth-child(4)
+            max-width: 7rem
+            min-width: 7rem
+          &:nth-child(5)
+            max-width: 8rem
+            min-width: 8rem
+          &:nth-child(6)
+            max-width: 10rem
+            min-width: 10rem
+          &:nth-child(7)
+            max-width: 13rem
+            min-width: 13rem
+          &:nth-child(8)
+            max-width: 10rem
+            min-width: 10rem
+          &:last-child
+            max-width: 7rem
+            min-width: 7rem
+            justify-content: flex-start
+      .gs-table-body
+        width: 767px
+        .gs-table-body-item
+          &.return_id
+            max-width: 6rem
+            min-width: 6rem
+          &.bcOrderId
+            max-width: 6rem
+            min-width: 6rem
+          &.status
+            max-width: 8rem
+            min-width: 8rem
+          &.customer-name
+            max-width: 9rem
+            min-width: 9rem
+          &.restock
+            max-width: 5rem
+            min-width: 5rem
+          &.refund_status
+            min-width: 9rem
+            max-width: 9rem
+          &.branch
+            max-width: 16rem
+            min-width: 16rem
+          &.create-date
+            max-width: 7rem
+            min-width: 7rem
+          &.staff
+            min-width: 7rem
+            max-width: 7rem
+
+
+
+

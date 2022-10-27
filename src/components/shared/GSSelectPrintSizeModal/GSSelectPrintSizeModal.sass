@@ -1,0 +1,89 @@
+.gs-select-print-size-modal
+  max-width: 750px!important
+
+  .modal-content
+    min-width: 750px!important
+    .modal-header
+      background: #F3F3F3
+      border-radius: 3px 3px 0px 0px
+      padding: 12px 15px!important
+      .modal-title
+        font-weight: 500
+        font-size: 20px
+        line-height: 23px
+        color: #000000
+
+    .gs-frm-control__title
+      font-size: 13px
+      color: #939393
+      font-weight: normal
+      text-transform: capitalize
+      white-space: nowrap
+      min-width: 160px
+
+    .field__wrapper
+      .form-group
+        margin: 0
+        .form-control
+          &::-webkit-scrollbar
+            width: 3px
+            margin-left: -30px
+          &::-webkit-scrollbar-thumb
+            background: #C4C4C4
+        .form-control::placeholder
+          font-size: 13px
+          font-style: italic
+          color: #B4B4B4
+          align-items: normal
+    .modalPrintPos
+      .section-wrapper
+        margin: 3px 0!important
+    .section-wrapper
+      display: flex
+      margin: 10px 0
+
+      .size-wrapper
+        width: 100%
+
+        .form-control
+          display: flex
+          justify-content: space-between
+
+      .box-custom-content
+        .custom-content-wrapper
+          .form-control
+            margin-top: -24px
+            display: grid
+            grid-template-columns: 1fr 1fr
+          .box-check-content
+            .custom-control
+              display: inline-block
+              margin-top: 24px
+              min-width: 250px
+              color: #000000
+            p
+              font-style: italic
+              font-weight: 400
+              font-size: 13px
+              line-height: 15px
+              color: #939393
+              width: 70%
+              margin: 0 0 0 25px
+        .title-error
+          font-weight: 400
+          font-size: 13px
+          line-height: 15px
+          color: #DB1B1B
+
+  &__body
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin: 1em
+    padding-left: 10% !important
+
+    label
+      font-weight: bold
+
+    &__radio-group
+      align-items: flex-start

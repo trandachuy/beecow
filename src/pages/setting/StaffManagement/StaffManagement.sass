@@ -1,0 +1,126 @@
+@import "../../../../sass/mixins"
+
+.staff-modal-wrapper
+  .modal.fade.show
+    display: flex!important
+    align-items: initial
+
+.staff-management
+  .uik-widget-table__wrapper tr td
+    padding: 15px 10px!important
+  .gs-widget__content
+    padding: 0
+
+    .staff-list-mobile
+      flex-direction: column
+      padding: 0.5em
+      .setting__account
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 20px 5px
+        flex-wrap: wrap
+      .account__block
+        display: flex
+        flex-direction: column
+        flex-basis: calc(100% - 50%)
+        word-break: break-word
+
+  .btn-enable-staff
+    label
+      margin-bottom: 0
+
+.add-staff-modal
+  max-width: 650px
+
+  .modal-content
+    width: 650px !important
+    @include mobile
+      max-width: calc(100vw - 1rem)
+
+
+  .staff-modal__header
+    padding: 1rem 24px
+    font-weight: 500 !important
+    font-size: 1.1rem
+    box-shadow: 0 1px 0 0 #EAEDF3
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 1rem
+
+  .staff-modal__footer
+    padding: 1rem
+    border-top: 1px solid #EAEDF3
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+
+  .modal-body
+    text-align: left !important
+    
+    .form-control.is-invalid
+      padding-right: 0px !important
+      
+    .was-validated .custom-control-label
+      color: rgb(73, 80,87)
+
+  .permission__container
+    background-color: #F9F9F9
+    border-top: 1px solid #EAEDF3
+
+    .permission__header
+      .permission__title
+        font-weight: 500
+        font-size: .9rem
+
+      .permission__description
+        color: #939393
+        font-size: .9rem
+
+    .custom-checkbox
+      margin-top: 1rem
+      margin-bottom: 1rem
+      &:first-child
+        margin-top: 0
+      &:last-child
+        margin-bottom: 0
+
+      label
+        cursor: pointer
+        width: 100%
+
+      &.is-invalid
+        label
+          color: #495057
+
+  .branch__container
+    background-color: #F9F9F9
+    border-top: 1px solid #EAEDF3
+
+    .branch__header
+      .branch__title
+        font-weight: 500
+        font-size: .9rem
+
+    .branch__body
+      .row
+        max-height: 90px
+        overflow-y: scroll
+    .custom-checkbox
+      margin-top: 1rem
+      margin-bottom: 1rem
+      &:first-child
+        margin-top: 0
+      &:last-child
+        margin-bottom: 0
+
+      label
+        cursor: pointer
+        width: 100%
+
+      &.is-invalid
+        label
+          color: #495057

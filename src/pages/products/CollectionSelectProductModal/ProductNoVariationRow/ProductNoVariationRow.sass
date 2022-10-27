@@ -1,0 +1,54 @@
+.product-no-variation-row
+  margin-top: .3em
+  margin-bottom: unset
+  //padding: 0 .3em .6em 0
+  width: 100%
+
+  // &:first-child
+  //   margin-top: 1em
+
+  // &:last-child
+  //   margin-bottom: 1em
+
+  .product-image
+    width: 4em
+    height: 4em
+    margin-left: 10px
+    max-width: 4em
+    min-width: 4em
+
+  .product-detail-text-line
+    flex: 2
+    display: flex
+    justify-content: space-between
+    //width: 100%
+    align-items: center
+
+    &__right
+      min-width: 15em
+      display: flex
+      justify-content: flex-end
+      align-items: center
+
+    .product-variant
+      flex-grow: 1
+
+    .product-price
+      min-width: 8em
+      text-align: right
+      margin-right: 1em
+
+  .product-name
+    text-align: left
+    margin-left: 1em
+    word-break: break-word
+    max-width: 40em
+
+  .uik-checkbox__label
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    &:after
+      top: calc(50% - 3px) !important
+      left: 4px

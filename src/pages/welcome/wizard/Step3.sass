@@ -1,0 +1,101 @@
+@import '../../../../sass/mixins'
+
+.step3-page__wrapper
+    //min-height: 100vh
+    max-width: 560px
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+
+    .step-page__container
+        width: 100%
+
+        .step-page__content
+            margin-top: 70px
+
+            .logo-upload
+                text-align: center
+
+                .logo-upload__icon
+                    font-size: 3em
+                    color: #9b9b9b
+                    cursor: pointer
+
+                .logo-preview
+                    margin: 0px auto
+                    width: 80px
+                    height: 80px
+                    position: relative
+
+                    .logo-preview__close
+                        width: 20px
+                        height: 20px
+                        position: absolute
+                        top: 0px
+                        right: 0px
+                        cursor: pointer
+
+                    .logo-preview__show
+                        width: 80px
+                        height: 80px
+                        border-radius: 50%
+
+                .logo-upload__text
+                    margin-top: 15px
+                    font-size: 1.5em
+                    color: #9b9b9b
+
+                .logo-upload__error
+                    font-size: 80%
+                    color: #dc3545
+
+                .logo-upload__suggest
+                    margin-top: 40px
+                    font-size: 14px
+
+            .button-group
+                max-width: 560px
+                margin-top: 2em
+
+                //margin: 70px auto
+
+                .btn
+                    width: 120px
+                    border-radius: 4px
+                    font-size: 14px
+
+                .btn-back
+                    border: solid 1px #556ce7
+                    color: #556ce7
+                    background-color: #ffffff
+
+                    .btn-back__icon
+                        font-size: 25px
+
+                .btn-skip  
+                    margin-left: 20px
+                    border: solid 1px #9b9b9b
+                    color: #9b9b9b
+                    background-color: #ffffff
+
+                .btn-next
+                    float: right
+                    border: solid 1px #556ce7
+                    color: #ffffff
+                    background-color: #556ce7
+                    
+                    .btn-next__icon
+                        font-size: 25px
+                
+@include mobile
+    .step3-page__wrapper
+        .step-page__container
+            .step-page__content
+                //.form-group
+                //    display: block
+                //    width: 100% !important
+                .button-group
+                    .btn
+                        width: 49%

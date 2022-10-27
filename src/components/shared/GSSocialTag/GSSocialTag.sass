@@ -1,0 +1,275 @@
+
+
+@import "../../../../sass/mixins"
+
+.gs-social-tag-container-wrapper
+  &.gs-page-container-max
+    padding: 0px
+  .uik-widget__wrapper
+    background: transparent
+    .uik-widget-content__wrapper
+      padding: 0
+
+  .social-tag-container
+    display: grid
+    grid-template-columns: 1fr auto
+    justify-content: flex-end
+    background-color: transparent
+    .social-tag-box
+      display: grid
+      grid-template-rows: 1fr auto
+      position: relative
+      .tags-area
+        display: flex
+        justify-content: flex-end
+        flex-wrap: wrap
+        max-height: 250px
+        visibility: hidden
+        bottom: 4.5rem   
+        overflow-y: auto
+        overflow-x: hidden
+        opacity: 0
+        right: 0
+        width: 100%
+        background: #fff
+        position: absolute
+        &.active
+          opacity: 1
+          visibility: visible
+      .tags-line
+        display: flex
+        justify-content: flex-end
+        flex-flow: row wrap
+    .social-tag-modal
+      display: flex
+      justify-content: flex-end
+      flex-direction: column
+    .social-tag-lead
+      width: 100px
+      height: 35px
+      display: flex
+      align-items: center
+      padding-left: 0.2rem
+      border-radius: 0.3em
+      margin-left: 0.2rem
+      margin-right: 0.2rem
+      cursor: pointer
+      >i
+        width: 20px
+        height: 100%
+        border-radius: 50%
+        margin-right: 0.4rem
+        &.bookmark
+          content: url(/assets/images/icon-bookmark.svg)
+      &.add-tags
+        color: #fff
+        &::before
+          display: flex
+          align-items: flex-end
+          height: 100%
+          padding-right: 0.4rem
+          content: url(/assets/images/icon-add-round.svg)
+
+.gs-modal-social-tag
+  .modal-content
+    min-width: fit-content !important
+    background-color: #F2F2F2
+    .modal-header
+      color: unset !important
+      .modal-title
+        display: flex
+        justify-content: space-between
+        .modal-close-button
+          cursor: pointer
+    .modal-footer
+      display: flex
+      justify-content: flex-end
+      padding-bottom: 0.5rem !important
+      padding-top: 0.5rem !important
+      .footer-action
+        display: flex
+        justify-content: space-between
+        width: 30%
+    .modal-body
+      text-align: left 
+      padding: 0 !important
+      header, main, .row 
+        display: flex !important
+        margin-top: 0.5rem
+        margin-bottom: 0.5rem
+        align-self: baseline
+      header
+        height: 3.2rem
+        align-items: center
+        text-transform: uppercase
+        font-weight: 500
+      main
+        margin-bottom: 0 !important
+        display: block !important
+        height: 400px
+        overflow-y: scroll
+        padding: 0.5rem
+      .col
+        flex: 1
+      .tagName
+        min-width: 20rem
+        align-self: center
+        .inactive
+          color: gray
+      .tagColorHeader
+        display: flex
+        justify-content: center
+        align-items: center
+        align-content: center
+      .tagColor
+        min-width: 10rem
+        display: flex
+        justify-content: center
+        align-items: center
+        align-content: center
+      .action
+        min-width: 10rem
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+      .white-color
+        background-color: #ffffff
+      .body-data
+        padding-top: 0.5rem
+        padding-bottom: 0.5rem
+        align-items: center
+        flex-wrap: nowrap
+      .circle-color
+        width: 32px
+        height: 32px
+        border-radius: 50%
+      .square-color
+        width: 37px
+        height: 37px
+        border-radius: 5%
+      .action-pointer
+        cursor: pointer
+      .action-wrapper-popover-color
+        position: relative
+        display: flex
+        &:hover 
+          .action-popover-color-content
+            z-index: 10
+            opacity: 1
+            visibility: visible
+            transform: translate(0, -20px)
+            transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97)
+      .action-popover-color-content
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        top: 60px
+        transform: translate(0, 10px)
+        background-color: #ffffff
+        padding: 0.5rem
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        width: 230px
+        display: flex
+        flex-wrap: wrap
+        &:before
+          position: absolute
+          z-index: -1
+          content: ""
+          right: calc(50% - 10px)
+          top: -8px
+          border-style: solid
+          border-width: 0 10px 10px 10px
+          border-color: transparent transparent #ffffff transparent
+          transition-duration: 0.3s
+          transition-property: transform
+      .box-color
+        margin: 0.5rem
+        position: relative
+      .color-actived
+        &::before
+          content: url(/assets/images/icon-checked.svg)
+          display: flex
+          align-items: center
+          align-content: center
+          justify-content: center
+          width: 100%
+          height: 100%
+          color: #ffffff
+      .action-item
+        display: flex
+        justify-content: flex-start
+        min-width: 32px
+        min-height: 32px
+        align-items: center
+        >i
+          background-repeat: no-repeat
+          width: 30px
+          height: 20px
+          cursor: pointer
+          margin: 0 10px
+          &.icon-view
+            background-image: url(/assets/images/icon-show.svg)
+            align-self: center
+            &:hover
+              opacity: 0.7
+          &.inactive
+            background-image: url(/assets/images/icon-hide.svg)
+          &.icon-delete
+            background-image: url(/assets/images/icon-delete.png)
+            &:hover
+              opacity: 0.7
+
+.social-tag-element
+  width: 100px
+  height: 35px
+  display: flex
+  align-items: center
+  border-radius: 0.3em
+  margin-left: 0.2rem
+  margin-right: 0.2rem
+  cursor: pointer
+  -webkit-transition: background-color .25s ease-out
+  -moz-transition: background-color .25s ease-out
+  -o-transition: background-color .25s ease-out
+  transition: background-color .25s ease-out
+  >i
+    width: 15px
+    height: 12px
+    border-radius: 50%
+    margin: 0.2rem 0.2rem
+    align-self: center
+  >span
+    padding: 0 2px
+  &.full-margin
+    margin: 0.2rem
+  &[data-tooltip]
+    position: relative
+    &::after
+      content: attr(data-tooltip)
+      position: absolute
+      transform: translate(20px, -30px)
+      width: max-content
+      height: 2rem
+      pointer-events: none
+      -webkit-transition: opacity .15s ease-in-out
+      -moz-transition: opacity .15s ease-in-out
+      -ms-transition: opacity .15s ease-in-out
+      -o-transition: opacity .15s ease-in-out
+      transition: opacity .15s ease-in-out
+      display: block
+      font-size: 12px
+      font-weight: 500
+      line-height: 24px
+      background: #e7e7e6
+      padding: 2px 10px
+      border: 1px solid #c0c0c0
+      border-radius: 5px
+      box-shadow: 2px 4px 5px #00000066
+      visibility: hidden
+      color: #1d1c1c
+    &:hover
+      &::after
+        visibility: visible
+        z-index: 5
+

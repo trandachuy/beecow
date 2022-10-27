@@ -1,0 +1,235 @@
+@import "../../../../sass/mixins"
+@import "../../../../sass/animations"
+
+
+.select-segment-modal
+  max-width: unset !important
+  width: 100%
+  margin: 0
+  @include mobile
+    margin: 0 !important
+    align-self: flex-end
+    transform: unset
+    transition: unset
+    animation-name: zoomIn
+    animation-duration: .3s
+    animation-timing-function: ease
+
+    @keyframes zoomIn
+      0%
+        opacity: 0
+        transform: scale(.9)
+      100%
+        transform: scale(1)
+        opacity: 1
+
+    .modal-content
+      //height: calc(100vh - 55px)
+      border-radius: 0 !important
+
+      .check-all_apage
+        padding-left: 1rem !important
+
+    .modal-header
+      display: flex
+      align-items: center
+
+      .mobile-header-btn
+        button
+          min-width: 6em !important
+
+    .modal-body
+      padding: 0
+
+    .footer-btn
+      justify-content: center
+      align-items: center
+
+  .btn-close__icon
+    background-image: url(/assets/images/icon-closepop-up.png)
+    background-repeat: no-repeat
+    width: 20px
+    height: 20px
+    display: block
+    position: absolute
+    top: 15px
+    right: 15px
+    cursor: pointer
+
+    &:hover
+      opacity: 0.7
+
+  .modal-content
+    min-width: 50%!important
+    width: 50em!important
+    max-width: 95%!important
+  .modal-header
+    h5
+      font-size: 1.1rem
+      text-align: left !important
+
+    .gs-widget__header-sub-title
+      color: #939393
+
+  .loading-product
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  button, .uik-btn__base
+    min-width: 10em
+
+  .spinner-border
+    position: absolute
+    right: 10px
+    top: 10px
+    width: 1.3em
+    height: 1.3em
+    color: #dadada !important
+
+  .search-group
+    width: 100%
+    display: flex
+    align-items: center
+    background-color: #eeeeee
+    height: 70px
+
+    .check-all_apage
+      padding-left: 30px
+
+    .search
+      margin-left: 2em
+      width: 70%
+      position: relative
+
+      .search-input
+        padding-right: 35px
+
+  .modal-body
+    padding: 0
+    .segments
+      height: 50vh
+      margin: 1em 0
+      position: relative
+      overflow-y: auto
+      border-top: .05em solid #ced4da
+      border-bottom: .05em solid #ced4da
+      margin-top: 0
+      .form-control
+        .segments-row
+          padding: 1em
+          border-bottom: .05em solid #ced4da
+          display: flex
+          display: -webkit-flex
+          &.disabled
+            background-color: #dbe0e4
+
+          .custom-control
+            flex-basis: 80%
+            text-align: left
+            padding-left: 2rem
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+            .custom-control-label
+              padding-left: .8em
+          .segment-users
+            flex-basis: 20%
+            color: rgb(202, 202, 202)
+          &:last-child
+            border-bottom: unset
+      &.loading
+        background-color: rgba(230, 230, 230, 0.3)
+        opacity: 0.3
+        &:after
+          content: " "
+          display: block
+          width: 46px
+          height: 46px
+          margin: 1px
+          border-radius: 50%
+          border: 5px solid
+          border-color: inherit
+          border-right-color: transparent
+          border-left-color: transparent
+          animation: lds-dual-ring 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+          margin-left: 30vh
+          position: fixed
+          bottom: 50vh
+      .empty
+            display: flex
+            display: -webkit-flex
+            flex-direction: column
+            -webkit-flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: #ffffff
+            width: 100%
+            margin-top: -1.1em
+            height: 48vh
+            i.icon-empty
+                background-image: url(/assets/images/icon-empty-loyalty.png)
+                background-repeat: no-repeat
+                width: 100px
+                height: 100px
+                display: block
+                margin-bottom: 1em
+                            
+    .footer-btn
+      padding-right: 1em
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+ .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .select-collection-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                padding-right: 0
+
+                

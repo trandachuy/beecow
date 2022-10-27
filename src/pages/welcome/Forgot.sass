@@ -1,0 +1,104 @@
+@import '../../../sass/mixins'
+
+.forgot-page-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #F2F2F2
+    flex: 0 0 38em
+    flex-direction: column
+    padding: 30px 0
+    min-height: 100vh
+
+.forgot-widget
+    width: 500px
+    flex: 0 0 25em
+
+    .login-widget__formHeader
+        text-align: center
+        background-color: #fbfbfd
+        padding-top: 2em
+
+        h3
+            width: 100%
+
+    .login-widget__btnSubmit
+        margin-bottom: 0
+        border-radius: 4px
+        background-color: #90ce51
+
+    .uik-widget-content__wrapper
+        padding: 25px 75px
+        .phone-code
+            .uik-select__wrapper
+                display: block
+            .phone-option
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+            .uik-select__optionListWrapper
+                width: 100%
+
+    .login-widget__btnShowPassword
+        color: #9EA0A5
+        position: absolute
+        right: 10px
+        bottom: 10px
+        cursor: pointer
+
+    .login-widget__inputPasswordWrapper
+        position: relative
+
+.forgot-widget__linkWrapper
+    margin-top: 15px
+    width: 500px
+
+    .forgot-widget__linkItem
+        text-decoration: none
+        color: #9EA0A5
+        font-size: 1em
+        float: right
+
+        .forgot--widget__signIn
+            cursor: pointer
+            color: #556CE7 !important
+            font-weight: 600
+
+        .forgot-widget__changeLanguage
+            font-size: 14px
+            line-height: 22px
+
+        .forgot-widget__changeLanguage-english
+            margin-right: 12px
+
+        .forgot-widget__changeLanguage-selected
+            color: #556CE7
+            cursor: pointer
+
+        .forgot-widget__changeLanguage-unselected
+            color: #9EA0A5
+            cursor: pointer
+
+    .forgot-widget__linkItem--right
+        float: right
+
+    .forgot-widget__linkItem--left
+        float: left
+
+.reset-frm
+    position: relative
+
+    .btn-resend
+        position: absolute
+        right: 0px
+        top: 8px
+
+@include mobile
+    .forgot-widget, .forgot-widget__linkWrapper
+        width: 100vw
+        .uik-widget-content__wrapper
+            padding: 25px 40px
+    .forgot-widget__linkWrapper
+        text-align: center
+        .forgot-widget__linkItem
+            float: none

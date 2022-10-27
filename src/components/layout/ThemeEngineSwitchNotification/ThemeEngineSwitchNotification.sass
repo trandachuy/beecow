@@ -1,0 +1,89 @@
+@import "../../../../sass/gsvariables"
+
+.backdrop
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.5)
+    z-index: 1000
+
+.notification-modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-image: url("../../../../public/assets/images/switch-theme-engine-notification/Bg@2x.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    width: 1166px
+    overflow: auto
+
+%btn-shared
+    width: 15rem
+    height: 3.5rem
+    border-radius: 3rem
+    font-size: 1rem
+    font-weight: bold
+    outline: none
+
+.notification-btn-container
+    justify-content: center
+    display: flex
+    bottom: 1rem
+    position: relative
+
+    .btn-unfilled
+        @extend %btn-shared
+        background: #FFF
+        border: solid $color-header thin
+        color: $color-header
+        margin-right: 5rem
+    .btn-unfilled:hover
+        background: $color-background
+        color: $color-header
+
+    .btn-filled
+        @extend %btn-shared
+        background: $color-header
+        color: #fff
+        border: none
+    .btn-filled:hover
+        background: $color-header-light
+
+.confirm-modal
+    white-space: pre-line
+
+
+.notification-slider-container
+    display: block
+    position: relative
+    height: 650px
+    text-align: center
+    padding: 2rem 7rem 3rem
+    .force-notification-container
+        box-shadow: 2px 2px 8px 3px #88888888
+        padding: 0.5rem 4rem
+        background-color: #fff
+        border-radius: 10px
+        height: 100%
+        display: flex
+        flex-direction: column
+        img
+            width: 100%
+        .custom-carousel-caption
+            .caption-details
+                margin: 1rem 0 2rem
+                text-align: center !important
+                font-size: 1.2rem
+            strong
+                font-size: 1.8rem
+                color: $color-header
+            .capitalize-bold-txt
+                text-transform: capitalize
+                font-weight: 500
+                color: $color-header
+        .force-notification-footer
+            margin-top: auto

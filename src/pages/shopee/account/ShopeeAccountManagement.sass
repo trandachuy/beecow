@@ -1,0 +1,80 @@
+.ShopeeAccountManagement
+  .uik-widget-table__wrapper
+    tr
+      td
+        font-size: 0.87rem
+
+  .disconnected
+    opacity: 0.3
+  .connected
+    opacity: 0.5
+  .gs-action-button.disconnected
+    cursor: context-menu
+  .gs-action-button:hover.disconnected
+    opacity: 0.5
+  .gs-widget:last-child
+    margin: 0
+  .gs-widget
+    .gs-action-button:first-child
+      margin-right: 10px
+    .add-account
+      font-weight: 500
+      font-size: 1rem
+      span
+        color: #2196f3
+
+.addAccountModal.modal-dialog
+  .modal-content
+    .modal-body
+      font-weight: 600
+      p:first-child
+        margin-bottom: 5px
+      p
+        font-size: 0.9rem
+        margin: 0
+    .modal-title
+      color: #90CE51
+
+.deleting-status
+  display: flex
+  align-items: center
+  margin-left: 30px
+  margin-right: auto
+
+  .synchronize-status-text
+    margin-left: 5px
+  
+  .image-status__grey
+    font-size: 2.5rem
+    color: #9EA0A5
+    width: 24px
+    height: 24px
+
+  .image-rotate
+    -webkit-animation: spin 4s linear infinite
+    -moz-animation: spin 4s linear infinite
+    animation: spin 4s linear infinite
+    @-moz-keyframes spin 
+      100%
+        -moz-transform: rotate(360deg)
+    @-webkit-keyframes spin 
+      100% 
+        -webkit-transform: rotate(360deg)
+    @keyframes spin 
+      100%
+        -webkit-transform: rotate(360deg)
+        transform:rotate(360deg)
+
+.modalDeleteAccount.modal-dialog
+  .modal-content
+    .modal-body
+      p
+       font-weight: 600
+    .boxCheckedDelete
+      text-align: left
+      margin-left: 30px
+      display: flex
+      uik-checkbox__label
+        margin-right: 10px
+
+  

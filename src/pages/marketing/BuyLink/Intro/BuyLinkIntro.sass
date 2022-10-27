@@ -1,0 +1,69 @@
+@import "../../../../../sass/mixins"
+
+.buylink-intro
+  height: 100%
+
+  .gs-page-content--large 
+    max-width: 100%
+
+  .buylink-intro__body
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+    .row
+      flex: 1
+      width: 100%
+
+  .buylink-intro__title
+    font-size: clamp(1.8rem, 2vh, 2.5rem)
+    margin-bottom: 1.2rem
+    font-weight: 500
+
+  .buylink-intro__description
+    font-size: clamp(1rem, 2vh, 1.5rem)
+    margin-bottom: 1.2rem
+    color: #3E3F42
+    max-width: 90%
+
+  .buylink-intro__list
+    ul
+      list-style: none
+      margin-left: 2rem
+      li::before
+        content: url("/assets/images/buylink/icon_buy_link.svg")
+        display: inline-block
+        margin-right: 1rem
+        vertical-align: text-top
+
+  .buylink-intro__explore
+    font-size: clamp(1rem, 2vh, 1.8rem)
+    &.gs-atm--disable
+      background-color: #6d6a6a
+
+  .buylink-intro__background
+    background-image: url("/assets/images/buylink/intro.png")
+    height: 100%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    &.icon-tera
+      background-image: url("/assets/images/buylink/intro_tera.png")
+      
+
+  .buylink-intro__left-col
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    top: 20%
+    height: fit-content
+    @include mobile
+      justify-content: flex-start
+      height: 0
+
+  .buylink-intro__right-col
+    //@include mobile
+    //  height: 100%

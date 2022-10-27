@@ -1,0 +1,25 @@
+.font-style-collection
+  display: flex
+
+  &__button
+    font-size: 14px
+    cursor: pointer
+    transition: background-color .3s
+    border-radius: 3px
+    width: 1.8rem
+    height: 1.8rem
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid transparent
+
+    &:hover
+      border: 1px solid #6378f1
+
+    &--active
+      background-color: #6378f1
+      color: white
+
+    &--inactive
+      background-color: transparent
+      color: black

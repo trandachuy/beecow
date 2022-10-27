@@ -1,0 +1,239 @@
+@import "../../../../../sass/mixins"
+.select-partner-modal
+  max-width: 500px
+  width: 100%
+  //margin: 0
+  @include mobile
+    margin: 0
+    @keyframes zoomIn
+      0%
+        opacity: 0
+        transform: scale(.9)
+      100%
+        transform: scale(1)
+        opacity: 1
+
+    .modal-content
+      //height: calc(100vh - 55px)
+      border-radius: 0 !important
+      .check-all_apage
+        padding-left: 1rem !important
+    .modal-header
+      display: flex
+      align-items: center
+
+      .mobile-header-btn
+        button
+          min-width: 6em !important
+
+    .modal-body
+      padding: 1rem 0 0 0
+
+    .footer-btn
+      justify-content: center
+      align-items: center
+  .btn-close__icon
+    background-image: url(/assets/images/icon-closepop-up.png)
+    background-repeat: no-repeat
+    width: 20px
+    height: 20px
+    display: block
+    position: absolute
+    top: 15px
+    right: 15px
+    cursor: pointer
+
+    &:hover
+      opacity: 0.7
+
+  .product-list
+    //overflow-y: scroll
+    height: 60vh
+    margin: 0.6em 0
+    position: relative
+    &.empty
+      .uik-form-input-group__vertical
+        .gs-table-header
+          border: unset
+    .gs-table
+      max-height: 50vh
+    .empty-partner-list
+      display: flex
+      padding-top: 30vh
+      justify-content: center
+      img
+        padding-right: 10px
+
+  .modal-content
+    min-width: 50%!important
+    width: 50em!important
+    max-width: 95%!important
+    .modal-header
+      background-color: #F8F8F8
+      padding: 0px 10px !important
+      .modal-title
+        padding: 10px 0 !important
+    .modal-body
+      padding-top: 15px
+      .uik-select__wrapper
+        width: 230px
+        height: 43px
+        padding: 0px 0px 0px 10px
+        float: left
+        margin-bottom: 15px
+  .modal-header
+    h5
+      font-size: 20px
+      text-align: left !important
+      color: #000000
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-bottom: 16px !important
+
+    .gs-widget__header-sub-title
+      color: #939393
+
+    .uncheck-group
+      float: right
+      font-size: 13px
+      font-weight: normal
+      color: black
+      text-transform: uppercase
+      .quantity-error
+        color: #dc3545
+
+  .loading-product
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  button, .uik-btn__base
+    min-width: 10em
+    height: 100%
+
+  .spinner-border
+    position: absolute
+    right: 10px
+    top: 10px
+    width: 1.3em
+    height: 1.3em
+    color: #dadada !important
+
+  .check-all_apage
+    padding: 7px 40px 7px 10px
+    background-color: #F7F7F7
+    p
+      font-size: 0.7rem
+      white-space: nowrap
+      font-weight: bold
+      margin-bottom: 0
+    div
+      align-items: center
+      label
+        margin: 0
+
+
+  .search-group
+    width: 100%
+    display: flex
+    align-items: center
+    background-color: transparent
+    height: 45px
+    padding: 0
+    .search
+      margin: 0 10px
+      position: relative
+      width: 100vw
+      display: flex
+      justify-content: space-between
+
+      >div:first-child
+        width: 100%
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio).select-collection-row
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label.green::before
+      background-image: url(/assets/images/icon-checked.png)
+      background-position: center center
+      background-repeat: no-repeat
+      background-color: #99D54F
+      border: 1px solid #99D54F
+
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio) .uik-checkbox__label:before
+    min-width: 18px
+    min-height: 18px
+  .uik-checkbox__wrapper:not(.uik-checkbox__toggle):not(.uik-checkbox__radio)
+    .uik-checkbox__checkbox:checked + .uik-checkbox__label
+      .uik-checkbox__checkboxIcon
+        display: none
+
+  .modal-body
+    padding: 0
+
+    .gs-table
+      .gs-table-body
+        height: 52vh
+        overflow-y: auto
+        .gs-table-body-items
+          .gs-table-body-item
+            max-width: 100%
+            padding: 0
+            &:first-child
+              padding: 0 1.15em
+            div
+              padding: 0
+              border: unset
+              &.product-name
+                text-overflow: ellipsis
+                overflow: hidden
+                max-width: 60%
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .select-product-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .select-product-modal
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+ .select-product-modal
+    margin: 0!important
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                max-width: 100%
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .select-product-modal
+    margin: 0!important
+    .modal-body
+      .product-list
+        .gs-table
+          .gs-table-body
+            .gs-table-body-items
+              .gs-table-body-item
+                padding-left: 1rem!important
+                max-width: 100%

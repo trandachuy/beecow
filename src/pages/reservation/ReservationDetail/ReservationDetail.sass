@@ -1,0 +1,175 @@
+@import "../../../../sass/style"
+@import "../../../../sass/mixins"
+
+.reservation-detail-page
+  .gs-widget
+    min-width: 25em
+
+  .buyer-cancel
+    .gs-widget__content
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-weight: bold
+      color: red
+
+      .buyer-cancel__btn-container
+        display: flex
+        flex-direction: row
+
+        .uik-btn__base, .btn-outline-secondary
+          height: 2em
+
+        .btn-outline-secondary
+          padding: 0px
+  .payment-detail
+    .order-info-sm
+      .order-info-sm--group
+        display: flex
+        .order-information__left-label
+          white-space: normal !important
+  .reservation-detail
+    .detail-left
+      img
+        width: 100%
+
+    .detail-center
+      div
+        margin-bottom: 10px
+      .name
+        font-weight: bold
+      .action
+        cursor: pointer
+        color: #0056B3
+        &:hover
+          text-decoration: underline
+      .left-font
+        font-weight: bold
+        color: #9EA0A5
+
+    .detail-right
+      text-align: right
+      font-size: 1.1em
+
+    .total-payment-container
+      display: flex
+      justify-content: space-between
+      .order-items__paid
+        padding: 5px
+        font-size: 1.5em
+        border: 2px dashed
+
+      .order-items__paid-status-unpaid
+        color: #ff5500
+        border-color: #ff5500
+
+      .order-items__paid-status-paid
+        color: green
+        border-color: green
+      .payment-amount
+        font-weight: bold
+        display: flex
+        justify-content: space-between
+        .left-font
+          color: #9EA0A5
+          &.total
+            color: black
+        .right-font
+          margin-left: 30px
+          &.total
+            color: #556CE7
+
+  .order-information__left-label
+    color: $color-frm-label
+    font-weight: bold
+    line-height: 2em
+    padding-right: 1em
+    white-space: nowrap
+    @extend .col-xl-4, .col-lg-6, .col-sm-6, .col-12
+
+  .order-information__right-value
+    align-self: center
+    @extend .col-xl-8, .col-lg-6, .col-sm-6, .col-12
+
+  .order__table, .order-info-sm
+    .order-info-sm--group
+      margin-bottom: 10px
+      @extend .order-table-info
+
+      .order-information__left-label, td
+        @extend .order-table-info
+        //min-width: 10em
+        word-break: break-word
+        color: $color-frm-label
+        font-weight: bold
+        line-height: 2em
+        padding-right: 1em
+        white-space: nowrap
+
+      .order-information__right-value
+        //min-width: 10em
+        @extend .order-table-info
+
+      .status
+        .status-box
+          border: 1px solid
+          border-radius: 2px
+          padding: 5px 10px
+          color: #3E3F42
+          &.to_confirm
+            border: #556CE7 
+            background-color: #F1F3FF
+          &.confirmed
+            border: #90CE51
+            background-color: #F1FFE2
+          &.completed
+            border: #9EA0A5
+            background-color: #ECEDF1
+          &.cancelled
+            border: #F84C30
+            background-color: #FFE2DE
+
+      .bounder
+        word-break: break-all
+        .note
+          padding-left: 10px
+          padding-right: 10px
+          border-radius: 3px
+          border-color: #EAEDF3
+          background-color: #F9F9F9
+//Buton order
+#btn-main
+  order: 0
+#btn-print
+  order: 1
+#btn-cancelOrder
+  order: 2
+
+.order-table-info
+  @extend .d-lg-flex, .d-block
+
+@include mobile
+  .reservation-detail-page .row
+    display: block
+    margin-bottom: 1em
+    >div
+      padding: 0
+
+    .order-items__detail
+      .order-items__table
+        width: 100%
+
+        tr
+          td:first-child
+            text-align: left
+  .order-info-sm
+    .order-info-sm--group
+      margin-bottom: 1em
+
+  //Buton order
+  #btn-main
+    order: 0
+  #btn-print
+    order: 2
+  #btn-cancelOrder
+    order: 1

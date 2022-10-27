@@ -1,0 +1,134 @@
+@import "../../../../../sass/style"
+@import "../../../../../sass/mixins"
+
+$break-small: 1530px
+
+.order-detail-page
+  .item-row__total-price
+    width: 20% !important
+    text-align: center
+    color: #5b5b5b
+    b
+      width: 100%
+  .item-row__unit
+    width: 20% !important
+    text-align: center
+    color: #5b5b5b
+    b
+      width: 100%
+  .item-row__info
+    width: 25% !important
+  .item-row__item-name
+    font-weight: 500
+  .item-row__quantity
+    color: #5b5b5b
+    width: 25% !important
+    text-align: center
+  .item-row
+    display: flex
+    flex-direction: row
+    margin-bottom: 1em
+    border-bottom: 1px solid #EAEDF3
+    padding: 0 1em 15px 1em
+    &.header
+      background: #F7F7F7
+      padding: 10px 1em
+      .item-row__info
+        margin-left: 0
+        b
+          text-transform: uppercase
+          margin: 0
+      .item-row__total-price
+        b
+          font-weight: 700
+          color: black
+          text-transform: uppercase
+          margin: 0
+      .item-row__unit
+        b
+          font-weight: 700
+          color: black
+          text-transform: uppercase
+          margin: 0
+      .item-row__quantity
+        p
+          font-weight: 700
+          color: black
+          text-transform: uppercase
+          margin: 0
+
+    &__thumbnail
+      width: 5em
+      height: 5em
+
+      &--empty
+        padding: 1em
+
+    &__info
+      margin-left: 1em
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+
+      p
+        margin-top: 5px
+        color: $color-frm-label
+        font-weight: 500
+        margin-bottom: unset !important
+
+    &__quantity
+      margin-left: auto
+      white-space: pre
+
+    &__item-name
+      overflow: hidden
+      -ms-word-break: break-all
+      word-break: break-word
+      -webkit-hyphens: auto
+      -moz-hyphens: auto
+      hyphens: auto
+      max-width: 38rem
+
+@include mobile
+  .order-detail-page
+    .item-row
+      border-bottom: 1px solid #EAEDF3
+      padding-bottom: 1em
+      &.header
+        display: none
+
+      &__item-name
+        max-width: 8em
+
+
+.modaIMEI-order-detail
+  .modal-content
+    max-width: 100%
+    overflow: hidden
+    .modal-header
+      padding: 0
+      background-color: #F8F8F8
+      padding: 10px
+      .modal-title
+        color: black
+        text-align: left
+        padding-bottom: 10px
+      button
+        span
+          font-size: 2rem
+    .modal-body
+      .itemIMEI
+        font-size: 1rem
+        background-color: #1E69D5
+        padding: 8px
+        color: white
+        border-radius: 5px
+        margin-bottom: 10px
+        text-align: left
+        text-overflow: ellipsis
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+        overflow: hidden
+
+
+

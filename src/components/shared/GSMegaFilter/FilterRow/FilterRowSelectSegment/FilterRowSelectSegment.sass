@@ -1,0 +1,79 @@
+@import "../../../../../../sass/mixins"
+
+.filter-segments-dropdown-wrapper
+  width: 16em
+  .uik-select__wrapper
+    margin-left: 0
+    min-width: 16em
+    max-width: 16em
+  .filter-segments-dropdown
+    padding: 1em 0 0
+    min-width: 12rem
+    max-width: 16rem
+    .segments-search
+      padding: 0 1em
+      .uik-input__input
+        padding-top: 7px !important
+        padding-bottom: 7px !important
+
+    hr
+      margin-left: -1em
+      margin-right: -1em
+      margin-bottom: 0
+
+    .segments-item-list
+      max-height: 200px
+      overflow-y: auto
+
+      .found-result
+        text-align: center
+        color: gray
+
+
+      .segments-item-row
+        padding: .5rem
+        border-bottom: 1px solid #EAEDF3 !important
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        cursor: pointer
+        font-size: 14px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:last-child
+          border-bottom: unset
+          box-shadow: unset
+
+        .select__check
+          width: 5px
+          height: 5px
+          background-color: #38B249
+          border-radius: 50%
+
+      .loading-row
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
+        top: 0
+        position: absolute
+        background-color: rgba(0, 0, 0, 0.02)
+
+    .gs-widget-empty-content
+      margin-top: -14px
+      //padding: 1em
+      .gs-widget-empty-content__icon
+        display: none
+        
+@include mobile
+  .filter-segments-dropdown-wrapper
+    width: 100%
+    .filter-segments-dropdown
+      width: 100% !important
+      max-width: unset
+    #dropdownSegmentsButton
+      max-width: unset
+
+

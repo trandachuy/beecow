@@ -1,0 +1,111 @@
+.dropdown-search-checkbox-custom
+  .modal-footer-select-customer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: #FFFFFF
+    .gs-button
+      background: #0074F9
+      color: #FFFFFF
+    p
+      font-size: 10px
+      color: #DA1919
+      margin: 0
+      margin-right: 20px
+  .select-customer-options
+    min-width: 160px
+    // height: 35px
+    cursor: pointer
+    position: relative
+    padding: 0.45rem 0.75rem
+    // font-size: 0.8rem
+    font-weight: 400
+    line-height: 1.5
+    color: #495057
+    background-color: #fff
+    background-clip: padding-box
+    border: 1px solid #ced4da
+    border-radius: 0.25rem
+    box-shadow: none
+    z-index: 9
+    margin-bottom: 0
+    .options-checked
+      width: 100%
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+    .options-rate
+      background: #EAEAEA
+      width: 100%
+      position: absolute
+      left: -1px
+      top: 100%
+      border-radius: 0.25rem
+      border: 1px solid #ced4da
+      z-index: 999999999
+      .search-box
+        background-color: #FFFFFF
+        width: 100%
+        padding: 15px 7px 5px
+        input
+          width: 100%
+          border: 1px solid #DDE0E9
+          border-radius: 3px
+          padding: 5px
+          font-size: 0.7rem
+          &::-webkit-input-placeholder
+            font-size: 0.7rem
+          &:focus-visible
+            outline: none
+      .label-list
+        max-height: 30vh
+        overflow: auto
+      .label
+        cursor: default
+        background: white
+        width: 100%
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        font-size: 13px
+        font-weight: 400
+        display: flex
+        align-items: center
+        margin: 0
+        border-bottom: 1px solid #EAEDF3
+        padding: 7px 0px
+        input, label
+          cursor: pointer
+      button
+        height: 33px
+        float: right
+        margin: 10px 17px 10px 0
+  .cur-input--error
+    border: 1px solid #dc3545 !important
+    border-radius: 0.25rem
+    transition-duration: 0.15s, 0.15s
+  .select-customer-options:before
+    display: block
+    position: absolute
+    content: ''
+    top: 52%
+    right: 3%
+    width: 0
+    height: 0
+    border-left: 3px solid transparent
+    border-right: 3px solid transparent
+    border-bottom: 3px solid #9EA0A5
+    transform: rotate(180deg)
+  .select-customer-options:after
+    display: block
+    position: absolute
+    content: ''
+    top: 37%
+    right: 3%
+    width: 0
+    height: 0
+    border-left: 3px solid transparent
+    border-right: 3px solid transparent
+    border-bottom: 3px solid #9EA0A5
+.z-index-999
+    z-index: 999 !important

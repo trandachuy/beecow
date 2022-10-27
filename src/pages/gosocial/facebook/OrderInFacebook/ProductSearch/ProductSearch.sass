@@ -1,0 +1,151 @@
+.order-instore-facebook
+    width: 100%
+    display: flex
+    flex-direction: column
+    position: relative
+    height: 40px
+
+    .uik-select__valueRendered
+        padding-top: 19px
+        padding-bottom: 19px
+        padding-left: 10px
+        min-width: 10rem
+
+    .uik-input__iconWrapper
+        padding-right: 10px
+        border-right: 2px solid #8080802e
+        .svg-inline--fa
+            color: #00000080
+
+    .uik-input__input
+        padding-left: 46px!important
+        border: 1px solid #80808087
+        height: 40px
+
+
+    .search-box__wrapper
+        width: 100%
+
+
+    .search-list__result
+        max-height: 70vh
+        overflow-y: auto
+        width: 100%
+        transform: translate3d(0px, 40px, 0px) !important
+        box-shadow: 0 1px 3px 0 #e7dede
+
+    .search-list-pos__result
+        max-height: 60vh
+        overflow-y: auto
+        width: 100%
+        transform: translate3d(0px, 40px, 0px) !important
+        box-shadow: 0 1px 3px 0 #e7dede
+        left: 0
+
+        .found-result
+            text-align: center
+            color: gray
+
+
+
+        .product-item-row
+            border-bottom: 1px solid #EAEDF3 !important
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: pre
+            cursor: pointer
+            font-size: 14px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding: .2rem 1rem
+
+            &.conversion-item
+                background-color: #F9F9F9
+
+            .product-item-row__product-summary
+                margin-right: auto
+                margin-left: 1rem
+                code
+                    font-size: 11px
+                span
+                    font-size: 12px
+            .product-item-row__price-inventory
+                display: flex
+                flex-direction: column
+                width: 150px
+                align-items: center
+
+            .product-item-row__product-inventory
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                font-size: 12px
+
+                .unit
+                    font-style: italic
+                    color: #556CE7
+
+            .product-item-row__product-name
+                //max-width: 400px
+                overflow-x: hidden
+                white-space: pre
+                text-overflow: ellipsis
+                max-width: 7vw
+                font-size: 12px
+
+
+
+            &.product-item-row__lastchild
+                justify-content: center
+                border-bottom: unset !important
+                box-shadow: unset
+
+            .product-item-row__thumbnail
+                width: 3rem
+                height: 3rem
+
+            .select__check
+                width: 5px
+                height: 5px
+                background-color: #38B249
+                border-radius: 50%
+        // .loading-row
+        //     display: flex
+        //     justify-content: center
+        //     align-items: center
+        //     height: 100%
+        //     width: 100%
+        //     top: 0
+        //     position: absolute
+        //     background-color: rgba(0, 0, 0, 0.02)
+
+
+    .order-instore-purchase__btn-clear-all
+        position: absolute
+        right: 10px
+        top: calc(50% - 8px)
+
+    .scan_button_on
+        background-color: #3F51B5
+        padding: 10px 15px 10px 15px
+        border-radius: 5px
+        border: 1px solid silver
+        width: 50px
+        text-align: center !important
+        cursor: pointer
+        .gs-action-button
+            vertical-align: middle
+
+    .scan_button_off
+        background-color: #FFFFFF
+        padding: 10px 15px 10px 15px
+        border-radius: 5px
+        border: 1px solid silver
+        width: 50px
+        text-align: center !important
+        cursor: pointer
+        .gs-action-button
+            vertical-align: middle
+
+

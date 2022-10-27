@@ -1,0 +1,57 @@
+@import "../../../../../sass/gsvariables"
+
+.notification-slider-container
+    display: block
+    position: relative
+    height: 600px
+    text-align: center
+
+%bg-img-center-norepeat
+    background-repeat: no-repeat
+    background-position: center
+
+%btn-base
+    @extend %bg-img-center-norepeat
+    width: 5.5rem
+    height: 5.5rem
+    background-color: transparent
+    border: none
+    border-radius: 50%
+    display: inline-block
+    position: absolute
+    top: 40% !important
+    outline: none
+
+.carousel-control-prev
+    @extend %btn-base
+    left: 8% !important
+    background-image: url("../../../../../public/assets/images/switch-theme-engine-notification/left-arrow@2x.png")
+
+.carousel-control-next
+    @extend %btn-base
+    left: 92%
+    transform: translateX(-100%)
+    background-image: url("../../../../../public/assets/images/switch-theme-engine-notification/right-arrow@2x.png")
+
+.carousel-inner
+    position: relative
+    left: 20%
+    height: 36rem
+    width: 60% !important
+
+.custom-carousel-caption
+    color: $color-header !important
+    padding: 0 !important
+    bottom: 0 !important
+    left: 0 !important
+    width: 100%
+    .caption-details
+        margin-top: .2rem !important
+        text-align: left !important
+
+.carousel-item, .active.carousel-item
+    position: absolute
+    display: inline-block
+    height: 100%
+    img
+        width: 100%

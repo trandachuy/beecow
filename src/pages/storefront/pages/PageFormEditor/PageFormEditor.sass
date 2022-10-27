@@ -1,0 +1,266 @@
+.page-form__container
+    .page-toolbar
+        flex-direction: column-reverse
+        i.icon-delete
+            background-image: url(/assets/images/icon-delete.png)
+            background-repeat: no-repeat
+            width: 20px
+            height: 20px
+            cursor: pointer
+            display: block
+            flex-basis: 100%
+            padding: 0
+            min-width: 3em
+            background-position: center
+        .gs-atm__flex-row--flex-start
+            .group-btn
+                display: flex
+                flex-basis: 100%
+            .gs-page-title
+                flex-basis: 100%
+    .url-prefix
+        display: none
+        color: #939393
+        font-weight: bold
+        font-size: 0.8rem
+        font-style: italic
+
+    .page-url__group
+        position: relative
+
+        .page-prefix
+            position: absolute
+            left: 10px
+            top: 8px
+            padding-left: 5px
+            padding-right: 5px
+            font-size: 1rem
+            color: #495057
+
+        .page-url
+            //padding-left: 340px
+
+    .content-title__group
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 15px
+
+        .select-template__drop
+            min-width: 250px
+
+/** RWD Menu */
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+    .page-form__container
+        padding: 0!important
+        .page-toolbar
+            position: absolute
+            background-color: #F2F2F2
+            height: 6.5em
+            z-index: 5
+            .sub-title
+                display: none
+            .gs-atm__flex-row--flex-start
+                .group-btn
+                    display: flex
+            .gs-button__red--outline
+                padding: 0
+                min-width: 3em
+                div
+                    span
+                        display: none
+                    .icon-delete
+                        display: block
+        .gs-page-content
+            margin-top: 4.9em
+            .uik-widget-content__wrapper
+                padding: 1em
+                flex-direction: column
+                display: flex
+
+                .url-prefix
+                    display: block
+
+                .content-title__group
+                    flex-direction: column
+                    align-items: flex-start
+                    .select-template__drop
+                        width: 100%
+                        
+                .page-url__group
+                    .page-prefix
+                        display: none
+                    .page-url
+                        padding-left: 0!important
+            
+            .fr-quick-insert
+                &.fr-visible
+                    top: 85px!important
+                    left: -8px!important
+                    a.fr-floating-btn
+                        width: 28px
+                        height: 28px
+                        line-height: 28px
+                        
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+    .page-form__container
+        padding: 0!important
+        .page-toolbar
+            position: absolute
+            background-color: #F2F2F2
+            height: 6.5em
+            z-index: 5
+            .sub-title
+                display: none
+            .gs-atm__flex-row--flex-start
+                .group-btn
+                    display: flex
+                .gs-button__red--outline
+                    padding: 0
+                    min-width: 3em
+                    div
+                        span
+                            display: none
+                        .icon-delete
+                            display: block
+        .gs-page-content
+            margin-top: 6.5em
+            .uik-widget-content__wrapper
+                padding: 1em
+                flex-direction: column
+                display: flex
+
+                .url-prefix
+                    display: block
+
+                .content-title__group
+                    flex-direction: column
+                    align-items: flex-start
+                    .select-template__drop
+                        width: 100%
+                .page-url__group
+                    .page-prefix
+                        display: none
+
+                    .page-url
+                        padding-left: 0!important
+
+            .fr-quick-insert 
+                &.fr-visible
+                    top: 85px!important
+                    left: -8px!important
+                    a.fr-floating-btn
+                        width: 28px
+                        height: 28px
+                        line-height: 28px
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+    .page-form__container
+        padding: 0!important
+        .page-toolbar
+            position: absolute
+            background-color: #F2F2F2
+            height: 6.5em
+            z-index: 5
+            .sub-title
+                display: none
+            .gs-atm__flex-row--flex-start
+                .group-btn
+                    display: flex
+                .gs-button__red--outline
+                    padding: 0
+                    min-width: 3em
+                    div
+                        span
+                            display: none
+                        .icon-delete
+                            display: block
+        .gs-page-content
+            margin-top: 6.5em
+            .uik-widget-content__wrapper
+                padding: 1em
+                flex-direction: column
+                display: flex
+
+                .url-prefix
+                    display: block
+
+                .content-title__group
+                    flex-direction: column
+                    align-items: flex-start
+                    .select-template__drop
+                        width: 100%
+
+                .page-url__group
+                    .page-prefix
+                        display: none
+
+                    .page-url
+                        padding-left: 0!important
+
+            .fr-quick-insert 
+                &.fr-visible
+                    top: 145px!important
+                    left: -8px!important
+                    a.fr-floating-btn
+                        width: 28px
+                        height: 28px
+                        line-height: 28px
+
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+    .page-form__container
+        padding: 0!important
+        .page-toolbar
+            position: absolute
+            background-color: #F2F2F2
+            height: 6.5em
+            z-index: 5
+            .sub-title
+                display: none
+            .gs-atm__flex-row--flex-start
+                .group-btn
+                    display: flex
+                .gs-button__red--outline
+                    padding: 0
+                    min-width: 3em
+                    div
+                        span
+                            display: none
+                        .icon-delete
+                            display: block
+
+        .gs-page-content
+            margin-top: 6.5em
+            .uik-widget-content__wrapper
+                padding: 1em
+                flex-direction: column
+                display: flex
+
+                .url-prefix
+                    display: block
+
+                .content-title__group
+                    flex-direction: column
+                    align-items: flex-start
+                    .select-template__drop
+                        width: 100%
+
+                .page-url__group
+                    .page-prefix
+                        display: none
+
+                    .page-url
+                        padding-left: 0!important
+
+            .fr-quick-insert 
+                &.fr-visible
+                    top: 145px!important
+                    left: -8px!important
+                    a.fr-floating-btn
+                        width: 28px
+                        height: 28px
+                        line-height: 28px

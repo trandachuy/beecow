@@ -1,0 +1,17 @@
+.av-field-group
+  display: flex
+  width: 100%
+
+  .form-group
+    &:first-child
+      flex-grow: 1
+      input, select, textarea
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+
+    &:last-child
+      min-width: 6rem
+      input, select, textarea
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        border-left: unset

@@ -1,0 +1,178 @@
+.transfer-wizard-form__container
+  .label-pdl
+    padding-left: 10px
+    font-size: 1.2rem
+    font-weight: bold
+  .transfer-wizard-container
+    display: grid
+    grid-template-areas: 'editor info'
+    grid-template-columns: 7.5fr 2.5fr
+    grid-column-gap: 1em
+
+    .transfer-wizard-editor
+      grid-area: editor
+
+      .uik-widget-content__wrapper
+        padding: 0
+
+      .table
+        td:first-child,
+        th:first-child
+          flex-basis: 10%
+
+        td:nth-child(2),
+        th:nth-child(2)
+          flex-basis: 40%
+
+        thead
+          background-color: #F7F7F7
+
+        tbody
+          max-height: 520px
+
+        .row-align-item
+          vertical-align: middle
+
+        tr th
+          color: #3E3F42
+          white-space: nowrap
+          border: unset
+          vertical-align: middle
+
+        tfoot
+          tr
+            background-color: #F8F8F8
+
+        .col-data
+          display: flex
+          height: 100%
+          align-items: center
+
+          .product-image
+            width: 70px
+            height: 70px
+            display: flex
+            justify-content: center
+            align-items: center
+
+          .product-name
+            font-weight: 500
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            overflow: hidden
+            max-width: 300px
+
+        .col-link-data
+          cursor: pointer
+          color: #3F51B5
+          width: max-content
+          >span
+            &.empty-value
+              background-color: #3F51B5
+              width: 1rem
+              height: 2px
+
+    .transfer-wizard-form__information
+      grid-area: info
+      .transfer-wizard_status
+        background-color: #3F51B5
+        border-radius: 6px
+        padding: 2px 6px
+        color: #fff
+        font-weight: 600
+
+        &.cancelled
+          background-color: #E7032C
+
+      .transfer-wizard-form_max-width
+        max-width: 20rem
+      .transfer-wizard_history
+        cursor: pointer
+        color: #3F51B5
+
+  .transfer-toolbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+    .group-button
+      display: flex
+
+    .custom-progress-bar
+      display: flex
+      flex-direction: row
+      width: 70%
+      background-color: unset
+
+    .group-action
+      display: flex
+      flex-direction: column
+      padding-left: 0.5rem
+
+      .gs-page-title
+        font-weight: bold
+        font-size: 1.6rem
+
+  .progressing
+    display: flex
+    align-items: center
+    color: #1E69D5
+    font-weight: 500
+
+  .error
+    display: flex
+    align-items: center
+    color: #e7032c
+    font-weight: 500
+
+.transfer-wizard-cancel-modal
+  textarea
+    border: 1px solid #719ECE
+    padding: 0.4em
+    &:focus
+      outline: none !important
+      border: 1px solid #719ECE
+      box-shadow: 0 0 10px #719ECE
+    &.transfer-wizard-cancel-note
+
+.transfer-history-modal
+  .modal-dialog 
+    .modal-content
+      max-width: 700px
+      max-height: 800px
+      width: max-content
+
+      .modal-body
+        table
+          overflow-y: auto
+          max-height: 600px
+          position: relative
+          tr
+            vertical-align: middle
+            padding-top: 1rem
+            padding-bottom: 1rem
+            >td
+              min-width: 8rem
+              &:nth-child(3)
+                min-width: 10rem
+
+    .modal-header
+      border-bottom: none
+      padding-bottom: unset
+      .modal-title
+        text-align: left
+
+@media screen and (max-width: 670px)
+  .transfer-wizard-form__container
+    .transfer-wizard-container
+      .transfer-wizard-editor
+      .transfer-wizard-form__information
+        .transfer-wizard-form_max-width
+          min-width: 8rem
+
+    .transfer-toolbar
+      .gs-atm__flex-row--flex-start
+        .custom-progress-bar
+          width: 100%

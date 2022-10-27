@@ -1,0 +1,118 @@
+.customization-theme-review
+  background-color: rgb(249, 249, 249)
+  box-shadow: 0 1px 1px 1px #dfdfdf
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+  .theme-component__preview-header
+    .theme-component__title
+      padding: 20px 20px 0 20px
+      color: #3E3F42
+      font-size: 1rem
+      margin-bottom: .8rem
+
+    .theme-component__tabs-header
+      padding: 0
+
+      .uik-tab__item
+        height: unset
+        padding: 1rem
+        margin: 0
+        text-align: center
+        justify-content: center
+        color: #9EA0A5
+
+        &.active
+          color: #556CE7
+          .tab-logo
+            filter: invert(37%) sepia(75%) saturate(1488%) hue-rotate(215deg) brightness(93%) contrast(95%)
+
+        .tab-logo
+          margin-right: .5em
+
+        border-right: 2px solid #EAEDF3
+
+
+
+
+  .theme-component__preview-body
+    background-color: white
+    flex-grow: 1
+    //flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    overflow-y: auto
+
+    .image-loader
+      margin: 3rem 0 3rem 0
+      height: 100%
+      width: 100%
+      padding: 0 1rem
+
+
+    .theme-component__cpn-container
+      margin: 3rem 0 3rem 0
+      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1)
+      width: calc(100% - 3rem)
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      position: relative
+      flex-shrink: 0
+
+
+      &:hover
+        border-top: unset
+        border-bottom: unset
+
+      .theme-component__img-preview
+        width: 100%
+        filter: grayscale(1)
+        transition-duration: .3s
+        transition-timing-function: ease-out
+        //animation-name: rotate-x
+        //animation-duration: .2s
+        //animation-timing-function: ease-out
+        //animation-iteration-count: initial
+        //
+        //@keyframes rotate-x
+        //  0%
+        //    opacity: 0
+        //  100%
+        //    opacity: 1
+
+        &.active
+          filter: grayscale(0)
+          animation-name: change-border-style
+          animation-duration: 1s
+          animation-timing-function: linear
+          animation-iteration-count: infinite
+          box-shadow: 0 0 0 3px #90CE51
+          transform: scale(1.02)
+          z-index: 2
+
+          @keyframes change-border-style
+            0%
+              //box-shadow: 0 0 0 3px #1665D8
+              opacity: .8
+            50%
+              //box-shadow: 0 0 0 3px green
+              opacity: 1
+            100%
+              //box-shadow: 0 0 0 3px #1665D8
+              opacity: .8
+
+
+
+
+        &:hover:not(.active)
+          cursor: pointer
+          filter: grayscale(0)
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.16)
+          z-index: 1
+
+

@@ -1,0 +1,40 @@
+.fb-page-configuration
+  .fb-page-configuration__page-list-section
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    flex-shrink: 0
+
+  .fb-page-configuration__account-section
+    flex-basis: 260px
+
+  .fb-page-configuration__page-checkbox
+    margin-bottom: 0
+    line-height: 0
+    transform: scale(1.3)
+
+    .uik-checkbox__label::before
+      margin-right: 0 !important
+      border-radius: 50% !important
+
+  .fb-page-configuration__page-row
+
+    &:last-child
+      margin-bottom: 0 !important
+      border-bottom: none !important
+      padding-bottom: 0 !important
+
+  .fb-page-configuration__page-list-container
+    height: 60vh
+    display: flex
+    flex-direction: column
+
+    .gs-widget__content
+      flex-grow: 1
+      overflow-y: auto
+
+  .show-page
+    display: block
+
+  .hide-page
+    //display: none

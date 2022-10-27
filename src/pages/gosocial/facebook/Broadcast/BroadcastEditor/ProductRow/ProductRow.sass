@@ -1,0 +1,73 @@
+.select-collection-row
+  margin-top: .3em
+  margin-bottom: unset
+  //padding: 0 .3em .6em 0
+  width: 100%
+
+  // &:first-child
+  //   margin-top: 1em
+
+  // &:last-child
+  //   margin-bottom: 1em
+
+  .product-image
+    width: 4em
+    height: 4em
+    margin-left: 10px
+
+  .product-detail-text-line
+    flex: 2
+    display: flex
+    justify-content: space-between
+    //width: 100%
+    align-items: center
+
+    &__right
+      min-width: 15em
+      display: flex
+      justify-content: flex-end
+      align-items: center
+
+    .product-variant
+      flex-grow: 1
+
+    .product-price
+      min-width: 8em
+      text-align: right
+      margin-right: 1em
+
+  .product-name
+    text-align: left
+    margin-left: 1em
+    word-break: break-word
+    max-width: 40em
+    align-self: flex-start !important
+    padding-top: .3em !important
+
+    .name
+      font-weight: 450
+      text-overflow: ellipsis
+      overflow-x: hidden
+
+    .model
+      margin-top: .4em
+      font-size: .9em
+      text-overflow: ellipsis
+      overflow-x: hidden
+      color: #000000
+      opacity: .5
+
+  .product-price
+    text-align: right !important
+    font-weight: 450
+    align-self: flex-start !important
+    padding-top: .3em !important
+
+  .uik-checkbox__label
+    display: flex !important
+    justify-content: flex-start
+    align-items: center
+
+    &:after
+      top: calc(50% - 3px) !important
+      left: 4px

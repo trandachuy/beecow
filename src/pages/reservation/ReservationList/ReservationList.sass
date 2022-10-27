@@ -1,0 +1,269 @@
+@import "../../../../sass/mixins"
+.reservation-list
+  .grey-font
+    color: #9EA0A5
+  .full-name
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    //max-width: 10rem
+    padding: 0px !important
+
+  @include mobile
+    .uik-widget-content__wrapper
+      padding: 0
+
+  .reservation-list__filter-container
+    width: 100%
+    display: flex
+    display: -webkit-box
+    justify-content: flex-end
+    align-items: center
+    flex-shrink: 0
+    margin-bottom: 1em
+
+    .gs-search-box__wrapper
+      flex: 4
+      .uik-input__input
+        min-width: 35em
+
+    .date-time__range
+      flex: 1
+
+    .frm-date-picker
+      width: 220px
+      position: relative
+
+      .form-group
+        margin-bottom: unset
+
+      .calendar-icon
+        position: absolute
+        top: 5px
+        right: 10px
+        color: #ced4da
+        font-size: 1.2em
+
+    &--mobile
+
+      @include mobile
+        display: flex
+        flex-direction: column
+        padding: 1rem 0
+        box-shadow: 0 2px 0 0 #c2c2c2
+        background-color: white
+        z-index: 1
+        //position: sticky
+        //top: 0
+
+        .react-bootstrap-daterangepicker-container
+          position: relative
+
+          svg
+            position: absolute
+            right: 5px
+            top: 10px
+
+        .row
+          width: 100%
+          margin-bottom: 1em
+          flex-shrink: 0
+
+        .uik-select__wrapper
+          margin: 0 !important
+          width: 100%
+          min-width: unset !important
+
+        .col-6
+          // &:first-child
+          //   padding-right: .25em
+          // &:last-child
+          //   padding-left: .25em
+
+        .btn-filter
+          border: 1px solid #D8DCE6
+          -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+          padding: 18px
+          height: 36px
+          border-radius: 4px
+          display: flex
+          justify-content: space-between
+          align-items: center
+
+          .icon-filter
+            margin-right: -7px
+
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0
+
+    .uik-select__wrapper
+      flex: 1
+      margin-left: 1em
+      min-width: 10em
+
+  .reservation-list__body
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    align-items: center
+    flex-shrink: 0
+
+    .uik-widget__wrapper
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      .uik-widget-content__wrapper
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+
+    .customer-list__list-container
+      .gs-table
+        margin-top: 1em
+        border-top: 1px solid #EAEDF3
+        .gs-table-header
+          .gs-table-header-item
+            white-space: normal
+            padding: 0px 5px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            &:first-child
+              max-width: 6rem
+              min-width: 6rem
+            &:nth-child(2)
+              max-width: 20rem
+              min-width: 20rem
+            &:nth-child(3)
+              max-width: 8rem
+              min-width: 8rem
+            &:nth-child(4)
+              max-width: 8rem
+              min-width: 8rem
+            &:nth-child(5)
+              max-width: 10rem
+              min-width: 10rem
+            &:nth-child(6)
+              max-width: 7rem
+              min-width: 7rem
+            &:nth-child(7)
+              max-width: 6rem
+              min-width: 6rem
+            &:last-child
+              max-width: 7rem
+              min-width: 7rem
+
+        .gs-table-body
+          .gs-table-body-items
+            
+            .gs-table-body-item
+              padding: 0.9em 5px
+              &.booking-id
+                max-width: 6rem
+                min-width: 6rem
+              &.service-name
+                max-width: 20rem
+                min-width: 20rem
+              &.arrival-date
+                min-width: 8rem
+                max-width: 8rem
+              &.customer-name
+                min-width: 10rem
+                max-width: 10rem
+              &.customer-barcode
+                min-width: 7rem
+                max-width: 7rem
+              &.quantity
+                min-width: 6rem
+                max-width: 6rem
+              &.total
+                min-width: 7rem
+                max-width: 7rem
+              &.status
+                min-width: 8rem
+                max-width: 8rem
+      
+      .status-box
+        border: 1px solid
+        border-radius: 2px
+        padding: 5px 10px
+        color: #3E3F42
+        &.to_confirm
+          border: #556CE7 
+          background-color: #F1F3FF
+        &.confirmed
+          border: #90CE51
+          background-color: #F1FFE2
+        &.completed
+          border: #9EA0A5
+          background-color: #ECEDF1
+        &.cancelled
+          border: #F84C30
+          background-color: #FFE2DE
+
+  .loading-list
+    display: flex
+    flex-grow: 1
+    justify-content: center
+    align-items: center
+    padding: 2rem
+
+  .mobile-customer-profile-row__info_left
+    width: 40vw
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+
+    .mobile-customer-profile-row__full-name
+      width: 40vw
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+
+  .mobile-customer-profile-row__info_right
+    width: 40vw
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+
+    .status-group
+      display: flex
+      flex-direction: row
+      align-items: center
+
+    .mobile-customer-profile-row__full-name
+      max-width: 40vw
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+      margin-left: 5px
+
+    .status-box
+      border: 1px solid
+      border-radius: 50%
+      color: #3E3F42
+      padding: 0px
+      width: 10px
+      height: 10px
+      
+      &.to_confirm
+        border: #556CE7 
+        background-color: #5365EC
+      &.confirmed
+        border: #90CE51
+        background-color: #7ED321
+      &.completed
+        border: #9EA0A5
+        background-color: #AAAAAA
+      &.cancelled
+        border: #F84C30
+        background-color: #F44336
+
+  
+
+    
+

@@ -1,0 +1,162 @@
+$color-var-item: #d1e2ff
+$color-var-item-btn-remove-hover: #cf1200
+
+.lazada-product-container
+  nav[aria-label="breadcrumb"]
+    flex: 1
+  ol.breadcrumb 
+    background-color: inherit
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 0
+
+  .gs-page-header
+    a
+      padding-left: 50px
+      padding-right: 50px
+      margin-left: 20px
+
+      &.btn-cancel
+        background: unset
+        border: solid 1px #556ce7
+        color: #556ce7
+
+  .uik-widget__wrapper
+    border: none
+    box-shadow: unset
+
+    label.uik-checkbox__wrapper
+      margin-right: 10px
+
+  .uik-widget-title__wrapper
+    padding-bottom: 5px
+    padding-top: 10px
+
+    label
+      font-size: 16px
+      font-weight: 600
+      margin-bottom: 0
+      text-transform: uppercase
+
+    p.uik-headline-desc__wrapper
+      font-size: 14px
+      margin-bottom: 0
+
+  .uik-widget-content__wrapper
+    label
+      font-weight: 600
+
+    section.selected-product
+      display: flex
+      margin-top: 10px
+      margin-bottom: 10px
+
+      img
+        height: 100px
+        width: 100px
+      span
+        padding-left: 10px
+        p
+          color: #9ea0a5
+          font-size: 14px
+
+    span.uik-content-title__wrapper
+      font-weight: 600
+
+    .gs-widget
+      margin-top: .5em
+      border: unset
+      box-shadow: unset
+
+  table.uik-widget-table__wrapper
+    td
+      div.form-group
+        margin-bottom: 0
+        div.invalid-feedback
+          display: none!important
+
+  
+
+.invisible
+  display: block
+
+.position-relative
+  position: relative
+  display: flex
+  border: 1px solid #ced4da !important
+  border-radius: 0.25rem
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+  height: 38px
+
+  div.dropdown
+    width: 100%
+    border: unset
+    height: 100%
+    position: absolute
+
+    button
+      &.var-values__pool
+        display: flex
+        padding: 0
+        margin: 0
+
+        div.var-values__varItem
+          background-color: $color-var-item
+          border-radius: 3px
+          padding: 5px
+          margin: 2px
+            
+        div.var-values__btn-remove
+          color: white !important
+          margin-left: 5px
+          transition-duration: 0.3s
+          cursor: pointer
+          font-size: 1em
+
+        &:after
+            width: 0
+            content: ''
+            height: 0
+            border-left: 3.2px solid transparent
+            border-right: 3.2px solid transparent
+            border-top: 6px solid #4b5058
+            float: right
+            align-self: center
+            margin-right: 5px
+            display: block!important
+            position: absolute
+            right: 0px
+
+    &.show
+      div.multiple-select
+        list-style: none
+        border: 1px solid #ced4da
+        border-radius: 0.25rem
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out 
+        position: absolute!important
+        z-index: 9999999
+        background-color: white
+        width: calc(100% + 1px)
+       
+        left: -1px!important
+        overflow-y: auto
+        height: 300px
+   
+        button.select-item
+          padding: 5px
+          &:hover
+            background-color: #d1e2ff
+
+    button
+      &.btn.btn-secondary
+        border: unset
+        height: 100%
+        width: 100%
+
+        &:after
+          display: none
+
+      &.dropdown-item
+        display: flex
+        align-items: center
+        padding-right: 10px

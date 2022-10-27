@@ -1,0 +1,120 @@
+@import "../../../../sass/mixins"
+
+.product-mega-filter-container
+
+  .mega-filter-container_around
+    padding: 0px 0.5rem
+
+    .dropdown-menu
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+
+  .mega-filter-container_mobile_panel
+    .filter-session:last-child
+      margin-bottom: 30px
+
+    .section_collection_filter
+      .uik-select__wrapper
+        margin-left: 0px !important
+        min-width: 20rem !important
+        
+    .section_branch_filter
+      .uik-select__wrapper
+        margin-left: 0px !important
+        min-width: 20rem !important
+    .gs-modal-fullscreen-mobile__body
+      height: calc(100% - 50px)
+      overflow-y: auto
+
+  .btn-filter-action
+    border: 1px solid #D8DCE6
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    padding: 0.75em
+    height: 38px
+    border-radius: 4px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 10rem
+    cursor: pointer
+
+    .icon-filter
+      margin-right: -3px
+
+  .mega-filter-container_panel
+    width: 550px
+    display: grid
+    row-gap: 0.8ch
+    grid-row-gap: 0.8ch
+
+    .panel_section
+      display: grid
+      grid-template-columns: 3fr 9fr
+      font-size: 14px
+      align-items: baseline
+
+      .section_panel_title
+        padding-left: 10px
+
+      .uik-select__wrapper
+        margin-left: 0px !important
+        min-width: 15em !important
+
+      .section__filter-optional
+        background-color: #e9f2fb
+        border-radius: .25rem
+        margin-right: .3rem
+        margin-bottom: .3rem
+        padding: .3rem .5rem
+        font-size: 14px
+        transition-duration: .2s
+        cursor: pointer
+        transition-property: opacity, background-color
+        font-weight: 500
+
+        &:hover
+          opacity: .8
+
+        &.selected
+          background-color: #1665d8
+          color: white
+
+    .section_complete
+      display: flex
+      .complete_action-left
+        padding-left: 10px
+
+    .section_status
+      .section_status_filter
+        display: flex
+        padding-left: 0px
+
+    .section_channel
+      .section_channel_filter
+        display: flex
+        padding-left: 0px
+        flex-wrap: wrap
+
+    .section_platform
+      .section_platform_filter
+        display: flex
+        padding-left: 0px
+        flex-wrap: wrap
+
+    .section_collection
+      .section_collection_filter
+        padding-left: 0px
+        .uik-select__label
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          width: 15rem
+
+    .section_branch
+      .section_branch_filter
+        padding-left: 0px
+        .uik-select__label
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          width: 15rem

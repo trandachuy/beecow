@@ -1,0 +1,112 @@
+
+.page-form__container
+    .label-pdl
+        padding-left: 10px
+        font-size: 1.2rem
+        font-weight: bold
+    .custom-page-container
+        display: grid
+        grid-template-areas: 'editor info'
+        grid-template-columns: 7.5fr 2.5fr
+        grid-column-gap: 1em
+
+        .custom-page-editor
+            grid-area: editor
+            .gs-widget__content
+                padding: 25px 30px !important
+
+        .page-form__information
+            grid-area: info
+            .widget-content_status
+                padding: 20px 0px 0px 15px !important
+
+        .custom-page-form__seo-content
+            h3
+                text-transform: uppercase
+
+    .page-toolbar
+        flex-direction: column-reverse
+        i.icon-delete
+            background-image: url(/assets/images/icon-delete.png)
+            background-repeat: no-repeat
+            width: 20px
+            height: 20px
+            cursor: pointer
+            display: block
+            flex-basis: 100%
+            padding: 0
+            min-width: 3em
+            background-position: center
+        .gs-atm__flex-row--flex-start
+            .group-btn
+                display: flex
+                flex-basis: 100%
+            .gs-page-title
+                flex-basis: 100%
+                min-width: 200px
+    .url-prefix
+        display: none
+        color: #939393
+        font-weight: bold
+        font-size: 0.8rem
+        font-style: italic
+
+    .page-url__group
+        position: relative
+
+        .page-prefix
+            position: absolute
+            left: 10px
+            top: 8px
+            padding-left: 5px
+            padding-right: 5px
+            font-size: 1rem
+            color: #495057
+
+        .page-url
+            //padding-left: 340px
+
+    .content-title__group
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 15px
+
+        .select-template__drop
+            min-width: 250px
+
+.setting-element
+    background-color: #f8f8f8
+
+    .element-header
+        background-color: #f2f2f2
+        line-height: 50px
+        border-bottom: 2px solid #e0dfdf
+        border-top: 2px solid #e0dfdf
+        vertical-align: middle
+
+    .image-setting
+        color: #989696
+        
+        .image-widget__container
+            justify-content: center
+            flex-direction: column
+            align-items: center
+
+            .image-widget__image-item
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+            svg
+                margin-top: 10px
+                margin-bottom: 10px
+                font-size: 1.2rem
+
+        .image-upload-description
+            font-size: 0.8rem
+            font-weight: bold
+        .image-description
+            font-size: 0.8rem
+            font-style: italic

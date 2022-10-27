@@ -1,0 +1,303 @@
+$color-main-photo: #01b8488f
+$color-var-item: #d1e2ff
+$color-var-item-btn-remove-hover: #cf1200
+@import "../../../../sass/gsvariables"
+@import '../../../../sass/mixins'
+
+$breakpoint-tablet: 768px
+
+.variation-detail-form-page__widget-wrapper
+
+  .is-invalid
+    padding-right: 12px !important
+
+.var-values__wrapper
+  border: 1px solid #ced4da
+  border-radius: 0.25rem
+  padding: 0.375rem 0.75rem
+
+
+
+  input
+    width: 100%
+    border: none
+    height: 25px
+
+    &:focus
+      outline: none
+      border: none
+
+.var-values__pool
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.var-values__varItem
+  background-color: $color-var-item
+  border-radius: 3px
+  padding: 6px
+  margin-right: 5px
+  margin-top: 5px
+
+.var-values__btn-remove
+  color: white !important
+  margin-left: 5px
+  transition-duration: 0.3s
+  cursor: pointer
+  font-size: 1em
+
+  &:hover
+    color: $color-var-item-btn-remove-hover !important
+
+.var-item__wrapper
+  padding: 10px
+  border: 1px solid #ced4da
+  border-radius: 0.25rem
+  position: relative
+  margin-bottom: 10px
+
+.var-item__btn-remove
+  position: absolute
+  top: -0.7em
+  right: -0.5em
+  cursor: pointer
+  color: #959595 !important
+  font-size: 1.5em
+  z-index: 1
+
+  &:hover
+    color: $color-var-item-btn-remove-hover !important
+
+.var-empty__wrapper
+  color: #9b9b9b
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.var-empty__icon
+  font-size: 3em
+
+.var-table
+  margin-top: 20px
+  text-align: center
+  width: 100%
+  border-radius: 0.25em
+  border: 1px solid #ced4da
+  border-collapse: separate !important
+  border-spacing: 0
+
+  &--error
+    border-color: $color-var-item-btn-remove-hover
+
+  td
+    padding: 6px
+    border-right: 1px solid #ced4da
+    border-top: 1px solid #ced4da
+
+    &:last-child
+      border-right: none
+
+    .wrapper
+      margin-bottom: 0px
+
+    .form-group
+      margin-bottom: 0px
+
+    .crystrapinput__wrapper
+      margin-bottom: 0px
+
+  th
+    padding: 6px
+    border-right: 1px solid #ced4da
+
+    &:last-child
+      border-right: none
+
+.page-toolbar
+
+  .btn
+    min-width: 6em
+    font-size: 1em
+    margin-left: 1em
+
+  .btn-save
+    margin-left: auto
+
+  .spinner-border
+    margin-right: 0.5em
+
+  .toolbar__product-status
+    margin-right: 1em
+    border-radius: 2px
+
+    &--active
+      background-color: #fcb016
+      color: white
+
+    &--inactive
+      background-color: $color-frm-label
+      color: white
+
+
+
+
+.form__wrapper
+  padding-bottom: 2em
+
+.input-group
+
+  .input-group-text
+    background-color: white
+    border-left: none
+    color: $color-frm-label
+
+.product-form__alert
+  font-size: 1em
+  margin-top: 0.8em
+  margin-bottom: 0.8em
+
+.image-widget__error-wrapper
+  width: 100%
+  text-align: left
+  margin-top: 5px
+
+.category__alert
+  text-align: center
+  font-size: .8em
+
+.shipping-widget__note
+  color: black
+  font-style: italic
+  padding: 0 15px
+
+
+.variation-detail-form-page
+
+  .fr-element.fr-view
+    max-height: 400px
+    overflow-y: auto
+
+  .product-name
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    max-width: 20em
+
+  .warning-dimension
+    border: 1px solid red
+    border-radius: 3px
+    display: flex
+    background-color: #FFF2F1
+    padding: 20px
+    margin-bottom: 20px
+
+    .icon
+      width: 40px
+
+      i
+        background-repeat: no-repeat
+        width: 20px
+        height: 20px
+        display: block
+        background-image: url(/assets/images/icon-error.svg)
+
+    .content
+      flex: 1
+
+      .title
+        font-weight: bold
+
+
+.priority-field
+  width: 100%
+
+.priority-field__wrapper
+  width: 100% !important
+
+.variation-detail-form-page
+
+  .variation-detail-form-page__widget-wrapper
+    display: flex
+    justify-content: center
+
+
+  .variation-detail-form-page__widget-col
+
+    &--n1
+      flex: 1
+      max-width: 800px
+
+    &--n2
+      flex-basis: 350px
+      padding-left: 1rem
+
+  .variation-detail-form-page__barcode
+    border: 1px solid #ced4da
+    border-radius: .25rem
+    height: 38px
+    display: flex
+    align-items: center
+    padding: 0 .9rem
+
+    code
+      color: black
+      font-size: 1rem
+
+  .variation-body-scroll
+    max-height: 400px
+    overflow-y: auto
+    &.gs-widget__content
+      padding: 0
+  .product-info
+    display: flex
+    padding: 0.2rem
+    max-width: 320px
+    img
+      width: 100px
+      height: 100px
+      border: 1px #9B9B9B solid
+      margin: 0.2rem
+      background-color: #ffffff
+    .product-default__info-wrapper
+      margin-left: 0.2rem
+    .product-name
+      overflow: hidden !important
+      text-overflow: ellipsis !important
+      white-space: nowrap !important
+      max-width: 210px
+  .cur-input
+    text-align: right !important
+  .des-header
+    div
+      float: right
+
+
+@media only screen and (max-width: $breakpoint-tablet) and (orientation: landscape) 
+  .variation-detail-form-page
+    .product-form-page__widget-wrapper
+      display: -webkit-flex
+      -webkit-flex-wrap: wrap
+    .variation-detail-form-page__widget-col--n2
+      flex-basis: auto
+      padding-left: 0
+      width: 100%
+    .variation-detail-form-page__widget-col--n1
+      flex-basis: auto
+      padding-left: 0
+      max-width: 100%
+
+@media only screen and (max-width: $breakpoint-tablet) and (orientation: portrait) 
+  .variation-detail-form-page
+    margin: 4px
+    .variation-detail-form-page__widget-wrapper
+      display: -webkit-flex
+      -webkit-flex-wrap: wrap
+    .variation-detail-form-page__widget-col--n2
+      flex-basis: auto
+      padding-left: 0
+      width: 100%
+    .variation-detail-form-page__widget-col--n1
+      flex-basis: auto
+      padding-left: 0
+      max-width: 100%

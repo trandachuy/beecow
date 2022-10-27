@@ -1,0 +1,77 @@
+@import "../../../../sass/mixins"
+
+@mixin close_icon()
+  background-image: url(/assets/images/icon-close.svg)
+
+$breakpoint-tablet: 768px
+
+.hint-popup-video
+  display: inline-block
+  position: relative
+  padding-left: 15px
+  cursor: pointer
+  @media screen and (max-width: 767px)
+    display: none
+
+  .thumbnail
+    display: none
+    position: absolute
+    z-index: 99
+    left: -95px
+    border-radius: 4px
+    padding: 4px
+    cursor: pointer
+    opacity: 0
+    transition: 0.4s
+    padding: 0
+
+    .triangle
+      width: 0
+      height: 15px
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      border-bottom: 12px solid white
+      margin: auto
+      filter: drop-shadow(0px 0px 16px black)
+
+    .border-thumbnail
+      background: white
+      box-shadow: 0px 0px 10px 0px #0000002e
+      border-radius: 3px
+      border: 1px solid white
+      padding-bottom: 5px
+      .thumbnail_image
+        height: 137px
+        overflow: hidden
+        display: flex
+        align-items: center
+        .photo--o9n-1
+          height: 180px
+      h6
+        padding-top: 5px
+        padding-left: 5px
+        font-size: 14px
+      a
+        padding-left: 5px
+        font-size: 12px
+        text-decoration: underline
+  &:hover
+    .thumbnail
+      display: block
+      opacity: 1
+.modal-dialog.tutorial_video
+  max-width: none!important
+  .modal-content
+    background: none!important
+    .close_modal
+      background-image: url(/assets/images/icon-close.svg)
+      background-size: 20px
+      width: 20px
+      height: 20px
+      background-repeat: no-repeat
+      margin-left: auto
+      cursor: pointer
+    .modal-body
+      padding-top: 0
+      padding-bottom: 0
+

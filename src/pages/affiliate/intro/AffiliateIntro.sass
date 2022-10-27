@@ -1,0 +1,68 @@
+@import "../../../../sass/mixins"
+
+.affiliate-intro
+  padding: 20px 0
+  font-size: 15px
+  font-weight: 400
+  .intro-title
+    display: flex
+    flex-direction: column
+    margin-top: 20px
+    margin-bottom: 20px
+  .tooltip-text
+    background-color: #C9C9C9
+    border-radius: 5px
+    padding: 12px 22px
+    cursor: pointer
+    display: inline-block
+    &.active
+      background-color: #87C652
+      color: #FFFFFF
+  .text
+    display: flex
+    margin-bottom: 15px
+    text-align: left
+    p
+      margin-bottom: 0
+    .icon-circle
+      padding: 5px
+      height: 5px
+      border-radius: 50%
+      background: #FFFFFF
+      margin-right: 13px
+      border: 5px solid #3EAE4E
+  .learn-more
+    margin: 60px 0 20px 0
+    padding: 10px 16px
+    border-radius: 50px
+    box-sizing: border-box
+    border: 1px solid #c1c1c1
+    .icon
+      color: #556CE7
+      border-radius: 50px
+      border: 1px solid #556CE7
+      padding: 0 5px
+      margin-right: 5px
+    span
+      font-weight: 500
+      font-size: 13px
+    .affiliate
+      color: #556CE7
+  .col-12
+    text-align: center
+
+  .col-12 h3
+    text-align: center
+  h3
+    font-size: 30px
+    font-weight: 700
+    text-align: left
+  p
+    margin-bottom: 5px
+@include xs
+  .affiliate-intro
+    font-size: 13px
+    h3
+      font-size: 20px
+    .intro-title
+      flex-direction: column-reverse

@@ -1,0 +1,67 @@
+@import "../../../../../sass/mixins"
+
+.go-social-zalo-chat-intro
+  height: 100%
+
+  .notification-intro__body
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    font-weight: 500
+    margin: auto 0
+
+    .row
+      flex: 1
+      width: 100%
+
+  .notification-intro__title
+    font-size: 1.8rem
+    margin-bottom: 19px
+    font-weight: bold
+
+  .notification-intro__description
+    font-size: .95rem
+    margin-bottom: 33px
+    color: #3E3F42
+
+  .notification-intro__background
+    width: 100%
+
+    @include mobile
+      margin-top: 40px
+
+  .notification-intro__left-col
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+
+  .text
+    display: flex
+    margin-bottom: 22px
+    text-align: left
+    p
+      margin-bottom: 0
+    .icon-circle
+      padding: 5px
+      height: 5px
+      border-radius: 50%
+      background: #FFFFFF
+      margin-right: 13px
+      border: 5px solid #3EAE4E
+
+  .btn-connect
+    background-color: #448AFF
+    padding: 8px 12px
+    border-radius: 5px
+    color: #FFFFFF
+    font-weight: 500
+    font-size: 18px
+    display: flex
+    align-items: center
+    cursor: pointer
+    margin-top: 20px
+
+    &:hover
+      opacity: .8

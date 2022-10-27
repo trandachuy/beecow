@@ -1,0 +1,22 @@
+.collection-selector
+  width: 100%
+
+  &__button
+
+    &__label
+      display: inline-block
+      font-weight: 500
+      font-size: 1.1em
+      width: calc(100% - 10px)
+
+    &--error
+      border: 1px solid red !important
+
+  &__dropdown
+    width: 100%
+    overflow-y: auto
+    max-height: 300px
+
+    &__item
+      text-overflow: ellipsis
+      overflow: hidden

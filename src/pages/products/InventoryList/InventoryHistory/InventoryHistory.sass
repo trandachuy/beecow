@@ -1,0 +1,52 @@
+.inventory_history
+  .box-filter-inventory
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 10px
+    .box-filter-right
+      display: inline-flex
+      .date-ranger-picker
+        .form-control
+          font-size: 0.875rem
+          padding: 0 18px
+          height: calc(1.5em + 1rem + 2px)
+      .uik-select__wrapper
+        margin-left: 5px
+        width: 160px!important
+      .filter-action
+        .uik-select__optionListWrapper
+          .uik-select__optionList
+            width: 180px!important
+  .inventory-history-list
+    width: 100%
+    overflow: auto
+    &::-webkit-scrollbar
+      height: 3px
+      margin-right: -3px
+    &::-webkit-scrollbar-thumb
+      background: #C4C4C4
+    &::-webkit-scrollbar-thumb:hover
+      background: #C4C4C4
+  @media (max-width: 1200px)
+    .box-filter-inventory
+      display: block
+      .box-filter-right
+        margin-top: 10px
+  @media (max-width: 867px)
+    .box-filter-inventory
+      .box-filter-left
+        .clear-up-down-btn
+          width: 450px!important
+      .box-filter-right
+        display: inline-block
+        .uik-select__wrapper
+          margin-bottom: 5px
+          width: 49% !important
+        .date-ranger-picker
+          margin-bottom: 4px
+          width: 49% !important
+          .form-control
+            //padding: 1.2rem 0.75rem
+        .filter-operator
+          margin-left: 0

@@ -1,0 +1,49 @@
+.call-customer-info-modal
+  font-size: .9em
+
+  &__header
+    color: #000000 !important
+    background-color: #F7F5F5 !important
+
+    h5
+      text-align: left !important
+
+  &__body
+
+    &__contact-group
+      background-color: #F4F4F4
+      padding: 1.5em 1em
+      margin-top: 1em
+
+      &__radio
+        overflow-y: auto
+        max-height: 400px
+
+        &--item
+          background-color: #F4F4F4
+          padding-top: 1.5em
+          display: flex !important
+          padding-left: 20% !important
+          justify-content: space-between
+          img
+            margin-right: 50px
+            cursor: pointer
+
+      &__contact
+        display: flex
+        background-color: #F4F4F4
+        padding-left: 25% !important
+
+        &-type
+          border: 1px solid
+          padding: 0px 10px
+          width: fit-content
+          border-radius: 3px
+          background-color: #FFFFFF
+
+          &.mem-type
+            border-color: green
+            color: green
+
+          &.guest-type
+            border-color: black

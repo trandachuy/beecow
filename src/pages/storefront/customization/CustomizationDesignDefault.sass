@@ -1,0 +1,176 @@
+.design-container
+  .card-img-top
+    &.fix-width
+      width: 174px
+
+  .error
+    font-size: 80%
+    color: #dc3545
+
+  .tooltip-inner
+    max-width: 300px !important
+    color: #3e3f42 !important
+    background-color: #f4f8ff !important
+
+  .tooltip .arrow::before
+    border-right-color: #f4f8ff !important
+
+
+  .icon-question
+    margin-left: 10px
+    width: 25px
+    cursor: pointer
+
+  .card
+    border: none !important
+
+    .card-header
+      background-color: #FFFFFF !important
+      border: none
+      padding: 0.75rem 0
+
+    .card-image
+      display: flex
+      width: 225px
+      height: 135px
+      position: relative
+      margin-bottom: 10px
+
+      .image-remove
+        position: absolute
+        right: 50px
+        font-size: 1.1rem
+        cursor: pointer
+        color: #a1a1a1 !important
+        &.banner
+          right: 5px
+
+    .card-body
+      padding: 0
+      button
+        width: 174px
+        border: 1px solid #2D9C3C
+        background-image: linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%)
+        color: #2D9C3C
+
+      .card-text
+        margin-top: 1.25rem
+
+.design-container
+  .design-container__title
+    margin-bottom: 1rem
+    //align-items: center
+
+    label
+      margin-bottom: 0
+
+    button
+      min-width: 6em
+      font-size: 1em
+
+  .design-container__box
+    border-radius: 4px
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04)
+    border: 1px solid #eaedf3
+    background-color: #ffffff
+    padding: 30px 32px
+
+    .design-container__box__title
+      text-transform: uppercase
+      color: #9ea0a5
+      margin-top: 25px
+
+    .design-container__box__content-categories
+      padding-left: 0
+      padding-right: 0
+
+      .url-postfix
+        position: absolute
+        right: 6px
+        top: 8px
+        font-size: 1rem
+        color: #9ea0a5
+
+    .design-container__box__content
+      padding: 25px
+      border: solid 1px #e2e5ed
+      border-radius: 4px
+
+    .design-container__box__content-color
+      p
+        font-size: 16px
+        padding: 10px 0
+        color: #3e3f42
+      .palette
+        display: initial
+        margin-right: 50px
+        flex: none
+      img
+        vertical-align: top
+
+    .design-container__box__picker
+      display: flex
+
+      .design-container__box__picker-present
+        position: relative
+
+        .present
+          width: 375px
+          height: 320px
+        .header-web
+          position: absolute
+          width: 250px
+          height: 31px
+          left: 2px
+          top: 3px
+        .header-mobile
+          position: absolute
+          right: 13px
+          width: 82px
+          top: 147px
+          height: 15px
+
+    .design-container__box__content-logo
+      .card
+        .card-header
+          color: #6b6c6f
+        img
+          margin: 10px 0 10px
+        .card-body
+          .card-text
+            color: #3e3f42
+    .design-container__box__content-banner
+      .row
+        align-items: center
+        margin-left: 15px
+
+        .design-container__box__content-banner--left
+          margin-right: 35px
+
+          .card
+            .card-header
+              color: #6b6c6f
+
+        .design-container__box__content-banner--right
+          width: 70%
+          label
+            color: #9ea0a5
+            text-transform: uppercase
+        svg.fa-question-circle
+          cursor: pointer
+
+    .design-container__box__content-video
+      .row
+        margin-left: 15px
+        align-items: center
+
+        .design-container__box__content-video--left
+          margin-right: 35px
+          img
+            width: 154px
+            height: 86px
+        .design-container__box__content-video--right
+          width: 70%
+          label
+            color: #9ea0a5
+            text-transform: uppercase

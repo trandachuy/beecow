@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@sass/*": ["sass/*"],
+        "@public/*": ["public/*"],
+        "@components/*": ["src/components/*"],
+        "@layout/*": ["src/components/layout/*"],
+        "@shared/*": ["src/components/shared/*"],
+        "@config/*": ["src/config/*"],
+        "@models/*": ["src/models/*"],
+        "@pages/*": ["src/pages/*"],
+        "@services/*": ["src/services/*"],
+        "@utils/*": ["src/utils/*"],
+      }
+    }
+  }

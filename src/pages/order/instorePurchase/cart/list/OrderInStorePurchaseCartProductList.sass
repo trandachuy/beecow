@@ -1,0 +1,114 @@
+.order-in-store-purchase-cart-product-list
+  height: 400px
+  overflow-y: auto
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 100px
+
+
+  .uik-widget-table__wrapper
+    thead
+      background-color: #f1f1f1
+      th
+        color: #3b3b3b
+
+  .err-out-of-stock
+    width: 100%
+    margin-top: 0.25rem
+    font-size: 85%
+    color: #dc3545
+    display: flex
+    align-items: center
+    margin: 0
+
+  .select-IMEI
+    width: 100%
+    margin-top: 0.25rem
+    font-size: 85%
+    color: #556CE7
+    display: flex
+    align-items: center
+    font-style: italic
+    line-height: 14px
+    margin: 0
+    cursor: pointer
+  .select-IMEI.errorIMEI
+    color: #DB1B1B
+
+  i.first-button
+    background-image: url(/assets/images/icon-edit.png)
+    background-repeat: no-repeat
+    width: 20px
+    height: 20px
+    display: block
+    cursor: pointer
+    margin-left: 3px
+  i.first-button:hover
+    opacity: 0.7
+
+  i.action-select-IMEI
+    background-image: url(/assets/images/icon_select_IMEI.png)
+    background-repeat: no-repeat
+    width: 20px
+    height: 20px
+    display: block
+    margin-left: 3px
+    align-items: center
+    margin-top: 5px
+  i.action-select-IMEI:hover
+    opacity: 0.7
+
+
+  .uik-checkbox__label
+    &:before
+      margin-right: 0 !important
+
+  .order-in-store-purchase-cart-product-list__table-header
+    background: #80808040
+    th
+      position: sticky
+      top: -2px
+      z-index: 1
+      color: black
+      font-size: 14px
+
+
+  .order-in-store-purchase-cart-product-list__product-row
+    td
+      transition: opacity .3s
+      animation-name: fadeIn
+      animation-duration: .3s
+
+    &--checked
+
+    &--unchecked
+      td
+        &:not(:first-child)
+          opacity: .5
+
+    //&:hover:not(&--checked)
+    //  opacity: 1
+    .uik-checkbox__label
+      &:before
+        margin-right: 0 !important
+
+  .order-in-store-purchase-cart-product-list__stock-input
+    width: fit-content
+    max-width: 8rem
+
+  .order-in-store-purchase-cart-product-list__td-action
+    padding: 0
+
+  .order-in-store-purchase-cart-product-list__product-thumbnail
+    width: 4rem
+    height: 4rem
+    flex-shrink: 0
+
+  .order-in-store-purchase-cart-product-list__product-name
+    overflow: hidden
+    word-break: break-word
+    max-height: 38px
+    white-space: pre
+    text-overflow: ellipsis
+
+  .order-in-store-purchase-cart-product-list__deleted-icon

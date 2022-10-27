@@ -1,0 +1,86 @@
+@import "../../../../sass/mixins"
+
+
+.affiliate-commission-form-editor
+  .affiliate-commission-form-editor__input-name-wrapper
+    width: 60%
+    @include mobile
+      width: 100%
+
+
+  .affiliate-commission-form-editor__body-desktop
+    .note
+      font-size: 0.85rem
+    .uik-select__valueRendered
+      height: calc(1.5em + 0.75rem + 2px)
+      padding: 0.375rem 0.75rem
+      font-size: 1rem
+      font-weight: 400
+      line-height: 1.5
+      color: #495057
+      background-color: #fff
+      background-clip: padding-box
+      border: 1px solid #ced4da
+      border-radius: 0.25rem
+      box-shadow: none
+    .password
+      p
+        color: black
+        font-size: .75rem
+        text-transform: uppercase
+        font-weight: bold
+        margin-top: 5px
+        margin-bottom: 0.5rem
+      input
+        width: 100%
+        height: calc(1.5em + 0.75rem + 2px)
+        padding: 0.375rem 0.75rem
+        font-size: 1rem
+        font-weight: 400
+        line-height: 1.5
+        color: #495057
+        background-color: #fff
+        background-clip: padding-box
+        border: 1px solid #ced4da
+        border-radius: 0.25rem
+    input:focus
+      box-shadow: none
+      border-color: #80bdff
+    .gs-widget__content
+      .form-group
+        label
+          color: black
+          font-size: .75rem
+          padding-top: 3px
+      .uik-select__wrapper
+        span
+          color: black
+      .checkbox
+        display: inline-block !important
+        position: absolute
+      notes
+        width: 50% !important
+      .label
+        color: black
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 0.75rem
+    @include xs
+      .gs-widget__content .col-sm-6
+        padding: 0
+      .gs-widget__content .col-sm-4
+        padding: 0
+
+  .warning
+    background-color: #FFE3E3
+    width: 100%
+    height: 59px
+    margin-top: 12px
+    border-radius: 5px
+    font-family: Roboto
+    font-style: normal
+    font-size: 13px
+    color: #DA1919
+    padding: 14px 63px 15px 18px
+    font-weight: 700
+    line-height: 15.23px

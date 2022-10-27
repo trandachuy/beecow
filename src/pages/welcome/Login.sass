@@ -1,0 +1,209 @@
+@import '../../../sass/mixins'
+
+.login-widget
+  flex: 0 0 38em
+
+  .login-widget__formHeader
+    text-align: center
+    background: #FBFBFD
+    box-shadow: 0 1px 0 #EAEDF3
+
+    h3
+      width: 100%
+
+  .login-widget__formBody
+    padding: 1.5em 5.5em
+    .phone-code
+      .uik-select__wrapper
+        display: block
+      .phone-option
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+      .uik-select__optionListWrapper
+        width: 100%
+
+  .login-widget__linkWrapper
+    margin-top: 10px
+
+    .login-widget__changeLanguage
+      font-size: 14px
+      line-height: 22px
+
+    .login-widget__changeLanguage-english
+      margin-right: 12px
+
+    .login-widget__changeLanguage-selected
+      color: #556CE7
+      cursor: pointer
+
+    .login-widget__changeLanguage-unselected
+      color: #9EA0A5
+      cursor: pointer
+
+    .login-widget__linkItem
+      text-decoration: none
+      color: #9EA0A5
+      font-size: 1em
+
+      .login-widget__txtDontHaveAccount
+        margin-right: 4px
+        color: #9EA0A5
+
+    .login-widget__linkItem--left
+      float: left
+
+    .login-widget__signUp
+      cursor: pointer
+      color: #556CE7 !important
+      font-weight: 600
+
+    .login-widget__linkItem--right
+      float: right
+
+  .login-widget__btnSubmit
+    margin-bottom: 0
+    height: 44px
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#90CE51), to(#90CE51)) !important
+
+    .uik-btn__content
+      font-size: 16px
+      font-weight: 600
+      text-transform: uppercase
+
+  .login-widget__btnSubmitFaceBook
+    margin-bottom: 0
+    height: 44px
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#5D81D2), to(#5D81D2)) !important
+
+  .login-widget__btnShowPassword
+    color: #9EA0A5
+    position: absolute
+    right: 10px
+    top: 40px
+    cursor: pointer
+
+  .login-widget__inputPasswordWrapper
+    position: relative
+
+    .login-widget__forgotPassword
+      position: absolute
+      right: 0
+      cursor: pointer
+      line-height: 22px
+      font-size: 12px
+      color: #556CE7
+
+  .divider-section
+    display: flex
+
+    .divider-left
+      flex: 1
+
+    .divider-center
+      color: #9EA0A5
+      font-size: 0.9em
+      text-align: center
+      align-self: center
+      flex: 3
+
+    .divider-right
+      flex: 1
+  .login-widget__tab
+    justify-content: center
+    font-weight: bold
+    text-transform: uppercase
+    .active
+      color: #1665D8
+
+.login-page-wrapper
+  justify-content: center
+  min-height: 100vh
+  display: flex
+  align-items: center
+  background-color: whitesmoke
+
+@include mobile
+  .login-widget
+    flex-basis: 100%
+    height: 100vh
+    display: flex
+    flex-direction: column
+
+    .login-widget__formBody
+      padding: 1.5em
+      flex: 0 1 auto
+
+    .login-widget__linkWrapper
+      flex: 0 1 auto
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      .login-widget__linkItem--left
+        float: none
+
+      .login-widget__linkItem--right
+        float: none
+
+    .divider-section
+      .divider-center
+        font-size: 0.8em
+
+.login-verify-modal__wrapper--modal
+
+  .modal-content
+    width: 500px
+
+  .modal-header
+    border-bottom: none
+    padding-bottom: unset
+
+  .modal-body
+    text-align: center
+    padding: 0 1.5rem
+    padding-bottom: 0 !important
+
+    .title
+      font-size: 25px
+
+    .suggest-1
+      margin-top: 30px
+      color: #939393
+
+    .email
+      font-weight: bold
+
+    .otp-input
+      margin-top: 30px
+
+      input
+        border-top: none
+        border-left: none
+        border-right: none
+
+      .alert__wrapper
+        text-align: left
+
+    .otp-button
+      margin-top: 40px
+
+      .btn-confirm
+        width: 100%
+        border-radius: 30px
+        background-color: #556ce7
+        color: #ffffff
+
+    .resend-otp
+      margin-top: 30px
+      padding-bottom: 20px
+      color: #939393
+      font-size: 12px
+@include mobile
+  .login-verify-modal__wrapper--modal
+    .modal-dialog
+      width: 100%
+
+      .modal-content
+        width: 100%

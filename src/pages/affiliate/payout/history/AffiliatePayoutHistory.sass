@@ -1,0 +1,71 @@
+@import "../../../../../sass/mixins"
+.affiliate-payout-history
+
+
+  .affiliate-payout__widget-header
+
+    h3
+      width: 100%
+
+  .affiliate-payout__widget-header-title
+    display: flex
+
+  .affiliate-payout__filter-container
+    display: flex
+
+  .affiliate-payout__widget-header-payout-count
+    flex-basis: 25rem
+
+  .affiliate-payout__widget-header-revenue-count
+    flex-basis: 25rem
+
+  .affiliate-payout__search-option
+    margin-left: .2em !important
+
+  .affiliate-payout__table
+    .uik-checkbox__wrapper
+      margin-bottom: 0 !important
+
+    .uik-checkbox__label
+      &::before
+        margin-right: 0 !important
+
+    tr th:first-child
+      padding: 0 !important
+
+    tr td:first-child
+      padding: 0 !important
+
+
+  @include mobile
+    .affiliate-payout__filter-container
+      flex-direction: column
+
+    .affiliate-payout__widget-header
+      padding: .5rem
+
+    .affiliate-payout__widget-header-title
+      flex-direction: column
+
+    .affiliate-payout__widget-header-payout-count, .affiliate-payout__widget-header-revenue-count
+      flex-basis: 2rem
+
+    .affiliate-payout__widget-header-count-title
+      display: inline-block
+      width: 10rem
+
+    .gs-widget__content
+      padding: .5rem
+
+    .affiliate-payout__search-option
+      width: 10rem
+      margin-left: .5rem !important
+
+    .search
+      flex-grow: 1
+
+    .affiliate-payout__table
+      overflow-x: auto
+
+    .btn-filter-action
+      width: 7rem

@@ -1,0 +1,62 @@
+.stepper
+  z-index: 1
+  width: 40px !important
+  min-width: 40px !important
+  height: 36px !important
+  margin-top: 1px !important
+
+  &.stepperUp
+    border-left: none
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+  &.stepperDown
+    border-right: none
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+.AvFieldPhoneWrapper
+  position: relative
+  // width: fit-content
+
+  .currencyInput
+    font-size: 1rem
+    color: #495057
+    height: calc(1.5em + 0.75rem)
+    padding: 0.375rem 0.75rem 0.375rem 4rem
+    position: absolute
+    top: 2px
+    left: 1px
+    width: 100%
+    text-align: left
+    border: none
+    background: transparent
+    z-index: 1
+
+    &:focus
+      outline: none
+
+  .avInput
+    color: transparent
+
+    &:focus
+      color: transparent
+
+  .paddingRight
+    padding-right: 2em
+
+  .paddingLeft
+    padding-left: 4em
+
+  .borderRadius0
+    border-radius: 0
+
+  .fieldWrapper
+    position: relative
+    .unit
+      position: absolute
+      left: 9px
+      top: 9px
+      color: #939393
+      font-weight: 500
+      font-size: 0.9rem

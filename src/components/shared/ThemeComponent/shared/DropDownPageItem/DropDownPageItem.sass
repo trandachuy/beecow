@@ -1,0 +1,52 @@
+.dropdown-page_item
+    width: 100%
+    .var-values__pool
+        overflow: hidden
+        line-height: 2em
+
+    .loading-screen
+        width: inherit
+        position: absolute
+        height: 2.5em
+        background-color: #f8f9fa
+        top: calc(100% - 50%)
+
+        position: absolute
+        width: inherit
+        height: 100%
+        .loading
+            .lds-dual-ring-white
+                display: flex
+                align-items: center
+
+            .lds-dual-ring-white:after
+                width: 30px
+                height: 30px
+    &.error
+        .var-values__pool
+            border-color: #ff0000
+
+    .dropdown-menu 
+        z-index: 100
+        &.show
+            width: 100%
+            overflow-y: auto
+            top: unset!important
+            transform: unset!important
+            max-height: 15em
+            height: inherit
+            .dropdown-item
+                overflow: hidden
+
+.dropdown-page_item-error
+    text-align: left
+
+
+
+
+
+
+
+    
+
+  

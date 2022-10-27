@@ -1,0 +1,51 @@
+.quotation-in-store-purchase
+
+  .quotation-in-store-purchase__pane
+    display: flex
+    flex-direction: column
+    
+    &--left
+      //background-color: #0B4AA5
+
+    &--right
+      //background-color: #00ab00
+      .quotation-in-store-purchase-complete
+        margin-top: 0 !important
+
+.quotation-in-store-purchase__text--primary
+  color: white
+  font-weight: bold
+
+
+.quotation-in-store-purchase__mobile-modal
+  border: 2em
+  border-radius: 5px
+  
+
+.quotation-in-store-purchase__container-fluid
+  display: grid
+  grid-template-areas: 'title title title title title title' 'image image image action action action'
+  grid-gap: 5px
+  padding: 5px
+
+.item1
+  grid-area: title
+
+.item2
+  grid-area: image
+
+.item3
+  grid-area: action
+  align-self: center
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+.wrap-mobile
+  .modal-dialog
+    width: 80%
+    margin: auto
+    .modal-content
+      min-width: auto!important
+      .modal-body
+        padding-top: 5px
+  

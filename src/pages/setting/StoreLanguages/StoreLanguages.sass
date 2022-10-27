@@ -1,0 +1,88 @@
+.languages-setting
+  .has-init-data-language
+    border-radius: 5px
+    background-color: #effae4
+    border: 1px solid red
+
+    .image-status__green
+      font-size: 2.5rem
+      color: #38B249
+      width: 24px
+      height: 24px
+      margin-left: 10px
+
+    .image-rotate
+      -webkit-animation: spin 4s linear infinite
+      -moz-animation: spin 4s linear infinite
+      animation: spin 4s linear infinite
+      @-moz-keyframes spin
+        100%
+          -moz-transform: rotate(360deg)
+      @-webkit-keyframes spin
+        100%
+          -webkit-transform: rotate(360deg)
+      @keyframes spin
+        100%
+          -webkit-transform: rotate(360deg)
+          transform:rotate(360deg)
+
+  .left-title
+    .title
+      font-size: 1.1rem
+      font-weight: 800
+  .box-1
+    flex: 2
+    display: flex
+    padding: 1%
+    height: 90px
+    padding-left: 0
+    .box-title
+      flex: 5
+      .title
+        font-size: 0.9rem
+        font-weight: 800
+      .description
+        font-size: 0.8rem
+        color: #9EA0A5
+    .gs-button
+      flex: 2.5
+  .boxright-2
+    .gs-widget__header
+      padding: 15px 15px 0px 15px
+      h3
+        display: flex
+        flex: 2
+        .title-multi
+          font-size: 0.8rem
+          flex: 2
+        .box2-right
+          display: inline-flex
+          .title-date
+            font-size: 0.8rem
+            font-weight: 100
+            span
+              font-weight: 800
+          .gs-button
+            height: 25px
+
+.modal-change
+  .modal-content
+    .modal-header
+      padding: 10px !important
+      padding-bottom: 10px !important
+      background-color: rgb(240, 240, 240)
+      border-radius: 10px 10px 0px 0px
+      .close
+        span
+          display: none
+      .modal-title
+        color: black
+        width: auto !important
+    .modal-body
+      text-align: left!important
+      p
+      font-weight: 800
+
+tr.disabled
+  opacity: 0.5
+  pointer-events: none

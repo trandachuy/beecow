@@ -1,0 +1,57 @@
+@import '../../../../sass/style'
+@import "../../../../sass/mixins"
+
+.gss-content-header
+  width: 100%
+  flex-shrink: 0
+
+
+  @include mobile
+    padding-left: 15px
+    padding-right: 15px
+
+  .title-expand
+    color: #959597
+    margin-left: 1em
+
+  .sub-title
+    color: #959597
+    margin-top: 1em
+
+  .navigation
+    list-style-type: none
+    margin-bottom: 0
+    li
+      display: inline-block
+      &:after
+        margin: 0 5px
+        content: "/"
+        opacity: 0.3
+      &:last-child:after
+        content: "" !important
+      span
+        opacity: 0.3
+
+.gss-content-header--action-btn
+  @extend .gs-atm__flex-row--flex-end
+  @extend .d-desktop-flex
+  @extend .d-mobile-block
+  margin-left: auto
+  float: right
+
+  .gss-content-header--action-btn--group
+    display: inline-flex
+
+.gss-content-header--large
+  max-width: 992px
+
+.gss-content-header--extra
+  max-width: 1200px
+
+@include mobile
+  .gs-content-header-right-el
+    display: flex !important
+  .gss-content-header--action-btn
+    margin-left: 0 !important
+  .gss-content-header--action-btn--mobile-left
+    float: left

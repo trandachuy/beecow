@@ -1,0 +1,53 @@
+.k-timepicker
+  .input-duration
+    //margin-left: 12px
+    display: inline-grid
+    grid-template-columns: repeat(auto-fit, 30px 5px)
+    min-width: 130px
+    grid-gap: 3px
+    list-style: none
+    border: 1.4px solid #CED4DA
+    padding: 3px 3px 3px 16px
+    border-radius: 3px
+    text-align: left
+    background: #FFFFFF
+    border: 1px solid #D8DCE6
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    .item-child
+      height: 30px
+      text-align: center
+      span
+        padding-top: 5px
+        font-size: 20px
+      &.active
+        background-color: #c2c2c2
+        color: transparent
+        text-shadow: 0 0 0 #2F3134
+    input
+      border: none
+      &:focus
+        border: none
+        border-width: 0
+        box-shadow: none
+        outline: none
+      &:hover
+        cursor: pointer
+    .control
+      display: grid
+      .img
+        background-image: url('/assets/images/icon-expand.png')
+        background-repeat: no-repeat
+        width: 30px
+        height: 10px
+        display: block
+        margin: auto
+        background-position: center
+        opacity: 0.3
+        &:hover
+          cursor: pointer
+          opacity: 2
+        &.up
+          -ms-transform: rotate(180deg)
+          transform: rotate(180deg)
+

@@ -1,0 +1,105 @@
+@import "../mixins"
+.page-wrapper
+  padding: 1em
+  width: 100%
+
+  &--flex-column
+    display: flex
+    flex-direction: column
+
+  &--flex-align-start
+    justify-content: flex-start
+
+
+.widget__header
+  background: white !important
+  border-top-left-radius: inherit
+  border-top-right-radius: inherit
+  padding: 0.5em 1em
+  h3
+    margin: 0
+    font-weight: 500
+    font-size: .9rem !important
+
+.widget
+  margin-top: 1.5em
+  width: 100%
+  -webkit-box-shadow: 0px -5px 15px -13px rgba(0,0,0,0.28)
+  -moz-box-shadow: 0px -5px 15px -13px rgba(0,0,0,0.28)
+  box-shadow: 0px -5px 15px -13px  rgba(0,0,0,0.28)
+
+.gs-widget__content
+  padding: 1em 1em
+
+  &--disable
+    pointer-events: none
+    opacity: .5
+
+  &--collapse
+    transition: 2s
+    max-height: 0
+    overflow: hidden
+    transition: max-height 0.2s ease-out
+
+
+.gs-widget__header
+  @extend .widget__header
+  
+  @include mobile
+    padding-left: 15px
+    padding-right: 15px
+
+  .collapse-icon-wrapper
+    background-repeat: no-repeat
+    width: 10px
+    height: 10px
+    display: block
+    cursor: pointer
+    background-image: url(/assets/images/icon-expand.png)
+
+
+    &:hover
+      opacity: 0.7
+
+    &.icon-collapse
+      transform: rotateZ(-90deg)
+      transition-duration: .5s
+
+    &.icon-expand
+      transform: rotateZ(0deg)
+      transition-duration: .5s
+      //background-image: url(/assets/images/icon-expand.png)
+
+  &--white
+    background-color: white !important
+
+.gs-widget__header-sub-title
+  font-size: .9em
+  font-weight: normal
+  color: gray
+  display: block
+
+.gs-widget__header--child
+  padding: 0.5em 1em
+  background: #F6F9FD
+  h3
+    margin: 0
+    font-weight: bold
+    font-size: .8rem
+
+.gs-widget
+  @extend .widget
+
+
+  &:last-child
+    margin-top: 1.5em
+    width: 100%
+    margin-bottom: 1.5em
+
+.uik-widget__wrapper
+  border: 1px solid #dedede
+
+.gs-widget__header--gray
+  background-color: #F0F0F0 !important
+  border-color: #E0E0E0 !important
+  border: 1px solid

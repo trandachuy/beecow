@@ -1,0 +1,67 @@
+.navigation-left
+  background-color: rgba(195, 195, 195, 0.36)
+  position: relative
+  animation: fade-in
+  animation-duration: .3s
+  animation-timing-function: ease-in-out
+
+  @keyframes fade-in
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+  &--closed
+    animation: fade-out
+    animation-duration: .3s
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+
+    @keyframes fade-out
+      0%
+        opacity: 1
+      100%
+        opacity: 0
+
+
+  .left-panel-wrapper
+    position: absolute
+    animation: slide-right
+    animation-duration: .3s
+    animation-timing-function: ease-in-out
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.68)
+    display: flex
+    flex-direction: column
+    height: 100vh
+
+
+    @keyframes slide-right
+      0%
+        left: -300px
+
+      100%
+        left: 0
+
+
+    &--closed
+      animation: slide-left
+      animation-duration: .2s
+      animation-timing-function: ease-in-out
+      animation-fill-mode: forwards
+
+      @keyframes slide-left
+        0%
+          left: 0
+
+        100%
+          left: -300px
+
+    .left-panel
+      flex: 1
+
+
+  .logo
+    height: 55px
+    background-color: #556CE7
+
+

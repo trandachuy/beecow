@@ -1,0 +1,41 @@
+@import "../../../../../sass/mixins"
+
+.item_partner
+  padding-left: 0!important
+
+.item_partner:last-child
+  padding-right: 0!important
+
+.item_box
+  background-color: #F7F7F7
+  border: 1px solid #ECECEC
+  border-radius: 3px
+  padding: 10px 10px
+  min-height: 100%
+
+.box-title
+  font-size: 15px
+  font-weight: 500
+  color: rgba(134, 134, 134, 1)
+  margin-left: 5px
+  line-height: 15px
+
+.box-amount
+  margin: 0
+  font-weight: 500
+  font-size: 23px
+  
+.payout-header
+  div
+    width: 220px
+
+@media screen and (max-width: 768px)
+  .item_partner:nth-child(2)
+    padding-right: 0!important
+  .item_partner
+    padding-bottom: 10px
+    padding-right: 0.5px
+  .payout-header
+    flex-grow: 1
+    div
+      width: 100%

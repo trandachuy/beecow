@@ -1,0 +1,100 @@
+.gs-tour-guide-product
+  .shepherd-text
+    overflow: hidden !important
+    padding: .5em !important
+    text-align: left
+  .shepherd-button-next-icon
+    width: 30px
+    height: 35px
+    background: transparent !important
+    display: block
+    right: 0
+    float: right
+    padding: 0
+    &::before
+      content: ""
+      background: url(/assets/images/icon-guide-arrow-forward.svg) no-repeat left top
+      width: 30px
+      height: 30px 
+      display: grid
+    &:hover
+      background: inherit
+      color: inherit
+      opacity: 1
+
+  .shepherd-button-back-icon
+    width: 30px
+    height: 35px
+    background: transparent !important
+    display: block
+    margin-left: auto
+    padding: 0
+    &::before
+      content: ""
+      background: url(/assets/images/icon-guide-arrow-backward.svg) no-repeat left top
+      width: 30px
+      height: 30px 
+      display: grid
+    &:hover
+      background: inherit
+      color: inherit
+      opacity: 1
+
+  .shepherd-button-cancel-icon
+    display: flex
+    justify-content: flex-start
+    align-content: flex-start
+    background-color: #fff
+    color: #3288e6 !important
+    padding-left: 0
+    font-size: 1rem
+    text-decoration: underline
+    text-decoration-color: #3288e6 !important
+    &:hover
+      background: transparent !important
+      font-weight: bold
+      opacity: 0
+
+  .shepherd-button
+    color: #fff
+    border: 0
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    &:hover
+      background: inherit
+      color: inherit
+      opacity: 1
+
+  .shepherd-footer
+    padding: 0.5rem
+    align-items: flex-end
+    justify-content: space-between
+    button
+      &:focus
+        border: 0
+        outline: none !important
+
+  .shepherd-element[data-popper-reference-hidden]
+    &:not(.shepherd-centered)
+      opacity: 1 !important
+      visibility: visible !important
+  .shepherd-content
+    .shepherd-header
+      .shepherd-cancel-icon
+        position: absolute
+        top: 0
+        right: 0
+        transform: translate(50%, -50%)
+        margin: 0
+        background: black
+        color: white
+        font-size: 1.1em
+        padding: 0.2em 0.4em
+        border-radius: 50%
+        float: right
+        font-weight: 700
+        line-height: 1
+        text-shadow: 0 1px 0 #fff
+        opacity: .5
+
+

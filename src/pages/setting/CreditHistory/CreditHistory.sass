@@ -1,0 +1,128 @@
+.credit-history__information
+  padding: 0 !important
+
+  .current-balance
+    display: flex
+    align-items: center
+
+    .current-balance__left
+      flex: 3
+
+      .ballance-money
+        display: inline-flex
+        align-items: center
+
+        i
+          background-repeat: no-repeat
+          width: 25px
+          height: 25px
+          display: block
+          background-image: url(/assets/images/icon-wallet.svg)
+
+        .ballance-money__format
+          font-size: 1.5rem
+          margin-left: 15px
+
+    .current-balance__right
+      display: flex
+      flex: 1
+      justify-content: flex-end
+
+      i
+        background-repeat: no-repeat
+        width: 10px
+        height: 10px
+        display: block
+        cursor: pointer
+
+        &:hover
+          opacity: 0.7
+        
+        &.icon-collapse
+          background-image: url(/assets/images/icon-collapse.png)
+
+        &.icon-expand
+          background-image: url(/assets/images/icon-expand.png)
+
+  .row-of__history
+    display: flex
+    border-bottom: 1px solid #EAEDF3
+    align-items: center
+    height: 5em
+
+    .left-col
+      flex: 1
+      display: flex
+      flex-direction: column
+
+      .history-number
+        color: #9EA0A5
+
+    .right-col
+      flex: 1
+      display: flex
+      flex-direction: column
+      text-align: right
+
+      .history-type
+        color: #9EA0A5
+
+      .history-amount
+
+        &.red
+          color: #FF4F4C
+
+        &.green
+          color: #90CE51
+
+        .pending
+          color: #007bff
+
+  .view-all__history
+    margin-top: 20px
+    text-align: center
+
+/** RWD Setting */
+
+// For mobile portrait
+@media only screen and (max-width: 480px) and (orientation: portrait)
+  .credit-history__information
+    margin-bottom: 1em
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      .setting__shipping_provider
+        padding-left: 0
+        
+// For mobile landscape
+@media only screen and (max-width: 480px) and (orientation: landscape)
+  .credit-history__information
+    margin-bottom: 1em
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      .setting__shipping_provider
+        padding-left: 0
+       
+// For ipad portrait
+@media only screen and (max-width: 768px) and (orientation: portrait)
+  .credit-history__information
+    margin-bottom: 1em
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      .setting__shipping_provider
+        padding-left: 0
+       
+// For ipad landscape
+@media only screen and (max-width: 768px) and (orientation: landscape)
+  .credit-history__information
+    margin-bottom: 1em
+    .gs-widget__header
+      padding: 1em
+    .gs-widget__content
+      .setting__shipping_provider
+        padding-left: 0
+       
+    
+

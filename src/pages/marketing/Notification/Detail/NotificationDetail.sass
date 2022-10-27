@@ -1,0 +1,26 @@
+@import "../../../../../sass/mixins"
+.notification-detail
+
+  .left-col__title
+    color: #939393
+
+  .row
+    margin-bottom: 20px
+
+    @include desktop
+      &:first-child
+        margin-top: 15px
+
+      &:last-child
+        margin-bottom: 15px
+
+  .col-12
+    @include mobile
+      padding: 0
+
+  .user-count
+    color: #939393
+
+  .email-content
+    img
+      max-width: 100%

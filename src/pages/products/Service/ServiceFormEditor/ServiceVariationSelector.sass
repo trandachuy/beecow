@@ -1,0 +1,27 @@
+@import '../../../../../sass/mixins'
+
+@include desktop
+    .var-row__wrapper
+        display: none
+    .locations
+        flex-direction: column
+@include mobile
+    .var-table__wrapper
+        display: none
+    .var-item__wrapper
+        padding: 10px 0
+
+
+.var-row__wrapper
+    .widget__header-grey
+        background-color: #EAEDF3 !important
+    .uik-widget-content__wrapper
+        padding: 25px 0
+    .gs-widget__header
+        .collapse-icon-wrapper
+            &.icon-collapse
+                background-image: url(/assets/images/icon-collapse.png)
+                transform: rotateZ(90deg)
+            &.icon-expand
+                background-image: url(/assets/images/icon-expand.png)
+                transform: rotateZ(-90deg)

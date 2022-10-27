@@ -1,0 +1,37 @@
+@import "../../../../../sass/mixins"
+.segment-condition-row
+  .col-11
+    padding: 0
+
+  .row
+    .col-md-3
+      padding: 0 .5em 0 0 !important
+
+  .btn-remove-wrapper
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    margin-top: 10px
+
+    .btn-remove
+      background-image: url(/assets/images/icon-delete.png)
+      width: 1.5rem
+      height: 1.5rem
+      display: block
+      background-position: center
+      background-repeat: no-repeat
+      cursor: pointer
+      &:hover
+        opacity: .5
+
+
+  .selector-wrapper
+    @include mobile
+      padding: 0
+
+  .btn-remove-wrapper
+    @include mobile
+      padding: 0
+
+  .form-group
+    margin: 0

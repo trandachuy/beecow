@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 53.2 (72643) - https://sketchapp.com -->
+    <title>23E9816C-93A8-4CC5-A0D3-AA06F5BB5008</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M16,7.415 L16,9.415 C16,9.967 15.552,10.415 15,10.415 L13,10.415 C12.45,10.415 12,9.965 12,9.415 L12,7.415 C12,6.863 12.448,6.415 13,6.415 L15,6.415 C15.552,6.415 16,6.863 16,7.415 L16,7.415 Z M5,10.415 C4.45,10.415 4,9.965 4,9.415 L4,7.415 C4,6.863 4.448,6.415 5,6.415 L7,6.415 C7.552,6.415 8,6.863 8,7.415 L8,9.415 C8,9.967 7.552,10.415 7,10.415 L5,10.415 Z M5,11.415 L15,11.415 C15,18.415 5,18.415 5,11.415 L5,11.415 Z M10,18 C5.589,18 2,14.411 2,10 C2,5.589 5.589,2 10,2 C14.411,2 18,5.589 18,10 C18,14.411 14.411,18 10,18 L10,18 Z M10,0 C4.477,0 0,4.477 0,10 C0,15.523 4.477,20 10,20 C15.523,20 20,15.523 20,10 C20,4.477 15.523,0 10,0 L10,0 Z" id="path-1"></path>
+    </defs>
+    <g id="v1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LiveChat-3-v1.0" transform="translate(-1230.000000, -757.000000)">
+            <g id="icon-attach-emotions" transform="translate(1230.000000, 757.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill-opacity="0" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Colour" fill="#9EA0A5" mask="url(#mask-2)" x="-1" y="-1" width="22" height="22"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

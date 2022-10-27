@@ -1,0 +1,242 @@
+@import "../../../../sass/mixins"
+.collection-list-page
+
+  .paging-table tbody tr
+    cursor: unset
+
+  .collection-list-widget
+    @include mobile
+      padding: 0
+
+  .gs-page-header
+    .btn-save
+      margin-left: auto
+
+  .action-button
+    cursor: pointer
+    font-size: 20px
+
+    &:hover
+      opacity: 0.7
+
+  .btn-group__action
+    flex-basis: 20%
+    display: flex
+
+    i
+      background-repeat: no-repeat
+      width: 20px
+      height: 20px
+      display: block
+
+      &.first-button
+        background-image: url(/assets/images/icon-edit.png)
+
+      &.lastest-button
+        margin-left: 1em
+        background-image: url(/assets/images/icon-delete.png)
+
+  .collection-list__counter
+    margin-left: auto
+
+  .collection-list-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  .collection-table__btn-edit
+    color: #9EA0A5 !important
+    transition-duration: .3s
+
+    &:hover
+      color: black !important
+
+  .collection-table__last-col
+    text-align: center
+
+  .collection-table__thumbnail
+    width: 4em
+    height: 4em
+
+  .collection-table__name
+    max-width: 20em
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    text-align: left
+
+  .collection-table__tooltips-thumbnail
+    opacity: 1 !important
+
+  .collection-table__td-thumbnail
+    display: flex
+    //justify-content: center
+    align-items: center
+
+
+  .row
+    align-items: center
+
+  .brands__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    .brands
+      width: 2em
+      border-radius: 3px
+      margin-left: 5px
+
+      &:first-child
+        margin-left: 0px
+
+      img
+        width: 2em
+
+      &--shopee
+        background-color: #ff5500
+
+
+      &--lazada
+        background-color: #254a5e
+
+  .uik-checkbox__label
+    margin-left: .9em
+
+    //&:before
+    //  margin-right: 0px !important
+
+  .n-filter-container
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 1em
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0px !important
+
+    .uik-select__wrapper
+      margin-left: 1em !important
+      min-width: 10em
+
+  .collection-list__body
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+
+    .paging-table-wrapper 
+      .paging-table 
+        th
+          text-align: left !important
+
+        td
+          text-align: left !important
+
+  .gs-widget
+    display: flex
+    flex-direction: column
+
+    .uik-widget-content__wrapper
+      flex: 1
+      display: flex
+      flex-direction: column
+
+    .loading
+      flex: 1
+      display: flex
+      align-items: center
+
+  .collection-list__empty
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  // for mobile
+  .mobile-collection-list-container
+    flex-direction: column
+    border-top: 1px solid rgba(220, 220, 220, 0.31)
+    flex-shrink: 0
+    flex-grow: 1
+    padding: 1rem
+
+    
+
+    .m-collection-row
+      padding: 1rem 0
+      border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+      display: flex
+      flex-direction: row
+      align-items: center
+
+      .m-collection__image
+        width: 4em
+        height: 4em
+
+      .m-collection__info
+        margin-left: .5rem
+        flex: 3
+        display: flex
+        flex-direction: column
+
+        .m-collection__info-name
+          word-break: break-word
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          max-width: 50vw
+          
+
+        .m-collection__info-product
+          color: #9EA0A5
+
+      .m-collection__action
+        flex: 1
+
+.collection-list-page
+  .collection-list__body
+    .gs-table
+      //margin-top: 2em
+      border-top: 1px solid #EAEDF3
+    .gs-table-header
+      .gs-table-header-item
+        padding: 15px
+        min-width: 10%
+
+        &:first-child
+          max-width: 7em
+          min-width: 4em
+        &:nth-child(2)
+          min-width: 35%
+        &:nth-child(3)
+          min-width: 10%
+          max-width: 10%
+        &:nth-child(4)
+          min-width: 10%
+          max-width: 10%
+        &:nth-child(5),
+        &:nth-child(6)
+          max-width: 14%
+        
+    .gs-table-body
+      .gs-table-body-items
+        .gs-table-body-item
+          padding: 15px
+          min-width: 10%
+
+          &:first-child
+            max-width: 7em
+            min-width: 4em
+
+          &.collection-name
+            min-width: 35%
+            text-overflow: ellipsis
+            overflow: hidden
+          &.collection-type
+            min-width: 10%
+            max-width: 10%
+          &.products,
+          &.actions
+            max-width: 14%
+

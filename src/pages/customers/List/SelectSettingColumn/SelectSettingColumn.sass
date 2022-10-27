@@ -1,0 +1,58 @@
+@import "../../../../../sass/mixins"
+.customer-select-column
+  
+  @include desktop
+    max-width: max-content
+
+  @include mobile
+    width: 100%
+
+  .content
+    display: flex
+
+    .form-group
+      margin-bottom: 0.8rem
+
+    @include desktop
+      flex-direction: row
+      justify-content: space-around
+      text-align: left
+
+    @include mobile
+      flex-direction: column
+      padding-left: 30px
+
+      .half-left
+        text-align: left
+      .half-right
+        text-align: left
+
+        
+
+
+
+  .modal-content
+    display: flex
+    justify-content: space-between
+    border-radius: 10px
+
+    @include desktop
+      min-width: 550px !important
+    
+    @include mobile
+      min-width: 100% !important
+
+    .modal-header
+      padding: 10px !important
+      padding-bottom: 10px !important
+      background-color: rgb(240, 240, 240)
+      border-radius: 10px 10px 0px 0px
+    .modal-title
+      color: #000000
+      width: auto !important
+    .modal-body
+      padding: 20px 0 0
+      flex-direction: column
+      .content
+        height: 55vh
+        overflow: auto

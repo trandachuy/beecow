@@ -1,0 +1,222 @@
+@import '../../../../sass/_gsvariables.sass'
+@import "../../../../sass/mixins"
+
+.nav-panel
+  display: flex
+  flex-direction: column
+  overflow-y: auto
+  //transition: max-width .3s ease-in-out
+  //overflow-x: auto
+  //
+  ////&--opened
+  ////  max-width: 270px
+  ////
+  ////&--closed
+  ////  max-width: 70px
+  .uik-nav-link__nav-1-text
+    transition: opacity .3s
+
+    &--closed
+      opacity: 0
+
+    &--opened
+      opacity: 1
+
+
+
+  .collapsible-icon
+
+    &--open
+      transform: rotateZ(90deg)
+
+    &--close
+      transform: rotateZ(0deg)
+
+
+  .nav-secondary-section
+    transition: max-height .3s ease-in-out
+    overflow-y: hidden
+
+    &--opened
+      max-height: 500px
+    
+    &--closed
+      max-height: 0
+      margin: 0
+
+
+    &--ani
+      animation-name: transX
+      animation-duration: .3s
+      animation-timing-function: ease-out
+      @keyframes transX
+        0%
+          opacity: 0
+          transform: translateX(-15px)
+        100%
+          opacity: 1
+          transform: translateX(0)
+
+
+  .nav-section-dashboard, .nav-section-sale-channel
+    text-transform: capitalize
+    font-size: $font-size-title
+    .gs-atm--disable
+      //removed disabled for sale pitch behavior
+      opacity: 100% !important
+    .gs-atm-must-disabled
+      //apply for normal behaviour
+      opacity: 50% !important
+      pointer-events: none !important
+
+  .nav-section-seperate
+    border-top: 1px solid lightgray
+    margin: 20px 15px 0px 15px
+
+  .nav-section-separate__dot
+    color: #9EA0A5
+    margin: 38px 0 20px 23px
+
+  .nav-section-setting
+    margin-top: auto
+    margin-bottom: 20px
+
+    @include mobile
+      margin-top: 0
+
+      .nav-level-1
+        margin-top: 20px
+        margin-bottom: 5rem
+
+    @include tablet
+      margin-top: 0
+
+      .nav-level-1
+        margin-top: 20px
+        margin-bottom: 5rem
+
+  .uik-nav-link__text, .uik-nav-link-secondary__text
+    text-transform: capitalize
+    display: flex
+    align-items: center
+
+
+
+  .uik-nav-link__wrapper
+    padding: 0 30px 0 20px
+    cursor: pointer
+    &:hover
+      color: #1665D8 !important
+
+    .uik-nav-link__text
+      &:hover
+        color: #1665D8
+
+    .nav-icon
+      height: 1.5em
+      width: 1.5em
+      margin-right: 1em
+      color: inherit
+      background-position: center center
+      background-size: contain
+      background-repeat: no-repeat
+      //transition: width .3s ease-in-out
+      margin-left: 2px
+
+      &--active:not(.nav-icon--none-hover)
+        filter: invert(30%) sepia(94%) saturate(1563%) hue-rotate(201deg) brightness(87%) contrast(94%)
+
+    .nav-icon--none-hover
+      height: 1.5em
+      width: 1.5em
+      margin-right: 1em
+      color: inherit
+      background-position: center center
+      background-size: contain
+      background-repeat: no-repeat
+      margin-left: 2px
+
+    &:hover
+      .nav-icon
+        filter: invert(30%) sepia(94%) saturate(1563%) hue-rotate(201deg) brightness(87%) contrast(94%)
+
+  .uik-nav-link__wrapper, .uik-nav-link-secondary__wrapper
+    cursor: pointer
+    text-decoration: none !important
+    //color: #3E3F42
+    &:hover
+      text-decoration: none
+
+  .uik-nav-link-secondary__wrapper.active
+    font-weight: bold
+    background: none
+    box-shadow: none
+
+.storefront-view
+  color: $color-header-light
+  font-size: 1rem
+
+.nav-level-1
+  display: flex
+  >a
+    flex-grow: 1
+
+  .uik-nav-link__wrapper.active
+    font-weight: bold
+    color: #1665D8 !important
+
+  &--disable
+    opacity: 0.3
+    text-decoration: none !important
+
+.nav-level-tips
+  &:hover
+    opacity: 1
+
+.nav-beta
+  text-decoration: none !important
+
+  &:hover
+    span
+      span:first-child
+        text-decoration: none
+
+  .uik-nav-link-secondary__text
+    display: flex
+    align-items: center
+
+
+  .uik-tag__wrapper
+    background-color: #9EA0A5
+    text-decoration: none !important
+    color: white
+    font-size: .6em
+    padding: .5em .5em .3em .5em
+    line-height: unset
+    height: unset
+    margin-left: .5em
+
+
+.nav-premium
+  text-decoration: none !important
+
+  &:hover
+    span
+      span:first-child
+        text-decoration: underline
+
+  .uik-nav-link-secondary__text
+    display: flex
+    align-items: center
+
+
+  .uik-tag__wrapper
+    background-color: #f26c22
+    text-decoration: none !important
+    color: white
+    font-size: .6em
+    padding: .5em .5em .3em .5em
+    line-height: unset
+    height: unset
+    margin-left: .5em
+

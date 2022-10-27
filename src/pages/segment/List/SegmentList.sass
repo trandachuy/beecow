@@ -1,0 +1,36 @@
+@import "../../../../sass/mixins"
+.segment-list
+
+  &__body
+    flex: 1
+    display: flex
+    flex-direction: column
+
+  &__widget
+    flex: 1
+    display: flex
+    flex-direction: column
+
+  &__widget-body
+    flex: 1
+    display: flex
+    flex-direction: column
+
+  .loading-list
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .search-box__wrapper
+    input
+      width: 235px
+      @include mobile
+        width: 100%
+
+  .modal-dialog
+    @include mobile
+      width: unset !important
+  .gs-mobile-list-container
+    .segment-id
+      font-weight: 500

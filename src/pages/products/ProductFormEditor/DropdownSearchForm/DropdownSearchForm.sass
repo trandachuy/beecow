@@ -1,0 +1,87 @@
+.gs-dropdown-search-form
+  position: relative
+  width: 100%
+  display: block
+  .search-box
+    .box-input-unit
+      position: relative
+      .form-group
+        margin-bottom: 0
+      input
+        // width: 45%
+        height: 40px
+        font-size: .88rem
+        border-radius: 3px
+        padding: 0.375rem 0.75rem
+        &::placeholder
+          font-size: 13px
+          color: #CCCCCC
+          font-style: italic
+          font-weight: normal
+        &:focus-visible
+          outline: none
+      .isBorderCheck
+        border-color: #dc3545
+      .icon-check
+        position: absolute
+        right: 9px
+        top: 6px
+        z-index: 2
+    .icon_add_unit
+      float: right
+      cursor: pointer
+      background: #FFFFFF
+      color: #87C652
+      border: 1px solid #87C652
+      border-radius: 3px
+      margin-left: 10px
+      padding: 8px 15px
+      transition: box-shadow 0.3s ease-in-out
+      &:hover
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15)
+  .invalid-check
+    display: flex
+    justify-items: left
+    width: 100%
+    font-size: 80%
+    color: #dc3545
+  .search-list
+    transition: all .2s ease
+    background-color: white
+    border-radius: .25rem
+    position: absolute
+    top: 45px
+    left: 0
+    width: 45%
+    max-height: 0
+    overflow-x: auto
+    z-index: 5
+    &::-webkit-scrollbar
+      width: 3px
+      margin-left: -30px
+    &::-webkit-scrollbar-thumb
+      background: #C4C4C4
+    &.expanded
+      max-height: 300px
+      border: 1px solid #DDE0E9
+      border-radius: 3px
+    &:focus
+      outline: none
+    .box-search-item
+      display: flex
+      align-items: center
+      border-bottom: 1px solid #F3F6FE
+      padding: 0.575rem 0.75rem
+      height: 40px
+      .search-item
+        font-size: 13px
+        color: #000000
+        width: 95%
+
+.modalDeleteUnit
+  .modal-header
+    background: #F8F8F8
+    padding: .5rem!important
+    .modal-title
+      color: #000000
+

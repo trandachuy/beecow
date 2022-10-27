@@ -1,0 +1,97 @@
+@import "../../../../sass/mixins"
+
+.headerButtonGroup
+  display: flex
+  justify-content: flex-end
+
+.generalInfo
+  font-size: 1em
+  //
+  //label
+  //  font-size: .8rem
+
+
+
+
+
+  .frmDatePicker
+    width: 100%
+    position: relative
+
+    .calendarIcon
+      position: absolute
+      top: 35px
+      right: 10px
+      color: #ced4da
+      font-size: 1.2em
+
+  .frmCouponCode
+    position: relative
+
+    .buttonGenCode
+      position: absolute
+      top: 1px
+      right: 0px
+      font-size: 1em
+
+.frmOptionValue
+  margin-left: 0
+  .frmOptionValueInput
+    max-width: 10em
+  .frmOptionValueInputValidate
+    //max-width: 10em
+    padding: 0
+    text-align: left
+    margin-top: -10px
+
+.customRadio
+  margin-bottom: .5em
+
+.customRadio:nth-child(1)
+  width: 200px
+
+.customRadio:nth-child(2)
+  width: 270px
+
+.customRadio:nth-child(3)
+  width: 270px
+
+.custom-checkbox
+  margin-bottom: .5em
+
+.leftCol
+  max-width: 14em
+
+.linkSelector
+  font-size: 13px
+  font-weight: 100
+  margin-bottom: 1em
+
+  .totalItem
+    color: #939393
+
+.shippingProviderCheckbox
+  display: inline-block
+  margin-right: 1em
+
+.shippingMaxAmount
+  margin-top: 5px
+  display: flex
+  @include mobile
+    flex-direction: column
+  label
+    padding-top: 10px
+    margin-right: 20px
+    @include mobile
+      padding-top: 0
+
+.inputValidate
+  margin-top: -25px
+  padding: 0
+  margin-left: -22px
+  @include mobile
+    text-align: left
+    margin-left: 0
+.valueInput
+  max-width: 10em
+  margin-bottom: 0 !important

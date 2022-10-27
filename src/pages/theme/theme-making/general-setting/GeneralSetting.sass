@@ -1,0 +1,237 @@
+// @font-face
+//   font-family: EBGaramond
+//   src: url("/assets/fonts/EBGaramond/EBGaramond-normal.ttf")
+//   font-weight: normal
+
+// @font-face
+//   font-family: EBGaramond
+//   src: url("/assets/fonts/EBGaramond/EBGaramond-bold.ttf")
+//   font-weight: bold
+
+// @font-face
+//   font-family: EBGaramond
+//   src: url("/assets/fonts/EBGaramond/EBGaramond-500.ttf")
+//   font-weight: 500
+
+
+
+// @font-face
+//   font-family: JosefinSans
+//   src: url("/assets/fonts/JosefinSans/JosefinSans-normal.ttf")
+//   font-weight: normal
+
+// @font-face
+//   font-family: JosefinSans
+//   src: url("/assets/fonts/JosefinSans/JosefinSans-bold.ttf")
+//   font-weight: bold
+
+// @font-face
+//   font-family: JosefinSans
+//   src: url("/assets/fonts/JosefinSans/JosefinSans-500.ttf")
+//   font-weight: 500
+
+
+
+
+// @font-face
+//   font-family: Literata
+//   src: url("/assets/fonts/Literata/Literata-normal.ttf")
+//   font-weight: normal
+
+// @font-face
+//   font-family: Literata
+//   src: url("/assets/fonts/Literata/Literata-bold.ttf")
+//   font-weight: bold
+
+// @font-face
+//   font-family: Literata
+//   src: url("/assets/fonts/Literata/Literata-500.ttf")
+//   font-weight: 500
+
+
+
+// @font-face
+//   font-family: Oswald
+//   src: url("/assets/fonts/Oswald/Oswald-normal.ttf")
+//   font-weight: normal
+
+// @font-face
+//   font-family: Oswald
+//   src: url("/assets/fonts/Oswald/Oswald-bold.ttf")
+//   font-weight: bold
+
+// @font-face
+//   font-family: Oswald
+//   src: url("/assets/fonts/Oswald/Oswald-500.ttf")
+//   font-weight: 500
+
+
+
+// @font-face
+//   font-family: Petrona
+//   src: url("/assets/fonts/Petrona/Petrona-normal.ttf")
+//   font-weight: normal
+
+// @font-face
+//   font-family: Petrona
+//   src: url("/assets/fonts/Petrona/Petrona-bold.ttf")
+//   font-weight: bold
+
+// @font-face
+//   font-family: Petrona
+//   src: url("/assets/fonts/Petrona/Petrona-500.ttf")
+//   font-weight: 500
+
+
+
+// @font-face
+//   font-family: PlayfairDisplay
+//   src: url("/assets/fonts/PlayfairDisplay/PlayfairDisplay-normal.ttf")
+//   font-weight: normal
+
+// @font-face
+//   font-family: PlayfairDisplay
+//   src: url("/assets/fonts/PlayfairDisplay/PlayfairDisplay-bold.ttf")
+//   font-weight: bold
+
+// @font-face
+//   font-family: PlayfairDisplay
+//   src: url("/assets/fonts/PlayfairDisplay/PlayfairDisplay-500.ttf")
+//   font-weight: 500
+
+
+
+// @font-face
+//   font-family: Vollkorn
+//   src: url("/assets/fonts/Vollkorn/Vollkorn-normal.ttf")
+//   font-weight: normal
+
+// @font-face
+//   font-family: Vollkorn
+//   src: url("/assets/fonts/Vollkorn/Vollkorn-bold.ttf")
+//   font-weight: bold
+
+// @font-face
+//   font-family: Vollkorn
+//   src: url("/assets/fonts/Vollkorn/Vollkorn-500.ttf")
+//   font-weight: 500
+
+.general-setting
+
+  &__scroll
+    height: calc(100vh - 119px)
+    overflow-y: auto
+
+  .label-pdl
+    padding-left: 10px
+    font-size: 1.2rem
+    font-weight: bold
+
+  .all-setting
+    .title-element
+      background-color: #536be7
+      height: 60px
+      color: #ffffff
+      align-items: center
+      display: flex
+      text-transform: capitalize
+      
+    .setting-element
+      background-color: #f8f8f8
+
+      .element-header
+        background-color: #f2f2f2
+        line-height: 50px
+        border-bottom: 2px solid #e0dfdf
+        border-top: 2px solid #e0dfdf
+        vertical-align: middle
+
+      .image-setting
+        color: #989696
+        padding-top: 20px
+        
+        .image-widget__container
+          justify-content: center
+          flex-direction: column
+          align-items: center
+          padding-bottom: 20px
+
+          .image-widget__image-item
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+          svg
+            margin-top: 10px
+            margin-bottom: 10px
+            font-size: 1.2rem
+
+        .image-upload-description
+          font-size: 0.8rem
+          font-weight: 500
+        .image-description
+          font-size: 0.8rem
+          font-style: italic
+
+      .font-setting
+        padding: 20px 15px 20px 15px
+
+        .uik-select__wrapper
+          width: 100%
+
+      .color-setting
+        padding: 20px 15px 20px 15px
+        font-size: 0.8rem
+
+        .color-setting-el
+          display: flex
+          flex-direction: row
+
+          .title
+            flex: 3
+            font-weight: 500
+            text-align: left
+
+          .color
+            flex: 1
+            text-align: right
+
+        .color-setting-el:last-child
+          margin-top: 15px
+
+      .widget-setting
+        padding: 20px 15px 20px 15px
+        font-size: 0.8rem
+
+        .widget-setting-el
+          display: flex
+          flex-direction: row
+
+          .title
+            flex: 3
+            font-weight: 500
+            text-align: left
+        
+          .widget
+            flex: 1
+            text-align: right
+            margin-top: 0 !important
+
+          .uik-checkbox__wrapper
+            margin-bottom: 0
+
+            .uik-checkbox__label
+              font-weight: 500
+
+        .widget-setting-el:last-child
+          margin-top: 15px
+          flex-wrap: wrap
+          flex-direction: column !important
+
+  
+      
+    
+      
+      
+

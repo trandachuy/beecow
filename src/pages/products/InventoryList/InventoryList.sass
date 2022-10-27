@@ -1,0 +1,231 @@
+@import "../../../../sass/mixins"
+
+.filter__row
+  margin-bottom: 1em
+  button
+    margin: 0 .9em
+    border-radius: 999px
+    min-width: 7em
+.filter__allBtn
+  min-width: 4em
+
+.inventory-list-page
+
+  .m-paging
+    //position: sticky
+    //bottom: 0
+
+  .mobile-inventory-list-container
+    flex-direction: column
+    padding: 1rem
+    border-top: 1px solid rgba(220, 220, 220, 0.31)
+    flex-shrink: 0
+    flex-grow: 1
+    //overflow-y: auto
+
+    .m-inventory-row
+      padding: 1rem 0
+      border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+      display: flex
+      justify-content: space-between
+      flex-shrink: 0
+
+      .m-inventory-basic-info
+        display: flex
+        align-items: center
+        flex: 1
+
+        .m-inventory-basic-info__name
+          margin-left: 1rem
+          word-break: break-word
+          height: 2.8rem
+          overflow: hidden
+          max-width: 40vw
+
+      .m-inventory-detail
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between
+
+        &__status
+          display: flex
+          align-items: center
+          justify-content: flex-end
+
+        &__price
+          font-weight: 500
+          color: gray
+
+        .status-dot
+          border-radius: 50%
+          width: .5rem
+          height: .5rem
+          margin-bottom: .2em
+          margin-right: .5em
+
+          &--active
+            background-color: green
+          &--error
+            background-color: red
+          &--inactive
+            background-color: gray
+
+
+  .inventory-list-widget
+    @include mobile
+      padding: 0
+
+  .gs-page-header
+    .btn-save
+      margin-left: auto
+
+
+  .inventory-list__counter
+    margin-left: auto
+
+  .inventory-list-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  .inventory-table__last-col
+    text-align: center
+
+  .inventory-table__thumbnail
+    width: 4em
+    height: 4em
+
+  .inventory-table__tooltips-thumbnail
+    opacity: 1 !important
+
+  .row
+    align-items: center
+
+  .brands__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    
+  .uik-checkbox__label
+    margin-left: .9em
+
+    //&:before
+    //  margin-right: 0px !important
+
+  .n-filter-container
+    width: 100%
+    display: flex
+    display: -webkit-box
+    justify-content: flex-end
+    align-items: center
+    flex-shrink: 0
+    //margin-bottom: 1em
+
+    .uik-checkbox__wrapper
+      margin-bottom: 0
+
+    .uik-select__wrapper
+      margin-left: 1em
+      min-width: 12em
+
+  .inventory-list__body
+    display: flex
+    flex-grow: 1
+    flex-shrink: 0
+
+  .gs-widget
+    display: flex
+    flex-direction: column
+
+    .uik-widget-content__wrapper
+      flex: 1
+      display: flex
+      flex-direction: column
+
+    .loading
+      flex: 1
+      display: flex
+      align-items: center
+
+  .inventory-list__empty
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .search-box__wrapper
+    webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08)
+
+    input
+      padding: 8px 15px 8px 40px !important
+
+.filter-modal-wrapper
+  padding: 1rem
+
+  .filter-session
+    border-bottom: 1px solid rgba(220, 220, 220, 0.31)
+    padding-bottom: 1rem
+    margin-bottom: 1rem
+
+    &:last-child
+      border-bottom: none
+
+
+    .filter-modal__title
+      margin-bottom: 1rem
+      display: block
+  
+.inventory-list-page
+  .inventory-list__body
+    .inventory-thumbnail
+      img
+        width: 4em
+        height: 4em
+    .inventory-table__name
+      max-width: 40em
+      min-width: 20em
+      overflow: hidden
+      -ms-word-break: break-all
+      word-break: break-word
+      -webkit-hyphens: auto
+      -moz-hyphens: auto
+      hyphens: auto
+      white-space: break-spaces
+    .inventory-table__tooltips-thumbnail
+      opacity: 1 !important
+    .remainingItem
+      min-width: 10em
+    .soldItem
+      min-width: 10em
+    .transactionItem
+      min-width: 10em
+    .price
+      display: flex
+      display: -webkit-flex
+      flex-direction: column
+      min-width: 10em
+      .org-price
+        color: #9EA0A5
+        .text-line-through
+          text-decoration: line-through
+    .status
+      .status-dot
+        align-self: center
+        border-radius: 50%
+        width: .5rem
+        height: .5rem
+        margin-bottom: .2em
+        margin-right: .5em
+
+        &--active
+          background-color: green
+        &--error
+          background-color: red
+        &--inactive
+          background-color: gray
+
+
+
